@@ -1,0 +1,9 @@
+# Сокрытие не копируемых файлов
+*.zip
+.DS_Store
+.vscode/sftp.json
+/app/libs/Db.php
+/node_modules/*
+/package-lock.json
+/package.json
+/gulpfile.js
