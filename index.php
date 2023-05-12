@@ -238,6 +238,8 @@
     const resultRegion = region.options[region.selectedIndex].value;
     const location = document.querySelector("#location");
     const resultLocation = location.options[location.selectedIndex].value;
+
+    console.log(resultLocation);
   
     const price = document.querySelector("#price").value;
     const devPrice = document.querySelector("#minimal_price").value;

@@ -61,7 +61,39 @@ if(isset($allData['problem']))
         $andYesOrNo = true;
     }
 }
-//$core->x($querySQL);
+
+if(isset($allData['region']))
+{
+    if($allData['region'])
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `regions_name` = ".$allData['region']."";
+        } else {
+            $querySQL .= " `regions_name` = ".$allData['region']."";
+        }
+        $andYesOrNo = true;
+    }
+}
+
+if(isset($allData['location']) && $allData['location'] != 'Алматы' && $allData['location'] != 'Астана' && $allData['location'] != 'Шимкент')
+{
+    $location = $con->db->query("SELECT `id` FROM `locations` WHERE `location_name` = '".$allData['location']."';");
+    $location = $location->fetch(PDO::FETCH_ASSOC);
+    $location = $location['id'];
+
+    if($location)
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `location_name` = ".$location."";
+        } else {
+            $querySQL .= " `location_name` = ".$location."";
+        }
+        $andYesOrNo = true;
+    }
+}
+$core->x($querySQL);
 $tenders = $con->db->query($querySQL);
 $tenders = $tenders->fetchAll(PDO::FETCH_ASSOC);
 
