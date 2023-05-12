@@ -93,7 +93,63 @@ if(isset($allData['location']) && $allData['location'] != 'Алматы' && $all
         $andYesOrNo = true;
     }
 }
-$core->x($querySQL);
+
+if(isset($allData['price']))
+{
+    if($allData['price'])
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `price` = ".$allData['price']."";
+        } else {
+            $querySQL .= " `price` = ".$allData['price']."";
+        }
+        $andYesOrNo = true;
+    }
+}
+
+if(isset($allData['dev_price']))
+{
+    if($allData['dev_price'])
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `dev_price` = ".$allData['dev_price']."";
+        } else {
+            $querySQL .= " `dev_price` = ".$allData['dev_price']."";
+        }
+        $andYesOrNo = true;
+    }
+}
+
+if(isset($allData['quantity']))
+{
+    if($allData['quantity'])
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `quantity` = ".$allData['quantity']."";
+        } else {
+            $querySQL .= " `quantity` = ".$allData['quantity']."";
+        }
+        $andYesOrNo = true;
+    }
+}
+
+if(isset($allData['vendor']))
+{
+    if($allData['vendor'])
+    {
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `vendor` = ".$allData['vendor']."";
+        } else {
+            $querySQL .= " `vendor` = ".$allData['vendor']."";
+        }
+        $andYesOrNo = true;
+    }
+}
+
 $tenders = $con->db->query($querySQL);
 $tenders = $tenders->fetchAll(PDO::FETCH_ASSOC);
 
