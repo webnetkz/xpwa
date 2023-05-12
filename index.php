@@ -271,11 +271,27 @@
     
     document.querySelectorAll('.hiddenLocations').forEach((el) => {
       el.style.display = 'none';
+
+      // Выбор городов республиканского назначения
+      switch(Number(resultRegion))
+      {
+        case 17:
+          document.querySelector("#location").setAttribute("disabled", "");
+        break;
+        case 18:
+          document.querySelector("#location").setAttribute("disabled", "");
+        break;
+        case 19:
+          document.querySelector("#location").setAttribute("disabled", "");
+        break;
+      }
+
       if(Number(el.value) === Number(resultRegion))
       {
+        document.querySelector("#location").removeAttribute("disabled");
         el.style.display = "inline-block";
-        console.log(el);
       }
+
     });
   }
 
