@@ -59,7 +59,7 @@
       <div id="filterContent">
         <div>
 
-          <select id="portal">
+          <select id="portal" onchange="startFilter();">
             <option value="none" disabled selected>Наименование рынка</option>
             <?php
               $portals = $con->db->query("SELECT * FROM `portals`");
@@ -73,7 +73,7 @@
           </select>
 
 
-          <select id="category">;
+          <select id="category" onchange="startFilter();">;
             <option value="none" disabled selected>Категория</option>;
             <?php
               $categories = $con->db->query("SELECT * FROM `categories`");
@@ -86,7 +86,7 @@
             ?>
           </select>
 
-          <select id="problem">;
+          <select id="problem" onchange="startFilter();">;
             <option value="none" disabled selected>Уровень проблем</option>;
             <?php
               $problemLevels = $con->db->query("SELECT * FROM `problem_levels`");
@@ -99,7 +99,7 @@
             ?>
           </select>
 
-          <select id="region">;
+          <select id="region" onchange="startFilter();">;
             <option value="none" disabled selected>Регион</option>;
             <?php
               $regions = $con->db->query("SELECT * FROM `regions`");
@@ -111,25 +111,24 @@
               }
             ?>
           </select>
-          <select id="location">;
+          <select id="city" onchange="startFilter();">;
             <option value="none" disabled selected>Город</option>;
             <?php
               $locations = $con->db->query("SELECT * FROM `locations`");
               $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
-  
+
               foreach($locations as $k => $v)
               {
-                echo '<option value="'.$v['location_name'].'">'.$v['location_name'].'</option>';
+                echo '<option value="'.$v['city_name'].'">'.$v['city_name'].'</option>';
               }
-            ?>
+              ?>
           </select>
-  
-        </div>
+          </div>
         <div>
-          <input type="text" id="price" placeholder="Цена">
-          <input type="text" id="quantity" placeholder="Количетсво">
-          <input type="text" id="minimal_price" placeholder="Себистоимость">
-          <input type="text" id="vendor" placeholder="Поставщик">
+          <input type="text" onchange="startFilter();" id="price" placeholder="Цена">
+          <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
+          <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик">
+          <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
         </div>
 
       </div>
@@ -141,7 +140,7 @@
 
         <?php
 
-          $allTenders = $con->db->query("SELECT * FROM `tenders`");
+          $allTenders = $con->db->query("SELECT * FROM `tenders` LIMIT 50");
           $allTenders = $allTenders->fetchAll(PDO::FETCH_ASSOC);
           
 
@@ -222,63 +221,43 @@
   </div>
 </div>
 
+<script src="./assets/scripts/fetch.js"></script>
+
 <script>
 
-  function getURL(parameterName)
+  function startFilter()
   {
-    var url = new URL(window.location.href);
-    var parameterValue = url.searchParams.get(parameterName);
-    return parameterValue;
-  }
-
-  /**
-   * Автоподгрузка ранее выбранных значений фильтра
-   * 
-   */
-  if(getURL("portal"))
-  {
-    const portalSave = getURL("portal");
-    const portal = document.querySelector("#portal");
-    portal.options[0].value = portalSave;
-    portal.options[0].innerText = portalSave;
-  }
-
-  if(getURL("category"))
-  {
-    const categorySave = getURL("category");
-    const category = document.querySelector("#category");
-    category.options[0].value = categorySave;
-    category.options[0].innerText = categorySave;
-  }
-
-
-  /**
-   * Обработчики событий для фильтра
-   * 
-   */
-  let portalSelect = document.querySelector("#portal");
-  portalSelect.addEventListener('click', () => {
     const portal = document.querySelector("#portal");
     const resultPortal = portal.options[portal.selectedIndex].value;
-
-    location.href = "./index.php?portal="+resultPortal;
-  });
-
-  let categorySelect = document.querySelector("#category");
-  categorySelect.addEventListener('click', () => {
     const category = document.querySelector("#category");
     const resultCategory = category.options[category.selectedIndex].value;
+    const problem = document.querySelector("#problem");
+    const resultProblem = problem.options[problem.selectedIndex].value;
+    const region = document.querySelector("#region");
+    const resultRegion = region.options[region.selectedIndex].value;
+    const city = document.querySelector("#city");
+    const resultCity = city.options[city.selectedIndex].value;
+  
+    const price = document.querySelector("#price").value;
+    const devPrice = document.querySelector("#minimal_price").value;
+    const vendor = document.querySelector("#vendor").value;
+    const quantity = document.querySelector("#quantity").value;
+  
+  
+    let filterParametrs = {};
+    filterParametrs.portal = resultPortal;
+    filterParametrs.category = resultCategory;
+    filterParametrs.problem = resultProblem;
+    filterParametrs.region = resultRegion;
+    filterParametrs.price = price;
+    filterParametrs.dev_price = devPrice;
+    filterParametrs.vendor = vendor;
+    filterParametrs.quantity = quantity;
+  
+    fsetRequest("./filter.php", filterParametrs, console.log);
+  }
 
-    if(getURL("portal"))
-    {
-      location.href = "./index.php?category="+resultCategory+"&portal="+getURL("portal");
-    } else {
-      location.href = "./index.php?category="+resultCategory;
-    }
-  });
 </script>
-
-<script src="./assets/scripts/fetch.js"></script>
 <?php require_once "./assets/components/footer.php"; ?>
       
       
