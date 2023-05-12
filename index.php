@@ -64,7 +64,11 @@
             <?php
               $portals = $con->db->query("SELECT * FROM `portals`");
               $portals = $portals->fetchAll(PDO::FETCH_ASSOC);
-
+              
+              $locations = $con->db->query("SELECT * FROM `locations`");
+              $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
+              
+              
               foreach($portals as $k => $v)
               {
                 echo '<option value="'.$v['portal_name'].'">'.$v['portal_name'].'</option>';
@@ -99,7 +103,7 @@
             ?>
           </select>
 
-          <select id="region" onchange="startFilter();">;
+          <select id="region" onchange="setLocations();">;
             <option value="none" disabled selected>Регион</option>;
             <?php
               $regions = $con->db->query("SELECT * FROM `regions`");
@@ -107,21 +111,18 @@
 
               foreach($regions as $k => $v)
               {
-                echo '<option value="'.$v['region_name'].'">'.$v['region_name'].'</option>';
+                echo '<option value="'.$v['id'].'">'.$v['region_name'].'</option>';
               }
             ?>
           </select>
-          <select id="city" onchange="startFilter();">;
+          <select id="location" onchange="startFilter();">;
             <option value="none" disabled selected>Город</option>;
             <?php
-              $locations = $con->db->query("SELECT * FROM `locations`");
-              $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
-
               foreach($locations as $k => $v)
               {
-                echo '<option value="'.$v['city_name'].'">'.$v['city_name'].'</option>';
+                echo '<option style="display: none" class="hiddenLocations" value="'.$v['parent_region'].'">'.$v['location_name'].'</option>';
               }
-              ?>
+            ?>
           </select>
           </div>
         <div>
@@ -189,7 +190,7 @@
                 echo $regions[$v['regions_name']]['region_name'].'</p>';
               echo '<p>';
                 echo '<span class="mini">Город:</span> ';
-                echo $locations[$v['city_name']]['city_name'].'</p>';
+                echo $locations[$v['location_name']]['location_name'].'</p>';
             echo '</div>';
             echo '<div class="price">';
               echo '<p>';
@@ -235,8 +236,8 @@
     const resultProblem = problem.options[problem.selectedIndex].value;
     const region = document.querySelector("#region");
     const resultRegion = region.options[region.selectedIndex].value;
-    const city = document.querySelector("#city");
-    const resultCity = city.options[city.selectedIndex].value;
+    const location = document.querySelector("#location");
+    const resultLocation = location.options[location.selectedIndex].value;
   
     const price = document.querySelector("#price").value;
     const devPrice = document.querySelector("#minimal_price").value;
@@ -249,12 +250,33 @@
     filterParametrs.category = resultCategory;
     filterParametrs.problem = resultProblem;
     filterParametrs.region = resultRegion;
+    filterParametrs.location = resultLocation;
     filterParametrs.price = price;
     filterParametrs.dev_price = devPrice;
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
   
-    fsetRequest("./filter.php", filterParametrs, console.log);
+    fsetRequest("./filter.php", filterParametrs, showTenders);
+  }
+
+  function showTenders(data)
+  {
+    console.log(JSON.parse(data));
+  }
+
+  function setLocations()
+  {
+    const region = document.querySelector("#region");
+    const resultRegion = region.options[region.selectedIndex].value;
+    
+    document.querySelectorAll('.hiddenLocations').forEach((el) => {
+      el.style.display = 'none';
+      if(Number(el.value) === Number(resultRegion))
+      {
+        el.style.display = "inline-block";
+        console.log(el);
+      }
+    });
   }
 
 </script>
