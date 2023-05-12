@@ -180,6 +180,9 @@
                 echo '<span class="mini">Поставщик:</span> ';
                 echo $v['vendor'];
               echo '</p>';
+              echo '<p>';
+                echo '<span class="mini">Категория:</span> ';
+                echo $categories[$v['category_name']]['category_name'].'</p>';
             echo '</div>';
             echo '<div class="category_regions">';
               echo '<p>';
