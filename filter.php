@@ -63,17 +63,20 @@ if(isset($allData['problem']))
 }
 
 if(isset($allData['region']) && $allData['region'] !== 'none')
-{
-    if($andYesOrNo)
+{	
+    if($allData['region'])
     {
-        $querySQL .= " AND `regions_name` = ".$allData['region']."";
-    } else {
-        $querySQL .= " `regions_name` = ".$allData['region']."";
+        if($andYesOrNo)
+        {
+            $querySQL .= " AND `regions_name` = '".$allData['region']."'";
+        } else {
+            $querySQL .= " `regions_name` = '".$allData['region']."'";
+        }
+        $andYesOrNo = true;
     }
-    $andYesOrNo = true;
 }
 
-if(isset($allData['location']) && $allData['location'] != 'Алматы' && $allData['location'] != 'Астана' && $allData['location'] != 'Шимкент')
+if(isset($allData['location']) && $allData['location'] !== 'Алматы' && $allData['location'] !== 'Астана' && $allData['location'] !== 'Шимкент' && $allData['location'] !== 'none')
 {
     $location = $con->db->query("SELECT `id` FROM `locations` WHERE `location_name` = '".$allData['location']."';");
     $location = $location->fetch(PDO::FETCH_ASSOC);
@@ -91,46 +94,38 @@ if(isset($allData['location']) && $allData['location'] != 'Алматы' && $all
     }
 }
 
-if(isset($allData['price']))
+if(isset($allData['price']) && $allData['price'])
 {
-    if($allData['price'])
+    if($andYesOrNo)
     {
-        if($andYesOrNo)
-        {
-            $querySQL .= " AND `price` = ".$allData['price']."";
-        } else {
-            $querySQL .= " `price` = ".$allData['price']."";
-        }
-        $andYesOrNo = true;
+        $querySQL .= " AND `price` = ".$allData['price']."";
+    } else {
+        $querySQL .= " `price` = ".$allData['price']."";
     }
+    $andYesOrNo = true;
 }
 
-if(isset($allData['dev_price']))
+if(isset($allData['dev_price']) && $allData['dev_price'])
 {
-    if($allData['dev_price'])
+    if($andYesOrNo)
     {
-        if($andYesOrNo)
-        {
-            $querySQL .= " AND `dev_price` = ".$allData['dev_price']."";
-        } else {
-            $querySQL .= " `dev_price` = ".$allData['dev_price']."";
-        }
-        $andYesOrNo = true;
+        $querySQL .= " AND `dev_price` = ".$allData['dev_price']."";
+    } else {
+        $querySQL .= " `dev_price` = ".$allData['dev_price']."";
     }
+    $andYesOrNo = true;
 }
 
-if(isset($allData['quantity']))
+if(isset($allData['quantity']) && $allData['quantity'])
 {
-    if($allData['quantity'])
-    {
-        if($andYesOrNo)
-        {
-            $querySQL .= " AND `quantity` = ".$allData['quantity']."";
-        } else {
-            $querySQL .= " `quantity` = ".$allData['quantity']."";
-        }
-        $andYesOrNo = true;
-    }
+  if($andYesOrNo)
+  {
+    $querySQL .= " AND `quantity` = ".$allData['quantity']."";
+  } else {
+    $querySQL .= " `quantity` = ".$allData['quantity']."";
+  }
+  $andYesOrNo = true;
+
 }
 
 if(isset($allData['vendor']) && $allData['vendor'])
@@ -147,6 +142,8 @@ if(isset($allData['vendor']) && $allData['vendor'])
 if($querySQL === 'SELECT * FROM `tenders` WHERE')
 {
     $querySQL = 'SELECT * FROM `tenders` LIMIT 50';
+} else {
+    $querySQL .= ' LIMIT 50';
 }
 
 $tenders = $con->db->query($querySQL);

@@ -8,13 +8,13 @@
   "categories": ["web"],
   "icons": [
     {
-      "src":"/public/img/logo.png",
+      "src":"/assets/imimgagesg/logo.png",
       "sizes": "51x51",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src":"/public/img/logo512.png",
+      "src":"/assets/imgages/logo512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

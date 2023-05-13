@@ -67,7 +67,7 @@
               
               $locations = $con->db->query("SELECT * FROM `locations`");
               $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
-              
+			        echo '<script> localStorage.setItem("locations", \''.json_encode($locations).'\');</script>';
               
               foreach($portals as $k => $v)
               {
@@ -82,6 +82,7 @@
             <?php
               $categories = $con->db->query("SELECT * FROM `categories`");
               $categories = $categories->fetchAll(PDO::FETCH_ASSOC);
+			        echo '<script> localStorage.setItem("categories", \''.json_encode($categories).'\');</script>';
 
               foreach($categories as $k => $v)
               {
@@ -108,6 +109,7 @@
             <?php
               $regions = $con->db->query("SELECT * FROM `regions`");
               $regions = $regions->fetchAll(PDO::FETCH_ASSOC);
+			        echo '<script> localStorage.setItem("regions", \''.json_encode($regions).'\');</script>';
 
               foreach($regions as $k => $v)
               {
@@ -120,7 +122,7 @@
             <?php
               foreach($locations as $k => $v)
               {
-                echo '<option style="display: none" class="hiddenLocations" value="'.$v['parent_region'].'">'.$v['location_name'].'</option>';
+                echo '<option style="display: none" class="hiddenLocations" parent="'.$v['parent_region'].'" value="'.$v['location_name'].'">'.$v['location_name'].'</option>';
               }
             ?>
           </select>
@@ -237,10 +239,7 @@
     const region = document.querySelector("#region");
     const resultRegion = region.options[region.selectedIndex].value;
     const location = document.querySelector("#location");
-    const resultLocation = location.options[location.selectedIndex].value;
-
-    console.log(resultLocation);
-  
+    const resultLocation = location.options[location.selectedIndex].value;  
     const price = document.querySelector("#price").value;
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
@@ -266,10 +265,20 @@
 	  let results = JSON.parse(data);
    	  let resultsContent = document.querySelector('.resultsContent');
 	  resultsContent.innerHTML = '';
-	  
+	  let problems = localStorage.getItem('problems');
+	  problems = JSON.parse(problems);
+	  let regions = localStorage.getItem('regions');
+	  regions = JSON.parse(regions);
+	  let categories = localStorage.getItem('categories');
+	  categories = JSON.parse(categories);
+	  let locations = localStorage.getItem('locations');
+	  locations = JSON.parse(locations);
 	  
 	  results.forEach((el) => {
-	  	let templateBlock = `<div class="result  '.$colorClass.'">
+		  let oneProcentProfit = Number(el.price) / 100;
+		  let profit = Number(el.price) - Number(el.dev_price);
+		  let profitProcent = profit / oneProcentProfit;
+		  let templateBlock = `<div class="result  '.$colorClass.'">
   <img src="./assets/images/icons/${el.portal_name}.png" class="icon">
   <div class="vendor">
   <p>
@@ -278,36 +287,36 @@
   </p>
   <p>
     <span class="mini">Категория:</span> 
-    echo $categories[$v['category_name']]['category_name'].'</p>
+    ${categories[Number(el.category_name) - 1].category_name}</p>
 </div>
 <div class="category_regions">
   <p>
     <span class="mini">Регион:</span> 
-    echo $regions[$v['regions_name']]['region_name'].'</p>
+    ${regions[Number(el.regions_name) - 1].region_name}</p>
   <p>
     <span class="mini">Город:</span> 
-    echo $locations[$v['location_name']]['location_name'].'</p>
+    ${locations[Number(el.location_name) - 1].location_name}</p>
 </div>
 <div class="price">
   <p>
     <span class="mini">Стоимость:</span> 
-  echo $v['price'].' тг.</p>
+  ${el.price} тг.</p>
   <p>
     <span class="mini">Себистоимость:</span> 
-  echo $v['dev_price'].' тг.</p>
+  ${el.dev_price} тг.</p>
 </div>
 <div class="quantity">
-  <h2>'.$v['quantity'].'</h2>
+  <h2>${el.quantity}</h2>
   <span class="mini">Количество:</span>
 </div>
 <div class="date">
   <h4>
     <span class="mini">Дата:</span>
-    12.05.2022</h4>
+    ${el.date}</h4>
 </div>
 <div class="profit">
-  <p><b>'.$priceTenge.' тг.</b></p>
-  <p><b>'.$priceProcent.' %</b></p>
+  <p><b>${profit} тг.</b></p>
+  <p><b>${Math.round(profitProcent)} %</b></p>
 </div>
             
 </div>`;
@@ -337,11 +346,13 @@
         break;
       }
 
-      if(Number(el.value) === Number(resultRegion))
+      if(Number(el.getAttribute('parent')) === Number(resultRegion))
       {
         document.querySelector("#location").removeAttribute("disabled");
         el.style.display = "inline-block";
       }
+
+      startFilter();
 
     });
   }
