@@ -59,16 +59,12 @@
       <div id="filterContent">
         <div>
 
-          <select id="portal" onchange="startFilter();">
+          <select id="portal">
             <option value="none" disabled selected>Наименование рынка</option>
             <?php
               $portals = $con->db->query("SELECT * FROM `portals`");
               $portals = $portals->fetchAll(PDO::FETCH_ASSOC);
-              
-              $locations = $con->db->query("SELECT * FROM `locations`");
-              $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
-              
-              
+
               foreach($portals as $k => $v)
               {
                 echo '<option value="'.$v['portal_name'].'">'.$v['portal_name'].'</option>';
@@ -77,7 +73,7 @@
           </select>
 
 
-          <select id="category" onchange="startFilter();">;
+          <select id="category">;
             <option value="none" disabled selected>Категория</option>;
             <?php
               $categories = $con->db->query("SELECT * FROM `categories`");
@@ -90,7 +86,7 @@
             ?>
           </select>
 
-          <select id="problem" onchange="startFilter();">;
+          <select id="problem">;
             <option value="none" disabled selected>Уровень проблем</option>;
             <?php
               $problemLevels = $con->db->query("SELECT * FROM `problem_levels`");
@@ -103,7 +99,7 @@
             ?>
           </select>
 
-          <select id="region" onchange="setLocations();">;
+          <select id="region">;
             <option value="none" disabled selected>Регион</option>;
             <?php
               $regions = $con->db->query("SELECT * FROM `regions`");
@@ -111,25 +107,29 @@
 
               foreach($regions as $k => $v)
               {
-                echo '<option value="'.$v['id'].'">'.$v['region_name'].'</option>';
+                echo '<option value="'.$v['region_name'].'">'.$v['region_name'].'</option>';
               }
             ?>
           </select>
-          <select id="location" onchange="startFilter();">;
+          <select id="location">;
             <option value="none" disabled selected>Город</option>;
             <?php
+              $locations = $con->db->query("SELECT * FROM `locations`");
+              $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
+  
               foreach($locations as $k => $v)
               {
-                echo '<option style="display: none" class="hiddenLocations" value="'.$v['parent_region'].'">'.$v['location_name'].'</option>';
+                echo '<option value="'.$v['location_name'].'">'.$v['location_name'].'</option>';
               }
             ?>
           </select>
-          </div>
+  
+        </div>
         <div>
-          <input type="text" onchange="startFilter();" id="price" placeholder="Цена">
-          <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
-          <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик">
-          <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
+          <input type="text" id="price" placeholder="Цена">
+          <input type="text" id="quantity" placeholder="Количетсво">
+          <input type="text" id="minimal_price" placeholder="Себистоимость">
+          <input type="text" id="vendor" placeholder="Поставщик">
         </div>
 
       </div>
@@ -141,7 +141,7 @@
 
         <?php
 
-          $allTenders = $con->db->query("SELECT * FROM `tenders` LIMIT 50");
+          $allTenders = $con->db->query("SELECT * FROM `tenders`");
           $allTenders = $allTenders->fetchAll(PDO::FETCH_ASSOC);
           
 
@@ -150,7 +150,7 @@
             $colorClass = '';
             if(isset($problemLevels[$v['problem_level']]))
             {
-              switch($problemLevels[$v['problem_level']]['problem_name'])
+              switch($problemLevels[$v['problem_level']])
               {
                 case 'Нет проблем':
                 break;
@@ -180,17 +180,14 @@
                 echo '<span class="mini">Поставщик:</span> ';
                 echo $v['vendor'];
               echo '</p>';
-              echo '<p>';
-                echo '<span class="mini">Категория:</span> ';
-                echo $categories[$v['category_name']]['category_name'].'</p>';
             echo '</div>';
             echo '<div class="category_regions">';
               echo '<p>';
                 echo '<span class="mini">Регион:</span> ';
                 echo $regions[$v['regions_name']]['region_name'].'</p>';
               echo '<p>';
-                echo '<span class="mini">Город:</span> ';
-                echo $locations[$v['location_name']]['location_name'].'</p>';
+                echo '<span class="mini">Категория:</span> ';
+                echo $categories[$v['category_name']]['category_name'].'</p>';
             echo '</div>';
             echo '<div class="price">';
               echo '<p>';
@@ -222,131 +219,64 @@
   </div>
 </div>
 
-<script src="./assets/scripts/fetch.js"></script>
-
 <script>
 
-  function startFilter()
+  function getURL(parameterName)
   {
+    var url = new URL(window.location.href);
+    var parameterValue = url.searchParams.get(parameterName);
+    return parameterValue;
+  }
+
+  /**
+   * Автоподгрузка ранее выбранных значений фильтра
+   * 
+   */
+  if(getURL("portal"))
+  {
+    const portalSave = getURL("portal");
+    const portal = document.querySelector("#portal");
+    portal.options[0].value = portalSave;
+    portal.options[0].innerText = portalSave;
+  }
+
+  if(getURL("category"))
+  {
+    const categorySave = getURL("category");
+    const category = document.querySelector("#category");
+    category.options[0].value = categorySave;
+    category.options[0].innerText = categorySave;
+  }
+
+
+  /**
+   * Обработчики событий для фильтра
+   * 
+   */
+  let portalSelect = document.querySelector("#portal");
+  portalSelect.addEventListener('click', () => {
     const portal = document.querySelector("#portal");
     const resultPortal = portal.options[portal.selectedIndex].value;
+
+    location.href = "./index.php?portal="+resultPortal;
+  });
+
+  let categorySelect = document.querySelector("#category");
+  categorySelect.addEventListener('click', () => {
     const category = document.querySelector("#category");
     const resultCategory = category.options[category.selectedIndex].value;
-    const problem = document.querySelector("#problem");
-    const resultProblem = problem.options[problem.selectedIndex].value;
-    const region = document.querySelector("#region");
-    const resultRegion = region.options[region.selectedIndex].value;
-    const location = document.querySelector("#location");
-    const resultLocation = location.options[location.selectedIndex].value;
 
-    console.log(resultLocation);
-  
-    const price = document.querySelector("#price").value;
-    const devPrice = document.querySelector("#minimal_price").value;
-    const vendor = document.querySelector("#vendor").value;
-    const quantity = document.querySelector("#quantity").value;
-  
-  
-    let filterParametrs = {};
-    filterParametrs.portal = resultPortal;
-    filterParametrs.category = resultCategory;
-    filterParametrs.problem = resultProblem;
-    filterParametrs.region = resultRegion;
-    filterParametrs.location = resultLocation;
-    filterParametrs.price = price;
-    filterParametrs.dev_price = devPrice;
-    filterParametrs.vendor = vendor;
-    filterParametrs.quantity = quantity;
-  
-    fsetRequest("./filter.php", filterParametrs, showTenders);
-  }
+    if(getURL("portal"))
+    {
+      location.href = "./index.php?category="+resultCategory+"&portal="+getURL("portal");
+    } else {
+      location.href = "./index.php?category="+resultCategory;
+    }
 
-  function showTenders(data)
-  {
-	  let results = JSON.parse(data);
-   	  let resultsContent = document.querySelector('.resultsContent');
-	  resultsContent.innerHTML = '';
-	  
-	  
-	  results.forEach((el) => {
-	  	let templateBlock = `<div class="result  '.$colorClass.'">
-  <img src="./assets/images/icons/${el.portal_name}.png" class="icon">
-  <div class="vendor">
-  <p>
-    <span class="mini">Поставщик:</span> 
-    ${el.vendor}
-  </p>
-  <p>
-    <span class="mini">Категория:</span> 
-    echo $categories[$v['category_name']]['category_name'].'</p>
-</div>
-<div class="category_regions">
-  <p>
-    <span class="mini">Регион:</span> 
-    echo $regions[$v['regions_name']]['region_name'].'</p>
-  <p>
-    <span class="mini">Город:</span> 
-    echo $locations[$v['location_name']]['location_name'].'</p>
-</div>
-<div class="price">
-  <p>
-    <span class="mini">Стоимость:</span> 
-  echo $v['price'].' тг.</p>
-  <p>
-    <span class="mini">Себистоимость:</span> 
-  echo $v['dev_price'].' тг.</p>
-</div>
-<div class="quantity">
-  <h2>'.$v['quantity'].'</h2>
-  <span class="mini">Количество:</span>
-</div>
-<div class="date">
-  <h4>
-    <span class="mini">Дата:</span>
-    12.05.2022</h4>
-</div>
-<div class="profit">
-  <p><b>'.$priceTenge.' тг.</b></p>
-  <p><b>'.$priceProcent.' %</b></p>
-</div>
-            
-</div>`;
-		  resultsContent.innerHTML += templateBlock;
-	  });
-  }
-
-  function setLocations()
-  {
-    const region = document.querySelector("#region");
-    const resultRegion = region.options[region.selectedIndex].value;
-    
-    document.querySelectorAll('.hiddenLocations').forEach((el) => {
-      el.style.display = 'none';
-
-      // Выбор городов республиканского назначения
-      switch(Number(resultRegion))
-      {
-        case 17:
-          document.querySelector("#location").setAttribute("disabled", "");
-        break;
-        case 18:
-          document.querySelector("#location").setAttribute("disabled", "");
-        break;
-        case 19:
-          document.querySelector("#location").setAttribute("disabled", "");
-        break;
-      }
-
-      if(Number(el.value) === Number(resultRegion))
-      {
-        document.querySelector("#location").removeAttribute("disabled");
-        el.style.display = "inline-block";
-      }
-
-    });
-  }
-
+  });
 </script>
+
+<script src="./assets/scripts/fetch.js"></script>
 <?php require_once "./assets/components/footer.php"; ?>
       
       

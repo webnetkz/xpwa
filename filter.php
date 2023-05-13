@@ -4,7 +4,7 @@ require_once "./config.php";
 
 $querySQL = "SELECT * FROM `tenders` WHERE";
 
-$allData = $_GET;
+$allData = $_POST;
 $andYesOrNo = false;
 
 if(isset($allData['portal']))
@@ -62,18 +62,15 @@ if(isset($allData['problem']))
     }
 }
 
-if(isset($allData['region']))
+if(isset($allData['region']) && $allData['region'] !== 'none')
 {
-    if($allData['region'])
+    if($andYesOrNo)
     {
-        if($andYesOrNo)
-        {
-            $querySQL .= " AND `regions_name` = ".$allData['region']."";
-        } else {
-            $querySQL .= " `regions_name` = ".$allData['region']."";
-        }
-        $andYesOrNo = true;
+        $querySQL .= " AND `regions_name` = ".$allData['region']."";
+    } else {
+        $querySQL .= " `regions_name` = ".$allData['region']."";
     }
+    $andYesOrNo = true;
 }
 
 if(isset($allData['location']) && $allData['location'] != 'Алматы' && $allData['location'] != 'Астана' && $allData['location'] != 'Шимкент')
@@ -136,18 +133,20 @@ if(isset($allData['quantity']))
     }
 }
 
-if(isset($allData['vendor']))
+if(isset($allData['vendor']) && $allData['vendor'])
 {
-    if($allData['vendor'])
+    if($andYesOrNo)
     {
-        if($andYesOrNo)
-        {
-            $querySQL .= " AND `vendor` = ".$allData['vendor']."";
-        } else {
-            $querySQL .= " `vendor` = ".$allData['vendor']."";
-        }
-        $andYesOrNo = true;
+        $querySQL .= " AND `vendor` = ".$allData['vendor']."";
+    } else {
+        $querySQL .= " `vendor` = ".$allData['vendor']."";
     }
+    $andYesOrNo = true;
+}
+
+if($querySQL === 'SELECT * FROM `tenders` WHERE')
+{
+    $querySQL = 'SELECT * FROM `tenders` LIMIT 50';
 }
 
 $tenders = $con->db->query($querySQL);

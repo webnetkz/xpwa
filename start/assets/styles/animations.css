@@ -1,0 +1,39 @@
+@keyframes bgBlur {
+    50% {
+        filter: blur(4px);
+    }
+}
+@keyframes bgContrast {
+    50% {
+        filter: contrast(50%);
+    }
+}
+@keyframes rotateCart {
+    50% {
+        transform: rotateY(360deg);
+    }
+    60% {
+        transform: rotateY(0deg);
+    }
+}
+@keyframes showBlock {
+  0% {
+    position: relative;
+    left: -1000px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

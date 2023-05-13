@@ -1,0 +1,189 @@
+/*============================= Radio and Checkbox  ==========================*/
+.pack {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 300ms;
+}
+/* для элемента label связанного с .custom-radio */
+.pack+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-left: -3px;
+    margin-right: 8px;
+}
+/* создание в label псевдоэлемента  before со следующими стилями */
+.pack+label::before {
+    content: '';
+    display: inline-block;
+    border: 1px solid #0B2E4E;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    margin-left: 5px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+/* стили при наведении курсора на радио */
+.pack:not(:disabled):not(:checked)+label:hover::before {
+    transform: scale(1.1);
+}
+/* стили для активной радиокнопки (при нажатии на неё) */
+.pack:not(:disabled):active+label::before {
+    background-color: #FFE565;
+}
+/* стили для радиокнопки, находящейся в фокусе */
+.pack:focus+label::before {
+    background-color: #FFE565;
+}
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.pack:focus:not(:checked)+label::before {
+    background-color: white;
+}
+/* стили для радиокнопки, находящейся в состоянии checked */
+.pack:checked+label::before {
+    background-color: #FFE565;
+}
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.pack:disabled+label::before {
+    background-color: white;
+}
+/*============================= END Radio and Checkbox  ==========================*/
+/*============================= SWITCH Buttons  ==========================*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+  }
+.switch input {display:none;}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #E3FCE6;
+  border: 1px solid #8CDF95;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 1px;
+  background-color: #71D27C;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2ad03e;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2ad03e;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+/*============================= END SWITCH Buttons  ==========================*/
+
+/*============================= START SELECT FILES  ==========================*/
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	transition-duration: 300ms;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(11, 46, 78);
+  background: rgb(255, 229, 101);
+  border: 0.5px solid rgb(11, 46, 78);
+  border-radius: 22px;
+  list-style: none;
+  margin-bottom: 2px;
+  padding-left: 30px;
+  padding: 5px 20px;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/active */
+.input-file:hover span {
+	background-color: var(--yellow60);
+}
+.input-file:active span {
+	background-color: var(--yellow60);
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+/*============================= END SELECT FILES  ==========================*/
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: var(--gray);
+  border-radius: 4px;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--yellow60);
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  opacity: 0;
+}
