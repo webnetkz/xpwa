@@ -66,7 +66,7 @@
     
     <div class="buttons">
       <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
-      <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn">
+      <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn" onclick="location.href='add.php'">
     </div>
 
     <div id="filterContainer">
@@ -144,7 +144,7 @@
         <div>
           <input type="text" onchange="startFilter();" id="price" placeholder="Цена">
           <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
-          <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик">
+          <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик/БИН/Производитель">
           <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
         </div>
 

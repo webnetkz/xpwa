@@ -131,6 +131,26 @@ html, body {
     opacity: 0;
   }
 }
+#appendContainer {
+  border-radius: 0.3rem;
+  border: 2px solid var(--red);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.12);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 5px;
+}
+#appendContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+#appendContent select {
+  width: 22%;
+}
 #filterContainer {
   border-radius: 0.3rem;
   border: 2px solid var(--red);
