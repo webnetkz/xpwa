@@ -65,7 +65,7 @@
   <div id="mainContentContainer">
     
     <div class="buttons">
-      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn">
+      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
       <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn">
     </div>
 
