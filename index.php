@@ -372,6 +372,7 @@
   }
 
 </script>
+
 <?php require_once "./assets/components/footer.php"; ?>
       
       

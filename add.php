@@ -71,7 +71,7 @@
 
     <div id="appendContainer">
       <div id="appendContent">
-          <select id="portal" onchange="startFilter();">
+          <select id="portal" >
             <option value="none" disabled selected>Наименование рынка</option>
             <?php
               $portals = $con->db->query("SELECT * FROM `portals`");
@@ -89,7 +89,7 @@
           </select>
 
 
-          <select id="category" onchange="startFilter();">;
+          <select id="category" >;
             <option value="none" disabled selected>Категория</option>;
             <?php
               $categories = $con->db->query("SELECT * FROM `categories`");
@@ -103,7 +103,7 @@
             ?>
           </select>
 
-          <select id="problem" onchange="startFilter();">;
+          <select id="problem" >;
             <option value="none" disabled selected>Уровень проблем</option>;
             <?php
               $problemLevels = $con->db->query("SELECT * FROM `problem_levels`");
@@ -129,7 +129,7 @@
               }
             ?>
           </select>
-          <select id="location" onchange="startFilter();">;
+          <select id="location" >;
             <option value="none" disabled selected>Город</option>;
             <?php
               foreach($locations as $k => $v)
@@ -138,22 +138,100 @@
               }
             ?>
           </select>
-          <input type="text" onchange="startFilter();" id="price" placeholder="Цена">
-          <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
-          <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик">
-          <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
+          <input type="text" id="price" placeholder="Цена">
+          <input type="text" id="minimal_price" placeholder="Себестоимость">
+          <input type="text" id="vendor" placeholder="Поставщик/БИН">
+          <input type="text" id="quantity" placeholder="Количетсво">
+          <input type="date" id="tenderDate">
 
+          <button class="btn" onclick="setNewTender()">Сохранить</button>
 
       </div>
     </div>
-
-
-    
-
 <script src="./assets/scripts/fetch.js"></script>
 
 <script>
 
+function setLocations()
+{
+  const region = document.querySelector("#region");
+  const resultRegion = region.options[region.selectedIndex].value;
+    
+  document.querySelectorAll('.hiddenLocations').forEach((el) => {
+    el.style.display = 'none';
+
+    // Выбор городов республиканского назначения
+    switch(Number(resultRegion))
+    {
+      case 17:
+        document.querySelector("#location").setAttribute("disabled", "");
+      break;
+      case 18:
+        document.querySelector("#location").setAttribute("disabled", "");
+      break;
+      case 19:
+        document.querySelector("#location").setAttribute("disabled", "");
+      break;
+    }
+
+      if(Number(el.getAttribute('parent')) === Number(resultRegion))
+      {
+        document.querySelector("#location").removeAttribute("disabled");
+        el.style.display = "inline-block";
+      }
+    });
+  }
+
+  function setNewTender()
+  {
+    const portal = document.querySelector("#portal");
+    const resultPortal = portal.options[portal.selectedIndex].value;
+    const category = document.querySelector("#category");
+    const resultCategory = category.options[category.selectedIndex].value;
+    const problem = document.querySelector("#problem");
+    const resultProblem = problem.options[problem.selectedIndex].value;
+    const region = document.querySelector("#region");
+    const resultRegion = region.options[region.selectedIndex].value;
+    const location = document.querySelector("#location");
+    const resultLocation = location.options[location.selectedIndex].value;  
+    const price = document.querySelector("#price").value;
+    const devPrice = document.querySelector("#minimal_price").value;
+    const vendor = document.querySelector("#vendor").value;
+    const quantity = document.querySelector("#quantity").value;
+    const tenderDate = document.querySelector("#tenderDate").value;
+
+    let errorsData = false;
+    
+    if(resultPortal === 'none') {showMsg('Выберите портал!'); errorsData = true;}
+    if(resultCategory === 'none') {showMsg('Выберите категорию!'); errorsData = true;}
+    if(resultProblem === 'none') {showMsg('Выберите уровень проблем!'); errorsData = true;}
+    if(resultRegion === 'none') {showMsg('Выберите регион!'); errorsData = true;}
+    if(resultLocation === 'none') {showMsg('Выберите локацию!'); errorsData = true;}
+    if(price === '') {showMsg('Заполните стоимость!'); errorsData = true;}
+    if(devPrice === '') {showMsg('Заполните себестоимость!'); errorsData = true;}
+    if(vendor === '') {showMsg('Заполните производителя!'); errorsData = true;}
+    if(quantity === '') {showMsg('Заполните количество!'); errorsData = true;}
+    if(tenderDate === '') {showMsg('Выберите дату!'); errorsData = true;}
+
+    if(errorsData)
+    {
+      return;
+    }
+
+    let allParametrs = {};
+    allParametrs.portal = resultPortal;
+    allParametrs.category = resultCategory;
+    allParametrs.problem = resultProblem;
+    allParametrs.region = resultRegion;
+    allParametrs.location = resultLocation;
+    allParametrs.price = price;
+    allParametrs.dev_price = devPrice;
+    allParametrs.vendor = vendor;
+    allParametrs.quantity = quantity;
+    allParametrs.tenderDate = tenderDate;
+  
+    fsetRequest("./addTender.php", allParametrs, showMsg('Успешно добавлена новая запись!', true));
+  }
 
 </script>
 <?php require_once "./assets/components/footer.php"; ?>

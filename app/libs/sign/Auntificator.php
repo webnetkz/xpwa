@@ -13,10 +13,15 @@ class Auntificator
         {
             if($key === $this->key)
             {
-                echo '<script> localStorage.setItem("secret", "'.$this->key.'"); </script>';
+                setcookie("secret", 'secret', time()+3600*24*30); 
                 return true;
             }
         }
-        //echo '<script>const check = localStorage.getItem("secret"); if(check == null) { location.href ="'.$this->url.'"}</script>';
+        
+        if(isset($_COOKIE['secret']) && htmlspecialchars($_COOKIE['secret']) == 'secret')
+        {
+            return;
+        }
+        echo '<script> location.href = "'.$this->url.'" </script>';
     }
 }
