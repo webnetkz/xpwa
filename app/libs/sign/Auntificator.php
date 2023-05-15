@@ -13,9 +13,10 @@ class Auntificator
         {
             if($key === $this->key)
             {
+                echo '<script> localStorage.setItem("secret", "'.$this->key.'"); </script>';
                 return true;
             }
         }
-        header("Location: ".$this->url);
+        //echo '<script>const check = localStorage.getItem("secret"); if(check == null) { location.href ="'.$this->url.'"}</script>';
     }
 }

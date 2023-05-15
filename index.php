@@ -50,11 +50,25 @@
   .black {
     border-right: 17px solid black;
   }
+  .buttons {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .buttons img {
+    width: 35px;
+    margin-right: 10px;
+  }
 </style>
 
 <div id="mainContent">
   <div id="mainContentContainer">
     
+    <div class="buttons">
+      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn">
+      <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn">
+    </div>
+
     <div id="filterContainer">
       <div id="filterContent">
         <div>
