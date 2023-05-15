@@ -2,7 +2,7 @@
 
 use App\Core\Core;
 require_once './app/core/Core.php';
-$core = new Core(true);
+$core = new Core();
 
 use App\Libs\Connector;
 require_once "./app/libs/Connector.php";
