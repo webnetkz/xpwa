@@ -140,14 +140,17 @@
           </select>
           <input type="text" id="price" placeholder="Цена">
           <input type="text" id="minimal_price" placeholder="Себестоимость">
-          <input type="text" id="vendor" placeholder="Поставщик/БИН">
+          <input type="text" id="bin" placeholder="БИН">
           <input type="text" id="quantity" placeholder="Количетсво">
           <input type="date" id="tenderDate">
+          <input type="text" id="vendor" placeholder="Поставщик" class="autocomplete_vendor">
 
-          <button class="btn" onclick="setNewTender()">Сохранить</button>
-
+          
+        </div>
       </div>
-    </div>
+
+      <br>
+      <button class="btn" onclick="setNewTender()">Сохранить</button>
 <script src="./assets/scripts/fetch.js"></script>
 
 <script>
@@ -209,7 +212,7 @@ function setLocations()
     if(resultLocation === 'none') {showMsg('Выберите локацию!'); errorsData = true;}
     if(price === '') {showMsg('Заполните стоимость!'); errorsData = true;}
     if(devPrice === '') {showMsg('Заполните себестоимость!'); errorsData = true;}
-    if(vendor === '') {showMsg('Заполните производителя!'); errorsData = true;}
+    if(vendor === '') {showMsg('Заполните название поставщика или его БИН!'); errorsData = true;}
     if(quantity === '') {showMsg('Заполните количество!'); errorsData = true;}
     if(tenderDate === '') {showMsg('Выберите дату!'); errorsData = true;}
 
@@ -234,6 +237,20 @@ function setLocations()
   }
 
 </script>
+
+
 <?php require_once "./assets/components/footer.php"; ?>
+
+
+<script src="./assets/scripts/moduls/autocomplete.js"></script>
+<script>
+
+/*An array containing all the country names in the world:*/
+var countries = ["Apple", "Amazon", "Google", "Microsoft", "Test", "Ракетный заво", "Торпедный завод", "ВВС мира", "AplphaBet", "Audi", "Amaha"];
+
+/*initiate the autocomplete function on the "name_user" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.querySelector(".autocomplete_vendor"), countries);
+
+</script>
       
       
