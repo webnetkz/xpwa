@@ -1,72 +1,13 @@
 <?php require_once "./assets/components/header.php";?>
 
-<style>
-  .resultsContainer {
-    border: 2px solid var(--red);
-    margin-top: 2rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.12);
-    border-radius: 0.3rem;
-    min-height: 200px;
-    color: black;
-  }
-  .result {
-    border: 1px solid var(--red);
-    border-radius: 0.3rem;
-    margin: 3px;
-    padding: 5px;
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 30px;
-    border-right: 17px solid rgb(244, 244, 244);
-    background: white;
-  }
-  .result:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  .quantity {
-    text-align: center;
-  }
-  .result > .icon {
-    width: 50px;
-  }
-  .profit p {
-    font-size: 1.2rem;
-  }
-  span.mini {
-    font-size: 0.7rem;
-  }
-  .green {
-    border-right: 17px solid green;
-  }
-  .yellow {
-    border-right: 17px solid yellow;
-  }
-  .red {
-    border-right: 17px solid red;
-  }
-  .black {
-    border-right: 17px solid black;
-  }
-  .buttons {
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-  }
-  .buttons img {
-    width: 35px;
-    margin-right: 10px;
-  }
-</style>
+<link rel="stylesheet" href="./assets/styles/index.css">
 
 <div id="mainContent">
   <div id="mainContentContainer">
     
     <div class="buttons">
       <img src="./assets/images/icons/interface/back.png" style="width: 30px;" class="hoverBtn" onclick="location.href = 'index.php';">
-      <img src="./assets/images/icons/interface/add.png" class="hoverBtn" style="width: 30px;">
+      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
     </div>
 
     <div id="appendContainer">
@@ -200,6 +141,7 @@ function setLocations()
     const price = document.querySelector("#price").value;
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
+    const bin = document.querySelector("#bin").value;
     const quantity = document.querySelector("#quantity").value;
     const tenderDate = document.querySelector("#tenderDate").value;
 
@@ -212,7 +154,8 @@ function setLocations()
     if(resultLocation === 'none') {showMsg('Выберите локацию!'); errorsData = true;}
     if(price === '') {showMsg('Заполните стоимость!'); errorsData = true;}
     if(devPrice === '') {showMsg('Заполните себестоимость!'); errorsData = true;}
-    if(vendor === '') {showMsg('Заполните название поставщика или его БИН!'); errorsData = true;}
+    if(vendor === '') {showMsg('Заполните название поставщика!'); errorsData = true;}
+    if(bin === '') {showMsg('Заполните БИН поставщика!'); errorsData = true;}
     if(quantity === '') {showMsg('Заполните количество!'); errorsData = true;}
     if(tenderDate === '') {showMsg('Выберите дату!'); errorsData = true;}
 
@@ -230,10 +173,11 @@ function setLocations()
     allParametrs.price = price;
     allParametrs.dev_price = devPrice;
     allParametrs.vendor = vendor;
+    allParametrs.bin = bin;
     allParametrs.quantity = quantity;
     allParametrs.tenderDate = tenderDate;
   
-    fsetRequest("./addTender.php", allParametrs, showMsg('Успешно добавлена новая запись!', true));
+    fsetRequest("./addTender.php", allParametrs, showMsg);
   }
 
 </script>
@@ -245,12 +189,20 @@ function setLocations()
 <script src="./assets/scripts/moduls/autocomplete.js"></script>
 <script>
 
-/*An array containing all the country names in the world:*/
-var countries = ["Apple", "Amazon", "Google", "Microsoft", "Test", "Ракетный заво", "Торпедный завод", "ВВС мира", "AplphaBet", "Audi", "Amaha"];
+<?php
 
-/*initiate the autocomplete function on the "name_user" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.querySelector(".autocomplete_vendor"), countries);
+$companies = $con->db->query("SELECT `company` FROM `companies`");
+$companies = $companies->fetchAll(PDO::FETCH_ASSOC);
+$companyNames = array_column($companies, 'company');
+$companyList = implode('\', \'', $companyNames);
+
+echo 'var companeis = [\''.$companyList.'\'];';
+?>
+
+autocomplete(document.querySelector(".autocomplete_vendor"), companeis);
 
 </script>
       
+
+
       

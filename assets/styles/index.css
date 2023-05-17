@@ -1,0 +1,58 @@
+.resultsContainer {
+  border: 2px solid var(--red);
+  margin-top: 2rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.12);
+  border-radius: 0.3rem;
+  min-height: 200px;
+  color: black;
+}
+.result {
+  border: 1px solid var(--red);
+  border-radius: 0.3rem;
+  margin: 3px;
+  padding: 5px;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  border-right: 17px solid rgb(244, 244, 244);
+  background: white;
+}
+.result:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.quantity {
+  text-align: center;
+}
+.result > .icon {
+  width: 50px;
+}
+.profit p {
+  font-size: 1.2rem;
+}
+span.mini {
+  font-size: 0.7rem;
+}
+.green {
+  border-right: 17px solid green;
+}
+.yellow {
+  border-right: 17px solid yellow;
+}
+.red {
+  border-right: 17px solid red;
+}
+.black {
+  border-right: 17px solid black;
+}
+.buttons {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.buttons img {
+  width: 35px;
+  margin-right: 10px;
+}
