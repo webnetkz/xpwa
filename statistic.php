@@ -93,90 +93,56 @@
       </div>
     </div>
 
+    <style>
+      .statistic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+      }
+      .statistic > div {
+        width: 250px;
+        height: 250px;
+        margin: 5px;
+        border-radius: 17px;
+        background: var(--bgColor);
+        padding: 30px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .statistic > div:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      .staticticResult {
+        margin-top: 50px;
+        font-size: 3rem;
+      }
+      .statistic {
+        text-transform: uppercase;
+      }
+    </style>
 
     <div class="resultsContainer">
       <div class="resultsContent">
 
-        <?php
+          <div class="statistic">
+            <div>
+              <h3>Всего записей</h3>
+              <p class="staticticResult">12</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
 
-          $allTenders = $con->db->query("SELECT * FROM `tenders` LIMIT 50");
-          $allTenders = $allTenders->fetchAll(PDO::FETCH_ASSOC);
-          
-
-          foreach($allTenders as $k => $v)
-          {
-            $colorClass = '';
-            if(isset($problemLevels[$v['problem_level']]))
-            {
-              switch($problemLevels[$v['problem_level']]['problem_name'])
-              {
-                case 'Нет проблем':
-                break;
-                case 'Средний уровень проблем':
-                  $colorClass = 'green';
-                break;
-                case 'Высокий уровень проблем':
-                  $colorClass = 'yellow';
-                break;
-                case 'Тяжелый уровень проблем':
-                  $colorClass = 'red';
-                break;
-                case 'Нерешаемо':
-                  $colorClass = 'black';
-                break;
-              }
-            }
-            
-            $priceTenge = $v['price'] - $v['dev_price'];
-            $procent = ((int)$v['price'] / 100);
-            // $core->x($procent);
-            //$priceProcent = round((int)$priceTenge / (int)$procent, 2);
-
-            echo '<div class="result  '.$colorClass.'">';
-              echo '<img src="./assets/images/icons/'.$v['portal_name'].'.png" class="icon">';
-              echo '<div class="vendor">';
-              echo '<p>';
-                echo '<span class="mini">Поставщик:</span> ';
-                echo $v['vendor'];
-              echo '</p>';
-              echo '<p>';
-                echo '<span class="mini">Категория:</span> ';
-                echo $categories[$v['category_name']]['category_name'].'</p>';
-            echo '</div>';
-            echo '<div class="category_regions">';
-              echo '<p>';
-                echo '<span class="mini">Регион:</span> ';
-                echo $regions[$v['regions_name']]['region_name'].'</p>';
-              echo '<p>';
-                echo '<span class="mini">Город:</span> ';
-                echo $locations[$v['location_name']]['location_name'].'</p>';
-            echo '</div>';
-            echo '<div class="price">';
-              echo '<p>';
-                echo '<span class="mini">Стоимость:</span> ';
-              echo $v['price'].' тг.</p>';
-              echo '<p>';
-                echo '<span class="mini">Себистоимость:</span> ';
-              echo $v['dev_price'].' тг.</p>';
-            echo '</div>';
-            echo '<div class="quantity">';
-              echo '<h2>'.$v['quantity'].'</h2>';
-              echo '<span class="mini">Количество:</span>';  
-            echo '</div>';
-            echo '<div class="date">';
-              echo '<h4>';
-                echo '<span class="mini">Дата:</span>';
-                echo '12.05.2022</h4>';
-            echo '</div>';
-            echo '<div class="profit">';
-              echo '<p><b>'.$priceTenge.' тг.</b></p>';
-              echo '<p><b>'.$priceProcent.' %</b></p>';
-            echo '</div>';
-            
-            echo '</div>';
-          }
-
-        ?>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -214,72 +180,9 @@
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
   
-    fsetRequest("./filter.php", filterParametrs, showTenders);
+    fsetRequest("./getStatistic.php", filterParametrs, console.log);
   }
 
-  function showTenders(data)
-  {
-	  let results = JSON.parse(data);
-   	  let resultsContent = document.querySelector('.resultsContent');
-	  resultsContent.innerHTML = '';
-	  let problems = localStorage.getItem('problems');
-	  problems = JSON.parse(problems);
-	  let regions = localStorage.getItem('regions');
-	  regions = JSON.parse(regions);
-	  let categories = localStorage.getItem('categories');
-	  categories = JSON.parse(categories);
-	  let locations = localStorage.getItem('locations');
-	  locations = JSON.parse(locations);
-	  
-	  results.forEach((el) => {
-		  let oneProcentProfit = Number(el.price) / 100;
-		  let profit = Number(el.price) - Number(el.dev_price);
-		  let profitProcent = profit / oneProcentProfit;
-		  let templateBlock = `<div class="result  '.$colorClass.'">
-  <img src="./assets/images/icons/${el.portal_name}.png" class="icon">
-  <div class="vendor">
-  <p>
-    <span class="mini">Поставщик:</span> 
-    ${el.vendor}
-  </p>
-  <p>
-    <span class="mini">Категория:</span> 
-    ${categories[Number(el.category_name) - 1].category_name}</p>
-</div>
-<div class="category_regions">
-  <p>
-    <span class="mini">Регион:</span> 
-    ${regions[Number(el.regions_name) - 1].region_name}</p>
-  <p>
-    <span class="mini">Город:</span> 
-    ${locations[Number(el.location_name) - 1].location_name}</p>
-</div>
-<div class="price">
-  <p>
-    <span class="mini">Стоимость:</span> 
-  ${el.price} тг.</p>
-  <p>
-    <span class="mini">Себистоимость:</span> 
-  ${el.dev_price} тг.</p>
-</div>
-<div class="quantity">
-  <h2>${el.quantity}</h2>
-  <span class="mini">Количество:</span>
-</div>
-<div class="date">
-  <h4>
-    <span class="mini">Дата:</span>
-    ${el.date}</h4>
-</div>
-<div class="profit">
-  <p><b>${profit} тг.</b></p>
-  <p><b>${Math.round(profitProcent)} %</b></p>
-</div>
-            
-</div>`;
-		  resultsContent.innerHTML += templateBlock;
-	  });
-  }
 
   function setLocations()
   {
