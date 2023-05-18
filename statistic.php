@@ -280,9 +280,16 @@
 <script>
   
 var data = {
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+  labels: ['1', '2', '3', '4', '5'],
   series: [
-    [5, 2, 4, 2, 0]
+    [3, 3, 3, 2, 0]
+  ]
+};
+
+var data2 = {
+  labels: ['PC', 'Note', 'Mono', 'Panel'],
+  series: [
+    [0, 1, 2, 3]
   ]
 };
 
@@ -292,7 +299,7 @@ var options = {
 };
 
 new Chartist.Line('.ct-chart', data, options);
-new Chartist.Line('.ct-chart2', data, options);
+new Chartist.Line('.ct-chart2', data2, options);
 
 </script>
 
