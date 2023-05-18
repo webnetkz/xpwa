@@ -25,8 +25,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
 
-        <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
-        <link rel="apple-touch-icon" href="./assets/img/logo.png">
+        <link rel="shortcut icon" type="image/png" href="./assets/images/logo.png">
+        <link rel="apple-touch-icon" href="./assets/images/logo.png">
         <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
         <link rel="stylesheet" href="./assets/styles/mobileStyle.css">
         <link rel="manifest" href="./assets/json/manifest.json"> 

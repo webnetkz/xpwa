@@ -36,9 +36,30 @@ class Connector
 			}
 		}
 	}
+  
+
+  public function getId($id, $table)
+  {
+    $result = $this->db->query("SELECT * FROM `$table` WHERE id='".$id."'");
+    $result = $result->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
+  public function getColumn($column, $table)
+  {
+    $result = $this->db->query("SELECT `$column` FROM `$table`");
+    $result = $result->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
+  public function insertId($value, $column, $table)
+  {
+    $result = $this->db->query("INSERT INTO `$table` (`$column`) VALUE ('".$value."')");
+    return $result;
+  }
 
 	public function __destruct()
-    {
+  {
         $this->db = null;
-    }
+  }
 }

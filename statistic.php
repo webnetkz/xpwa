@@ -1,6 +1,8 @@
 <?php require_once "./assets/components/header.php";?>
 
 <link rel="stylesheet" href="./assets/styles/index.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
 <div id="mainContent">
   <div id="mainContentContainer">
@@ -8,7 +10,7 @@
     <div class="buttons">
       <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
       <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn" onclick="location.href='add.php'">
-      <img src="./assets/images/icons/interface/data.png" class="hoverBtn" onclick="location.href='statistic.php'">
+      <img src="./assets/images/icons/interface/home.png" class="hoverBtn" onclick="location.href='index.php'">
     </div>
 
     <div id="filterContainer">
@@ -129,16 +131,31 @@
 
           <div class="statistic">
             <div>
-              <h3>Всего записей</h3>
-              <p class="staticticResult">12</p>
+              <h3>Всего</h3>
+              <p class="staticticResult" id="allTenders">0</p>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+              <h3>Стоимость</h3>
+              <p class="staticticResult" id="resPrice">0</p>
+            </div>
+            <div>
+              <h3>Прибыль</h3>
+              <p class="staticticResult" id="profit">0</p>
+            </div>
+            <div>
+              <h3>Количество</h3>
+              <p class="staticticResult" id="resQuantity">0</p>
+            </div>
+            <div style="width: 30%">
+             <div class="ct-chart ct-perfect-fourth"></div>
+            </div>
+            <div>
+              <h3>Себестоимость</h3>
+              <p class="staticticResult" id="devPrice">0</p>
+            </div>
+            <div style="width: 30%">
+             <div class="ct-chart2 ct-perfect-fourth"></div>
+            </div>
           </div>
 
       </div>
@@ -180,9 +197,49 @@
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
   
-    fsetRequest("./getStatistic.php", filterParametrs, console.log);
+    fsetRequest("./filter.php", filterParametrs, showStatistics);
   }
 
+  startFilter();
+
+  function showStatistics(data)
+  {
+    const resultData = JSON.parse(data);
+    const countTenders = resultData.length;
+
+    let price = 0;
+    let devPrice = 0;
+    let profit = 0;
+    let profitProcent = 0;
+    let quantity = 0;
+
+    for(let el of resultData)
+    {
+      price += Number(el.price);
+      devPrice += Number(el.dev_price);
+      quantity += Number(el.quantity);
+    }
+    
+    price = Number(price) / Number(countTenders);
+    devPrice = Number(devPrice) / Number(countTenders);
+    profit = price - devPrice;
+    profitProcent = Math.round(Math.round(profit / (Number(price)/100)) / countTenders);
+
+
+    console.log(resultData);
+
+    document.querySelector("#allTenders").innerText = countTenders;
+    document.querySelector("#resPrice").innerText = !isNaN(price) ? price : 0;
+    document.querySelector("#profit").innerText = !isNaN(profit) ? profit : 0 +"тг "+ (!isNaN(profitProcent) ? profitProcent : 0) +"%";
+    document.querySelector("#resQuantity").innerText = quantity;
+
+    
+
+
+    document.querySelector("#devPrice").innerText = !isNaN(devPrice) ? devPrice : 0 +"тг ";
+
+
+  }
 
   function setLocations()
   {
@@ -218,6 +275,27 @@
   }
 
 </script>
+
+
+<script>
+  
+var data = {
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+  series: [
+    [5, 2, 4, 2, 0]
+  ]
+};
+
+var options = {
+  width: 300,
+  height: 200
+};
+
+new Chartist.Line('.ct-chart', data, options);
+new Chartist.Line('.ct-chart2', data, options);
+
+</script>
+
 
 <?php require_once "./assets/components/footer.php"; ?>
       
