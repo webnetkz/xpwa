@@ -6,6 +6,7 @@
   <div id="mainContentContainer">
     
     <div class="buttons">
+      <img src="./assets/images/icons/interface/home.png" class="hoverBtn" onclick="location.href='index.php'">
       <img src="./assets/images/icons/interface/back.png" style="width: 30px;" class="hoverBtn" onclick="location.href = 'index.php';">
       <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
     </div>
