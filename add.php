@@ -82,7 +82,6 @@
           </select>
           <input type="text" id="price" placeholder="Цена">
           <input type="text" id="minimal_price" placeholder="Себестоимость">
-          <input type="text" id="bin" placeholder="БИН">
           <input type="text" id="quantity" placeholder="Количетсво">
           <input type="date" id="tenderDate">
           <input type="text" id="vendor" placeholder="Поставщик" class="autocomplete_vendor">
@@ -142,7 +141,6 @@ function setLocations()
     const price = document.querySelector("#price").value;
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
-    const bin = document.querySelector("#bin").value;
     const quantity = document.querySelector("#quantity").value;
     const tenderDate = document.querySelector("#tenderDate").value;
 
@@ -156,7 +154,6 @@ function setLocations()
     if(price === '') {showMsg('Заполните стоимость!'); errorsData = true;}
     if(devPrice === '') {showMsg('Заполните себестоимость!'); errorsData = true;}
     if(vendor === '') {showMsg('Заполните название поставщика!'); errorsData = true;}
-    if(bin === '') {showMsg('Заполните БИН поставщика!'); errorsData = true;}
     if(quantity === '') {showMsg('Заполните количество!'); errorsData = true;}
     if(tenderDate === '') {showMsg('Выберите дату!'); errorsData = true;}
 
@@ -174,7 +171,6 @@ function setLocations()
     allParametrs.price = price;
     allParametrs.dev_price = devPrice;
     allParametrs.vendor = vendor;
-    allParametrs.bin = bin;
     allParametrs.quantity = quantity;
     allParametrs.tenderDate = tenderDate;
   

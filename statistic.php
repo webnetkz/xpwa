@@ -213,8 +213,47 @@
     let profitProcent = 0;
     let quantity = 0;
 
+    // Categories
+    let pc = 0, notebooks = 0, monoblocks = 0, panels = 0;
+    let problem1 = 0, problem2 = 0, problem3 = 0, problem4 = 0, problem5 = 0;
+
     for(let el of resultData)
     {
+      switch(el.category_name)
+      {
+        case 1:
+          pc += 1;
+        break;
+        case 2:
+          notebooks += 1;
+        break;
+        case 3:
+          panels += 1;
+        break;
+        case 4:
+          monoblocks += 1;
+        break;
+      }
+
+      switch(el.problem_level)
+      {
+        case 1:
+          problem1 += 1;
+        break;
+        case 2:
+          problem2 += 1;
+        break;
+        case 3:
+          problem3 += 1;
+        break;
+        case 4:
+          problem4 += 1;
+        break;
+        case 5:
+          problem5 += 1;
+        break;
+      }
+
       price += Number(el.price);
       devPrice += Number(el.dev_price);
       quantity += Number(el.quantity);
@@ -222,7 +261,7 @@
     
     price = Number(price) / Number(countTenders);
     devPrice = Number(devPrice) / Number(countTenders);
-    profit = price - devPrice;
+    profit = Math.round(price - devPrice);
     profitProcent = Math.round(Math.round(profit / (Number(price)/100)) / countTenders);
 
 
@@ -234,9 +273,32 @@
     document.querySelector("#resQuantity").innerText = quantity;
 
     
+    var data = {
+      labels: ['1', '2', '3', '4', '5'],
+      series: [
+        [problem1, problem2, problem3, problem4, problem5]
+      ]
+    };
+    var data2 = {
+      labels: ['PC', 'Note', 'Mono', 'Panel'],
+      series: [
+        [pc, notebooks, monoblocks, panels]
+      ]
+    };
+
+    var options = {
+      width: 300,
+      height: 200
+    };
+    new Chartist.Line('.ct-chart', data, options);
+    new Chartist.Line('.ct-chart2', data2, options);
 
 
-    document.querySelector("#devPrice").innerText = !isNaN(devPrice) ? devPrice : 0 +"тг ";
+
+
+
+
+    document.querySelector("#devPrice").innerText = !isNaN(devPrice) ? Math.round(devPrice) : 0 +"тг ";
 
 
   }
@@ -277,33 +339,6 @@
 </script>
 
 
-<script>
-  
-var data = {
-  labels: ['1', '2', '3', '4', '5'],
-  series: [
-    [3, 3, 3, 2, 0]
-  ]
-};
-
-var data2 = {
-  labels: ['PC', 'Note', 'Mono', 'Panel'],
-  series: [
-    [0, 1, 2, 3]
-  ]
-};
-
-var options = {
-  width: 300,
-  height: 200
-};
-
-new Chartist.Line('.ct-chart', data, options);
-new Chartist.Line('.ct-chart2', data2, options);
-
-</script>
-
-
 <?php require_once "./assets/components/footer.php"; ?>
       
-      
+    
