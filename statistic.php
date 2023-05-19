@@ -12,11 +12,9 @@
       <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
       <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn" onclick="location.href='add.php'">
     </div>
-
     <div id="filterContainer">
       <div id="filterContent">
         <div>
-
           <select id="portal" onchange="startFilter();">
             <option value="none" disabled selected>Наименование рынка</option>
             <?php
@@ -128,7 +126,6 @@
 
     <div class="resultsContainer">
       <div class="resultsContent">
-
           <div class="statistic">
             <div>
               <h3>Всего</h3>
@@ -157,10 +154,8 @@
              <div class="ct-chart2 ct-perfect-fourth"></div>
             </div>
           </div>
-
       </div>
     </div>
-
   </div>
 </div>
 
@@ -259,13 +254,12 @@
       quantity += Number(el.quantity);
     }
     
-    price = Number(price) / Number(countTenders);
+    price = Math.round(Number(price) / Number(countTenders));
     devPrice = Number(devPrice) / Number(countTenders);
     profit = Math.round(price - devPrice);
     profitProcent = Math.round(Math.round(profit / (Number(price)/100)) / countTenders);
 
-
-    console.log(resultData);
+    // console.log(resultData);
 
     document.querySelector("#allTenders").innerText = countTenders;
     document.querySelector("#resPrice").innerText = !isNaN(price) ? price : 0;
@@ -293,14 +287,7 @@
     new Chartist.Line('.ct-chart', data, options);
     new Chartist.Line('.ct-chart2', data2, options);
 
-
-
-
-
-
     document.querySelector("#devPrice").innerText = !isNaN(devPrice) ? Math.round(devPrice) : 0 +"тг ";
-
-
   }
 
   function setLocations()

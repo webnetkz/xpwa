@@ -54,15 +54,19 @@ function fsetRequest(url, data, f, settings='text') {
   
   xhr.onreadystatechange = function() {
     if (this.readyState != 4) return;
-      if(settings == "text") {
-        f( this.responseText );
-      } else {
-        f( this.response );
-      }
-
+    if(settings == "text") {
+      f( this.responseText );
+    } else {
+      f( this.response );
+    }
   }
   
-  xhr.send(body);
+  try {
+    xhr.send(body);
+  } catch (error) {
+    console.log("yes");
+  }
+
 }
 
 function getRequest(url) {

@@ -23,7 +23,6 @@ if(isset($allData['portal']))
         }
         $andYesOrNo = true;
     }
-
 }
 
 if(isset($allData['category']))

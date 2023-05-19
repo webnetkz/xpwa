@@ -215,13 +215,16 @@
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
   
-    fsetRequest("./filter.php", filterParametrs, showTenders);
+    setTimeout(() => {
+      fsetRequest("./filter.php", filterParametrs, showTenders);
+    }, 100);
   }
 
   function showTenders(data)
   {
+    if(data[0] == '<') return;
 	  let results = JSON.parse(data);
-   	  let resultsContent = document.querySelector('.resultsContent');
+   	let resultsContent = document.querySelector('.resultsContent');
 	  resultsContent.innerHTML = '';
 	  let problems = localStorage.getItem('problems');
 	  problems = JSON.parse(problems);
@@ -236,7 +239,30 @@
 		  let oneProcentProfit = Number(el.price) / 100;
 		  let profit = Number(el.price) - Number(el.dev_price);
 		  let profitProcent = profit / oneProcentProfit;
-		  let templateBlock = `<div class="result  '.$colorClass.'">
+
+      let colorClass = el.problem_level;
+      console.log(el);
+
+      switch(colorClass)
+      {
+        case 1:
+          colorClass = "";
+        break;
+        case 2:
+          colorClass = 'green';
+        break;
+        case 3:
+          colorClass = 'yellow';
+        break;
+        case 4:
+          colorClass = 'red';
+        break;
+        case 5:
+          colorClass = 'black';
+        break;
+      }
+
+		  let templateBlock = `<div class="result ${colorClass}">
   <img src="./assets/images/icons/${el.portal_name}.png" class="icon">
   <div class="vendor">
   <p>
