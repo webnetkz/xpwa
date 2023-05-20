@@ -84,8 +84,8 @@
           </select>
           </div>
         <div>
-          <input type="text" onchange="startFilter();" id="price" placeholder="Цена">
-          <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
+        <input type="text" onchange="startFilter();" style="width: 100px" id="price_from" placeholder="Цена от">
+          <input type="text" onchange="startFilter();" style="width: 100px" id="price_to" placeholder="Цена до">          <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
           <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик/БИН">
           <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
         </div>
@@ -175,7 +175,8 @@
     const resultRegion = region.options[region.selectedIndex].value;
     const location = document.querySelector("#location");
     const resultLocation = location.options[location.selectedIndex].value;  
-    const price = document.querySelector("#price").value;
+    const price_from = document.querySelector("#price_from").value;
+    const price_to = document.querySelector("#price_to").value;
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
     const quantity = document.querySelector("#quantity").value;
@@ -187,7 +188,9 @@
     filterParametrs.problem = resultProblem;
     filterParametrs.region = resultRegion;
     filterParametrs.location = resultLocation;
-    filterParametrs.price = price;
+    filterParametrs.location = resultLocation;
+    filterParametrs.price_from = price_from;
+    filterParametrs.price_to = price_to;
     filterParametrs.dev_price = devPrice;
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;

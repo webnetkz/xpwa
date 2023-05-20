@@ -93,13 +93,25 @@ if(isset($allData['location']) && $allData['location'] !== 'Алматы' && $al
     }
 }
 
-if(isset($allData['price']) && $allData['price'])
+
+if(isset($allData['price_from']) && $allData['price_from'])
 {
     if($andYesOrNo)
     {
-        $querySQL .= " AND `price` = ".$allData['price']."";
+        $querySQL .= " AND `price` >= ".$allData['price_from']."";
     } else {
-        $querySQL .= " `price` = ".$allData['price']."";
+        $querySQL .= " `price` >= ".$allData['price_from']."";
+    }
+    $andYesOrNo = true;
+}
+
+if(isset($allData['price_to']) && $allData['price_to'])
+{
+    if($andYesOrNo)
+    {
+        $querySQL .= " AND `price` <= ".$allData['price_to']."";
+    } else {
+        $querySQL .= " `price` <= ".$allData['price_to']."";
     }
     $andYesOrNo = true;
 }
