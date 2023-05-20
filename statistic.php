@@ -328,10 +328,9 @@
         document.querySelector("#location").removeAttribute("disabled");
         el.style.display = "inline-block";
       }
-
-      startFilter();
-
     });
+    
+    startFilter();
   }
 
 </script>
