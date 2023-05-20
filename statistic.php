@@ -14,7 +14,7 @@
     </div>
     <div id="filterContainer">
       <div id="filterContent">
-        <div>
+        <div style="margin-top: 5px;">
           <select id="portal" onchange="startFilter();">
             <option value="none" disabled selected>Наименование рынка</option>
             <?php

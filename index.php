@@ -14,7 +14,7 @@
 
     <div id="filterContainer">
       <div id="filterContent">
-        <div>
+        <div style="margin-top: 5px;">
 
           <select id="portal" onchange="startFilter();">
             <option value="none" disabled selected>Наименование рынка</option>
@@ -163,7 +163,7 @@
                 echo '<span class="mini">Стоимость:</span> ';
               echo $v['price'].' тг.</p>';
               echo '<p>';
-                echo '<span class="mini">Себистоимость:</span> ';
+                echo '<span class="mini">Себистоимость:</span><br> ';
               echo $v['dev_price'].' тг.</p>';
             echo '</div>';
             echo '<div class="quantity">';
@@ -172,7 +172,7 @@
             echo '</div>';
             echo '<div class="date">';
               echo '<h4>';
-                echo '<span class="mini">Дата:</span>';
+                echo '<span class="mini">Дата:</span><br>';
                 echo '12.05.2022</h4>';
             echo '</div>';
             echo '<div class="profit">';
@@ -209,7 +209,8 @@
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
     const quantity = document.querySelector("#quantity").value;
-  
+    const date_from = document.querySelector("#date_from").value;
+    const date_to = document.querySelector("#date_to").value;
   
     let filterParametrs = {};
     filterParametrs.portal = resultPortal;
@@ -222,10 +223,10 @@
     filterParametrs.dev_price = devPrice;
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
+    filterParametrs.date_from = date_from;
+    filterParametrs.date_to = date_to;
   
-    setTimeout(() => {
-      fsetRequest("./filter.php", filterParametrs, showTenders);
-    }, 100);
+    fsetRequest("./filter.php", filterParametrs, showTenders);
   }
 
   function showTenders(data)
@@ -302,7 +303,7 @@
 </div>
 <div class="date">
   <h4>
-    <span class="mini">Дата:</span>
+    <span class="mini">Дата:</span><br>
     ${el.date}</h4>
 </div>
 <div class="profit">

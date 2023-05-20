@@ -23,7 +23,23 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+.vendor {
+  max-width: 100px;
+}
+.category_regions {
+  max-width: 220px;
+}
+.price {
+  max-width: 100px;
+}
+.date {
+  max-width: 100px;
+}
+.profit {
+  max-width: 100px;
+}
 .quantity {
+  max-width: 50px;
   text-align: center;
 }
 .result > .icon {
@@ -45,7 +61,7 @@ span.mini {
   border-right: 17px solid red;
 }
 .black {
-  border-right: 17px solid black;
+  border-right: 17px solid black;   
 }
 .buttons {
   margin-bottom: 5px;
