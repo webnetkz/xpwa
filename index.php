@@ -90,6 +90,11 @@
           <input type="text" onchange="startFilter();" id="minimal_price" placeholder="Себистоимость">
           <input type="text" onchange="startFilter();" id="vendor" placeholder="Поставщик/БИН">
           <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
+        
+        </div>
+        <div style="margin: 5px;">
+          <input type="date" onchange="startFilter();" id="date_from">
+          <input type="date" onchange="startFilter();" id="date_to">
         </div>
 
       </div>

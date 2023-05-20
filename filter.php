@@ -150,6 +150,28 @@ if(isset($allData['vendor']) && $allData['vendor'])
     $andYesOrNo = true;
 }
 
+if(isset($allData['date_from']) && $allData['date_from'])
+{
+    if($andYesOrNo)
+    {
+        $querySQL .= " AND `date` >= '".$allData['date_from']."'";
+    } else {
+        $querySQL .= " `date` >= '".$allData['date_from']."'";
+    }
+    $andYesOrNo = true;
+}
+
+if(isset($allData['date_to']) && $allData['date_to'])
+{
+    if($andYesOrNo)
+    {
+        $querySQL .= " AND `date` <= '".$allData['date_to']."'";
+    } else {
+        $querySQL .= " `date` <= '".$allData['date_to']."'";
+    }
+    $andYesOrNo = true;
+}
+
 if($querySQL === 'SELECT * FROM `tenders` WHERE')
 {
     $querySQL = 'SELECT * FROM `tenders` LIMIT 50';

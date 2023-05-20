@@ -90,6 +90,11 @@
           <input type="text" onchange="startFilter();" id="quantity" placeholder="Количетсво">
         </div>
 
+        <div style="margin: 5px;">
+          <input type="date" onchange="startFilter();" id="date_from">
+          <input type="date" onchange="startFilter();" id="date_to">
+        </div>
+
       </div>
     </div>
 
@@ -180,7 +185,8 @@
     const devPrice = document.querySelector("#minimal_price").value;
     const vendor = document.querySelector("#vendor").value;
     const quantity = document.querySelector("#quantity").value;
-  
+    const date_from = document.querySelector("#date_from").value;
+    const date_to = document.querySelector("#date_to").value;
   
     let filterParametrs = {};
     filterParametrs.portal = resultPortal;
@@ -194,6 +200,8 @@
     filterParametrs.dev_price = devPrice;
     filterParametrs.vendor = vendor;
     filterParametrs.quantity = quantity;
+    filterParametrs.date_from = date_from;
+    filterParametrs.date_to = date_to;
   
     fsetRequest("./filter.php", filterParametrs, showStatistics);
   }
