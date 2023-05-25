@@ -7,7 +7,7 @@
     
     <div class="buttons">
       <img src="./assets/images/icons/interface/home.png" class="hoverBtn" onclick="location.href='index.php'">
-      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="location.reload();">
+      <img src="./assets/images/icons/interface/reset.png" class="hoverBtn" onclick="localStorage.clear();location.reload();">
       <img src="./assets/images/icons/interface/add.png" style="width: 30px;" class="hoverBtn" onclick="location.href='add.php'">
       <img src="./assets/images/icons/interface/data.png" class="hoverBtn" onclick="location.href='statistic.php'">
     </div>
@@ -25,6 +25,9 @@
               $locations = $con->db->query("SELECT * FROM `locations`");
               $locations = $locations->fetchAll(PDO::FETCH_ASSOC);
 			        echo '<script> localStorage.setItem("locations", \''.json_encode($locations).'\');</script>';
+			  $companies = $con->db->query("SELECT * FROM `companies`");
+              $companies = $companies->fetchAll(PDO::FETCH_ASSOC);
+			        echo '<script> localStorage.setItem("companies", \''.json_encode($companies).'\');</script>';
               
               foreach($portals as $k => $v)
               {
@@ -144,11 +147,18 @@
               echo '<div class="vendor">';
               echo '<p>';
                 echo '<span class="mini">Поставщик:</span> ';
-                echo $v['vendor'];
+				foreach($companies as $k => $val)
+				{
+					if($val['id'] == $v['vendor'])
+					{
+						echo $val['company'];
+					}
+				}
+                
               echo '</p>';
               echo '<p>';
                 echo '<span class="mini">Категория:</span> ';
-                echo $categories[$v['category_name']]['category_name'].'</p>';
+                echo $categories[$v['category_name'] - 1]['category_name'].'</p>';
             echo '</div>';
             echo '<div class="category_regions">';
               echo '<p>';
@@ -270,12 +280,20 @@
         break;
       }
 
+		  const companies = JSON.parse(localStorage.getItem('companies'));
+		  let company = '';
+		  companies.forEach((elem) => {
+			if(elem.id == el.vendor)
+			{
+				company = elem.company;
+			}
+		  });
 		  let templateBlock = `<div class="result ${colorClass}">
   <img src="./assets/images/icons/${el.portal_name}.png" class="icon">
   <div class="vendor">
   <p>
-    <span class="mini">Поставщик:</span> 
-    ${el.vendor}
+    <span class="mini">Поставщик:</span>
+    ${company}
   </p>
   <p>
     <span class="mini">Категория:</span> 

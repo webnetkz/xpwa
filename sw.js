@@ -12,6 +12,10 @@ self.addEventListener('install', function(e)
  );
 });
 
+/*================================================*/
+// Кэширование запросов с родительской страници
+/*================================================*/
+
 // self.addEventListener('fetch', function(event)
 // {
   //console.log(event.request.url);

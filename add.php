@@ -144,13 +144,18 @@ function setLocations()
     const quantity = document.querySelector("#quantity").value;
     const tenderDate = document.querySelector("#tenderDate").value;
 
-    let errorsData = false;
-    
+	      let errorsData = false;
+	  
+	  if(resultRegion != 17 || resultRegion != 18 || resultRegion != 19)
+	  {
+		  //if(resultLocation === 'none') {showMsg('Выберите локацию!'); errorsData = true;}
+	  }
+	  
+	  
+    if(resultRegion === 'none') {showMsg('Выберите регион!'); errorsData = true;}
     if(resultPortal === 'none') {showMsg('Выберите портал!'); errorsData = true;}
     if(resultCategory === 'none') {showMsg('Выберите категорию!'); errorsData = true;}
     if(resultProblem === 'none') {showMsg('Выберите уровень проблем!'); errorsData = true;}
-    if(resultRegion === 'none') {showMsg('Выберите регион!'); errorsData = true;}
-    if(resultLocation === 'none') {showMsg('Выберите локацию!'); errorsData = true;}
     if(price === '') {showMsg('Заполните стоимость!'); errorsData = true;}
     if(devPrice === '') {showMsg('Заполните себестоимость!'); errorsData = true;}
     if(vendor === '') {showMsg('Заполните название поставщика!'); errorsData = true;}
