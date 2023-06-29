@@ -8,7 +8,7 @@ export class TabsXPWA extends HTMLElement
 
   addAction()
   {
-    this.tabs = this.querySelectorAll('tab-sigma');
+    this.tabs = this.querySelectorAll('tab-xpwa');
     
     this.tabs.forEach((element) => {
       element.classList.add('button');

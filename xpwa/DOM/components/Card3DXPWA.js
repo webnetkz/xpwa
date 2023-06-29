@@ -45,6 +45,9 @@ export class Card3DXPWA extends HTMLElement {
 
   setStyles()
   {
+    const contentBlock = this.querySelector(':first-child');
+    console.log(contentBlock);
+
     this.style.cssText = `
       perspective: 1000px;
       transform-style: preserve-3d;
@@ -57,4 +60,4 @@ export class Card3DXPWA extends HTMLElement {
   }
 }
 
-customElements.define("card-3d-XPWA", Card3DXPWA);
+customElements.define("card-3d-xpwa", Card3DXPWA);
