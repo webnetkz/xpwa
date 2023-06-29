@@ -33,8 +33,8 @@ export class Card3DXPWA extends HTMLElement {
     const halfWidth = container.offsetWidth / 2;
 
     container.style.transform = 'rotateX(' + -
-    ((event.offsetY - halfHeight) / 2 ) + 'deg) rotateY(' + 
-    ((event.offsetX - halfWidth) / 2 ) + 'deg)';    
+    ((event.offsetY - halfHeight) / 5 ) + 'deg) rotateY(' + 
+    ((event.offsetX - halfWidth) / 5 ) + 'deg)';    
   }
 
   stopRotate(event)
@@ -45,17 +45,10 @@ export class Card3DXPWA extends HTMLElement {
 
   setStyles()
   {
-    const contentBlock = this.querySelector(':first-child');
-    console.log(contentBlock);
-
     this.style.cssText = `
       perspective: 1000px;
       transform-style: preserve-3d;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      height: 200px;
+      display: grid;
     `;
   }
 }
