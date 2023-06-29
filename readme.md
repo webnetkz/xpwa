@@ -1,4 +1,4 @@
-<h1>xPWA <u>V.0.2.3</u> <img src="./logo.png" style="float: right"></h1>
+<h1>xPWA <u>V.0.2.3</u> <img src="./logo.png" style="float: right; width: 120px"></h1>
 
 <hr>
 x Progressive WEB Application - комплекс решений для разработки WEB приложений.<br>
