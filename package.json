@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/webnetkz/xpwa/issues"
   },
-  "homepage": "https://github.com/webnetkz/xpwa#readme"
+  "homepage": "https://github.com/webnetkz/xpwa#readme",
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.1"
+  }
 }
