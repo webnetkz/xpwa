@@ -1,14 +1,14 @@
-import { ShowerHidden } from './xXPWA/ShowerHidden.js';
-import { MessageXPWA } from './xXPWA/components/MessageXPWA.js';
+import { ShowerHidden } from './xpwa/ShowerHidden.js';
+import { MessageXPWA } from './xpwa/components/MessageXPWA.js';
 
 // Компоненты которые не требуют инициализации
-import { CloserXPWA } from './xXPWA/components/CloserXPWA.js';
-import { ProgressBarXPWA } from './xXPWA/components/ProgressBarXPWA.js';
-import { ProgressRoundXPWA } from './xXPWA/components/ProgressRoundXPWA.js';
-import { TabsXPWA } from './xXPWA/components/TabsXPWA.js';
-import { InputXPWA } from './xXPWA/components/InputXPWA.js';
-import { SliderXPWA } from './xXPWA/components/SliderXPWA.js';
-import { Card3DXPWA } from './xXPWA/components/Card3DXPWA.js';
+import { CloserXPWA } from './xpwa/components/CloserXPWA.js';
+import { ProgressBarXPWA } from './xpwa/components/ProgressBarXPWA.js';
+//import { ProgressRoundXPWA } from './xpwa/components/ProgressRoundXPWA.js';
+import { TabsXPWA } from './xpwa/components/TabsXPWA.js';
+//import { InputXPWA } from './xpwa/components/InputXPWA.js';
+//import { SliderXPWA } from './xpwa/components/SliderXPWA.js';
+import { Card3DXPWA } from './xpwa/components/Card3DXPWA.js';
 
 
 export class DOM
