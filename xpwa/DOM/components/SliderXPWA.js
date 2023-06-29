@@ -1,4 +1,4 @@
-export class SliderPWA extends HTMLElement
+export class SliderXPWA extends HTMLElement
 {
   nowSlide = 0;
 
@@ -86,4 +86,4 @@ export class SliderPWA extends HTMLElement
 
 }
 
-customElements.define("slider-pwa", SliderPWA);
+customElements.define("slider-xpwa", SliderXPWA);

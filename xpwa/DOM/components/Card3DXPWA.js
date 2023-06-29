@@ -1,6 +1,6 @@
 import { Mobile } from '../Mobile.js';
 
-export class Card3DPWA extends HTMLElement {
+export class Card3DXPWA extends HTMLElement {
 
   constructor() {
     super();
@@ -57,4 +57,4 @@ export class Card3DPWA extends HTMLElement {
   }
 }
 
-customElements.define("card-3d-pwa", Card3DPWA);
+customElements.define("card-3d-XPWA", Card3DXPWA);

@@ -1,4 +1,4 @@
-export class CloserPWA extends HTMLElement {
+export class CloserXPWA extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = '+';
@@ -13,4 +13,4 @@ export class CloserPWA extends HTMLElement {
   }
 }
 
-customElements.define("closer-pwa", CloserPWA);
+customElements.define("closer-xpwa", CloserXPWA);

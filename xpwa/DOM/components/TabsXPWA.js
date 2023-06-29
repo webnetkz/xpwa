@@ -1,4 +1,4 @@
-export class TabsPWA extends HTMLElement
+export class TabsXPWA extends HTMLElement
 {
   constructor() {
     super();
@@ -40,4 +40,4 @@ export class TabsPWA extends HTMLElement
   }
 }
 
-customElements.define("tabs-pwa", TabsPWA);
+customElements.define("tabs-xpwa", TabsXPWA);

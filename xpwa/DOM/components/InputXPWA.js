@@ -1,4 +1,4 @@
-export class InputPWA extends HTMLElement
+export class InputXPWA extends HTMLElement
 {
     constructor()
     {
@@ -21,4 +21,4 @@ export class InputPWA extends HTMLElement
     }
 }
 
-customElements.define("input-pwa", InputPWA);
+customElements.define("input-xpwa", InputXPWA);

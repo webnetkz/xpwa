@@ -1,4 +1,4 @@
-export class RequestPWA
+export class RequestXPWA
 {
     static async request(options = {
         url: './', 

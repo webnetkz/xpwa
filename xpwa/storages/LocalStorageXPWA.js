@@ -1,4 +1,4 @@
-export class LocalStoragePWA
+export class LocalStorageXPWA
 {
     constructor()
     {

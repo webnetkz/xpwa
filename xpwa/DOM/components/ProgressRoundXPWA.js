@@ -1,10 +1,10 @@
-export class ProgressRoundPWA extends HTMLElement
+export class ProgressRoundXPWA extends HTMLElement
 {
     constructor()
     {
         super();
         this.innerHTML += `<span></span>`;
-        this.classList.add('progressround-pwa');
+        this.classList.add('progressround-XPWA');
     }
     
     static get observedAttributes()
@@ -23,4 +23,4 @@ export class ProgressRoundPWA extends HTMLElement
     }
 }
 
-customElements.define("progressround-pwa", ProgressRoundPWA);
+customElements.define("progressround-xpwa", ProgressRoundXPWA);

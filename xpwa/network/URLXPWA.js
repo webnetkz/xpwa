@@ -1,4 +1,4 @@
-export class URLPWA
+export class URLXPWA
 {
     constructor()
     {

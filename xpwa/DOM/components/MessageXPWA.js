@@ -1,10 +1,10 @@
-export class MessagePWA extends HTMLElement
+export class MessageXPWA extends HTMLElement
 {
   constructor() {
     super();
-    this.innerHTML = this.innerText+'<closer-pwa></closer-pwa>';
+    this.innerHTML = this.innerText+'<closer-XPWA></closer-XPWA>';
     this.classList.add('block');
-    this.classList.add('message-pwa');
+    this.classList.add('message-XPWA');
   }
 
   connectedCallback()
@@ -42,4 +42,4 @@ export class MessagePWA extends HTMLElement
   }
 }
 
-customElements.define("message-pwa", MessagePWA);
+customElements.define("message-xpwa", MessageXPWA);

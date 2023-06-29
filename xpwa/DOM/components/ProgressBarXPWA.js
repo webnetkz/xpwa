@@ -1,9 +1,9 @@
-export class ProgressBarPWA extends HTMLElement
+export class ProgressBarXPWA extends HTMLElement
 {
     constructor()
     {
         super();
-        this.classList.add('rogressbar-pwa');
+        this.classList.add('rogressbar-XPWA');
     }
     
     static get observedAttributes()
@@ -34,4 +34,4 @@ export class ProgressBarPWA extends HTMLElement
     }
 }
 
-customElements.define("progressbar-pwa", ProgressBarPWA);
+customElements.define("progressbar-xpwa", ProgressBarXPWA);

@@ -1,14 +1,14 @@
 import { ShowerHidden } from './ShowerHidden.js';
-import { MessagePWA } from './components/MessagePWA.js';
+import { MessageXPWA } from './components/MessageXPWA.js';
 
 // Компоненты которые не требуют инициализации
-import { CloserPWA } from './components/CloserPWA.js';
-import { ProgressBarPWA } from './components/ProgressBarPWA.js';
-import { ProgressRoundPWA } from './components/ProgressRoundPWA.js';
-import { TabsPWA } from './components/TabsPWA.js';
-import { InputPWA } from './components/InputPWA.js';
-import { SliderPWA } from './components/SliderPWA.js';
-import { Card3DPWA } from './components/Card3DPWA.js';
+import { CloserXPWA } from './components/CloserXPWA.js';
+import { ProgressBarXPWA } from './components/ProgressBarXPWA.js';
+import { ProgressRoundXPWA } from './components/ProgressRoundXPWA.js';
+import { TabsXPWA } from './components/TabsXPWA.js';
+import { InputXPWA } from './components/InputXPWA.js';
+import { SliderXPWA } from './components/SliderXPWA.js';
+import { Card3DXPWA } from './components/Card3DXPWA.js';
 
 
 export class DOM
@@ -35,6 +35,6 @@ export class DOM
 
     setComponents()
     {
-        new MessagePWA();
+        new MessageXPWA();
     }
 }
