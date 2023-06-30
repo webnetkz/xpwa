@@ -4,7 +4,6 @@ export class ProgressRoundXPWA extends HTMLElement
     {
         super();
         this.innerHTML += `<span></span>`;
-        this.classList.add('progressround-XPWA');
     }
     
     static get observedAttributes()
@@ -23,4 +22,4 @@ export class ProgressRoundXPWA extends HTMLElement
     }
 }
 
-customElements.define("progressround-xpwa", ProgressRoundXPWA);
+customElements.define("progress-round-xpwa", ProgressRoundXPWA);

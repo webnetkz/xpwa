@@ -19,3 +19,23 @@
       opacity: 0;
   }
 }
+@keyframes progressround {
+  50% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes progressroundSputnik {
+  0% {
+      left: -15px;
+      background-color: red;
+  }
+  1% {
+      background-color: none;
+  }
+  50% {
+      left: 102px;
+  }
+  100% {
+      left: -15px;
+  }
+}

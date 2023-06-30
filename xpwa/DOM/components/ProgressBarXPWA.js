@@ -28,4 +28,4 @@ export class ProgressBarXPWA extends HTMLElement
     }
 }
 
-customElements.define("progressbar-xpwa", ProgressBarXPWA);
+customElements.define("progress-  bar-xpwa", ProgressBarXPWA);

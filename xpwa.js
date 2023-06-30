@@ -15,7 +15,7 @@ export class XPWA
     {
         const linkElement = document.createElement("link");
         linkElement.rel = "stylesheet";
-        linkElement.href = "./styles/xpwa.css";
+        linkElement.href = "./xpwa/styles/xpwa.css";
         document.head.appendChild(linkElement);
     }
 

@@ -1,7 +1,7 @@
 @import url(variables.css);
 @import url(animations.css);
 
-.progressround-pwa {
+progress-round-xpwa {
   position: relative;
   z-index: 999;
   position: fixed;
@@ -14,7 +14,7 @@
   animation: progressround 2s infinite;
   box-shadow: 0 0 20px rgba(101, 141, 255, 0.1);
 }
-.progressround-pwa > span {
+progress-round-xpwa > span {
   box-sizing: border-box;
   display: block;
   min-width: 10px;
@@ -23,31 +23,11 @@
   height: 10px;
   position: absolute;
   z-index: 99;
-  border: 1px solid red;
+  border: 1px solid var(--mainColor);
   border-radius: 10px;
   left: -15px;
   top: 44px;
   animation: progressroundSputnik 3s infinite;
-}
-@keyframes progressround {
-  50% {
-      transform: rotate(360deg);
-  }
-}
-@keyframes progressroundSputnik {
-  0% {
-      left: -15px;
-      background-color: red;
-  }
-  1% {
-      background-color: none;
-  }
-  50% {
-      left: 102px;
-  }
-  100% {
-      left: -15px;
-  }
 }
 message-xpwa {
   position: fixed;
