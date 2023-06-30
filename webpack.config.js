@@ -1,4 +1,4 @@
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+const MinifyPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: './xpwa.js',

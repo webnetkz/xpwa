@@ -1,11 +1,11 @@
 export class SliderXPWA extends HTMLElement
 {
-  nowSlide = 0;
-
+  
   constructor() {
     super();
     this.classList.add('block');
     this.timer = 5;
+    this.nowSlide = 0;
     
     this.innerHTML += `
     <div class="backSlide"></div>
@@ -82,8 +82,6 @@ export class SliderXPWA extends HTMLElement
   attributeChangedCallback(name, oldValue, newValue)
   {
   }
-
-
 }
 
 customElements.define("slider-xpwa", SliderXPWA);

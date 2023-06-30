@@ -1,7 +1,7 @@
-import { URLXPWA } from './network/URLXPWA.js';
-import { RequestXPWA } from './network/RequestXPWA.js';
-import { LocalStorageXPWA } from './storages/LocalStorageXPWA.js';
-import { DOM } from './DOM/DOM.js';
+import { URLXPWA } from './xpwa/network/URLXPWA.js';
+import { RequestXPWA } from './xpwa/network/RequestXPWA.js';
+import { LocalStorageXPWA } from './xpwa/storages/LocalStorageXPWA.js';
+import { DOM } from './xpwa/DOM/DOM.js';
 
 export class XPWA
 {
