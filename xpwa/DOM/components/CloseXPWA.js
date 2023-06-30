@@ -12,4 +12,4 @@ export class CloseXPWA extends HTMLElement {
   }
 }
 
-customElements.define("closer-xpwa", CloserXPWA);
+customElements.define("close-xpwa", CloseXPWA);
