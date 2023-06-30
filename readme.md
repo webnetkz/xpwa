@@ -1,30 +1,26 @@
-<h1>xPWA <u>V.0.2.4</u> <img src="./logo.png" style="float: right; width: 120px"></h1>
+<h1>xPWA <u>V.0.2.5</u> <img src="./logo.png" style="float: right; width: 120px"></h1>
 
 <hr>
-x Progressive WEB Application - комплекс решений для разработки WEB приложений.<br>
-
-Из коробки есть возможность воспользоваться MVC архитектурой или SPA.
-<hr>
-Основной файл конфигураций находиться в корне проекта "config.php" и содержит важные константы настроек проекта.
-<br>
+x Progressive WEB Application<br>
 <hr>
 <br>
-<h2>Front-End</h2>
-<p>Conmands of JS</p>
+<h2>HTML components</h2>
 <ul>
-<li><b>P - Core object</b></li>
-<li><b>log(output)</b> - Global function for output in console information</li>
-<li><b>query(selector, [parent=document])</b> - Select HTML element</li>
-<li><b>qeuryAll(selector, [parent=document])</b> - Select HTML elements</li>
-<li><b>hiiden</b> - HTML element will to hidden</li>
-
+<li><b>card-3d-xpwa</b></li>
+<li><b>close-xpwa</b></li>
+<li><b>input-xpwa</b></li>
+<li><b>message-xpwa</b></li>
+<li><b>progress-bar-xpwa</b></li>
+<li><b>progress-round-xpwa</b></li>
+<li><b>slider-xpwa</b></li>
+<li><b>tabs-xpwa</b></li>
 </ul>
 
 <hr>
-<h2>Авторы</h2>
+<h2>Author:</h2>
 WebNet (@webnetkz)
-<h2>Лицензия</h2>
-Этот проект находится под лицензией GPL-3. Подробности смотрите в файле <a href="LICENSE">LICENSE</a>.
+<h2>GPL-3 <a href="LICENSE">LICENSE</a>.</h2>
+
 
 
 
