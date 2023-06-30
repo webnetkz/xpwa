@@ -16,7 +16,7 @@ export class ProgressRoundXPWA extends HTMLElement
         switch(name)
         {
             case 'color':
-                this.style.background = newValue;
+                this.style.border = newValue;
             break;
         }
     }

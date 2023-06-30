@@ -31,11 +31,18 @@ progress-round-xpwa > span {
 }
 message-xpwa {
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   width: 300px;
+  min-height: 70px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-progressbar-xpwa {
+progress-bar-xpwa {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -43,14 +50,8 @@ progressbar-xpwa {
   height: 5px;
   background: var(--mainColor);
 }
-.showElement {
-  animation: showElementAnimation 0.3s linear;
-}
-.hiddenElement {
-  animation: hiddenElementAnimation 0.3s linear;
-}
 close-xpwa {
-  position: fixed;
+  position: absolute;
   top: 9px;
   right: 9px;
   width: 20px;

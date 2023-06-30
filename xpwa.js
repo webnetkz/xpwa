@@ -29,10 +29,10 @@ export class XPWA
 
 window.onload = (() => {
     window.P = new XPWA();
+    window.DOM = new DOM();
+    
     window.log = console.log;
-
-    DOM = new DOM();
-    request = SigmaRequest.request;
+    window.req = RequestXPWA.request;
 })();
 
 
