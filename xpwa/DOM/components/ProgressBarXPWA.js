@@ -3,7 +3,6 @@ export class ProgressBarXPWA extends HTMLElement
     constructor()
     {
         super();
-        this.classList.add('rogressbar-XPWA');
     }
     
     static get observedAttributes()
@@ -26,11 +25,6 @@ export class ProgressBarXPWA extends HTMLElement
                 this.style.width = newValue+'vw';
             break;
         }
-    }
-
-    adoptedCallback()
-    {
-
     }
 }
 

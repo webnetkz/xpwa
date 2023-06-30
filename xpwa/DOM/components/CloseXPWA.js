@@ -1,15 +1,14 @@
-export class CloserXPWA extends HTMLElement {
+export class CloseXPWA extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = '+';
-    this.classList.add('closer');
 
     this.addEventListener('click', this.closeWindow);
   }
 
   closeWindow()
   {
-    S.DOM.hide(this.parentNode);
+    DOM.hide(this.parentNode);
   }
 }
 

@@ -2,9 +2,9 @@ export class MessageXPWA extends HTMLElement
 {
   constructor() {
     super();
-    this.innerHTML = this.innerText+'<closer-XPWA></closer-XPWA>';
+    this.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
     this.classList.add('block');
-    this.classList.add('message-XPWA');
+    this.classList.add('message-xpwa');
   }
 
   connectedCallback()

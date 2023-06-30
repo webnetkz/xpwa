@@ -2,7 +2,7 @@ import { ShowerHidden } from './ShowerHidden.js';
 import { MessageXPWA } from './components/MessageXPWA.js';
 
 // Компоненты которые не требуют инициализации
-import { CloserXPWA } from './components/CloserXPWA.js';
+import { CloseXPWA } from './components/CloseXPWA.js';
 import { ProgressBarXPWA } from './components/ProgressBarXPWA.js';
 import { ProgressRoundXPWA } from './components/ProgressRoundXPWA.js';
 import { TabsXPWA } from './components/TabsXPWA.js';

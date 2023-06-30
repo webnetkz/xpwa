@@ -1,0 +1,21 @@
+@keyframes showElementAnimation {
+  0% {
+      opacity: 0;
+      transform: perspective(1000px) rotateX(180deg);
+  }
+  100% {
+      opacity: 1;
+      transform: perspective(800px) rotateX(0deg);
+  }
+}
+@keyframes hiddenElementAnimation {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      transform: perspective(800px) rotateY(70deg);
+  }
+  100% {
+      opacity: 0;
+  }
+}
