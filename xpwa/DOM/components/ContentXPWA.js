@@ -17,6 +17,8 @@ export class ContentXPWA extends HTMLElement {
   {
     this.style.cssText = `
       display: block;
+      min-height: 90vh;
+      width: 100%;
       background: rgba(0,0,0,0.1);
     `;
   }

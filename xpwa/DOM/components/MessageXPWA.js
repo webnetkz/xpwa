@@ -2,6 +2,7 @@ export class MessageXPWA extends HTMLElement
 {
   constructor() {
     super();
+    this.setStyles();
     this.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
   }
 
@@ -18,6 +19,23 @@ export class MessageXPWA extends HTMLElement
   static get observedAttributes()
   {
     return ['inputs', 'url'];
+  }
+
+  setStyles()
+  {
+    this.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 300px;
+      min-height: 70px;
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 12px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    `;
   }
 
   attributeChangedCallback(name, oldValue, newValue)

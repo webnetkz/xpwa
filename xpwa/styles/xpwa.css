@@ -22,70 +22,7 @@ body {
   min-height: 100vh;
 }
 
-header-xpwa, content-xpwa, footer-xpwa, menu-xpwa {
-  min-width: 100%;
-}
-content-xpwa {
-  min-height: 90vh;
-}
 
-progress-round-xpwa {
-  position: relative;
-  z-index: 999;
-  position: fixed;
-  top: calc(50vh - 50px);
-  left: calc(50vw - 50px);
-  width: 100px;
-  height: 100px;
-  border: 2px solid var(--main-theme);
-  border-radius: 100px;
-  animation: progressround 2s infinite;
-  box-shadow: 0 0 20px rgba(101, 141, 255, 0.1);
-}
-progress-round-xpwa > span {
-  box-sizing: border-box;
-  display: block;
-  min-width: 10px;
-  min-height: 10px;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  z-index: 99;
-  border: 1px solid var(--main-theme);
-  border-radius: 10px;
-  left: -15px;
-  top: 44px;
-  animation: progressroundSputnik 3s infinite;
-}
-message-xpwa {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 300px;
-  min-height: 70px;
-  padding: 5px;
-  border: 1px solid black;
-  border-radius: 12px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-progress-bar-xpwa {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 5px;
-  background: var(--main-theme);
-}
-close-xpwa {
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 20px;
-  font-size: 1.5rem;
-  transform: rotate(45deg);
-}
 close-xpwa:hover {
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
@@ -112,9 +49,6 @@ tab-content {
   top: 70px;
   min-width: 95%;
 }
-/*************************************
-              SLIDER
-*************************************/
 slider-xpwa {
   background-position: center center!important;
   background-size: contain!important;

@@ -21,6 +21,7 @@ export class MenuXPWA extends HTMLElement {
       align-items: center;
       margin: 3px;
       background: red;
+      width: 100%;
     `;
 
     let allChilds = this.querySelectorAll('*');
