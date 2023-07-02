@@ -22,7 +22,7 @@ export class FooterXPWA extends HTMLElement {
 
   setMobileStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
     `;
   }
 }

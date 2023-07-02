@@ -22,7 +22,7 @@ export class HeaderXPWA extends HTMLElement {
 
   setMobileStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
     `;
   }
 

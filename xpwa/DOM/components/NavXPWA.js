@@ -1,6 +1,6 @@
 import { Mobile } from '../Mobile.js';
 
-export class ContentXPWA extends HTMLElement {
+export class NavXPWA extends HTMLElement {
 
   constructor() {
     super();
@@ -17,7 +17,8 @@ export class ContentXPWA extends HTMLElement {
   {
     this.style.cssText = `
       display: block;
-      background: rgba(0,0,0,0.1);
+      background: white;
+      min-width: 20vw;
     `;
   }
 
@@ -28,4 +29,4 @@ export class ContentXPWA extends HTMLElement {
   }
 }
 
-customElements.define("content-xpwa", ContentXPWA);
+customElements.define("nav-xpwa", NavXPWA);

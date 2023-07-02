@@ -1,3 +1,7 @@
 :root {
-  --mainColor: red;
+  --main-theme: red;
+  --main-theme-light: rgb(249, 81, 81);
+  --main-theme-dark: rgb(195, 1, 1);
+
+  --gray: rgb(130, 128, 128);
 }
