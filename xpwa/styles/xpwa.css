@@ -9,8 +9,16 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
+}
+
+header-xpwa, content-xpwa, footer-xpwa, menu-xpwa {
+  min-width: 100%;
+}
+content-xpwa {
+  min-height: 90vh;
 }
 
 progress-round-xpwa {

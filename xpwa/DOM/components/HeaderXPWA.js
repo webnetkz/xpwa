@@ -16,7 +16,7 @@ export class HeaderXPWA extends HTMLElement {
   setStyles()
   {
     this.style.cssText = `
-
+      background: green;
     `;
   }
 

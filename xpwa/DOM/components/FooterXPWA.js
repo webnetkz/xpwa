@@ -16,7 +16,7 @@ export class FooterXPWA extends HTMLElement {
   setStyles()
   {
     this.style.cssText = `
-
+      background: gray;
     `;
   }
 

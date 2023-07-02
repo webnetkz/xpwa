@@ -19,6 +19,8 @@ export class MenuXPWA extends HTMLElement {
       display: flex;
       justify-contentn: space-between;
       align-items: center;
+      width: 100%:
+      background: red;
     `;
   }
 

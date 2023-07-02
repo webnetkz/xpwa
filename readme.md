@@ -1,4 +1,4 @@
-<h1>xPWA <u>V.0.2.5</u> <img src="./logo.png" style="float: right; width: 120px"></h1>
+<h1>xPWA <u>V.0.3.3</u> <img src="./logo.png" style="float: right;"></h1>
 
 <hr>
 x Progressive WEB Application<br>
@@ -6,6 +6,10 @@ x Progressive WEB Application<br>
 <br>
 <h2>HTML components</h2>
 <ul>
+<li><b>header-xpwa</b></li>
+<li><b>content-xpwa</b></li>
+<li><b>footer-xpwa</b></li>
+<li><b>menu-xpwa</b></li>
 <li><b>card-3d-xpwa</b></li>
 <li><b>close-xpwa</b></li>
 <li><b>input-xpwa</b></li>
