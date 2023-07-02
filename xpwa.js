@@ -27,6 +27,7 @@ export class XPWA
     }
 }
 
+
 window.onload = (() => {
     window.P = new XPWA();
     window.DOM = new DOM();
@@ -36,8 +37,6 @@ window.onload = (() => {
 })();
 
 
-
-// Лого в консоли
 const style = ['padding: 0.3rem 1rem;',
   'background: black;',
   'font-family: sans-serif;',
