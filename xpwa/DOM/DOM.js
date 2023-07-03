@@ -5,6 +5,7 @@ import { HeaderXPWA } from './components/HeaderXPWA.js';
 import { ContentXPWA } from './components/ContentXPWA.js';
 import { FooterXPWA } from './components/FooterXPWA.js';
 import { MenuXPWA } from './components/MenuXPWA.js';
+import { SidebarXPWA } from './components/SidebarXPWA.js';
 
 
 import { CloseXPWA } from './components/CloseXPWA.js';

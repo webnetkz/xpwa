@@ -1,4 +1,4 @@
-<h1>xPWA <u>V.0.3.3</u> <img src="./logo.png" style="float: right;"></h1>
+<h1>xPWA <u>V.0.3.5</u> <img src="./logo.png" style="float: right;"></h1>
 
 <hr>
 x Progressive WEB Application<br>
@@ -17,6 +17,7 @@ x Progressive WEB Application<br>
 <li><b>progress-bar-xpwa</b></li>
 <li><b>progress-round-xpwa</b></li>
 <li><b>slider-xpwa</b></li>
+<li><b>sidebar-xpwa</b></li>
 <li><b>tabs-xpwa</b></li>
 </ul>
 
