@@ -4,6 +4,10 @@
 .hiddenElement {
     animation: hiddenElementAnimation 0.3s linear;
 }
+.hiddenToRightElement {
+  animation: hiddenToRightElementAnimation 0.5s linear;
+  transition-property: right;
+}
 @keyframes showElementAnimation {
   0% {
     opacity: 0;
@@ -20,6 +24,18 @@
   }
   50% {
     transform: perspective(800px) rotateY(70deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hiddenToRightElementAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    right: -100vw;
   }
   100% {
     opacity: 0;

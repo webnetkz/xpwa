@@ -23,7 +23,7 @@ export class MessageXPWA extends HTMLElement
 
   setStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
       position: fixed;
       top: 20px;
       right: 20px;

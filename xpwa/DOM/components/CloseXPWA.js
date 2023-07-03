@@ -1,6 +1,8 @@
 export class CloseXPWA extends HTMLElement {
   constructor() {
     super();
+
+    this.animation = 'hide';
     this.innerHTML = '+';
     this.setStyles();
     this.addEventListener('click', this.closeWindow);
@@ -20,7 +22,31 @@ export class CloseXPWA extends HTMLElement {
 
   closeWindow()
   {
+    console.log(this.animation)
+    if(this.animation == 'hideR')
+    {
+      DOM.hideR(this.parentNode);
+      return;
+    }
+
     DOM.hide(this.parentNode);
+  }
+
+  static get observedAttributes()
+  {
+    return ['animation'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue)
+  {
+    console.log(name);
+    switch(name)
+    {
+        case 'animation':
+          console.log(name);
+          this.animation = 'hideR';
+        break;
+    }
   }
 }
 

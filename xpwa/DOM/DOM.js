@@ -26,6 +26,7 @@ export class DOM
 
         this.sh = new ShowerHidden();
         this.hide = this.sh.hidden;
+        this.hideR = this.sh.hiddenToRight;
         this.setComponents();
     }
 
