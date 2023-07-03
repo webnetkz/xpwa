@@ -24,9 +24,9 @@ export class DOM
         window.query = this.query;
         window.queryAll = this.queryAll;
 
-        this.sh = new ShowerHidden();
-        this.hide = this.sh.hidden;
-        this.hideR = this.sh.hiddenToRight;
+        this.showerHidden = new ShowerHidden();
+        this.hide = this.showerHidden.hidden;
+        this.hideR = this.showerHidden.hiddenToRight;
         this.setComponents();
     }
 
