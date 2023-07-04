@@ -8,7 +8,7 @@ import { MenuXPWA } from './components/MenuXPWA.js';
 import { SidebarXPWA } from './components/SidebarXPWA.js';
 import { BlockXPWA } from './components/BlockXPWA.js';
 
-
+import { CheckboxXPWA } from './components/CheckboxXPWA.js';
 import { RadioXPWA } from './components/RadioXPWA.js';
 import { ButtonXPWA } from './components/ButtonXPWA.js';
 
