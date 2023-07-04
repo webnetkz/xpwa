@@ -27,8 +27,8 @@ x Progressive WEB Application<br>
 <hr>
 <h2>More</h2>
 <ul>
-<li><b>DOM.query(element, [parent]=this)</b></li>
-<li><b>DOM.queryAll(elements, [parent]=this)</b></li>
+<li><b>DOM.query(element, [parent=this])</b></li>
+<li><b>DOM.queryAll(elements, [parent=this])</b></li>
 <li><b>DOM.hide - hidden element</b></li>
 <li><b>log(output)</b></li>
 <li>
