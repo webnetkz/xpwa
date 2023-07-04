@@ -1,4 +1,4 @@
-<h1>xPWA <u>V.0.3.5</u> <img src="./logo.png" style="float: right;"></h1>
+<h1>xPWA <u>V.0.3.6</u> <img src="./logo.png" style="float: right;"></h1>
 
 <hr>
 x Progressive WEB Application<br>
@@ -19,8 +19,27 @@ x Progressive WEB Application<br>
 <li><b>slider-xpwa</b></li>
 <li><b>sidebar-xpwa</b></li>
 <li><b>tabs-xpwa</b></li>
+<li><b>button-xpwa</b></li>
+<li><b>radio-xpwa</b></li>
 </ul>
 
+<hr>
+<h2>More</h2>
+<ul>
+<li><b>DOM.query(element, [parent]=this)</b></li>
+<li><b>DOM.queryAll(elements, [parent]=this)</b></li>
+<li><b>DOM.hide - hidden element</b></li>
+<li><b>log(output)</b></li>
+<li><code>req(options = {
+        url: './', 
+        method: 'GET', 
+        headers: { "Access-Control-Allow-Origin": "*", },
+        mode: 'cors',
+        data: {},
+        json: false,
+    })</code></li>
+
+</ul>
 <hr>
 <h2>Author:</h2>
 WebNet (@webnetkz)
