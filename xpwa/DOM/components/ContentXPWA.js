@@ -19,7 +19,7 @@ export class ContentXPWA extends HTMLElement {
       display: block;
       min-height: 90vh;
       min-width: 98vw;
-      background: var(--gray);
+      background: var(--gray-gradient);
       margin: var(--margin);
       padding: var(--padding);
       border-radius: var(--radius);
