@@ -1,9 +1,12 @@
 export class MessageXPWA extends HTMLElement
 {
-  constructor() {
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
+    shadow.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
+
     this.setStyles();
-    this.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
   }
 
   connectedCallback()

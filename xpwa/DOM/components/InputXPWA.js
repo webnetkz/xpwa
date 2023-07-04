@@ -3,7 +3,9 @@ export class InputXPWA extends HTMLElement
     constructor()
     {
         super();
-        this.innerHTML = '<input type="text">';
+        const shadow = this.attachShadow({mode: 'closed'});
+        shadow.innerHTML = '<input type="text">';
+
         this.inp = this.querySelector('input');
         this.inp.addEventListener('input', this.listener(e));
         this.inp.addEventListener('keydown', this.keyDown(e));

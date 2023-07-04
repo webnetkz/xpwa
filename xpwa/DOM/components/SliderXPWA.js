@@ -1,15 +1,18 @@
 export class SliderXPWA extends HTMLElement
 {
-  
-  constructor() {
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
+    shadow.innerHTML += `
+    <div class="backSlide"></div>
+    <div class="nextSlide"></div>`;
+
+
     this.classList.add('block');
     this.timer = 5;
     this.nowSlide = 0;
     
-    this.innerHTML += `
-    <div class="backSlide"></div>
-    <div class="nextSlide"></div>`;
     this.images = this.querySelectorAll('img');
     this.setAttribute('counter', this.images.length);
     this.setAttribute('now-slide', "1");

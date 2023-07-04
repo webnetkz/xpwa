@@ -1,10 +1,12 @@
 import { Mobile } from '../Mobile.js';
 
-export class HeaderXPWA extends HTMLElement {
-
-  constructor() {
+export class HeaderXPWA extends HTMLElement
+{
+  constructor()
+  {
     super();
-    
+    const shadow = this.attachShadow({mode: 'closed'});
+
     this.setStyles();
 
     if(Mobile.isMobile())

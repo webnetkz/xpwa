@@ -1,9 +1,11 @@
 import { Mobile } from '../Mobile.js';
 
-export class FooterXPWA extends HTMLElement {
-
-  constructor() {
+export class FooterXPWA extends HTMLElement
+{
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
     
     this.setStyles();
 

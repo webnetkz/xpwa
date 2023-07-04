@@ -1,7 +1,10 @@
 export class TabsXPWA extends HTMLElement
 {
-  constructor() {
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
+
     this.querySelector('tab-content').style.display = 'block';
     this.addAction();
   }

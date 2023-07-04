@@ -3,8 +3,11 @@ export class ProgressRoundXPWA extends HTMLElement
     constructor()
     {
         super();
+        const shadow  = this.attachShadow({mode: 'closed'});
+        shadow.innerHTML += `<span></span>`;
+
         this.setStyles();
-        this.innerHTML += `<span></span>`;
+
     }
     
     static get observedAttributes()

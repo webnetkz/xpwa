@@ -1,9 +1,11 @@
 import { Mobile } from '../Mobile.js';
 
-export class Card3DXPWA extends HTMLElement {
-
-  constructor() {
+export class Card3DXPWA extends HTMLElement
+{
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
 
     this.addEventListener('mousemove', this.rotate);  
     this.addEventListener('mouseout', this.stopRotate);      

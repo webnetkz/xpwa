@@ -1,8 +1,11 @@
-export class CheckboxXPWA extends HTMLElement {
-  constructor() {
+export class CheckboxXPWA extends HTMLElement
+{
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
 
-    this.innerHTML = '<input type="checkbox">';
+    shadow.innerHTML = '<input type="checkbox">';
     this.setStyles();
   }
 

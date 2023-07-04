@@ -1,9 +1,11 @@
 import { Mobile } from '../Mobile.js';
 
-export class NavXPWA extends HTMLElement {
-
-  constructor() {
+export class NavXPWA extends HTMLElement
+{
+  constructor()
+  {
     super();
+    const shadow = this.attachShadow({mode: 'closed'});
     
     this.setStyles();
 
