@@ -1,4 +1,4 @@
-<h1>xPWA <u>V.0.3.6</u> <img src="./logo.png" style="float: right;"></h1>
+<h1>xPWA <u>V.0.3.7</u> <img src="./logo.png" style="float: right;"></h1>
 
 <hr>
 x Progressive WEB Application<br>
@@ -6,6 +6,8 @@ x Progressive WEB Application<br>
 <br>
 <h2>HTML components</h2>
 <ul>
+<li><b>button-xpwa</b></li>
+<li><b>block-xpwa</b></li>
 <li><b>header-xpwa</b></li>
 <li><b>content-xpwa</b></li>
 <li><b>footer-xpwa</b></li>
@@ -19,7 +21,6 @@ x Progressive WEB Application<br>
 <li><b>slider-xpwa</b></li>
 <li><b>sidebar-xpwa</b></li>
 <li><b>tabs-xpwa</b></li>
-<li><b>button-xpwa</b></li>
 <li><b>radio-xpwa</b></li>
 </ul>
 
@@ -30,14 +31,20 @@ x Progressive WEB Application<br>
 <li><b>DOM.queryAll(elements, [parent]=this)</b></li>
 <li><b>DOM.hide - hidden element</b></li>
 <li><b>log(output)</b></li>
-<li><code>req(options = {
-        url: './', 
-        method: 'GET', 
-        headers: { "Access-Control-Allow-Origin": "*", },
-        mode: 'cors',
-        data: {},
-        json: false,
-    })</code></li>
+<li>
+    <pre>
+        <code>
+            req(options = {
+                url: './', 
+                method: 'GET', 
+                headers: { "Access-Control-Allow-Origin": "*", },
+                mode: 'cors',
+                data: {},
+                json: false,
+            })
+        </code>
+    </pre>
+</li>
 
 </ul>
 <hr>

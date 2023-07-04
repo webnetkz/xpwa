@@ -1,13 +1,15 @@
 :root {
-  --main-theme: red;
-  --main-theme-light: rgb(249, 81, 81);
-  --main-theme-dark: rgb(195, 1, 1);
+  --main-theme: linear-gradient(180deg, #5172FF 0%, #003DFF 100%);
+  --main-theme-light: linear-gradient(180deg, #7c93fb 0%, #2959f9 100%);
+  --main-theme-dark: linear-gradient(180deg, #4b69ee 0%, #0134db 100%);
 
   --white: white;
   --black: black;
   --gray: rgb(130, 128, 128);
   --gray-gradient: linear-gradient(90deg,#f5f5fa 80%,#ebebf0);
 
-
+  --padding: 5px;
+  --margin: 5px;
   --radius: 7px;
+  --shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }

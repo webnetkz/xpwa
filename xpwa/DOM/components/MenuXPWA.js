@@ -29,10 +29,18 @@ export class MenuXPWA extends HTMLElement {
     allChilds.forEach((element) => {
       element.style.cssText += `
         padding: 5px 15px;
-        border-radius: 7px;
+        border-radius: var(--radius);
         background: var(--white);
         margin: 0px 1.5px;
+        color: var(--black);
       `;
+
+      element.addEventListener('click', () => {
+        element.style.cssText += `
+          background: var(--main-theme);
+          color: var(--black);
+        `;
+      });
 
       element.addEventListener('mousemove', () => {
         element.style.cssText += `

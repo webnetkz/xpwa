@@ -6,20 +6,30 @@
   <title>Document</title>
 </head>
 <body>
-  <sidebar-xpwa></sidebar-xpwa>
 
   <header-xpwa>
     <menu-xpwa>
       <span>First</span>
       <span>Second</span>
       <span>Home</span>
-      <span>First home</span>
+      <span onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</span>
       <span>Contacts</span>
     </menu-xpwa>
   </header-xpwa>
   
   <content-xpwa>
-    content
+    <block-xpwa>
+      <card-3d-xpwa>
+        <div style="width: 200px; height: 400px; background: var(--main-theme); padding: 5px; border-radius: 7px;">
+          <h1 style="color: var(--white);">3D Card</h1>
+        </div>
+      </card-3d-xpwa>
+    </block-xpwa>
+    <block-xpwa>
+      <button-xpwa onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</button-xpwa>
+    </block-xpwa>
+    <block-xpwa>content</block-xpwa>
+    <block-xpwa>content</block-xpwa>
   </content-xpwa>
 
   <footer-xpwa>

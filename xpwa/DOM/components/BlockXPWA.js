@@ -1,6 +1,6 @@
 import { Mobile } from '../Mobile.js';
 
-export class FooterXPWA extends HTMLElement {
+export class BlockXPWA extends HTMLElement {
 
   constructor() {
     super();
@@ -18,11 +18,13 @@ export class FooterXPWA extends HTMLElement {
     this.style.cssText += `
       display: block;
       background: var(--gray-gradient);
-      min-width: 98vw;
+      width: 98vw;
       min-height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      background: var(--white);
+      padding: 10px var(--padding);
+      margin: var(--margin);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     `;
   }
 
@@ -33,4 +35,4 @@ export class FooterXPWA extends HTMLElement {
   }
 }
 
-customElements.define("footer-xpwa", FooterXPWA);
+customElements.define("block-xpwa", BlockXPWA);

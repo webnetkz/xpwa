@@ -28,7 +28,7 @@ export class Card3DXPWA extends HTMLElement {
 
   rotate(event)
   {
-    let container = this.querySelector('div');
+    let container = this.querySelector(':first-child');
     const halfHeight = container.offsetHeight / 2;
     const halfWidth = container.offsetWidth / 2;
 
@@ -39,13 +39,13 @@ export class Card3DXPWA extends HTMLElement {
 
   stopRotate(event)
   {
-    let container = this.querySelector('div');
+    let container = this.querySelector(':first-child');
     container.style.transform = 'rotate(0)';
   }
 
   setStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
       perspective: 1000px;
       transform-style: preserve-3d;
       display: grid;
@@ -54,3 +54,4 @@ export class Card3DXPWA extends HTMLElement {
 }
 
 customElements.define("card-3d-xpwa", Card3DXPWA);
+

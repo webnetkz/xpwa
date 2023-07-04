@@ -6,6 +6,7 @@ export class SidebarXPWA extends HTMLElement {
     super();
     
     this.setStyles();
+    this.classList.add('showElement');
     this.innerHTML += '<close-xpwa></close-xpwa>';
 
     if(Mobile.isMobile())
