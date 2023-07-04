@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.3.7</i> 
+    <i>version 0.3.71</i> 
     <img src="./logo.png">
 </h1>
 <hr>
@@ -57,9 +57,9 @@
     </li>
 </ul>
 <hr>
-<h2>Author:</h2>
-WebNet (@webnetkz)
-<h2>GPL-3 <a href="LICENSE">LICENSE</a>.</h2>
+<h5>Author:</h5>
+<p>WebNet (@webnetkz)</p>
+<h4>GPL-3 <a href="LICENSE">LICENSE</a>.</h4>
 
 
 
