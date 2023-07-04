@@ -15,11 +15,14 @@ export class ContentXPWA extends HTMLElement {
 
   setStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
       display: block;
       min-height: 90vh;
-      width: 100%;
-      background: rgba(0,0,0,0.1);
+      min-width: 98vw;
+      background: var(--gray);
+      margin: 5px;
+      padding: 5px;
+      border-radius: var(--radius);
     `;
   }
 

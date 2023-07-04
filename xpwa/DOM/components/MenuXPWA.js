@@ -20,7 +20,7 @@ export class MenuXPWA extends HTMLElement {
       justify-contentn: space-between;
       align-items: center;
       margin: 3px;
-      background: red;
+      background: var(--gray-gradient);
       width: 100%;
     `;
 
@@ -30,20 +30,22 @@ export class MenuXPWA extends HTMLElement {
       element.style.cssText += `
         padding: 5px 15px;
         border-radius: 7px;
-        border: 1px solid #000;
+        background: var(--white);
         margin: 0px 1.5px;
       `;
 
       element.addEventListener('mousemove', () => {
         element.style.cssText += `
-          background: blue;
+          background: var(--gray);
+          color: var(--white);
           cursor: pointer;
         `;
       });
 
       element.addEventListener('mouseout', () => {
         element.style.cssText += `
-          background: white;
+          background: var(--white);
+          color: var(--black);
         `;
       });
     });

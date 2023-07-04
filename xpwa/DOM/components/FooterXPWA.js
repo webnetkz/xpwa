@@ -16,8 +16,12 @@ export class FooterXPWA extends HTMLElement {
   setStyles()
   {
     this.style.cssText = `
-      background: gray;
-      width: 100%;
+      background: var(--gray-gradient);
+      min-width: 98vw;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
     `;
   }
 

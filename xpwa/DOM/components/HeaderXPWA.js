@@ -16,7 +16,7 @@ export class HeaderXPWA extends HTMLElement {
   setStyles()
   {
     this.style.cssText = `
-      background: green;
+      background: var(--gray-gradient);
       width: 100%;
     `;
   }
