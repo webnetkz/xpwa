@@ -8,6 +8,10 @@ import { MenuXPWA } from './components/MenuXPWA.js';
 import { SidebarXPWA } from './components/SidebarXPWA.js';
 
 
+import { RadionXPWA } from './components/RadionXPWA.js';
+import { ButtonXPWA } from './components/ButtonXPWA.js';
+
+
 import { CloseXPWA } from './components/CloseXPWA.js';
 import { ProgressBarXPWA } from './components/ProgressBarXPWA.js';
 import { ProgressRoundXPWA } from './components/ProgressRoundXPWA.js';

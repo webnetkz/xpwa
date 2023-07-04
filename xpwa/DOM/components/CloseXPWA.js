@@ -10,7 +10,7 @@ export class CloseXPWA extends HTMLElement {
 
   setStyles()
   {
-    this.style.cssText = `
+    this.style.cssText += `
       position: absolute;
       top: 9px;
       right: 9px;
@@ -22,7 +22,6 @@ export class CloseXPWA extends HTMLElement {
 
   closeWindow()
   {
-    console.log(this.animation)
     if(this.animation == 'hideR')
     {
       DOM.hideR(this.parentNode);
@@ -39,11 +38,9 @@ export class CloseXPWA extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue)
   {
-    console.log(name);
     switch(name)
     {
         case 'animation':
-          console.log(name);
           this.animation = 'hideR';
         break;
     }
