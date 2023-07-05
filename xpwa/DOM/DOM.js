@@ -11,6 +11,7 @@ import { BlockXPWA } from './components/BlockXPWA.js';
 import { CheckboxXPWA } from './components/CheckboxXPWA.js';
 import { RadioXPWA } from './components/RadioXPWA.js';
 import { ButtonXPWA } from './components/ButtonXPWA.js';
+import { TopXPWA } from './components/TopXPWA.js';
 
 
 import { CloseXPWA } from './components/CloseXPWA.js';
