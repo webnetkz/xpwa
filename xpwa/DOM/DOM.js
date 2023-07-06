@@ -7,6 +7,9 @@ import { FooterXPWA } from './components/FooterXPWA.js';
 import { MenuXPWA } from './components/MenuXPWA.js';
 import { SidebarXPWA } from './components/SidebarXPWA.js';
 import { BlockXPWA } from './components/BlockXPWA.js';
+import { ModalXPWA } from './components/ModalXPWA.js';
+import { StubXPWA } from './components/StubXPWA.js';
+
 
 import { CheckboxXPWA } from './components/CheckboxXPWA.js';
 import { RadioXPWA } from './components/RadioXPWA.js';
