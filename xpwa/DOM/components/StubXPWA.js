@@ -1,5 +1,3 @@
-import { Mobile } from '../Mobile.js';
-
 export class StubXPWA extends HTMLElement
 {
   constructor()
@@ -8,11 +6,6 @@ export class StubXPWA extends HTMLElement
     const shadow = this.attachShadow({mode: 'closed'});
     
     this.setStyles();
-
-    if(Mobile.isMobile())
-    {
-      this.setMobileStyles();
-    }
   }
 
   setStyles()

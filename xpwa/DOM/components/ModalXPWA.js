@@ -5,7 +5,20 @@ export class ModalXPWA extends HTMLElement
   constructor()
   {
     super();
+
+    this.modalTitle = 'Title';
+    this.modalContent = 'Content';
+
     const shadow = this.attachShadow({mode: 'closed'});
+    shadow.innerHTML += `<stub-xpwa>
+      <div class="modal-title-xpwa">
+        <h2>${this.modalTitle}</h2>
+        <close-xpwa></close-xpwa>
+      </div>
+      <div class="modal-content-xpwa">
+        ${this.modalContent}
+      </div>
+    </stub-xpwa>`;
     
     this.setStyles();
 
@@ -24,17 +37,18 @@ export class ModalXPWA extends HTMLElement
       border-color: var(--border-color);
       box-shadow: var(--box-shadow);
       background: var(--white);
-    
-    .uchet-modal > div {
-      padding: 5px 15px;
-    }
-    .uchet-modal-title {
+    `;
+
+    this.querySelector('.modal-title-xpwa').style.cssText = `
       height: 60px;
       border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
+    `;
+    
+    this.querySelector('.modal-content-xpwa').style.cssText = `
+      padding: 5px 15px;
     `;
   }
 
