@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <script type="module" src="./xpwa.js"></script>
 </head>
 <body>
 
@@ -11,7 +13,7 @@
     <menu-xpwa>
       <span>First</span>
       <span>Second</span>
-      <span>Home</span>
+      <span onclick="document.body.innerHTML += '<modal-xpwa title=\'tmp\'>content</modal-xpwa>'">Show modal</span>
       <span onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</span>
       <span>Contacts</span>
     </menu-xpwa>
@@ -36,6 +38,5 @@
     2023 © xPWA
   </footer-xpwa>
 
-  <script type="module" src="./xpwa.js"></script>
 </body>
 </html>

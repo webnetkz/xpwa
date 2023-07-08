@@ -5,7 +5,6 @@ export class Card3DXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
 
     this.addEventListener('mousemove', this.rotate);  
     this.addEventListener('mouseout', this.stopRotate);      

@@ -20,9 +20,23 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-
+menu-xpwa * {
+  padding: 5px 15px;
+  border-radius: var(--radius);
+  background: var(--white);
+  margin: 0px 1.5px;
+  color: var(--black);
+}
+menu-xpwa *:hover {
+  background: var(--gray);
+  color: var(--white);
+  cursor: pointer;
+}
 close-xpwa:hover {
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);

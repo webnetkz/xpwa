@@ -5,7 +5,6 @@ export class ContentXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
     
     this.setStyles();
 
@@ -19,10 +18,12 @@ export class ContentXPWA extends HTMLElement
   {
     this.style.cssText += `
       display: block;
+      position: relative;
+      left: 0.5vw;
+      top: 1vh;
       min-height: 90vh;
       min-width: 98vw;
       background: var(--gray-gradient);
-      margin: var(--margin);
       padding: var(--padding);
       border-radius: var(--radius);
     `;

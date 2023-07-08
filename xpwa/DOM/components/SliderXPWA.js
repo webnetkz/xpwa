@@ -3,8 +3,7 @@ export class SliderXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-    shadow.innerHTML += `
+    this.innerHTML += `
     <div class="backSlide"></div>
     <div class="nextSlide"></div>`;
 

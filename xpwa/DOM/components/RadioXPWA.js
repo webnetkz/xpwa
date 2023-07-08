@@ -3,8 +3,7 @@ export class RadioXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-    shadow.innerHTML = '<input type="radio">';
+    this.innerHTML = '<input type="radio">';
 
     this.setStyles();
   }

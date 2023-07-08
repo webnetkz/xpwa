@@ -5,7 +5,6 @@ export class NavXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
     
     this.setStyles();
 

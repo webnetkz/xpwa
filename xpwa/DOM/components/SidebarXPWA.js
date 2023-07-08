@@ -5,9 +5,8 @@ export class SidebarXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-    shadow.classList.add('showElement');
-    shadow.innerHTML += '<close-xpwa></close-xpwa>';
+    this.classList.add('showElement');
+    this.innerHTML += '<close-xpwa></close-xpwa>';
     
     this.setStyles();
 

@@ -3,8 +3,7 @@ export class InputXPWA extends HTMLElement
     constructor()
     {
         super();
-        const shadow = this.attachShadow({mode: 'closed'});
-        shadow.innerHTML = '<input type="text">';
+        this.innerHTML = '<input type="text">';
 
         this.inp = this.querySelector('input');
         this.inp.addEventListener('input', this.listener(e));

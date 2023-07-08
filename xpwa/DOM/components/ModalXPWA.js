@@ -7,16 +7,14 @@ export class ModalXPWA extends HTMLElement
     super();
 
     this.modalTitle = 'Title';
-    this.modalContent = 'Content';
 
-    const shadow = this.attachShadow({mode: 'closed'});
-    shadow.innerHTML += `<stub-xpwa>
+    this.innerHTML += `<stub-xpwa>
       <div class="modal-title-xpwa">
         <h2>${this.modalTitle}</h2>
         <close-xpwa></close-xpwa>
       </div>
       <div class="modal-content-xpwa">
-        ${this.modalContent}
+        ${this.innerHTML}
       </div>
     </stub-xpwa>`;
     
@@ -57,6 +55,20 @@ export class ModalXPWA extends HTMLElement
     this.style.cssText += `
       width: 90vw;
     `;
+  }
+  static get observedAttributes()
+  {
+    return ['title'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue)
+  {
+    switch(name)
+    {
+        case 'title':
+            this.title = newValue; 
+        break;
+    }
   }
 }
 

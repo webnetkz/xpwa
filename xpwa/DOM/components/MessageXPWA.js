@@ -3,20 +3,9 @@ export class MessageXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-    shadow.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
+    this.innerHTML = this.innerText+'<close-xpwa></closer-xpwa>';
 
     this.setStyles();
-  }
-
-  connectedCallback()
-  {
-
-  }
-
-  disconnectedCallback()
-  {
-
   }
 
   static get observedAttributes()
@@ -52,12 +41,6 @@ export class MessageXPWA extends HTMLElement
             console.log(newValue);
         break;
     }
-  }
-
-  adoptedCallback()
-  {
-    // вызывается, когда элемент перемещается в новый документ
-    // (происходит в document.adoptNode)
   }
 }
 

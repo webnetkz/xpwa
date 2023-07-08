@@ -5,8 +5,6 @@ export class HeaderXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-
     this.setStyles();
 
     if(Mobile.isMobile())
@@ -18,8 +16,12 @@ export class HeaderXPWA extends HTMLElement
   setStyles()
   {
     this.style.cssText += `
-      display: block;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 0;
       background: var(--gray-gradient);
+      min-height: 50px;
       width: 100vw;
     `;
   }

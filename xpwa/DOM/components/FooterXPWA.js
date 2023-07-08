@@ -5,8 +5,9 @@ export class FooterXPWA extends HTMLElement
   constructor()
   {
     super();
-    const shadow = this.attachShadow({mode: 'closed'});
-    
+    const shadow = this.attachShadow({mode: 'open'});
+    shadow.textContent = this.textContent;
+
     this.setStyles();
 
     if(Mobile.isMobile())
@@ -19,12 +20,13 @@ export class FooterXPWA extends HTMLElement
   {
     this.style.cssText += `
       display: block;
-      background: var(--gray-gradient);
-      min-width: 98vw;
+      background: var(--gray);
+      min-width: 100vw;
       min-height: 100px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      color: var(--white);
     `;
   }
 
