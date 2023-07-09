@@ -7,8 +7,8 @@ import { FooterXPWA } from './components/FooterXPWA.js';
 import { MenuXPWA } from './components/MenuXPWA.js';
 import { SidebarXPWA } from './components/SidebarXPWA.js';
 import { BlockXPWA } from './components/BlockXPWA.js';
-import { ModalXPWA } from './components/ModalXPWA.js';
 import { StubXPWA } from './components/StubXPWA.js';
+import { ModalXPWA } from './components/ModalXPWA.js';
 
 
 import { CheckboxXPWA } from './components/CheckboxXPWA.js';
@@ -35,7 +35,6 @@ export class DOM
 
         this.showerHidden = new ShowerHidden();
         this.hide = this.showerHidden.hidden;
-        this.hideR = this.showerHidden.hiddenToRight;
         this.setComponents();
     }
 

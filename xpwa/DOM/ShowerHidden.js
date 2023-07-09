@@ -16,15 +16,7 @@ export class ShowerHidden
 
         setTimeout(() => {
             element.style.display = 'none';
+            element.remove();
         }, 290)
-    }
-
-    hiddenToRight(element)
-    {
-        element.classList.add('hiddenToRightElement');
-
-        setTimeout(() => {
-            element.style.display = 'none';
-        }, 490)
     }
 }

@@ -24,12 +24,6 @@ export class CloseXPWA extends HTMLElement
 
   closeWindow()
   {
-    if(this.animation == 'hideR')
-    {
-      DOM.hideR(this.parentNode);
-      return;
-    }
-
     DOM.hide(this.parentNode);
   }
 
@@ -43,7 +37,7 @@ export class CloseXPWA extends HTMLElement
     switch(name)
     {
         case 'animation':
-          this.animation = 'hideR';
+
         break;
     }
   }

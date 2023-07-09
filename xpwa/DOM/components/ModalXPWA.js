@@ -7,17 +7,10 @@ export class ModalXPWA extends HTMLElement
     super();
 
     this.modalTitle = 'Title';
+  }
 
-    this.innerHTML += `<stub-xpwa>
-      <div class="modal-title-xpwa">
-        <h2>${this.modalTitle}</h2>
-        <close-xpwa></close-xpwa>
-      </div>
-      <div class="modal-content-xpwa">
-        ${this.innerHTML}
-      </div>
-    </stub-xpwa>`;
-    
+  connectedCallback() {
+    this.rendering();
     this.setStyles();
 
     if(Mobile.isMobile())
@@ -26,11 +19,30 @@ export class ModalXPWA extends HTMLElement
     }
   }
 
+  rendering()
+  {
+    if(this.querySelector(".modal-xpwa")) return;
+    const stub = document.createElement('stub-xpwa');
+    
+    this.innerHTML = `
+      <close-xpwa></close-xpwa>
+      <div class="modal-title-xpwa">
+        <h2>${this.modalTitle}</h2>
+      </div>
+      <div class="modal-content-xpwa">
+        123
+      </div>`;
+  }
+
   setStyles()
   {
     this.style.cssText += `
       width: 60vw;
       height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--white);
       border-radius: var(--radius);
       border-color: var(--border-color);
       box-shadow: var(--box-shadow);
@@ -58,15 +70,16 @@ export class ModalXPWA extends HTMLElement
   }
   static get observedAttributes()
   {
-    return ['title'];
+    return ['modal-title'];
   }
 
   attributeChangedCallback(name, oldValue, newValue)
   {
     switch(name)
     {
-        case 'title':
-            this.title = newValue; 
+        case 'modal-title':
+            this.modalTitle = newValue;
+            this.querySelector('.modal-title-xpwa h2').innerText = newValue;
         break;
     }
   }
