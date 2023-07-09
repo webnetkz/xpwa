@@ -4,6 +4,7 @@ export class StubXPWA extends HTMLElement
   {
     super();
     
+    this.innerHTML += `<close-xpwa style="color: white;"></close-xpwa>`;
     this.setStyles();
   }
 

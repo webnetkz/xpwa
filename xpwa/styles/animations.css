@@ -11,11 +11,11 @@
 @keyframes showElementAnimation {
   0% {
     opacity: 0;
-    transform: perspective(1000px) rotateX(180deg);
+    transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: perspective(800px) rotateX(0deg);
+    transform: scale(1);
   }
 }
 @keyframes hiddenElementAnimation {

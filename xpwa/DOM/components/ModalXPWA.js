@@ -5,8 +5,6 @@ export class ModalXPWA extends HTMLElement
   constructor()
   {
     super();
-
-    this.modalTitle = 'Title';
   }
 
   connectedCallback() {
@@ -22,10 +20,8 @@ export class ModalXPWA extends HTMLElement
   rendering()
   {
     if(this.querySelector(".modal-xpwa")) return;
-    const stub = document.createElement('stub-xpwa');
     
     this.innerHTML = `
-      <close-xpwa></close-xpwa>
       <div class="modal-title-xpwa">
         <h2>${this.modalTitle}</h2>
       </div>
@@ -55,10 +51,12 @@ export class ModalXPWA extends HTMLElement
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 15px;
     `;
     
     this.querySelector('.modal-content-xpwa').style.cssText = `
       padding: 5px 15px;
+      height: 98%;
     `;
   }
 
@@ -78,8 +76,7 @@ export class ModalXPWA extends HTMLElement
     switch(name)
     {
         case 'modal-title':
-            this.modalTitle = newValue;
-            this.querySelector('.modal-title-xpwa h2').innerText = newValue;
+            //this.querySelector('.modal-title-xpwa h2').innerText = newValue;
         break;
     }
   }

@@ -27,6 +27,7 @@ export class SidebarXPWA extends HTMLElement
       min-height: 100vh;
       width: 80vw;
       background: var(--white);
+      box-shadow: var(--shadow);
     `;
   }
 
