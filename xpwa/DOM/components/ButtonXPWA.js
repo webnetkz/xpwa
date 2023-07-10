@@ -43,14 +43,14 @@ export class ButtonXPWA extends HTMLElement
 
   static get observedAttributes()
   {
-    return ['x'];
+    return ['attr'];
   }
 
   attributeChangedCallback(name, oldValue, newValue)
   {
     switch(name)
     {
-        case 'x':
+        case 'attr':
         break;
     }
   }
