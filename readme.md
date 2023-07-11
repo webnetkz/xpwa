@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.4.1</i>
+    <i>version 0.4.2</i>
     <img src="./logo.png">
 </h1>
 <hr>
@@ -34,6 +34,7 @@
     <li><b>stub-xpwa</b></li>
     <li><b>tabs-xpwa</b></li>
     <li><b>radio-xpwa</b></li>
+    <li><b>top-xpwa</b></li>
     <li><b>and more</b></li>
 </ul>
 
