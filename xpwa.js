@@ -9,6 +9,7 @@ export class XPWA
     {    
         this.setStyles();
         this.installXPWA();
+        document.body.innerHTML += '<top-xpwa></top-xpwa>';
     }
 
     setStyles()

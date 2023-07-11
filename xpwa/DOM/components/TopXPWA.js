@@ -8,29 +8,52 @@ export class TopXPWA extends HTMLElement
     this.attachShadow({ mode: 'open' });
     this.setStyles();
 
-    console.log(123);
-
     if(Mobile.isMobile())
     {
       this.setMobileStyles();
     }
 
-    document.body.appendChild(this);
+    this.addEventListener('click', () => {
+      window.scrollTo(0, 0);
+    });
   }
 
   setStyles()
   {
     const styles = `
       :host {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        line-height: 5rem;
         position: fixed;
         bottom: 20px;
         right: 20px;
         width: 50px;
         height: 50px;
+        background: var(--main-theme);
+        border-radius: 50%;
+        z-index: 999999;
+      }
+      :host:hover {
         background: red;
-        z-index: 99;
-      }`;
+      }
+      :host:after {
+        content: "\\2191";
+        transform: scaleX(0.7);
+        margin-bottom: 10px;
+        color: white;
+      }
+      
+      `;
       this.shadowRoot.innerHTML = `<style>${styles}</style>`;
+
+      this.addEventListener('mousemove', () => {
+        this.style.cssText = `
+            cursor: pointer;
+          `;
+      });
   }
 
   setMobileStyles()

@@ -13,6 +13,7 @@
   font-family: 'Bad Script', cursive!important;
   font-family: 'Montserrat', sans-serif!important;
   font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   display: flex;
