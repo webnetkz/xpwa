@@ -1,32 +1,8 @@
-import { Mobile } from '../Mobile.js';
-
 export class NavXPWA extends HTMLElement
 {
   constructor()
   {
     super();
-    
-    this.setStyles();
-
-    if(Mobile.isMobile())
-    {
-      this.setMobileStyles();
-    }
-  }
-
-  setStyles()
-  {
-    this.style.cssText = `
-      display: block;
-      background: white;
-      min-width: 20vw;
-    `;
-  }
-
-  setMobileStyles()
-  {
-    this.style.cssText += `
-    `;
   }
 }
 

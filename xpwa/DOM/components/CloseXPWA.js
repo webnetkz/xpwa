@@ -6,20 +6,7 @@ export class CloseXPWA extends HTMLElement
     this.innerHTML = '+';
 
     this.animation = 'hide';
-    this.setStyles();
     this.addEventListener('click', this.closeWindow);
-  }
-
-  setStyles()
-  {
-    this.style.cssText += `
-      position: absolute;
-      top: 9px;
-      right: 9px;
-      width: 20px;
-      font-size: 1.5rem;
-      transform: rotate(45deg);
-    `;
   }
 
   closeWindow()

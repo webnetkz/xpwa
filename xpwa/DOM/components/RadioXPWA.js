@@ -4,15 +4,6 @@ export class RadioXPWA extends HTMLElement
   {
     super();
     this.innerHTML = '<input type="radio">';
-
-    this.setStyles();
-  }
-
-  setStyles()
-  {
-    this.style.cssText += `
-      
-    `;
   }
 
   static get observedAttributes()

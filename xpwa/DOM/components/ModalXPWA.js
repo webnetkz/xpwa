@@ -9,12 +9,6 @@ export class ModalXPWA extends HTMLElement
 
   connectedCallback() {
     this.rendering();
-    this.setStyles();
-
-    if(Mobile.isMobile())
-    {
-      this.setMobileStyles();
-    }
   }
 
   rendering()
@@ -32,18 +26,6 @@ export class ModalXPWA extends HTMLElement
 
   setStyles()
   {
-    this.style.cssText += `
-      width: 60vw;
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--white);
-      border-radius: var(--radius);
-      border-color: var(--border-color);
-      box-shadow: var(--box-shadow);
-      background: var(--white);
-    `;
 
     this.querySelector('.modal-title-xpwa').style.cssText = `
       height: 60px;

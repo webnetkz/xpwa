@@ -4,16 +4,9 @@ export class CheckboxXPWA extends HTMLElement
   {
     super();
 
-    shadow.innerHTML = '<input type="checkbox">';
-    this.setStyles();
+    this.innerHTML = '<input type="checkbox">';
   }
 
-  setStyles()
-  {
-    this.style.cssText += `
-      
-    `;
-  }
 
   static get observedAttributes()
   {
