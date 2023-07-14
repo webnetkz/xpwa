@@ -5,7 +5,6 @@ export class BlockXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.attachShadow({ mode: 'open' });
     this.setStyles();
 
     if(Mobile.isMobile())
@@ -16,29 +15,24 @@ export class BlockXPWA extends HTMLElement
 
   setStyles()
   {
-    const styles = `
-      :host {
-        display: block;
-        background: var(--gray-gradient);
-        width: 98vw;
-        min-height: 100px;
-        background: var(--white);
-        padding: 10px var(--padding);
-        margin: var(--margin);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-      }`;
-      this.shadowRoot.innerHTML = `<style>${styles}</style>`;
+    this.style.cssText = ` 
+      display: block;
+      background: var(--gray-gradient);
+      width: 98vw;
+      min-height: 100px;
+      background: var(--white);
+      padding: 10px var(--padding);
+      margin: var(--margin);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    `;
   }
 
   setMobileStyles()
   {
-    const mobileStyles = `
-      :host {
-        /* Здесь ваши мобильные стили */
-      }
+    this.style.cssText = `
+
     `;
-    this.shadowRoot.innerHTML += `<style>${mobileStyles}</style>`;
   }
 }
 
