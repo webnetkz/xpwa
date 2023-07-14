@@ -1,29 +1,29 @@
 import { ShowerHidden } from './ShowerHidden.js';
-import { MessageXPWA } from './components/MessageXPWA.js';
+import { MessageXPWA } from './components/Message.js';
 
-import { HeaderXPWA } from './components/HeaderXPWA.js';
-import { ContentXPWA } from './components/ContentXPWA.js';
-import { FooterXPWA } from './components/FooterXPWA.js';
-import { MenuXPWA } from './components/MenuXPWA.js';
-import { SidebarXPWA } from './components/SidebarXPWA.js';
-import { BlockXPWA } from './components/BlockXPWA.js';
-import { StubXPWA } from './components/StubXPWA.js';
-import { ModalXPWA } from './components/ModalXPWA.js';
-
-
-import { CheckboxXPWA } from './components/CheckboxXPWA.js';
-import { RadioXPWA } from './components/RadioXPWA.js';
-import { ButtonXPWA } from './components/ButtonXPWA.js';
-import { TopXPWA } from './components/TopXPWA.js';
+import { HeaderXPWA } from './components/Header.js';
+import { ContentXPWA } from './components/Content.js';
+import { FooterXPWA } from './components/Footer.js';
+import { MenuXPWA } from './components/Menu.js';
+import { SidebarXPWA } from './components/Sidebar.js';
+import { BlockXPWA } from './components/Block.js';
+import { StubXPWA } from './components/Stub.js';
+import { ModalXPWA } from './components/Modal.js';
 
 
-import { CloseXPWA } from './components/CloseXPWA.js';
-import { ProgressBarXPWA } from './components/ProgressBarXPWA.js';
-import { ProgressRoundXPWA } from './components/ProgressRoundXPWA.js';
-import { TabsXPWA } from './components/TabsXPWA.js';
-import { InputXPWA } from './components/InputXPWA.js';
-import { SliderXPWA } from './components/SliderXPWA.js';
-import { Card3DXPWA } from './components/Card3DXPWA.js';
+import { CheckboxXPWA } from './components/Checkbox.js';
+import { RadioXPWA } from './components/Radio.js';
+import { ButtonXPWA } from './components/Button.js';
+import { TopXPWA } from './components/Top.js';
+
+
+import { CloseXPWA } from './components/Close.js';
+import { ProgressBarXPWA } from './components/ProgressBar.js';
+import { ProgressRoundXPWA } from './components/ProgressRound.js';
+import { TabsXPWA } from './components/Tabs.js';
+import { InputXPWA } from './components/Input.js';
+import { SliderXPWA } from './components/Slider.js';
+import { Card3DXPWA } from './components/Card3D.js';
 
 
 export class DOM

@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 7px;
+    width: var(--width-scroll-bar);
     height: 8px;
     background-color: var(--gray);
     border-radius: 4px;

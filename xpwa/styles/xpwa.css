@@ -24,6 +24,7 @@ body {
   min-width: 100vw;
   width: 100vw;
   overflow-x: hidden;
+  padding-right: 7px;
 }
 content-xpwa {
   display: block;
@@ -55,7 +56,10 @@ header-xpwa {
   min-height: 50px;
   width: 100vw;
 }
-:host {
+card-3d-xpwa {
+  will-change: transform;
+}
+top-xpwa {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,9 +76,10 @@ header-xpwa {
 }
 top-xpwa:hover {
   background: red;
+  cursor: pointer;
 }
 top-xpwa:after {
-  content: "\\2191";
+  content: "\2191";
   transform: scaleX(0.7);
   margin-bottom: 10px;
   color: white;
@@ -172,7 +177,7 @@ message-xpwa {
 menu-xpwa {
   display: flex;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: var(--margin);
   background: var(--gray-gradient);

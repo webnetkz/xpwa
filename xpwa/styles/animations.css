@@ -1,11 +1,14 @@
 .showElement {
     animation: showElementAnimation 0.3s linear;
+    will-change: transform;
 }
 .hiddenElement {
     animation: hiddenElementAnimation 0.3s linear;
+    will-change: transform;
 }
 .hiddenToRightElement {
   animation: hiddenToRightElementAnimation 0.5s linear;
+  will-change: transform;
   transition-property: right;
 }
 @keyframes showElementAnimation {
