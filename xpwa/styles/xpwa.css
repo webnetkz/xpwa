@@ -24,7 +24,7 @@ body {
   min-width: 100vw;
   width: 100vw;
   overflow-x: hidden;
-  padding-right: 7px;
+  padding-right: var(--width-scroll-bar);
 }
 content-xpwa {
   display: block;

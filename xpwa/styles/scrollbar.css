@@ -1,16 +1,12 @@
 ::-webkit-scrollbar {
     width: var(--width-scroll-bar);
-    height: 8px;
-    background-color: var(--gray);
-    border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-theme);
-    border-radius: 9em;
-    box-shadow: inset 1px 1px 10px #f3faf7;
+    background: var(--main-theme);
+    border-radius: 3em;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--main-theme-dark);
+    background: var(--main-theme-dark);
     cursor: pointer;
 }
 ::-webkit-scrollbar-button:vertical:start:decrement {
