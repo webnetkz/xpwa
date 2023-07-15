@@ -30,11 +30,7 @@ export class XPWA
 
 
 window.onload = (() => {
-    window.P = new XPWA();
     window.DOM = new DOM();
-    
-    window.log = console.log;
-    window.req = RequestXPWA.request;
 })();
 
 

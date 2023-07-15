@@ -22,7 +22,7 @@ import { ProgressBarXPWA } from './components/ProgressBar.js';
 import { ProgressRoundXPWA } from './components/ProgressRound.js';
 import { TabsXPWA } from './components/Tabs.js';
 import { InputXPWA } from './components/Input.js';
-import { SliderXPWA } from './components/Slider.js';
+import { SliderXPWA } from './components/slider/Slider.js';
 import { Card3DXPWA } from './components/Card3D.js';
 
 
