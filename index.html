@@ -11,7 +11,7 @@
   <header-xpwa>
     <menu-xpwa>
       <button-xpwa>First</button-xpwa>
-      <button-xpwa onclick="URLXPWA.redirect('slider.html')">Slider</button-xpwa>
+      <button-xpwa onclick="location.href = 'slider.html'">Slider</button-xpwa>
       <button-xpwa onclick="document.body.innerHTML += '<stub-xpwa><modal-xpwa modal-title='+123+'>content</modal-xpwa></stub-xpwa>'">Show modal</button-xpwa>
       <button-xpwa onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</button-xpwa>
       <button-xpwa>Contacts</button-xpwa>
@@ -39,9 +39,8 @@
 
   <script type="module">
     import { XPWA } from './xpwa.js';
-    new XPWA();
 
-    log()
+    new XPWA();
   </script>
 
 </body>

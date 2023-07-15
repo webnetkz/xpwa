@@ -1,3 +1,7 @@
+/**
+ * @namespace {URLXPWA}
+ */
+
 export class URLXPWA
 {
     static redirect(url)
