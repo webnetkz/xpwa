@@ -1,0 +1,19 @@
+dots-container-xpwa {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+    min-width: 100px;
+    left: calc(50vw - 50px);
+}
+dot-xpwa {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: red;
+}
+dot-xpwa:hover, dot-xpwa.active {
+    transform: scale(2);
+    cursor: pointer;
+}

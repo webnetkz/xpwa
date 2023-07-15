@@ -1,7 +1,10 @@
 import { Mobile } from '../../Mobile.js';
+import { SlideXPWA } from './Slide.js';
 import { NextSlideXPWA } from './NextSlide.js';
 import { BackSlideXPWA } from './BackSlide.js';
 import { DotXPWA } from '../Dot.js';
+import { DotsContainerXPWA } from '../DotsContainer.js';
+
 
 
 export class SliderXPWA extends HTMLElement
@@ -13,8 +16,16 @@ export class SliderXPWA extends HTMLElement
     this.sliderIndex = 0;
 
     this.prepend(document.createElement('back-slide-xpwa'));
+    this.appendChild(document.createElement('dots-container-xpwa'));
     this.appendChild(document.createElement('next-slide-xpwa'));
 
+    const images = this.getAllImages();
+    
+    images.forEach((image) => {
+      console.log(image.src);
+    });
+
+    this.createDots(images);
   }
 
   getAllImages()
@@ -22,24 +33,27 @@ export class SliderXPWA extends HTMLElement
     return this.querySelectorAll('img');
   }
 
-  createDots(items)
+  createDots(images)
   {
-    items.forEach((_, i) => {
-      const dot = document.createElement('dot-slide-xpwa');
+    const dotsContainer = this.querySelector('dots-container-xpwa');
+
+    images.forEach((_, i) => {
+      const dot = document.createElement('dot-xpwa');
 
       if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
-        sliderIndex = i;
+        this.sliderIndex = i;
             this.updateSlider();
         });
-        //sliderDotsContainer.appendChild(dot);
+        dotsContainer.appendChild(dot);
     });
   }
 
   updateSlider() {
-    this.style.transform = `translateX(-${sliderIndex * 100}vw)`;
-    //sliderDots.forEach(dot => dot.classList.remove('active'));
-    //sliderDots[sliderIndex].classList.add('active');
+    const dots = this.querySelectorAll('dot-xpwa');
+    //this.style.transform = `translateX(-${this.sliderIndex * 100}vw)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[this.sliderIndex].classList.add('active');
   }
 
 
@@ -67,22 +81,6 @@ export class SliderXPWA extends HTMLElement
   setImage(img)
   {
     this.style.background = 'url("'+img.src+'")';
-  }
-
-  connectedCallback() {
-    console.log('connectedCallback called');
-  }
-
-  disconnectedCallback() {
-    console.log('disconnectedCallback called');
-  }
-
-  adoptedCallback() {
-    console.log('adoptedCallback called');
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    console.log('attributeChangedCallback called', name, oldValue, newValue);
   }
 
   static get observedAttributes()

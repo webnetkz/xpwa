@@ -7,17 +7,8 @@ export class XPWA
 {
     constructor()
     {    
-        this.setStyles();
         this.installXPWA();
         document.body.innerHTML += '<top-xpwa></top-xpwa>';
-    }
-
-    setStyles()
-    {
-        const linkElement = document.createElement("link");
-        linkElement.rel = "stylesheet";
-        linkElement.href = "./xpwa/styles/xpwa.css";
-        document.head.appendChild(linkElement);
     }
 
     installXPWA()

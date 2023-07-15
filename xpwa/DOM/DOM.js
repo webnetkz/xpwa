@@ -33,6 +33,8 @@ export class DOM
         window.query = this.query;
         window.queryAll = this.queryAll;
 
+        this.setStyles();
+
         this.showerHidden = new ShowerHidden();
         this.hide = this.showerHidden.hidden;
         this.setComponents();
@@ -46,6 +48,14 @@ export class DOM
     queryAll(element, parent=document)
     {
         return parent.querySelectorAll(element);
+    }
+
+    setStyles()
+    {
+        const linkElement = document.createElement("link");
+        linkElement.rel = "stylesheet";
+        linkElement.href = "./xpwa/styles/xpwa.css";
+        document.head.appendChild(linkElement);
     }
 
     setComponents()

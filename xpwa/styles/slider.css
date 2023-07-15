@@ -1,29 +1,24 @@
 slider-xpwa {
-  background-position: center center!important;
-  background-size: cover!important;
-  background-repeat: no-repeat!important;
-  min-height: 400px!important;
-  min-width: 100vw;
-  position: relative;
+    position: relative;
+    background-position: center center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    min-height: 400px!important;
+    min-width: 100vw;
 }
 slider-xpwa img {
   display: none;
 }
-.nextSlide, .backSlide {
-  width: 60px;
-  height: 100%;
-  position: absolute;
-  top: 0;
+back-slide-xpwa, next-slide-xpwa {
+    position: absolute;
+    top: 200px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
 }
-.nextSlide:hover {
-  cursor: pointer;
+back-slide-xpwa {
+    left: 10px;
 }
-.backSlide:hover {
-  cursor: pointer;
-}
-.nextSlide {
-  right: 0;
-}
-.backSlide {
-  left: 0;
+next-slide-xpwa {
+    right: 10px;
 }
