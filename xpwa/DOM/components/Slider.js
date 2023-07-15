@@ -1,3 +1,5 @@
+import { Mobile } from '../Mobile.js';
+
 export class SliderXPWA extends HTMLElement
 {
   constructor()
@@ -8,7 +10,6 @@ export class SliderXPWA extends HTMLElement
     <div class="nextSlide"></div>`;
 
 
-    this.classList.add('block');
     this.timer = 5;
     this.nowSlide = 0;
     

@@ -2,6 +2,10 @@
     animation: showElementAnimation 0.3s linear;
     will-change: transform;
 }
+.showFromRightElement {
+  animation: showFromRightElementAnimation 0.2s linear;
+  will-change: transform;
+}
 .hiddenElement {
     animation: hiddenElementAnimation 0.3s linear;
     will-change: transform;
@@ -19,6 +23,14 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes showFromRightElementAnimation {
+  0% {
+    left: 120vw;
+  }
+  100% {
+    left: 20vw;
   }
 }
 @keyframes hiddenElementAnimation {

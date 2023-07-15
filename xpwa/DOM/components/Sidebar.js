@@ -5,7 +5,7 @@ export class SidebarXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.classList.add('showElement');
+    this.classList.add('showFromRightElement');
     this.innerHTML += '<close-xpwa></close-xpwa>';
   }
 }

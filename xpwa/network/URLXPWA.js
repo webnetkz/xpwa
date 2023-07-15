@@ -1,15 +1,11 @@
 export class URLXPWA
 {
-    constructor()
-    {
-    }
-
-    href(url)
+    static redirect(url)
     {
         window.location.href = url;
     }
 
-    getParametr(parameterName='id')
+    static getParametr(parameterName='id')
     {
         const url = new URL(window.location.href);
         return url.searchParams.get(parameterName);

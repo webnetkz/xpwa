@@ -1,0 +1,29 @@
+slider-xpwa {
+  background-position: center center!important;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
+  min-height: 400px!important;
+  min-width: 100vw;
+  position: relative;
+}
+slider-xpwa img {
+  display: none;
+}
+.nextSlide, .backSlide {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.nextSlide:hover {
+  cursor: pointer;
+}
+.backSlide:hover {
+  cursor: pointer;
+}
+.nextSlide {
+  right: 0;
+}
+.backSlide {
+  left: 0;
+}

@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <script type="module" src="./xpwa.js"></script>
 </head>
 <body>
 
   <header-xpwa>
     <menu-xpwa>
-      <span>First</span>
-      <span>Second</span>
-      <span onclick="document.body.innerHTML += '<stub-xpwa><modal-xpwa modal-title='+123+'>content</modal-xpwa></stub-xpwa>'">Show modal</span>
-      <span onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</span>
-      <span>Contacts</span>
+      <button-xpwa>First</button-xpwa>
+      <button-xpwa onclick="URLXPWA.redirect('slider.html')">Slider</button-xpwa>
+      <button-xpwa onclick="document.body.innerHTML += '<stub-xpwa><modal-xpwa modal-title='+123+'>content</modal-xpwa></stub-xpwa>'">Show modal</button-xpwa>
+      <button-xpwa onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</button-xpwa>
+      <button-xpwa>Contacts</button-xpwa>
     </menu-xpwa>
   </header-xpwa>
   
@@ -30,13 +29,20 @@
     <block-xpwa>
       <button-xpwa onclick="document.body.innerHTML += '<sidebar-xpwa></sidebar-xpwa>'">Show sidebar</button-xpwa>
     </block-xpwa>
-    <block-xpwa>content</block-xpwa>
-    <block-xpwa>content</block-xpwa>
   </content-xpwa>
 
   <footer-xpwa>
     2023 © xPWA
   </footer-xpwa>
+
+  <script type="module" src="./xpwa.js"></script>
+
+  <script type="module">
+    import { XPWA } from './xpwa.js';
+    new XPWA();
+
+    log()
+  </script>
 
 </body>
 </html>

@@ -2,6 +2,7 @@
 @import url(variables.css);
 @import url(animations.css);
 @import url(scrollbar.css);
+@import url(slider.css);
 
 
 * {
@@ -73,9 +74,11 @@ top-xpwa {
   background: var(--main-theme);
   border-radius: 50%;
   z-index: 999999;
+  transition-duration: 0.5s;
 }
 top-xpwa:hover {
-  background: red;
+  transform: scale(1.2) rotateZ(360deg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 top-xpwa:after {
@@ -198,7 +201,6 @@ button-xpwa:hover {
   background: var(--main-theme-light);
   color: var(--white);
   cursor: pointer;
-  box-shadow: 0px 3px 6px 0px rgba(93, 100, 148, 0.20), 0px 4px 11px 0px rgba(37, 44, 97, 0.15)
 }
 close-xpwa {
   position: absolute;
@@ -218,18 +220,6 @@ block-xpwa {
   margin: var(--margin);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-}
-menu-xpwa * {
-  padding: 5px 15px;
-  border-radius: var(--radius);
-  background: var(--white);
-  margin: 0px 1.5px;
-  color: var(--black);
-}
-menu-xpwa *:hover {
-  background: var(--gray);
-  color: var(--white);
-  cursor: pointer;
 }
 close-xpwa:hover {
   cursor: pointer;
@@ -256,32 +246,4 @@ tab-content {
   left: 10px;
   top: 70px;
   min-width: 95%;
-}
-slider-xpwa {
-  background-position: center center!important;
-  background-size: contain!important;
-  background-repeat: no-repeat!important;
-  min-height: 400px!important;
-  position: relative;
-}
-slider-xpwa img {
-display: none;
-}
-.nextSlide, .backSlide {
-width: 60px;
-height: 100%;
-position: absolute;
-top: 0;
-}
-.nextSlide:hover {
-cursor: pointer;
-}
-.backSlide:hover {
-cursor: pointer;
-}
-.nextSlide {
-right: 0;
-}
-.backSlide {
-left: 0;
 }
