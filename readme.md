@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.4.6</i>
+    <i>version 0.4.7</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@0.4.6/dist/xpwa.min.js</code>

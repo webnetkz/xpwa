@@ -14,21 +14,17 @@ export class SliderXPWA extends HTMLElement
     super();
     
     this.sliderIndex = 0;
-    this.position = 0;
+    this.timer = 1;
 
     this.setAttribute('index', this.sliderIndex);
-
+    
     this.prepend(document.createElement('back-slide-xpwa'));
     this.appendChild(document.createElement('dots-container-xpwa'));
     this.appendChild(document.createElement('next-slide-xpwa'));
-
+    
     const images = this.getAllImages();
     
     this.setImage(images[0]);
-    images.forEach((image) => {
-      console.log(image.src);
-    });
-
     this.createDots(images);
   }
 
@@ -47,13 +43,14 @@ export class SliderXPWA extends HTMLElement
       if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
         this.sliderIndex = i;
-            this.updateSlider();
+            this.updateDots();
         });
         dotsContainer.appendChild(dot);
       });
   }
 
-  updateSlider() {
+  updateDots()
+  {
     this.isUpdating = true;
     const dots = this.querySelectorAll('dot-xpwa');
 
@@ -65,20 +62,33 @@ export class SliderXPWA extends HTMLElement
     this.isUpdating = false;
   }
 
+  autoUpdateSlider()
+  {
+    setInterval(() => {
+      this.querySelector('next-slide-xpwa').click();
+    }, this.timer * 1000);
+  }
+
   setImage(img)
   {
     this.style.background = 'url("'+img.src+'")';
   }
 
   static get observedAttributes() {
-    return ['index'];
+    return ['index', 'timer'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'index' && !this.isUpdating)
+    if(name === 'index' && !this.isUpdating)
     {
       this.sliderIndex = parseInt(newValue, 10);
-      this.updateSlider();
+      this.updateDots();
+    }
+
+    if(name === 'timer')
+    {
+      this.timer = newValue;
+      this.autoUpdateSlider();
     }
   }
 }

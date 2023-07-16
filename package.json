@@ -1,8 +1,8 @@
 {
   "name": "xpwa",
-  "version": "0.4.6",
-  "description": "For fast dev",
-  "main": "pwa.js",
+  "version": "0.4.7",
+  "description": "For fast dev web UI",
+  "main": "xpwa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
