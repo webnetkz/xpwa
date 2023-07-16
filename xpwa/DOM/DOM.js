@@ -11,17 +11,17 @@ import { StubXPWA } from './components/Stub.js';
 import { ModalXPWA } from './components/Modal.js';
 
 
-import { CheckboxXPWA } from './components/Checkbox.js';
-import { RadioXPWA } from './components/Radio.js';
-import { ButtonXPWA } from './components/Button.js';
+import { CheckboxXPWA } from './components/form/Checkbox.js';
+import { RadioXPWA } from './components/form/Radio.js';
+import { ButtonXPWA } from './components/form/Button.js';
 import { TopXPWA } from './components/Top.js';
 
 
 import { CloseXPWA } from './components/Close.js';
-import { ProgressBarXPWA } from './components/ProgressBar.js';
-import { ProgressRoundXPWA } from './components/ProgressRound.js';
+import { ProgressBarXPWA } from './components/progress/ProgressBar.js';
+import { ProgressRoundXPWA } from './components/progress/ProgressRound.js';
 import { TabsXPWA } from './components/Tabs.js';
-import { InputXPWA } from './components/Input.js';
+import { InputXPWA } from './components/form/Input.js';
 import { SliderXPWA } from './components/slider/Slider.js';
 import { Card3DXPWA } from './components/Card3D.js';
 

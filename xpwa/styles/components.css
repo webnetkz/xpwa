@@ -1,0 +1,71 @@
+radio-xpwa {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px; 
+  cursor: pointer;
+}
+radio-xpwa > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--gray);
+  border-radius: 50%;
+}
+radio-xpwa > input:checked ~ radio-xpwa-input {
+  background-color: var(--main-theme);
+}
+radio-xpwa > input:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+radio-xpwa > input:checked ~ radio-xpwa > input:after {
+  display: block;
+}
+radio-xpwa radio-xpwa > input:after {
+  top: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+checkbox-xpwa {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px; 
+  cursor: pointer;
+}
+checkbox-xpwa > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--gray);
+  border: 2px solid var(--main-theme);
+  border-radius: var(--radius);
+}
+checkbox-xpwa > input:checked ~ checkbox-xpwa > input {
+  background-color: var(--main-theme);
+}
+checkbox-xpwa > input:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+checkbox-xpwa > input:checked ~ checkbox-xpwa > input:after {
+  display: block;
+}
+checkbox-xpwa checkbox-xpwa > input:after {
+  top: 2px;
+  left: 5px;
+  width: 7px;
+  height: 13px;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

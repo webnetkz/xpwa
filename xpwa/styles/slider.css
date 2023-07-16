@@ -4,30 +4,38 @@ slider-xpwa {
     background-size: cover!important;
     background-repeat: no-repeat!important;
     min-height: 400px!important;
-    min-width: 100vw;
+    min-width: 100%;
 }
 slider-xpwa img {
   display: none;
 }
 back-slide-xpwa, next-slide-xpwa {
     position: absolute;
-    top: 200px;
+    height: 100%;
     width: 50px;
-    height: 50px;
+    color: var(--main-theme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+back-slide-xpwa:hover, next-slide-xpwa:hover {
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 back-slide-xpwa {
-    left: 10px;
+    left: 0;
 }
 back-slide-xpwa:after {
-    content: "\2190";
-    color: red;
-    font-size: 3rem;
+    content: "\25C0";
+    color: var(--white);
+    font-size: 1rem;
 }
 next-slide-xpwa {
-    right: 10px;
+    right: 0;
 }
 next-slide-xpwa:after {
-    content: "\2192";
-    color: red;
-    font-size: 3rem;
+    content: "\25B6";
+    color: var(--white);
+    font-size: 1rem;
 }
