@@ -5,7 +5,6 @@ export class TopXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.attachShadow({ mode: 'open' });
 
     this.addEventListener('click', () => {
       window.scrollTo(0, 0);

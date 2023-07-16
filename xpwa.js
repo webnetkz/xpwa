@@ -8,7 +8,6 @@ export class XPWA
     constructor()
     {    
         this.installXPWA();
-        document.body.innerHTML += '<top-xpwa></top-xpwa>';
     }
 
     installXPWA()

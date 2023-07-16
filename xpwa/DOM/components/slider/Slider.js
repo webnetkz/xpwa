@@ -14,6 +14,9 @@ export class SliderXPWA extends HTMLElement
     super();
     
     this.sliderIndex = 0;
+    this.position = 0;
+
+    this.setAttribute('index', this.sliderIndex);
 
     this.prepend(document.createElement('back-slide-xpwa'));
     this.appendChild(document.createElement('dots-container-xpwa'));
@@ -21,6 +24,7 @@ export class SliderXPWA extends HTMLElement
 
     const images = this.getAllImages();
     
+    this.setImage(images[0]);
     images.forEach((image) => {
       console.log(image.src);
     });
@@ -46,50 +50,36 @@ export class SliderXPWA extends HTMLElement
             this.updateSlider();
         });
         dotsContainer.appendChild(dot);
-    });
+      });
   }
 
   updateSlider() {
+    this.isUpdating = true;
     const dots = this.querySelectorAll('dot-xpwa');
-    //this.style.transform = `translateX(-${this.sliderIndex * 100}vw)`;
+
     dots.forEach(dot => dot.classList.remove('active'));
     dots[this.sliderIndex].classList.add('active');
-  }
-
-
-  
-  
-
-      // backSlide.addEventListener('click', () => {
-      //   sliderIndex--;
-      //   if (sliderIndex < 0) sliderIndex = sliderItems.length - 1;
-      //   updateSlider();
-      // });
+    this.setAttribute('index', this.sliderIndex);
     
-      // nextSlide.addEventListener('click', () => {
-      //   sliderIndex++;
-      //   if (sliderIndex >= sliderItems.length) sliderIndex = 0;
-      //   updateSlider();
-      // });
-  
-      // setInterval(() => {
-      //   nextSlide.click();
-      // }, interval);
-
-
+    this.setImage(this.getAllImages()[this.sliderIndex]);
+    this.isUpdating = false;
+  }
 
   setImage(img)
   {
     this.style.background = 'url("'+img.src+'")';
   }
 
-  static get observedAttributes()
-  {
-    return [];
+  static get observedAttributes() {
+    return ['index'];
   }
 
-  attributeChangedCallback(name, oldValue, newValue)
-  {
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'index' && !this.isUpdating)
+    {
+      this.sliderIndex = parseInt(newValue, 10);
+      this.updateSlider();
+    }
   }
 }
 

@@ -30,10 +30,9 @@ export class DOM
 {
     constructor()
     {
-        window.query = this.query;
-        window.queryAll = this.queryAll;
-
         this.setStyles();
+
+        document.body.appendChild(document.createElement('top-xpwa'));
 
         this.showerHidden = new ShowerHidden();
         this.hide = this.showerHidden.hidden;

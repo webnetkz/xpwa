@@ -3,27 +3,22 @@ export class BackSlideXPWA extends HTMLElement
   constructor()
   {
     super();
+
+    this.addEventListener('click', this.handlerBackSlide);
   }
 
   handlerBackSlide()
   {
     
     let slider = this.parentNode;
-    let nowSlide = Number(slider.getAttribute('now-slide'));
-    let images = slider.querySelectorAll('img');
-    let counter = Number(slider.getAttribute('counter'));
+    let images = slider.getAllImages();
 
-    if(counter == 0)
-    {
-      nowSlide = images.length;
-    } 
-
-    slider.classList.add('showElement');
-    setTimeout(() => {
-      slider.classList.remove('showElement');
-    }, 300);
-    slider.setAttribute('now-slide', nowSlide - 1);
-    slider.style.background = `url('${images[nowSlide].src}')`;
+    if (slider.sliderIndex == 0) {
+        slider.setAttribute('index', (images.length - 1));
+    } else { 
+      slider.sliderIndex--;
+      slider.setAttribute('index', slider.sliderIndex);
+     }
   }
 }
 

@@ -14,11 +14,20 @@ back-slide-xpwa, next-slide-xpwa {
     top: 200px;
     width: 50px;
     height: 50px;
-    background-color: blue;
 }
 back-slide-xpwa {
     left: 10px;
 }
+back-slide-xpwa:after {
+    content: "\2190";
+    color: red;
+    font-size: 3rem;
+}
 next-slide-xpwa {
     right: 10px;
+}
+next-slide-xpwa:after {
+    content: "\2192";
+    color: red;
+    font-size: 3rem;
 }
