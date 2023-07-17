@@ -6,7 +6,6 @@ import { DotXPWA } from '../Dot.js';
 import { DotsContainerXPWA } from '../DotsContainer.js';
 
 
-
 export class SliderXPWA extends HTMLElement
 {
   constructor()
@@ -17,20 +16,59 @@ export class SliderXPWA extends HTMLElement
     this.timer = 1;
 
     this.setAttribute('index', this.sliderIndex);
-    
-    this.prepend(document.createElement('back-slide-xpwa'));
-    this.appendChild(document.createElement('dots-container-xpwa'));
-    this.appendChild(document.createElement('next-slide-xpwa'));
-    
+    this.createArrows();
+
+    if(!Mobile.isMobile())
+    {
+    }
+
+    this.swipes();
+
     const images = this.getAllImages();
     
     this.setImage(images[0]);
     this.createDots(images);
   }
 
+  swipes()
+  {
+    let next = this.querySelector("next-slide-xpwa");
+    let previous = this.querySelector("back-slide-xpwa");
+
+    let startX;
+    let endX;
+
+    function handleTouchStart(e) {
+      startX = e.touches[0].clientX;
+    }
+
+    function handleTouchEnd(e) {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    }
+
+    function handleSwipe() {
+      if (startX - endX > 100) {
+        next.click();
+      } else if (startX - endX < -100) {
+        previous.click();
+      }
+    }
+
+    this.addEventListener('touchstart', handleTouchStart, false);
+    this.addEventListener('touchend', handleTouchEnd, false);
+  }
+
   getAllImages()
   {
     return this.querySelectorAll('img');
+  }
+
+  createArrows()
+  {
+    this.prepend(document.createElement('back-slide-xpwa'));
+    this.appendChild(document.createElement('dots-container-xpwa'));
+    this.appendChild(document.createElement('next-slide-xpwa'));
   }
 
   createDots(images)

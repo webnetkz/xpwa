@@ -3,7 +3,6 @@ export class FooterXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.attachShadow({mode: 'open'});
   }
 }
 
