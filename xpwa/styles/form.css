@@ -1,0 +1,167 @@
+sign-form-xpwa {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  sign-form-xpwa::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: formAnimation 7s linear infinite;
+  }
+  sign-form-xpwa::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #3025fc, #3025fc, #3025fc);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: formAnimation 7s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes formAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  sign-form-xpwa form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: var(--radius);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  sign-form-xpwa form h2 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1rem; 
+  }
+  sign-form-xpwa form .sign-input {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+  }
+  sign-form-xpwa form .sign-input input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  sign-form-xpwa form .sign-input span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+  }
+  sign-form-xpwa form .sign-input input:valid ~ span,
+  sign-form-xpwa form .sign-input input:focus ~ span {
+    color: #fff;
+    font-size: 0.75rem;
+    transform: translateY(-35px);
+  }
+  sign-form-xpwa form .sign-input i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  sign-form-xpwa form .sign-input input:valid ~ i,
+  sign-form-xpwa form .sign-input input:focus ~ i {
+    height: 43px;
+  }
+  sign-form-xpwa form .links {
+    display: flex;
+    justify-content: space-between;
+  }
+  sign-form-xpwa form .links a {
+    margin: 10px 0;
+    font-size: 0.75rem;
+    color: #8f8f8f;
+    text-decoration: none;
+  }
+  sign-form-xpwa form .links a:hover,
+  sign-form-xpwa form .links a:nth-child(2) {
+    color: #fff;
+  }
+  sign-form-xpwa form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+  }
+  sign-form-xpwa form input[type="submit"]:active {
+    opacity: 0.8
+  }
+  .borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+  }
+  .borderLine:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #27ff40, #27ff40, #27ff40);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: formAnimation 7s linear infinite;
+    animation-delay: 1s;
+  }
+  .borderLine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: formAnimation 7s linear infinite;
+    animation-delay: 2s;
+  }
