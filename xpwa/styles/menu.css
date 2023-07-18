@@ -1,0 +1,19 @@
+menu-xpwa {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin: var(--margin);
+    background: var(--gray-gradient);
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    menu-xpwa {
+        flex-direction: column;
+    }
+    menu-xpwa > * {
+        margin-bottom: 5px;
+        width: 94%;
+    }
+}

@@ -6,6 +6,7 @@
 @import url(dots.css);
 @import url(components.css);
 @import url(mobile.css);
+@import url(menu.css);
 
 
 * {
@@ -179,15 +180,6 @@ message-xpwa {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-menu-xpwa {
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  align-items: center;
-  margin: var(--margin);
-  background: var(--gray-gradient);
-  width: 100%;
 }
 button-xpwa {
   color: var(--white);
