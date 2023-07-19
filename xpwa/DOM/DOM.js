@@ -14,6 +14,7 @@ import { ModalXPWA } from './components/Modal.js';
 import { CheckboxXPWA } from './components/form/Checkbox.js';
 import { RadioXPWA } from './components/form/Radio.js';
 import { ButtonXPWA } from './components/form/Button.js';
+import { BorderLinesXPWA } from './components/form/BorderLines.js';
 import { TopXPWA } from './components/Top.js';
 
 

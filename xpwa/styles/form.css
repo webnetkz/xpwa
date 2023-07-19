@@ -5,6 +5,7 @@ sign-form-xpwa {
     background: #1c1c1c;
     border-radius: var(--radius);
     overflow: hidden;
+    margin: 1rem;
   }
   sign-form-xpwa::before {
     content: '';
@@ -134,12 +135,12 @@ sign-form-xpwa {
   sign-form-xpwa form input[type="submit"]:active {
     opacity: 0.8
   }
-  .borderLine {
+  border-lines-xpwa {
     position: absolute;
     top: 0;
     inset: 0;
   }
-  .borderLine:before {
+  border-lines-xpwa:before {
     content: '';
     position: absolute;
     top: -50%;
@@ -152,7 +153,7 @@ sign-form-xpwa {
     animation: formAnimation 7s linear infinite;
     animation-delay: 1s;
   }
-  .borderLine::after {
+  border-lines-xpwa::after {
     content: '';
     position: absolute;
     top: -50%;
