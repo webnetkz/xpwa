@@ -28,7 +28,7 @@ back-slide-xpwa {
 }
 back-slide-xpwa:after {
     content: "\25C0";
-    color: var(--white);
+    color: var(--main-theme);
     font-size: 1rem;
 }
 next-slide-xpwa {
@@ -36,6 +36,6 @@ next-slide-xpwa {
 }
 next-slide-xpwa:after {
     content: "\25B6";
-    color: var(--white);
+    color: var(--main-theme);
     font-size: 1rem;
 }

@@ -10,10 +10,10 @@ radio-xpwa > input {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: var(--gray);
+  background-color: var(--black);
   border-radius: 50%;
 }
-radio-xpwa > input:checked ~ radio-xpwa-input {
+radio-xpwa > input:checked ~ radio-xpwa > input {
   background-color: var(--main-theme);
 }
 radio-xpwa > input:after {
@@ -24,7 +24,7 @@ radio-xpwa > input:after {
 radio-xpwa > input:checked ~ radio-xpwa > input:after {
   display: block;
 }
-radio-xpwa radio-xpwa > input:after {
+radio-xpwa > input:after {
   top: 6px;
   left: 6px;
   width: 13px;
@@ -60,7 +60,7 @@ checkbox-xpwa > input:after {
 checkbox-xpwa > input:checked ~ checkbox-xpwa > input:after {
   display: block;
 }
-checkbox-xpwa checkbox-xpwa > input:after {
+checkbox-xpwa > input:after, checkbox-xpwa:after {
   top: 2px;
   left: 5px;
   width: 7px;

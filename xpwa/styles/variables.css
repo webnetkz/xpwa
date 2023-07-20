@@ -1,12 +1,13 @@
 :root {
-  --main-theme: linear-gradient(180deg, #5172FF 0%, #003DFF 100%);
-  --main-theme-light: linear-gradient(180deg, #7c93fb 0%, #2959f9 100%);
-  --main-theme-dark: linear-gradient(180deg, #4b69ee 0%, #0134db 100%);
+  --main-theme: #fffb00;
+  --main-theme-light: #fcf946;
+  --main-theme-dark: #dad601;
 
-  --white: white;
+  --bg: #4d3d3d;
+  --white: #222222;
   --black: black;
-  --gray: rgb(130, 128, 128);
-  --gray-gradient: linear-gradient(90deg,#f5f5fa 80%,#ebebf0);
+  --gray: #302e2e;
+  --gray-gradient: linear-gradient(90deg,#222222 80%,#302e2e);
 
   --padding: 5px;
   --margin: 5px;
