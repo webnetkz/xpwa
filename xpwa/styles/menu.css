@@ -8,6 +8,18 @@ menu-xpwa {
     width: 100%;
 }
 
+.burger-icon {
+    display: none;
+    cursor: pointer;
+}
+.burger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background: #000;
+}
+
 @media (max-width: 1200px) {
     menu-xpwa {
         flex-direction: column;
@@ -15,5 +27,9 @@ menu-xpwa {
     menu-xpwa > * {
         margin-bottom: 5px;
         width: 94%;
+    }
+    .burger-icon {
+        display: inline-block;
+        cursor: pointer;
     }
 }

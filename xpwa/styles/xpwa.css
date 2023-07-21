@@ -94,7 +94,7 @@ top-xpwa:after {
 }
 progress-round-xpwa {
   position: relative;
-  z-index: 999;
+  z-index: var(--progress-round);
   position: fixed;
   top: calc(50vh - 50px);
   left: calc(50vw - 50px);
@@ -141,6 +141,7 @@ progress-bar-xpwa {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: var(--progress-bar);
   width: 100vw;
   height: 5px;
   background: var(--main-theme-dark);

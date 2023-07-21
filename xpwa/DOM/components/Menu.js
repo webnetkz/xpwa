@@ -5,6 +5,8 @@ export class MenuXPWA extends HTMLElement
   constructor()
   {
     super();
+
+    this.innerHTML += `<i class="burger-icon"><span></span><span></span><span></span></i>`;
   }
 
   setMobileStyles()
