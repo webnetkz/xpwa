@@ -1,4 +1,4 @@
-import { Mobile } from '../Mobile.js';
+import { Mobile } from '../../Mobile.js';
 
 export class MenuXPWA extends HTMLElement
 {
@@ -6,7 +6,7 @@ export class MenuXPWA extends HTMLElement
   {
     super();
 
-    this.innerHTML += `<i class="burger-icon"><span></span><span></span><span></span></i>`;
+    this.innerHTML += `<burger-xpwa></burger-xpwa>`;
   }
 
   setMobileStyles()
