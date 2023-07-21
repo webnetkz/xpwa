@@ -1,3 +1,11 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .showElement {
     animation: showElementAnimation 0.3s linear;
     will-change: transform;

@@ -29,6 +29,7 @@ burger-xpwa span {
         margin-bottom: 5px;
         width: 94%;
         display: none;
+        animation: show 0.3s linear;
     }
     burger-xpwa {
         display: inline-block;

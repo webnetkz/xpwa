@@ -1,9 +1,9 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.5.5</i>
+    <i>version 0.5.6</i>
     <img src="./logo.png">
 </h1>
-<code>https://cdn.jsdelivr.net/npm/xpwa@0.5.5/dist/xpwa.min.js</code>
+<code>https://cdn.jsdelivr.net/npm/xpwa@0.5.6/dist/xpwa.min.js</code>
 <hr>
 <h3>x Progressive WEB Application</h3>
 <p>xPWA is a powerful JavaScript library for building web applications, heavily leveraging web components and the Shadow DOM. The library provides a set of ready-to-use HTML components with rich functionality, each having its own isolated styles and animations.</p>
