@@ -149,9 +149,12 @@ modal-xpwa
 }
 nav-xpwa
 {
-  display: block;
-  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
   min-width: 20vw;
+  display: block;
+  background: var(--gray-gradient);
 }
 progress-bar-xpwa
 {
