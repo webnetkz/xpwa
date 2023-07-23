@@ -8,11 +8,11 @@ export class Card3DXPWA extends HTMLElement
 
     this.addEventListener('mousemove', this.rotate);  
     this.addEventListener('mouseout', this.stopRotate);      
-    this.setStyles();
 
     if(Mobile.isMobile())
     {
-      window.addEventListener("deviceorientation", function(event) {
+      window.addEventListener("deviceorientation", function(event)
+      {
 
         let container = document.querySelector('.tmp');
         let beta = (Math.round(event.beta) / 180) * 6;
@@ -42,15 +42,6 @@ export class Card3DXPWA extends HTMLElement
   {
     let container = this.querySelector(':first-child');
     container.style.transform = 'rotate(0)';
-  }
-
-  setStyles()
-  {
-    this.style.cssText += `
-      perspective: 1000px;
-      transform-style: preserve-3d;
-      display: grid;
-    `;
   }
 }
 

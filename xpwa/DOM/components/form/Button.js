@@ -4,20 +4,6 @@ export class ButtonXPWA extends HTMLElement
   {
     super();
   }
-
-  static get observedAttributes()
-  {
-    return ['attr'];
-  }
-
-  attributeChangedCallback(name, oldValue, newValue)
-  {
-    switch(name)
-    {
-        case 'attr':
-        break;
-    }
-  }
 }
 
 customElements.define("button-xpwa", ButtonXPWA);

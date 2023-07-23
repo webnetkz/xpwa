@@ -31,15 +31,6 @@ export class TabsXPWA extends HTMLElement
       });
     });
   }
-
-  static get observedAttributes()
-  {
-    return [''];
-  }
-
-  attributeChangedCallback(name, oldValue, newValue)
-  {
-  }
 }
 
 customElements.define("tabs-xpwa", TabsXPWA);

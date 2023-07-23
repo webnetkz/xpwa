@@ -10,7 +10,8 @@
 @import url(components.css);
 
 
-* {
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,7 +22,8 @@
   font-family: 'Ubuntu', sans-serif;
   scroll-behavior: smooth;
 }
-body {
+body
+{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,7 +34,8 @@ body {
   overflow-x: hidden;
   background: var(--bg);
 }
-content-xpwa {
+content-xpwa
+{
   display: block;
   position: relative;
   left: 0.5vw;
@@ -43,7 +46,8 @@ content-xpwa {
   padding: var(--padding);
   border-radius: var(--radius);
 }
-footer-xpwa {
+footer-xpwa
+{
   display: block;
   background: var(--gray);
   min-width: 100vw;
@@ -53,7 +57,8 @@ footer-xpwa {
   align-items: flex-end;
   color: var(--white);
 }
-header-xpwa {
+header-xpwa
+{
   display: flex;
   align-items: center;
   position: relative;
@@ -62,10 +67,15 @@ header-xpwa {
   min-height: 50px;
   width: 100vw;
 }
-card-3d-xpwa {
+card-3d-xpwa
+{
   will-change: transform;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: grid;
 }
-top-xpwa {
+top-xpwa
+{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,18 +91,21 @@ top-xpwa {
   z-index: 999999;
   transition-duration: 0.5s;
 }
-top-xpwa:hover {
+top-xpwa:hover
+{
   transform: scale(1.2) rotateZ(360deg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-top-xpwa:after {
+top-xpwa:after
+{
   content: "\2191";
   transform: scaleX(0.7);
   margin-bottom: 10px;
   color: var(--white);
 }
-progress-round-xpwa {
+progress-round-xpwa
+{
   position: relative;
   z-index: var(--progress-round);
   position: fixed;
@@ -105,7 +118,8 @@ progress-round-xpwa {
   animation: progressround 2s infinite;
   box-shadow: 0 0 20px rgba(101, 141, 255, 0.1);
 }
-progress-round-xpwa > span {
+progress-round-xpwa > span
+{
   box-sizing: border-box;
   display: block;
   min-width: 10px;
@@ -120,7 +134,8 @@ progress-round-xpwa > span {
   top: 44px;
   animation: progressroundSputnik 3s infinite;
 }
-modal-xpwa {
+modal-xpwa
+{
   width: 60vw;
   height: 50vh;
   display: flex;
@@ -132,12 +147,14 @@ modal-xpwa {
   box-shadow: var(--box-shadow);
   background: var(--white);
 }
-nav-xpwa {
+nav-xpwa
+{
   display: block;
   background: white;
   min-width: 20vw;
 }
-progress-bar-xpwa {
+progress-bar-xpwa
+{
   position: fixed;
   bottom: 0;
   left: 0;
@@ -146,7 +163,8 @@ progress-bar-xpwa {
   height: 5px;
   background: var(--main-theme-dark);
 }
-sidebar-xpwa {
+sidebar-xpwa
+{
   display: block;
   position: fixed;
   top: 0;
@@ -157,7 +175,8 @@ sidebar-xpwa {
   background: var(--white);
   box-shadow: var(--shadow);
 }
-stub-xpwa {
+stub-xpwa
+{
   position: fixed;
   display: flex;
   top: 0;
@@ -170,7 +189,8 @@ stub-xpwa {
   backdrop-filter: blur(5px);
   z-index: 999999999;
 }
-message-xpwa {
+message-xpwa
+{
   position: fixed;
   top: 20px;
   right: 20px;
@@ -183,23 +203,27 @@ message-xpwa {
   justify-content: flex-start;
   align-items: center;
 }
-button-xpwa {
+button-xpwa
+{
   color: var(--white);
   border-radius: var(--radius);
   padding: var(--padding) 15px;
   background: var(--main-theme);
   box-shadow: 0px 1px 3px 0px rgba(93, 100, 148, 0.20), 0px 4px 11px 0px rgba(37, 44, 97, 0.15)
 }
-button-xpwa:active {
+button-xpwa:active
+{
   background: var(--main-theme);
   color: var(--white);
 }
-button-xpwa:hover {
+button-xpwa:hover
+{
   background: var(--main-theme-light);
   color: var(--white);
   cursor: pointer;
 }
-close-xpwa {
+close-xpwa
+{
   position: absolute;
   top: 9px;
   right: 20px;
@@ -208,7 +232,8 @@ close-xpwa {
   transform: rotate(45deg);
   color: var(--main-theme)!important;
 }
-block-xpwa {
+block-xpwa
+{
   display: block;
   background: var(--gray-gradient);
   width: 98vw;
@@ -219,11 +244,13 @@ block-xpwa {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-close-xpwa:hover {
+close-xpwa:hover
+{
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
-tabs-xpwa {
+tabs-xpwa
+{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -238,7 +265,8 @@ tabs-xpwa {
   border-radius: 9.61711px;
   position: relative;
 }
-tab-content {
+tab-content
+{
   display: none;
   position: absolute;
   left: 10px;
