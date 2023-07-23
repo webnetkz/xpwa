@@ -1,4 +1,5 @@
-menu-xpwa {
+menu-xpwa
+{
     display: flex;
     position: relative;
     justify-content: space-around;
@@ -7,11 +8,13 @@ menu-xpwa {
     background: var(--gray-gradient);
     width: 100%;
 }
-burger-xpwa {
+burger-xpwa
+{
     display: none;
     cursor: pointer;
 }
-burger-xpwa span {
+burger-xpwa span
+{
     display: block;
     width: 25px;
     height: 3px;
@@ -20,18 +23,22 @@ burger-xpwa span {
     background: var(--main-theme);
 }
 
-@media (max-width: 1200px) {
-    menu-xpwa {
+@media (max-width: 1200px)
+{
+    menu-xpwa
+    {
         margin-top: 40px;
         flex-direction: column;
     }
-    menu-xpwa > * {
+    menu-xpwa > *
+    {
         margin-bottom: 5px;
         width: 94%;
         display: none;
         animation: show 0.3s linear;
     }
-    burger-xpwa {
+    burger-xpwa
+    {
         display: inline-block;
         cursor: pointer;
         position: absolute;

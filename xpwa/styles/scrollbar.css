@@ -1,23 +1,30 @@
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
     width: var(--width-scroll-bar);
 }
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb
+{
     background: var(--main-theme);
     border-radius: 3em;
 }
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover
+{
     background: var(--main-theme-dark);
     cursor: pointer;
 }
-::-webkit-scrollbar-button:vertical:start:decrement {
+::-webkit-scrollbar-button:vertical:start:decrement
+{
     opacity: 0;
 }
-::-webkit-scrollbar-button:vertical:end:increment {
+::-webkit-scrollbar-button:vertical:end:increment
+{
     opacity: 0;
 }
-::-webkit-scrollbar-button:horizontal:start:decrement {
+::-webkit-scrollbar-button:horizontal:start:decrement
+{
     opacity: 0;
 }
-::-webkit-scrollbar-button:horizontal:end:increment {
+::-webkit-scrollbar-button:horizontal:end:increment
+{
     opacity: 0;
 }

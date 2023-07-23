@@ -1,4 +1,5 @@
-dots-container-xpwa {
+dots-container-xpwa
+{
     display: flex;
     justify-content: space-around;
     position: absolute;
@@ -6,14 +7,16 @@ dots-container-xpwa {
     min-width: 100px;
     left: calc(50vw - 50px);
 }
-dot-xpwa {
+dot-xpwa
+{
     display: block;
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background: var(--main-theme);
 }
-dot-xpwa:hover, dot-xpwa.active {
+dot-xpwa:hover, dot-xpwa.active
+{
     transform: scale(2);
     cursor: pointer;
 }

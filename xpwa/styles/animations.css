@@ -1,86 +1,114 @@
-@keyframes show {
-  0% {
+@keyframes show
+{
+  0%
+  {
     opacity: 0;
   }
-  100% {
+  100%
+  {
     opacity: 1;
   }
 }
-.showElement {
+.showElement
+{
     animation: showElementAnimation 0.3s linear;
     will-change: transform;
 }
-.showFromRightElement {
+.showFromRightElement
+{
   animation: showFromRightElementAnimation 0.2s linear;
   will-change: transform;
 }
-.hiddenElement {
+.hiddenElement
+{
     animation: hiddenElementAnimation 0.3s linear;
     will-change: transform;
 }
-.hiddenToRightElement {
+.hiddenToRightElement
+{
   animation: hiddenToRightElementAnimation 0.5s linear;
   will-change: transform;
   transition-property: right;
 }
-@keyframes showElementAnimation {
-  0% {
+@keyframes showElementAnimation
+{
+  0%
+  {
     opacity: 0;
     transform: scale(0);
   }
-  100% {
+  100%
+  {
     opacity: 1;
     transform: scale(1);
   }
 }
-@keyframes showFromRightElementAnimation {
-  0% {
+@keyframes showFromRightElementAnimation
+{
+  0%
+  {
     left: 120vw;
   }
-  100% {
+  100%
+  {
     left: 20vw;
   }
 }
-@keyframes hiddenElementAnimation {
-  0% {
+@keyframes hiddenElementAnimation
+{
+  0%
+  {
     opacity: 1;
   }
-  50% {
+  50%
+  {
     transform: perspective(800px) rotateY(70deg);
   }
-  100% {
+  100%
+  {
     opacity: 0;
   }
 }
-@keyframes hiddenToRightElementAnimation {
-  0% {
+@keyframes hiddenToRightElementAnimation
+{
+  0%
+  {
     opacity: 1;
   }
-  90% {
+  90%
+  {
     opacity: 1;
     right: -100vw;
   }
-  100% {
+  100%
+  {
     opacity: 0;
   }
 }
-@keyframes progressround {
-  50% {
+@keyframes progressround
+{
+  50%
+  {
     transform: rotate(360deg);
   }
 }
-@keyframes progressroundSputnik {
-  0% {
+@keyframes progressroundSputnik
+{
+  0%
+  {
     left: -15px;
     background-color: red;
   }
-  1% {
+  1%
+  {
     background-color: none;
   }
-  50% {
+  50%
+  {
     left: 102px;
   }
-  100% {
+  100%
+  {
     left: -15px;
   }
 }

@@ -1,11 +1,13 @@
 html, 
 html *, 
 body, 
-body * {
+body *
+{
     cursor: none;
 }
 .cursor-dot,
-.cursor-dot-outline {
+.cursor-dot-outline
+{
     mix-blend-mode: normal;
     pointer-events: none;
     position: absolute;
@@ -21,7 +23,8 @@ body * {
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out;
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, -webkit-transform 0.20s ease-in-out;
 }
-.cursor-dot {
+.cursor-dot
+{
     z-index:99999999;
     width: 16.0px;
     height: 16.0px;
@@ -31,7 +34,8 @@ body * {
     border-width: 0px;
     border-color: #ffffff;
 }
-.cursor-dot-outline {
+.cursor-dot-outline
+{
     z-index:99999998;
     width: 30.0px;
     height: 30.0px;
