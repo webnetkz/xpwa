@@ -21,6 +21,16 @@ export class XPWA
 
 window.onload = (() => {
     window.DOM = new DOM();
+
+    fetch('/xpwa.json')
+        .then(response => response.json())
+        .then((data) => {
+            data = JSON.stringify(data);
+            localStorage.setItem('xpwa', data);
+            console.log(data);
+        })
+        .catch(error => console.log('Ошибка:', error));
+
 })();
 
 

@@ -1,0 +1,27 @@
+{
+    "menu": [
+        {
+            "text": "Home",
+            "link": "/"
+        },
+        {
+            "text": "Form",
+            "link": "/pages/form/index.html"
+        },
+        {
+            "text": "And more",
+            "link": "/pages/more/index.html"
+        }
+    ],
+    "colors": 
+    {
+        "main-theme": "#fffb00",
+        "main-theme-light": "#fcf946",
+        "main-theme-dark": "#dad601",
+        "bg": "#4d3d3d"
+    },
+    "theme":
+    {
+        "radius": "3px"
+    }
+}

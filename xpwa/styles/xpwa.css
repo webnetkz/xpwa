@@ -66,6 +66,8 @@ header-xpwa
   background: var(--gray-gradient);
   min-height: 50px;
   width: 100vw;
+  z-index: var(--z-header);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 card-3d-xpwa
 {
@@ -149,12 +151,16 @@ modal-xpwa
 }
 nav-xpwa
 {
+  padding: 60px 10px;
   position: fixed;
   left: 0;
   top: 0;
-  min-width: 20vw;
-  display: block;
-  background: var(--gray-gradient);
+  width: 20vw;
+  height: 100vh;
+  z-index: var(--z-nav);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
 }
 progress-bar-xpwa
 {

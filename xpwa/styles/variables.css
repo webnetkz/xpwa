@@ -15,6 +15,9 @@
   --shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   --width-scroll-bar: 5px;
 
+  --z-nav: 9;
+  --z-header: 99;
+
 
   --progress-bar: 999;
   --progress-round: 1000;
