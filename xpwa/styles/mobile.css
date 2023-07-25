@@ -5,9 +5,9 @@
         width: 30px;
         height: 30px;
     }
-    .burger-icon
+
+    nav-xpwa
     {
-        display: inline-block;
-        cursor: pointer;
+        width: 90vw!important;
     }
 }

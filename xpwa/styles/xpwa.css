@@ -166,6 +166,7 @@ nav-xpwa
   background: var(--bg);
   display: flex;
   flex-direction: column;
+  transition-duration: 50ms;
 }
 nav-xpwa button-xpwa
 {
