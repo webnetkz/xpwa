@@ -1,3 +1,5 @@
+import { Mobile } from '../Mobile.js';
+
 export class NavXPWA extends HTMLElement
 {
   constructor()
@@ -10,9 +12,23 @@ export class NavXPWA extends HTMLElement
     
     this.setButtonStyle(button);
     button.addEventListener('click',() => {
-      this.style.cssText = `
-        left: -88vw;
-        background: var(--main-theme);`;
+
+      if(Mobile.isMobile())
+      {
+        this.style.cssText = `
+          left: -88vw;
+          background: var(--main-theme);`;
+      }
+      else
+      {
+        this.style.cssText = `
+          left: -18vw;
+          background: var(--main-theme);`;
+      }
+
+
+      
+      this.lessContent();
     });
 
     this.openNav();
@@ -26,10 +42,11 @@ export class NavXPWA extends HTMLElement
       left: 2.1vw;
     `;
   }
-
+  
   openNav()
   {
     this.addEventListener('mousemove', () => {
+      this.lessContent();
       this.style.cssText = `
       transition-duration: 400ms;
       left: 0vw;

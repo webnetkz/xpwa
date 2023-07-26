@@ -41,7 +41,7 @@ content-xpwa
   left: 0.5vw;
   top: 1vh;
   min-height: 90vh;
-  min-width: 98vw;
+  width: 98vw;
   background: var(--gray-gradient);
   padding: var(--padding);
   border-radius: var(--radius);
@@ -167,6 +167,7 @@ nav-xpwa
   display: flex;
   flex-direction: column;
   transition-duration: 50ms;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 nav-xpwa button-xpwa
 {
