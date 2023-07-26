@@ -7,7 +7,6 @@ export class NavXPWA extends HTMLElement
     super();
 
     this.innerHTML += `<button-xpwa close="close">Close</button-xpwa>`;
-
     const button = this.querySelector('button-xpwa[close="close"]');
     
     this.setButtonStyle(button);
@@ -24,11 +23,7 @@ export class NavXPWA extends HTMLElement
         this.style.cssText = `
           left: -18vw;
           background: var(--main-theme);`;
-      }
-
-
-      
-      this.lessContent();
+      }      
     });
 
     this.openNav();
@@ -46,14 +41,12 @@ export class NavXPWA extends HTMLElement
   openNav()
   {
     this.addEventListener('mousemove', () => {
-      this.lessContent();
       this.style.cssText = `
       transition-duration: 400ms;
       left: 0vw;
       background: var(--bg);`;
     });
   }
-
 }
 
 customElements.define("nav-xpwa", NavXPWA);
