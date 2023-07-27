@@ -5,28 +5,16 @@ export class ContentXPWA extends HTMLElement
     super();
 
     const header = document.querySelector('header-xpwa');
-
     if(header && header.getAttribute('position') == 'fixed')
     {
       this.style.top = '70px';
     }
 
-    this.lessContent();
-  }
-
-  lessContent()
-  {
     const nav = document.querySelector('nav-xpwa');
-
-    if(nav && nav.style.left == 0)
+    if(nav)
     {
       this.style.left = '10vw';
-      this.style.width = '79vw';
-    }
-    else
-    {
-      this.style.left = '0.5vw';
-      this.style.width = '80vw';
+      this.style.width = '78vw';
     }
   }
 }

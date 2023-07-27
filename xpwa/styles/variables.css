@@ -4,7 +4,7 @@
   --main-theme-dark: #dad601;
 
   --bg: #4d3d3d;
-  --white: #222222;
+  --white: #a6a4a4;
   --black: black;
   --gray: #302e2e;
   --gray-gradient: linear-gradient(90deg,#222222 80%,#302e2e);
@@ -17,6 +17,8 @@
 
   --z-nav: 9;
   --z-header: 99;
+  --z-stub: 998;
+  --z-preloader: 999;
 
 
   --progress-bar: 999;

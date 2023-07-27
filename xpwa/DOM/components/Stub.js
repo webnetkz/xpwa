@@ -2,9 +2,27 @@ export class StubXPWA extends HTMLElement
 {
   constructor()
   {
-    super();
-    
-    this.innerHTML += `<close-xpwa style="color: white;"></close-xpwa>`;
+    super();    
+  }
+  
+  createCloseButton()
+  {
+    this.innerHTML += `<close-xpwa style="color: var(--main-theme);"></close-xpwa>`;
+  }
+
+  static get observedAttributes()
+  {
+      return ['close'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue)
+  {
+    switch(name)
+    {
+      case 'close':
+        this.createCloseButton();
+      break;
+    }
   }
 }
 

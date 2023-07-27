@@ -39,6 +39,7 @@ content-xpwa
   display: block;
   position: relative;
   left: 0.5vw;
+  right: 0.5vw;
   top: 1vh;
   min-height: 90vh;
   width: 98vw;
@@ -56,6 +57,7 @@ footer-xpwa
   justify-content: center;
   align-items: flex-end;
   color: var(--white);
+  margin-top: 75px;
 }
 header-xpwa
 {
@@ -110,36 +112,6 @@ top-xpwa:after
   transform: scaleX(0.7);
   margin-bottom: 10px;
   color: var(--white);
-}
-progress-round-xpwa
-{
-  position: relative;
-  z-index: var(--progress-round);
-  position: fixed;
-  top: calc(50vh - 50px);
-  left: calc(50vw - 50px);
-  width: 100px;
-  height: 100px;
-  border: 2px solid var(--main-theme);
-  border-radius: 100px;
-  animation: progressround 2s infinite;
-  box-shadow: 0 0 20px rgba(101, 141, 255, 0.1);
-}
-progress-round-xpwa > span
-{
-  box-sizing: border-box;
-  display: block;
-  min-width: 10px;
-  min-height: 10px;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  z-index: 99;
-  border: 1px solid var(--main-theme);
-  border-radius: 10px;
-  left: -15px;
-  top: 44px;
-  animation: progressroundSputnik 3s infinite;
 }
 modal-xpwa
 {
@@ -207,7 +179,7 @@ stub-xpwa
   height: 100vh;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  z-index: 999999999;
+  z-index: var(--z-stub);
 }
 message-xpwa
 {
@@ -292,4 +264,14 @@ tab-content
   left: 10px;
   top: 70px;
   min-width: 95%;
+}
+
+h1
+{
+  color: var(--white);
+}
+hr
+{
+  border-color: var(--main-theme);
+  margin: 1rem;
 }

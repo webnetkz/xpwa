@@ -21,15 +21,32 @@
   </nav-xpwa>
   
   <content-xpwa>
-
-    <checkbox-xpwa name="checkbox"></checkbox-xpwa>
-
-    <radio-xpwa name="radio"></radio-xpwa>
-    <radio-xpwa name="radio"></radio-xpwa>
-    <radio-xpwa name="radio"></radio-xpwa>
-
-
+    <h1>Checkbox</h1>
+    <hr>
+    <checkbox-xpwa></checkbox-xpwa>
   </content-xpwa>
+
+  <stub-xpwa></stub-xpwa>
+
+  <style>
+    preloader-xpwa
+    {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: var(--z-preloader);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    preloader-xpwa span
+    {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+  <preloader-xpwa color="rgba(255, 0, 0, 0.2)"></preloader-xpwa>
 
 
   <footer-xpwa>
