@@ -97,7 +97,7 @@ top-xpwa
   height: 50px;
   background: var(--main-theme);
   border-radius: 50%;
-  z-index: 999999;
+  z-index: var(--z-to-top);
   transition-duration: 0.5s;
 }
 top-xpwa:hover
@@ -274,4 +274,23 @@ hr
 {
   border-color: var(--main-theme);
   margin: 1rem;
+}
+phone-xpwa
+{
+  min-width: 50px;
+  min-height: 50px;
+  background-color: var(--green);
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: var(--z-phone);
+}
+phone-xpwa a
+{
+  color: var(--main-theme);
+  font-size: 2rem;
 }

@@ -3,6 +3,7 @@
   --main-theme-light: #fcf946;
   --main-theme-dark: #dad601;
 
+  --green: rgb(6, 157, 6);
   --bg: #4d3d3d;
   --white: #a6a4a4;
   --black: black;
@@ -16,6 +17,8 @@
   --width-scroll-bar: 5px;
 
   --z-nav: 9;
+  --z-to-top: 88;
+  --z-phone: 88;
   --z-header: 99;
   --z-stub: 998;
   --z-preloader: 999;

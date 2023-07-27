@@ -18,6 +18,7 @@ import { ButtonXPWA } from './components/form/Button.js';
 import { BorderLinesXPWA } from './components/form/BorderLines.js';
 import { TopXPWA } from './components/Top.js';
 import { NavXPWA } from './components/Nav.js';
+import { PhoneXPWA } from './components/Phone.js';
 
 import { CloseXPWA } from './components/Close.js';
 import { ProgressBarXPWA } from './components/progress/ProgressBar.js';
