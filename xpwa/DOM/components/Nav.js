@@ -15,11 +15,12 @@ export class NavXPWA extends HTMLElement
       if(Mobile.isMobile())
       {
         this.style.cssText = `
-          left: -88vw;
-          background: var(--main-theme);`;
+        left: -88vw;
+        background: var(--main-theme);`;
       }
       else
       {
+        this.lessContent();
         this.style.cssText = `
           left: -19.5vw;
           background: var(--main-theme);`;
@@ -41,12 +42,13 @@ export class NavXPWA extends HTMLElement
   openNav()
   {
     this.addEventListener('mousemove', () => {
-      this.lessContent();
+      console.log(this);
       this.style.cssText = `
       transition-duration: 400ms;
       left: 0vw;
       background: var(--bg);`;
     });
+
   }
 
   lessContent()
