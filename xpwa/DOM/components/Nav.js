@@ -42,7 +42,6 @@ export class NavXPWA extends HTMLElement
   openNav()
   {
     this.addEventListener('mousemove', () => {
-      console.log(this);
       this.style.cssText = `
       transition-duration: 400ms;
       left: 0vw;

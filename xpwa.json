@@ -5,6 +5,10 @@
             "link": "/"
         },
         {
+            "text": "Messages",
+            "link": "/pages/messages/index.html"
+        },
+        {
             "text": "Form",
             "link": "/pages/form/index.html"
         },

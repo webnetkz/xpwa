@@ -194,6 +194,8 @@ message-xpwa
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--main-theme);
+  z-index: var(--z-message);
 }
 button-xpwa
 {
