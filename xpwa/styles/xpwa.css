@@ -281,7 +281,7 @@ phone-xpwa
 {
   min-width: 50px;
   min-height: 50px;
-  background-color: var(--green);
+  border: 1px solid var(--main-theme);
   position: fixed;
   right: 20px;
   bottom: 80px;
@@ -294,5 +294,14 @@ phone-xpwa
 phone-xpwa a
 {
   color: var(--main-theme);
-  font-size: 2rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+phone-xpwa:hover
+{
+  background: var(--main-theme);
+}
+phone-xpwa:hover a
+{
+  color: var(--black);
 }

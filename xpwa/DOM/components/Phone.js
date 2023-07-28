@@ -3,7 +3,7 @@ export class PhoneXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.innerHTML = '<a href="#">&#9743;</a>';
+    this.innerHTML = '<a href="#">&#9742;</a>';
   }
 
   
