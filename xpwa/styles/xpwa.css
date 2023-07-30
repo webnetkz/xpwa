@@ -197,6 +197,10 @@ message-xpwa
   background-color: var(--main-theme);
   z-index: var(--z-message);
 }
+message-xpwa close-xpwa
+{
+  color: var(--dark)!important;
+}
 button-xpwa
 {
   color: var(--white);
