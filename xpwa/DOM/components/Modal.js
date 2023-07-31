@@ -1,66 +1,52 @@
-import { Mobile } from '../Mobile.js';
-
 export class ModalXPWA extends HTMLElement
 {
   constructor()
   {
     super();
-  }
-
-  connectedCallback() {
+    this.classList.add('showElement');
     this.rendering();
+    this.closeModal();
   }
 
   rendering()
   {
-    if(this.querySelector(".modal-xpwa")) return;
-    
+    const tmp = this.innerHTML;
     this.innerHTML = `
+    <div class="modal-xpwa">
       <div class="modal-title-xpwa">
         <h2>${this.modalTitle}</h2>
+        <span>&times;</span>
       </div>
       <div class="modal-content-xpwa">
-        123
-      </div>`;
+        ${tmp}
+      </div>
+    </div>`;
   }
 
-  setStyles()
+  closeModal()
   {
-
-    this.querySelector('.modal-title-xpwa').style.cssText = `
-      height: 60px;
-      border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px;
-    `;
-    
-    this.querySelector('.modal-content-xpwa').style.cssText = `
-      padding: 5px 15px;
-      height: 98%;
-    `;
+    this.querySelector('.modal-title-xpwa span').addEventListener('click', () => {
+      this.classList.add('hiddenElement');
+      setTimeout(() => {
+        this.remove();
+      }, 200);
+      
+    });
   }
 
-  setMobileStyles()
-  {
-    this.style.cssText += `
-      width: 90vw;
-    `;
-  }
   static get observedAttributes()
   {
-    return ['modal-title'];
+    return ['modal'];
   }
 
   attributeChangedCallback(name, oldValue, newValue)
   {
     switch(name)
     {
-        case 'modal-title':
-            //this.querySelector('.modal-title-xpwa h2').innerText = newValue;
+        case 'modal':
+          this.querySelector('h2').innerHTML = newValue;
         break;
-    }
+    } 
   }
 }
 
