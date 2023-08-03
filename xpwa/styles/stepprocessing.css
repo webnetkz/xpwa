@@ -1,0 +1,49 @@
+step-processing-xpwa
+{
+    position: relative;
+    width: 300px;
+    height: 20px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+step-processing-xpwa .line,
+step-processing-xpwa .indecator-line
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px!important;
+    margin-top: calc(11px - 3px);
+    background-color: #ccc;
+    border-radius: 10px;
+}
+step-processing-xpwa .indecator-line
+{
+    width: 25%;
+    top: -8px;
+    background: red;
+    transition: width 0.5s ease-in-out; /* Добавляем анимацию для плавного перемещения */
+}
+step-processing-xpwa .step
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+step-processing-xpwa .step:hover
+{
+    cursor: pointer;
+}
+step-processing-xpwa .step.active
+{
+    background-color: red;
+}
+step-processing-xpwa .step.active + .line
+{
+    background-color: red;
+}

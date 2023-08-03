@@ -10,6 +10,7 @@ import { SidebarXPWA } from './components/Sidebar.js';
 import { BlockXPWA } from './components/Block.js';
 import { StubXPWA } from './components/Stub.js';
 import { ModalXPWA } from './components/Modal.js';
+import { StepProcessingXPWA } from './components/progress/StepProcessing.js';
 
 
 import { CheckboxXPWA } from './components/form/Checkbox.js';
