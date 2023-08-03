@@ -9,13 +9,6 @@ export class ContentXPWA extends HTMLElement
     {
       this.style.top = '70px';
     }
-
-    const nav = document.querySelector('nav-xpwa');
-    if(nav)
-    {
-      this.style.left = '10vw';
-      this.style.width = '78vw';
-    }
   }
 }
 

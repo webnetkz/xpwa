@@ -20,13 +20,13 @@ export class NavXPWA extends HTMLElement
       }
       else
       {
-        this.lessContent();
         this.style.cssText = `
           left: -19.5vw;
           background: var(--main-theme);`;
       }      
     });
 
+    button.click();
     this.openNav();
   }
 
@@ -47,23 +47,6 @@ export class NavXPWA extends HTMLElement
       left: 0vw;
       background: var(--bg);`;
     });
-
-  }
-
-  lessContent()
-  {
-    const content = document.querySelector('content-xpwa');
-    
-    if(content && this.style.left == '-19.5vw')
-    {
-      content.style.left = '10vw';
-      content.style.width = '78vw';
-    }
-    else
-    {
-      content.style.left = '0.5vw';
-      content.style.width = '98vw';
-    }
   }
 }
 
