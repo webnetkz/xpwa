@@ -42,7 +42,7 @@ export class StepProcessingXPWA extends HTMLElement
             }
         });
 
-        indicatorLine.style.width = `${stepWidth * currentStep}%`; // Перемещаем индикатор в соответствии с текущим шагом
+        indicatorLine.style.width = `${stepWidth * currentStep}%`;
     }
     
     static get observedAttributes()
