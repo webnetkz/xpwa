@@ -6,7 +6,6 @@ export class PhoneXPWA extends HTMLElement
     this.innerHTML = '<a href="#">&#9742;</a>';
   }
 
-  
   static get observedAttributes()
   {
     return ['phone'];

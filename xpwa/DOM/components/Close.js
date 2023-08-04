@@ -6,12 +6,17 @@ export class CloseXPWA extends HTMLElement
     this.innerHTML = '+';
 
     this.animation = 'hide';
-    this.addEventListener('click', this.closeWindow);
+    this.addEventListener('click', this.hidden);
   }
 
-  closeWindow()
+  hidden(element)
   {
-    DOM.hide(this.parentNode);
+      element.classList.add('hiddenElement');
+
+      setTimeout(() => {
+          element.style.display = 'none';
+          element.remove();
+      }, 290)
   }
 
   static get observedAttributes()

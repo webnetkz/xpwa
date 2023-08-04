@@ -7,20 +7,20 @@ export class ButtonXPWA extends HTMLElement
 
   static get observedAttributes()
   {
-      return ['link'];
+    return ['link'];
   }
 
   attributeChangedCallback(name, oldValue, newValue)
   {
-      switch(name)
-      {
-          case 'link':
-              this.addEventListener('click', () =>
-              {
-                location.href = newValue;
-              });
-          break;
-      }
+    switch(name)
+    {
+      case 'link':
+        this.addEventListener('click', () =>
+        {
+          location.href = newValue;
+        });
+      break;
+    }
   }
 }
 

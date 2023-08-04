@@ -14,7 +14,7 @@ export class BurgerXPWA extends HTMLElement
     childElements.forEach((el) => {
         el.style.display = 'block';
     });
-}
+  }
 
   closeMenu()
   {

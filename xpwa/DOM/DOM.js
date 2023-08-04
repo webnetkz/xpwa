@@ -1,4 +1,3 @@
-import { ShowerHidden } from './ShowerHidden.js';
 import { MessageXPWA } from './components/Message.js';
 
 import { HeaderXPWA } from './components/Header.js';
@@ -38,8 +37,6 @@ export class DOM
 
         document.body.appendChild(document.createElement('top-xpwa'));
 
-        this.showerHidden = new ShowerHidden();
-        this.hide = this.showerHidden.hidden;
         this.setComponents();
     }
 

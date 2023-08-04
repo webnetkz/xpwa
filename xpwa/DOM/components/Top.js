@@ -10,7 +10,6 @@ export class TopXPWA extends HTMLElement
       window.scrollTo(0, 0);
     });
   }
-
 }
 
 customElements.define("top-xpwa", TopXPWA);

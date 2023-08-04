@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.6.5</i>
+    <i>version 0.6.6</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
@@ -45,27 +45,6 @@
 </ul>
 
 <hr>
-<h2>More</h2>
-<ul>
-    <li><b>DOM.query(element, [parent=this])</b></li>
-    <li><b>DOM.queryAll(elements, [parent=this])</b></li>
-    <li><b>DOM.hide - hidden element</b></li>
-    <li><b>log(output)</b></li>
-    <li>
-        <pre>
-            <code>
-                req(options = {
-                    url: './', 
-                    method: 'GET', 
-                    headers: { "Access-Control-Allow-Origin": "*", },
-                    mode: 'cors',
-                    data: {},
-                    json: false,
-                })
-            </code>
-        </pre>
-    </li>
-</ul>
 <hr>
 <h5>Author:</h5>
 <p>WebNet (@webnetkz)</p>
