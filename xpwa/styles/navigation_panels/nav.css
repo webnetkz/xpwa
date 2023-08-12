@@ -1,0 +1,24 @@
+@import url(nav_mobile.css);
+
+nav-xpwa {
+  padding: 60px 10px;
+  position: fixed;
+  left: -19.5vw;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  z-index: var(--z-nav);
+  background: var(--main-theme);
+  display: flex;
+  flex-direction: column;
+  transition-duration: 50ms;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+nav-xpwa:hover {
+  cursor: pointer;
+}
+
+nav-xpwa button-xpwa {
+  margin-bottom: 3px;
+}

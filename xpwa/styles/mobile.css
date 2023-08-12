@@ -1,17 +1,15 @@
-@media (max-width: 1200px)
-{
-    top-xpwa
-    {
+@media (max-width: 1200px) {
+    top-xpwa {
         width: 30px;
         height: 30px;
     }
-    content-xpwa
-    {
-        width: 96vw!important;
-        left: 0.5vw!important;
+
+    content-xpwa {
+        width: 96vw !important;
+        left: 0.5vw !important;
     }
-    nav-xpwa
-    {
-        width: 90vw!important;
+
+    nav-xpwa {
+        width: 90vw !important;
     }
 }

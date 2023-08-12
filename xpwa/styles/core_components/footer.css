@@ -1,0 +1,11 @@
+footer-xpwa {
+    display: block;
+    background: var(--gray);
+    min-width: 100vw;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--white);
+    margin-top: 75px;
+}

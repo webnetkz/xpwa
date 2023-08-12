@@ -35,19 +35,7 @@ export class DOM
     {
         this.setStyles();
 
-        document.body.appendChild(document.createElement('top-xpwa'));
-
         this.setComponents();
-    }
-
-    query(element, parent=document)
-    {
-        return parent.querySelector(element);
-    }
-
-    queryAll(element, parent=document)
-    {
-        return parent.querySelectorAll(element);
     }
 
     setStyles()

@@ -1,0 +1,16 @@
+body:has(nav-xpwa) content-xpwa {
+    padding-left: 2vw;
+}
+
+content-xpwa {
+    display: block;
+    position: relative;
+    left: 0.5vw;
+    right: 0.5vw;
+    top: 1vh;
+    min-height: 90vh;
+    width: 98vw;
+    background: var(--gray-gradient);
+    padding: var(--padding);
+    border-radius: var(--radius);
+}

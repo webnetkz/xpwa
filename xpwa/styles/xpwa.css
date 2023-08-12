@@ -11,21 +11,30 @@
 @import url(components.css);
 @import url(stepprocessing.css);
 
+@import url(core_components/header.css);
+@import url(core_components/header_mobile.css);
+@import url(core_components/content.css);
+@import url(core_components/content_mobile.css);
+@import url(core_components/footer.css);
+@import url(core_components/footer_mobile.css);
 
-*
-{
+@import url(navigation_panels/nav.css);
+@import url(navigation_panels/nav_mobile.css);
+
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition-duration: 0.5s;
   font-family: sans-serif;
-  font-family: 'Bad Script', cursive!important;
-  font-family: 'Montserrat', sans-serif!important;
+  font-family: 'Bad Script', cursive !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-family: 'Ubuntu', sans-serif;
   scroll-behavior: smooth;
 }
-body
-{
+
+body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,45 +45,11 @@ body
   overflow-x: hidden;
   background: var(--bg);
 }
-content-xpwa
-{
-  display: block;
-  position: relative;
-  left: 0.5vw;
-  right: 0.5vw;
-  top: 1vh;
-  min-height: 90vh;
-  width: 98vw;
-  background: var(--gray-gradient);
-  padding: var(--padding);
-  border-radius: var(--radius);
-}
-footer-xpwa
-{
-  display: block;
-  background: var(--gray);
-  min-width: 100vw;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  color: var(--white);
-  margin-top: 75px;
-}
-header-xpwa
-{
-  display: flex;
-  align-items: center;
-  position: relative;
-  left: 0;
-  background: var(--gray-gradient);
-  min-height: 50px;
-  width: 100vw;
-  z-index: var(--z-header);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-}
-card-3d-xpwa
-{
+
+
+
+
+card-3d-xpwa {
   width: 100%;
   height: 400px;
   background: var(--main-theme);
@@ -85,8 +60,8 @@ card-3d-xpwa
   transform-style: preserve-3d;
   display: grid;
 }
-top-xpwa
-{
+
+top-xpwa {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,21 +77,21 @@ top-xpwa
   z-index: var(--z-to-top);
   transition-duration: 0.5s;
 }
-top-xpwa:hover
-{
+
+top-xpwa:hover {
   transform: scale(1.2) rotateZ(360deg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-top-xpwa:after
-{
+
+top-xpwa:after {
   content: "\2191";
   transform: scaleX(0.7);
   margin-bottom: 10px;
   color: var(--white);
 }
-modal-xpwa
-{
+
+modal-xpwa {
   width: 60vw;
   height: 50vh;
   display: flex;
@@ -128,27 +103,8 @@ modal-xpwa
   box-shadow: var(--box-shadow);
   background: var(--white);
 }
-nav-xpwa
-{
-  padding: 60px 10px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 20vw;
-  height: 100vh;
-  z-index: var(--z-nav);
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  transition-duration: 50ms;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-}
-nav-xpwa button-xpwa
-{
-  margin-bottom: 3px;
-}
-progress-bar-xpwa
-{
+
+progress-bar-xpwa {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -157,8 +113,8 @@ progress-bar-xpwa
   height: 5px;
   background: var(--main-theme-dark);
 }
-sidebar-xpwa
-{
+
+sidebar-xpwa {
   display: block;
   position: fixed;
   top: 0;
@@ -169,8 +125,8 @@ sidebar-xpwa
   background: var(--white);
   box-shadow: var(--shadow);
 }
-stub-xpwa
-{
+
+stub-xpwa {
   position: fixed;
   display: flex;
   top: 0;
@@ -183,8 +139,8 @@ stub-xpwa
   backdrop-filter: blur(5px);
   z-index: var(--z-stub);
 }
-message-xpwa
-{
+
+message-xpwa {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -199,41 +155,41 @@ message-xpwa
   background-color: var(--main-theme);
   z-index: var(--z-message);
 }
-message-xpwa close-xpwa
-{
-  color: var(--dark)!important;
+
+message-xpwa close-xpwa {
+  color: var(--dark) !important;
 }
-button-xpwa
-{
+
+button-xpwa {
   color: var(--white);
   border-radius: var(--radius);
   padding: var(--padding) 15px;
   background: var(--main-theme);
   box-shadow: 0px 1px 3px 0px rgba(93, 100, 148, 0.20), 0px 4px 11px 0px rgba(37, 44, 97, 0.15)
 }
-button-xpwa:active
-{
+
+button-xpwa:active {
   background: var(--main-theme);
   color: var(--white);
 }
-button-xpwa:hover
-{
+
+button-xpwa:hover {
   background: var(--main-theme-light);
   color: var(--white);
   cursor: pointer;
 }
-close-xpwa
-{
+
+close-xpwa {
   position: absolute;
   top: 9px;
   right: 20px;
   width: 20px;
   font-size: 2.5rem;
   transform: rotate(45deg);
-  color: var(--main-theme)!important;
+  color: var(--main-theme) !important;
 }
-block-xpwa
-{
+
+block-xpwa {
   display: block;
   background: var(--gray-gradient);
   width: 98vw;
@@ -244,13 +200,13 @@ block-xpwa
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-close-xpwa:hover
-{
+
+close-xpwa:hover {
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
-tabs-xpwa
-{
+
+tabs-xpwa {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -265,8 +221,8 @@ tabs-xpwa
   border-radius: 9.61711px;
   position: relative;
 }
-tab-content
-{
+
+tab-content {
   display: none;
   position: absolute;
   left: 10px;
@@ -274,17 +230,16 @@ tab-content
   min-width: 95%;
 }
 
-h1
-{
+h1 {
   color: var(--white);
 }
-hr
-{
+
+hr {
   border-color: var(--main-theme);
   margin: 1rem;
 }
-phone-xpwa
-{
+
+phone-xpwa {
   min-width: 50px;
   min-height: 50px;
   border: 1px solid var(--main-theme);
@@ -297,17 +252,17 @@ phone-xpwa
   align-items: flex-start;
   z-index: var(--z-phone);
 }
-phone-xpwa a
-{
+
+phone-xpwa a {
   color: var(--main-theme);
   font-size: 1.4rem;
   line-height: 3rem;
 }
-phone-xpwa:hover
-{
+
+phone-xpwa:hover {
   background: var(--main-theme);
 }
-phone-xpwa:hover a
-{
+
+phone-xpwa:hover a {
   color: var(--black);
 }

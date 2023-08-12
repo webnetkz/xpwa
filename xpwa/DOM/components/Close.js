@@ -9,14 +9,15 @@ export class CloseXPWA extends HTMLElement
     this.addEventListener('click', this.hidden);
   }
 
-  hidden(element)
+  hidden()
   {
-      element.classList.add('hiddenElement');
+    const parentElement = this.parentElement;
+    parentElement.classList.add('hiddenElement');
 
-      setTimeout(() => {
-          element.style.display = 'none';
-          element.remove();
-      }, 290)
+    setTimeout(() => {
+        parentElement.style.display = 'none';
+        parentElement.remove();
+    }, 290)
   }
 
   static get observedAttributes()

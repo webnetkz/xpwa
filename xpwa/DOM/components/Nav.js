@@ -6,46 +6,23 @@ export class NavXPWA extends HTMLElement
   {
     super();
 
-    this.innerHTML += `<button-xpwa close="close">Close</button-xpwa>`;
-    const button = this.querySelector('button-xpwa[close="close"]');
-
-    this.setButtonStyle(button);
-    button.addEventListener('click',() => {
-
-      if(Mobile.isMobile())
-      {
-        this.style.cssText = `
-        left: -88vw;
-        background: var(--main-theme);`;
-      }
-      else
-      {
-        this.style.cssText = `
-          left: -19.5vw;
-          background: var(--main-theme);`;
-      }      
-    });
-
-    button.click();
-    this.openNav();
-  }
-
-  setButtonStyle(button)
-  {
-    button.style.cssText = `
-      position: absolute;
-      bottom: 10px;
-      left: 2.1vw;
-    `;
-  }
-  
-  openNav()
-  {
     this.addEventListener('mousemove', () => {
       this.style.cssText = `
       transition-duration: 400ms;
-      left: 0vw;
+      left: 0;
       background: var(--bg);`;
+    });
+
+    document.body.addEventListener('click', () => {
+      this.style.cssText = `
+      transition-duration: 400ms;
+      left: -19.5vw;
+      background: var(--main-theme);`;
+
+      if(Mobile.isMobile()) {
+        this.style.cssText = `
+        left: -88vw;`;
+      }
     });
   }
 }
