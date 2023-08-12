@@ -2,12 +2,12 @@ import { MessageXPWA } from './components/Message.js';
 
 import { HeaderXPWA } from './components/core/Header.js';
 import { ContentXPWA } from './components/core/Content.js';
+import { MenuXPWA } from './components/core/menu/Menu.js';
+import { BurgerXPWA } from './components/core/menu/Burger.js';
 import { FooterXPWA } from './components/core/Footer.js';
 
 import { NavXPWA } from './components/navigation/Nav.js';
 
-import { MenuXPWA } from './components/menu/Menu.js';
-import { BurgerXPWA } from './components/menu/Burger.js';
 import { SidebarXPWA } from './components/Sidebar.js';
 import { BlockXPWA } from './components/Block.js';
 import { StubXPWA } from './components/Stub.js';
@@ -17,7 +17,7 @@ import { StepProcessingXPWA } from './components/progress/StepProcessing.js';
 
 import { CheckboxXPWA } from './components/form/Checkbox.js';
 import { RadioXPWA } from './components/form/Radio.js';
-import { ButtonXPWA } from './components/form/Button.js';
+import { ButtonXPWA } from './components/core/button/Button.js';
 import { BorderLinesXPWA } from './components/form/BorderLines.js';
 import { TopXPWA } from './components/Top.js';
 import { PhoneXPWA } from './components/Phone.js';

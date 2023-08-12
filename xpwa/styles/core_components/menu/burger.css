@@ -1,0 +1,13 @@
+burger-x {
+    display: none;
+    cursor: pointer;
+}
+
+burger-x span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    border-radius: 7px;
+    background: var(--main-theme);
+}

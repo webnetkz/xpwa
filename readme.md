@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.1</i>
+    <i>version 0.7.2</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
@@ -20,15 +20,19 @@
 <hr>
 <h2>HTML components</h2>
 <ul>
-    <li><b>content-x</b></li>
-    <li><b>header-x</b></li>
-    <li><b>footer-x</b></li>
-    <li><b>button-xpwa</b></li>
+    <li>
+        <ul>
+            <li><h3>Core components</h3></li>
+            <li><b>content-x</b></li>
+            <li><b>header-x</b></li>
+            <li><b>footer-x</b></li> 
+            <li><b>menu-x</b></li>
+            <li><b>burger-x</b></li>
+            <li><b>button-x</b></li>   
+        </ul>
+    </li>
+    
     <li><b>block-xpwa</b></li>
-    <li><b>header-xpwa</b></li>
-    <li><b>content-xpwa</b></li>
-    <li><b>footer-xpwa</b></li>
-    <li><b>menu-xpwa</b></li>
     <li><b>card-3d-xpwa</b></li>
     <li><b>close-xpwa</b></li>
     <li><b>input-xpwa</b></li>
@@ -43,7 +47,6 @@
     <li><b>radio-xpwa</b></li>
     <li><b>top-xpwa</b></li>
     <li><b>sign-form-xpwa</b></li>
-    <li><b>burger-xpwa</b></li>
     <li><b>and more</b></li>
 </ul>
 

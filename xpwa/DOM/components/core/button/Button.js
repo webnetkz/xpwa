@@ -24,4 +24,4 @@ export class ButtonXPWA extends HTMLElement
   }
 }
 
-customElements.define("button-xpwa", ButtonXPWA);
+customElements.define("button-x", ButtonXPWA);

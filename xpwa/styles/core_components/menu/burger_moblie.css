@@ -1,0 +1,9 @@
+@media (max-width: 1200px) {
+    burger-x {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: -30px;
+        left: 90%;
+    }
+}

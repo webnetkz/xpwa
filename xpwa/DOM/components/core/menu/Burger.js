@@ -10,7 +10,7 @@ export class BurgerXPWA extends HTMLElement
 
   openMenu()
   {
-    const childElements = this.parentNode.querySelectorAll('button-xpwa');
+    const childElements = this.parentNode.querySelectorAll('button-x');
     childElements.forEach((el) => {
         el.style.display = 'block';
     });
@@ -18,7 +18,7 @@ export class BurgerXPWA extends HTMLElement
 
   closeMenu()
   {
-    const childElements = this.parentNode.querySelectorAll('button-xpwa');
+    const childElements = this.parentNode.querySelectorAll('button-x');
     childElements.forEach((el) => {
         el.style.display = 'none';
     });
@@ -53,4 +53,4 @@ export class BurgerXPWA extends HTMLElement
 
 }
 
-customElements.define("burger-xpwa", BurgerXPWA);
+customElements.define("burger-x", BurgerXPWA);

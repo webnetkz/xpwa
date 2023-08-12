@@ -1,0 +1,9 @@
+menu-x {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin: var(--margin);
+    background: var(--gray-gradient);
+    width: 100%;
+}

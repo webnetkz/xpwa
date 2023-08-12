@@ -12,8 +12,7 @@ window.onload = (() => {
         .then(response => response.json())
         .then((data) => {
             data = JSON.stringify(data);
-            localStorage.setItem('xpwa', data);
-            console.log(data);
+            localStorage.setItem('xpwa-menu', data);
         })
         .catch(error => console.log('Ошибка:', error));
 
