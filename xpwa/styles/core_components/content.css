@@ -1,8 +1,8 @@
-body:has(nav-xpwa) content-xpwa {
+body:has(nav-x) content-x {
     padding-left: 2vw;
 }
 
-content-xpwa {
+content-x {
     display: block;
     position: relative;
     left: 0.5vw;

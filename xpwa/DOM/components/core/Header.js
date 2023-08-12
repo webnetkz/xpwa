@@ -21,4 +21,4 @@ export class HeaderXPWA extends HTMLElement
   }
 }
 
-customElements.define("header-xpwa", HeaderXPWA);
+customElements.define("header-x", HeaderXPWA);

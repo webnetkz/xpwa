@@ -6,4 +6,4 @@ export class FooterXPWA extends HTMLElement
   }
 }
 
-customElements.define("footer-xpwa", FooterXPWA);
+customElements.define("footer-x", FooterXPWA);

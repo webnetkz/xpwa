@@ -1,6 +1,6 @@
 @import url(nav_mobile.css);
 
-nav-xpwa {
+nav-x {
   padding: 60px 10px;
   position: fixed;
   left: -19.5vw;
@@ -15,10 +15,10 @@ nav-xpwa {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-nav-xpwa:hover {
+nav-x:hover {
   cursor: pointer;
 }
 
-nav-xpwa button-xpwa {
+nav-x button-x {
   margin-bottom: 3px;
 }

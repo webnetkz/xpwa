@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.0</i>
+    <i>version 0.7.1</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
@@ -20,6 +20,9 @@
 <hr>
 <h2>HTML components</h2>
 <ul>
+    <li><b>content-x</b></li>
+    <li><b>header-x</b></li>
+    <li><b>footer-x</b></li>
     <li><b>button-xpwa</b></li>
     <li><b>block-xpwa</b></li>
     <li><b>header-xpwa</b></li>
