@@ -15,8 +15,8 @@ export class CloseXPWA extends HTMLElement
     parentElement.classList.add('hiddenElement');
 
     setTimeout(() => {
-        parentElement.style.display = 'none';
-        parentElement.remove();
+      parentElement.style.display = 'none';
+      parentElement.remove();
     }, 290)
   }
 
@@ -29,11 +29,11 @@ export class CloseXPWA extends HTMLElement
   {
     switch(name)
     {
-        case 'animation':
+      case 'animation':
 
-        break;
+      break;
     }
   }
 }
 
-customElements.define("close-xpwa", CloseXPWA);
+customElements.define("close-x", CloseXPWA);

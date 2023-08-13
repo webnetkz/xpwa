@@ -3,3 +3,4 @@ import { ContentXPWA } from './Content.js';
 import { MenuXPWA } from './menu/Menu.js';
 import { FooterXPWA } from './Footer.js';
 import { BlockXPWA } from './Block.js';
+import { CloseXPWA } from './Close.js';

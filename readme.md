@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.3</i>
+    <i>version 0.7.4</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
@@ -33,7 +33,8 @@
                     <li><b>burger-x</b></li>
                 </ul>
             </li>
-            <li><b>button-x</b></li>   
+            <li><b>button-x</b></li>
+            <li><b>close-x</b></li>
         </ul>
     </li>
     <li>
@@ -45,6 +46,12 @@
             <li><b>dots-container-x</b></li>
             <li><b>back-slide-x</b></li>
             <li><b>next-slide-x</b></li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li><h3>Messages</h3></li>
+            <li><b>tos-x</b></li>
         </ul>
     </li>
     

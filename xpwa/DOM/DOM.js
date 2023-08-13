@@ -1,7 +1,6 @@
-import { MessageXPWA } from './components/Message.js';
-
 import './components/core/core_components.js';
 
+import { TosXPWA } from './components/messages/Tos.js';
 import { NavXPWA } from './components/navigation/Nav.js';
 
 import { SidebarXPWA } from './components/Sidebar.js';
@@ -17,7 +16,6 @@ import { BorderLinesXPWA } from './components/form/BorderLines.js';
 import { TopXPWA } from './components/Top.js';
 import { PhoneXPWA } from './components/Phone.js';
 
-import { CloseXPWA } from './components/Close.js';
 import { ProgressBarXPWA } from './components/progress/ProgressBar.js';
 import { PreloaderXPWA } from './components/progress/Preloader.js';
 import { TabsXPWA } from './components/Tabs.js';
@@ -31,8 +29,6 @@ export class DOM
     constructor()
     {
         this.setStyles();
-
-        this.setComponents();
     }
 
     setStyles()
@@ -41,10 +37,5 @@ export class DOM
         linkElement.rel = "stylesheet";
         linkElement.href = "./xpwa/styles/xpwa.css";
         document.head.appendChild(linkElement);
-    }
-
-    setComponents()
-    {
-        new MessageXPWA();
     }
 }

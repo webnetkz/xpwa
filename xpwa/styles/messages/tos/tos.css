@@ -1,0 +1,19 @@
+tos-x {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  min-height: 70px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--main-theme);
+  z-index: var(--z-message);
+}
+
+tos-x close-x {
+  color: var(--dark) !important;
+}

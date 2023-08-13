@@ -1,3 +1,5 @@
 @media (max-width: 1200px) {
-
+    body:has(nav-x) content-x {
+        padding-left: 2vw;
+    }
 }

@@ -1,5 +1,6 @@
 slider-x {
     position: relative;
+    display: block;
     background-position: center center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;

@@ -1,7 +1,3 @@
-body:has(nav-x) content-x {
-    padding-left: 2vw;
-}
-
 content-x {
     display: block;
     position: relative;

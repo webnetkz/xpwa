@@ -1,0 +1,14 @@
+close-x {
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  width: 20px;
+  font-size: 2.5rem;
+  transform: rotate(45deg);
+  color: var(--main-theme) !important;
+}
+
+close-x:hover {
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
