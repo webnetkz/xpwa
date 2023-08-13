@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.2</i>
+    <i>version 0.7.3</i>
     <img src="./logo.png">
 </h1>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
@@ -24,15 +24,30 @@
         <ul>
             <li><h3>Core components</h3></li>
             <li><b>content-x</b></li>
+            <li><b>block-x</b></li>
             <li><b>header-x</b></li>
             <li><b>footer-x</b></li> 
             <li><b>menu-x</b></li>
-            <li><b>burger-x</b></li>
+            <li>
+                <ul>
+                    <li><b>burger-x</b></li>
+                </ul>
+            </li>
             <li><b>button-x</b></li>   
         </ul>
     </li>
+    <li>
+        <ul>
+            <li><h3>Sliders</h3></li>
+            <li><b>slider-x</b></li>
+            <li><b>slide-x</b></li>
+            <li><b>dot-x</b></li>
+            <li><b>dots-container-x</b></li>
+            <li><b>back-slide-x</b></li>
+            <li><b>next-slide-x</b></li>
+        </ul>
+    </li>
     
-    <li><b>block-xpwa</b></li>
     <li><b>card-3d-xpwa</b></li>
     <li><b>close-xpwa</b></li>
     <li><b>input-xpwa</b></li>
@@ -40,7 +55,6 @@
     <li><b>modal-xpwa</b></li>
     <li><b>progress-bar-xpwa</b></li>
     <li><b>progress-round-xpwa</b></li>
-    <li><b>slider-xpwa</b></li>
     <li><b>sidebar-xpwa</b></li>
     <li><b>stub-xpwa</b></li>
     <li><b>tabs-xpwa</b></li>

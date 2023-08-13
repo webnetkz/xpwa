@@ -18,4 +18,4 @@ export class NextSlideXPWA extends HTMLElement
     }
 }
 
-customElements.define("next-slide-xpwa", NextSlideXPWA);
+customElements.define("next-slide-x", NextSlideXPWA);

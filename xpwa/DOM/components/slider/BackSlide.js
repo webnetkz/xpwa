@@ -22,4 +22,4 @@ export class BackSlideXPWA extends HTMLElement
   }
 }
 
-customElements.define("back-slide-xpwa", BackSlideXPWA);
+customElements.define("back-slide-x", BackSlideXPWA);

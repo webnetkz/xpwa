@@ -2,8 +2,8 @@ import { Mobile } from '../../Mobile.js';
 import { SlideXPWA } from './Slide.js';
 import { NextSlideXPWA } from './NextSlide.js';
 import { BackSlideXPWA } from './BackSlide.js';
-import { DotXPWA } from '../Dot.js';
-import { DotsContainerXPWA } from '../DotsContainer.js';
+import { DotXPWA } from './Dot.js';
+import { DotsContainerXPWA } from './DotsContainer.js';
 
 
 export class SliderXPWA extends HTMLElement
@@ -32,8 +32,8 @@ export class SliderXPWA extends HTMLElement
 
   swipes()
   {
-    let next = this.querySelector("next-slide-xpwa");
-    let previous = this.querySelector("back-slide-xpwa");
+    let next = this.querySelector("next-slide-x");
+    let previous = this.querySelector("back-slide-x");
 
     let startX;
     let endX;
@@ -66,17 +66,17 @@ export class SliderXPWA extends HTMLElement
 
   createArrows()
   {
-    this.prepend(document.createElement('back-slide-xpwa'));
-    this.appendChild(document.createElement('dots-container-xpwa'));
-    this.appendChild(document.createElement('next-slide-xpwa'));
+    this.prepend(document.createElement('back-slide-x'));
+    this.appendChild(document.createElement('dots-container-x'));
+    this.appendChild(document.createElement('next-slide-x'));
   }
 
   createDots(images)
   {
-    const dotsContainer = this.querySelector('dots-container-xpwa');
+    const dotsContainer = this.querySelector('dots-container-x');
 
     images.forEach((_, i) => {
-      const dot = document.createElement('dot-xpwa');
+      const dot = document.createElement('dot-x');
 
       if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
@@ -90,7 +90,7 @@ export class SliderXPWA extends HTMLElement
   updateDots()
   {
     this.isUpdating = true;
-    const dots = this.querySelectorAll('dot-xpwa');
+    const dots = this.querySelectorAll('dot-x');
 
     dots.forEach(dot => dot.classList.remove('active'));
     dots[this.sliderIndex].classList.add('active');
@@ -103,7 +103,7 @@ export class SliderXPWA extends HTMLElement
   autoUpdateSlider()
   {
     setInterval(() => {
-      this.querySelector('next-slide-xpwa').click();
+      this.querySelector('next-slide-x').click();
     }, this.timer * 1000);
   }
 
@@ -131,4 +131,4 @@ export class SliderXPWA extends HTMLElement
   }
 }
 
-customElements.define("slider-xpwa", SliderXPWA);
+customElements.define("slider-x", SliderXPWA);

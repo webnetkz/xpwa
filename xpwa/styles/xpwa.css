@@ -2,8 +2,6 @@
 @import url(variables.css);
 @import url(animations.css);
 @import url(scrollbar.css);
-@import url(slider.css);
-@import url(dots.css);
 @import url(mobile.css);
 @import url(form.css);
 @import url(modal.css);
@@ -14,6 +12,8 @@
 @import url(core_components/header_mobile.css);
 @import url(core_components/content.css);
 @import url(core_components/content_mobile.css);
+@import url(core_components/block.css);
+@import url(core_components/block_mobile.css);
 @import url(core_components/menu/menu.css);
 @import url(core_components/menu/menu_mobile.css);
 @import url(core_components/menu/burger.css);
@@ -26,6 +26,8 @@
 @import url(navigation_panels/nav.css);
 @import url(navigation_panels/nav_mobile.css);
 
+@import url(sliders/slider.css);
+@import url(sliders/dots.css);
 
 * {
   margin: 0;
@@ -173,18 +175,6 @@ close-xpwa {
   font-size: 2.5rem;
   transform: rotate(45deg);
   color: var(--main-theme) !important;
-}
-
-block-xpwa {
-  display: block;
-  background: var(--gray-gradient);
-  width: 98vw;
-  min-height: 100px;
-  background: var(--white);
-  padding: 10px var(--padding);
-  margin: var(--margin);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 
 close-xpwa:hover {

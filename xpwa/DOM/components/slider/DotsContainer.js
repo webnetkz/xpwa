@@ -6,4 +6,4 @@ export class DotsContainerXPWA extends HTMLElement
   }
 }
 
-customElements.define("dots-container-xpwa", DotsContainerXPWA);
+customElements.define("dots-container-x", DotsContainerXPWA);

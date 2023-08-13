@@ -1,15 +1,10 @@
 import { MessageXPWA } from './components/Message.js';
 
-import { HeaderXPWA } from './components/core/Header.js';
-import { ContentXPWA } from './components/core/Content.js';
-import { MenuXPWA } from './components/core/menu/Menu.js';
-import { BurgerXPWA } from './components/core/menu/Burger.js';
-import { FooterXPWA } from './components/core/Footer.js';
+import './components/core/core_components.js';
 
 import { NavXPWA } from './components/navigation/Nav.js';
 
 import { SidebarXPWA } from './components/Sidebar.js';
-import { BlockXPWA } from './components/Block.js';
 import { StubXPWA } from './components/Stub.js';
 import { ModalXPWA } from './components/Modal.js';
 import { StepProcessingXPWA } from './components/progress/StepProcessing.js';

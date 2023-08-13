@@ -1,0 +1,11 @@
+block-x {
+  display: block;
+  background: var(--gray-gradient);
+  width: 98vw;
+  min-height: 100px;
+  background: var(--white);
+  padding: 10px var(--padding);
+  margin: var(--margin);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

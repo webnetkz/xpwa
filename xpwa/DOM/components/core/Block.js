@@ -6,4 +6,4 @@ export class BlockXPWA extends HTMLElement
   }
 }
 
-customElements.define("block-xpwa", BlockXPWA);
+customElements.define("block-x", BlockXPWA);

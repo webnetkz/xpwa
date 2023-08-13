@@ -6,4 +6,4 @@ export class SlideXPWA extends HTMLElement
   }
 }
 
-customElements.define("slide-xpwa", SlideXPWA);
+customElements.define("slide-x", SlideXPWA);

@@ -6,4 +6,4 @@ export class DotXPWA extends HTMLElement
   }
 }
 
-customElements.define("dot-xpwa", DotXPWA);
+customElements.define("dot-x", DotXPWA);

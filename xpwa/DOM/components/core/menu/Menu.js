@@ -1,3 +1,5 @@
+import { BurgerXPWA } from "./Burger.js";
+
 export class MenuXPWA extends HTMLElement
 {
   constructor()

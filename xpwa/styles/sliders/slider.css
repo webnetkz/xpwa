@@ -1,18 +1,18 @@
-slider-xpwa
-{
+slider-x {
     position: relative;
-    background-position: center center!important;
-    background-size: cover!important;
-    background-repeat: no-repeat!important;
-    min-height: 400px!important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    min-height: 400px !important;
     min-width: 100%;
 }
-slider-xpwa img
-{
-  display: none;
+
+slider-x img {
+    display: none;
 }
-back-slide-xpwa, next-slide-xpwa
-{
+
+back-slide-x,
+next-slide-x {
     position: absolute;
     height: 100%;
     width: 50px;
@@ -21,27 +21,29 @@ back-slide-xpwa, next-slide-xpwa
     align-items: center;
     justify-content: center;
 }
-back-slide-xpwa:hover, next-slide-xpwa:hover
-{
+
+back-slide-x:hover,
+next-slide-x:hover {
     font-size: 2rem;
     background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-back-slide-xpwa
-{
+
+back-slide-x {
     left: 0;
 }
-back-slide-xpwa:after
-{
+
+back-slide-x:after {
     content: "\25C0";
     color: var(--main-theme);
     font-size: 1rem;
 }
-next-slide-xpwa {
+
+next-slide-x {
     right: 0;
 }
-next-slide-xpwa:after
-{
+
+next-slide-x:after {
     content: "\25B6";
     color: var(--main-theme);
     font-size: 1rem;
