@@ -2,6 +2,7 @@ import './components/core/core_components.js';
 
 import { TosXPWA } from './components/messages/Tos.js';
 import { NavXPWA } from './components/navigation/Nav.js';
+import { Card3DXPWA } from './components/decorative/Card3D.js';
 
 import { SidebarXPWA } from './components/Sidebar.js';
 import { StubXPWA } from './components/Stub.js';
@@ -21,7 +22,6 @@ import { PreloaderXPWA } from './components/progress/Preloader.js';
 import { TabsXPWA } from './components/Tabs.js';
 import { InputXPWA } from './components/form/Input.js';
 import { SliderXPWA } from './components/slider/Slider.js';
-import { Card3DXPWA } from './components/Card3D.js';
 
 
 export class DOM

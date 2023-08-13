@@ -17,9 +17,10 @@ export class NavXPWA extends HTMLElement {
       left: -19.5vw;
       background: var(--main-theme);`;
 
-      if (Mobile.isMobile()) {
+      if(Mobile.isMobile())
+      {
         this.style.cssText = `
-        left: -88vw;`;
+        left: -79vw;`;
       }
     });
   }

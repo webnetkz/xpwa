@@ -16,7 +16,9 @@ export class TosXPWA extends HTMLElement
     switch(name)
     {
         case 'timer':
-            
+            setTimeout(() => {
+              this.querySelector('close-x').click();
+            }, Number(newValue) * 1000);
         break;
     }
   }

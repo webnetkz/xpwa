@@ -1,13 +1,15 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.4</i>
-    <img src="./logo.png">
+    <i>version 0.7.5</i>
 </h1>
+<hr>
+<img src="./logo.png">
+<hr>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
 <code><a href="https://xpwa.webnet.kz">Documentation</a></code>
 
 <hr>
-<h3>x Progressive WEB Application</h3>
+<h3>xPWA - x Progressive WEB Application</h3>
 <p>xPWA is a powerful JavaScript library for building web applications, heavily leveraging web components and the Shadow DOM. The library provides a set of ready-to-use HTML components with rich functionality, each having its own isolated styles and animations.</p>
 <h4>Key features:</h4>
 <p>Use of web components and Shadow DOM for code and style encapsulation.</p>
@@ -31,6 +33,9 @@
             <li>
                 <ul>
                     <li><b>burger-x</b></li>
+                    <code>
+                        <img src="./gifs/burger.gif">
+                    </code>
                 </ul>
             </li>
             <li><b>button-x</b></li>
@@ -54,11 +59,14 @@
             <li><b>tos-x</b></li>
         </ul>
     </li>
+    <li>
+        <ul>
+            <li><h3>Decorative elements</h3></li>
+            <li><b>card-3d-x</b></li>
+        </ul>
+    </li>
     
-    <li><b>card-3d-xpwa</b></li>
-    <li><b>close-xpwa</b></li>
     <li><b>input-xpwa</b></li>
-    <li><b>message-xpwa</b></li>
     <li><b>modal-xpwa</b></li>
     <li><b>progress-bar-xpwa</b></li>
     <li><b>progress-round-xpwa</b></li>

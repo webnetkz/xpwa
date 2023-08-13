@@ -1,4 +1,4 @@
-import { Mobile } from '../Mobile.js';
+import { Mobile } from '../../Mobile.js';
 
 export class Card3DXPWA extends HTMLElement
 {
@@ -29,21 +29,19 @@ export class Card3DXPWA extends HTMLElement
 
   rotate(event)
   {
-    let container = this.querySelector(':first-child');
-    const halfHeight = container.offsetHeight / 2;
-    const halfWidth = container.offsetWidth / 2;
+    const halfHeight = this.offsetHeight / 2;
+    const halfWidth = this.offsetWidth / 2;
 
-    container.style.transform = 'rotateX(' + -
+    this.style.transform = 'rotateX(' + -
     ((event.offsetY - halfHeight) / 5 ) + 'deg) rotateY(' + 
     ((event.offsetX - halfWidth) / 5 ) + 'deg)';    
   }
 
   stopRotate(event)
   {
-    let container = this.querySelector(':first-child');
-    container.style.transform = 'rotate(0)';
+    this.style.transform = 'rotate(0)';
   }
 }
 
-customElements.define("card-3d-xpwa", Card3DXPWA);
+customElements.define("card-3d-x", Card3DXPWA);
 

@@ -1,0 +1,11 @@
+card-3d-x {
+    width: 100%;
+    height: 400px;
+    background: var(--main-theme);
+    padding: 5px;
+    border-radius: var(--radius);
+    will-change: transform;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    display: grid;
+}

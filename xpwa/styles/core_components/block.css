@@ -1,7 +1,7 @@
 block-x {
   display: block;
   background: var(--gray-gradient);
-  width: 98vw;
+  width: 100%;
   min-height: 100px;
   background: var(--white);
   padding: 10px var(--padding);
