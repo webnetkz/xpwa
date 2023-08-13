@@ -1,5 +1,5 @@
 button-x {
-    color: var(--white);
+    color: var(--black);
     border-radius: var(--radius);
     padding: var(--padding) 15px;
     background: var(--main-theme);

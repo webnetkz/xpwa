@@ -37,6 +37,9 @@
 @import url(decorative_components/3d_card.css);
 @import url(decorative_components/3d_card_mobile.css);
 
+@import url(progress_components/progress_bar.css);
+@import url(progress_components/progress_bar_mobile.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -103,16 +106,6 @@ modal-xpwa {
   border-color: var(--border-color);
   box-shadow: var(--box-shadow);
   background: var(--white);
-}
-
-progress-bar-xpwa {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: var(--progress-bar);
-  width: 100vw;
-  height: 5px;
-  background: var(--main-theme-dark);
 }
 
 sidebar-xpwa {

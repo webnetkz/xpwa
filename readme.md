@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.51</i>
+    <i>version 0.7.6</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -80,10 +80,18 @@
             <li><b>card-3d-x</b></li>
         </ul>
     </li>
+    <li>
+        <ul>
+            <li><h3>Progress elements</h3></li>
+            <li><b>progress-bar-x</b></li>
+            <code>
+                <img src="./gifs/progress_bar.gif">
+            </code>
+        </ul>
+    </li>
     
     <li><b>input-xpwa</b></li>
     <li><b>modal-xpwa</b></li>
-    <li><b>progress-bar-xpwa</b></li>
     <li><b>progress-round-xpwa</b></li>
     <li><b>sidebar-xpwa</b></li>
     <li><b>stub-xpwa</b></li>

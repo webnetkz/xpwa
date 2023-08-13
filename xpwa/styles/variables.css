@@ -5,7 +5,7 @@
 
   --green: rgb(6, 157, 6);
   --bg: #4d3d3d;
-  --white: #a6a4a4;
+  --white: #e6e1e1;
   --black: black;
   --gray: #302e2e;
   --gray-gradient: linear-gradient(90deg,#222222 80%,#302e2e);
@@ -24,7 +24,7 @@
   --z-stub: 998;
   --z-preloader: 999;
 
-  --progress-bar: 999;
+  --z-progress: 999;
   --progress-round: 1000;
 
 
