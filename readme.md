@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.5</i>
+    <i>version 0.7.51</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -51,12 +51,27 @@
             <li><b>dots-container-x</b></li>
             <li><b>back-slide-x</b></li>
             <li><b>next-slide-x</b></li>
+            <code>
+                <img src="./gifs/slider.gif">
+            </code>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li><h3>Navigation</h3></li>
+            <li><b>nav-x</b></li>
+            <code>
+                <img src="./gifs/nav.gif">
+            </code>
         </ul>
     </li>
     <li>
         <ul>
             <li><h3>Messages</h3></li>
             <li><b>tos-x</b></li>
+            <code>
+                <img src="./gifs/tos.gif">
+            </code>
         </ul>
     </li>
     <li>

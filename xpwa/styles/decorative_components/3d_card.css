@@ -1,5 +1,5 @@
 card-3d-x {
-    width: 100%;
+    width: 500px;
     height: 400px;
     background: var(--main-theme);
     padding: 5px;
@@ -8,4 +8,9 @@ card-3d-x {
     perspective: 1000px;
     transform-style: preserve-3d;
     display: grid;
+}
+
+card-3d-x > * {
+    perspective: 500px;
+    transform-style: preserve-3d;
 }
