@@ -10,3 +10,7 @@ content-x {
     padding: var(--padding);
     border-radius: var(--radius);
 }
+
+body:has(header-x) content-x {
+    padding-top: 20px;
+}

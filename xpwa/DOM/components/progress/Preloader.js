@@ -29,4 +29,4 @@ export class PreloaderXPWA extends HTMLElement
     }
 }
 
-customElements.define("preloader-xpwa", PreloaderXPWA);
+customElements.define("preloader-x", PreloaderXPWA);

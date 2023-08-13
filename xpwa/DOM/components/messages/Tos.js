@@ -3,7 +3,15 @@ export class TosXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.innerHTML = this.innerHTML+'<close-x></closer-x>';
+    this.createTos();
+  }
+
+  createTos()
+  {
+    if(!this.querySelector('close-x'))
+    {
+      this.innerHTML = this.innerHTML+'<close-x></closer-x>';
+    } return;
   }
 
   static get observedAttributes()

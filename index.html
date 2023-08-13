@@ -9,6 +9,9 @@
 
   <header-x position="fixed">
     <menu-x>
+      <button-x>Home</button-x>
+      <button-x>Components</button-x>
+      <button-x>Contacts</button-x>
     </menu-x>
   </header-x>
   
@@ -19,41 +22,14 @@
   </nav-x>
   
   <content-x>
-    <slider-x>
-      <img src="https://99px.ru/sstorage/53/2013/03/tmb_63154_5335.jpg">
-      <img src="https://w.forfun.com/fetch/0f/0f05d275b01835702927b3b3802d4b7f.jpeg">
-      <img src="https://i.pinimg.com/736x/0d/a9/35/0da935cedd130e5d404e17592049f438.jpg">
-    </slider-x>
-    
+    <button-x onclick="document.body.innerHTML += `<tos-x><p>This is demonstration tos-x</p></tos-x>`">Open tos-x</button-x>
     
   </content-x>
 
-  <style>
-    preloader-xpwa
-    {
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      z-index: var(--z-preloader);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    preloader-xpwa span
-    {
-      width: 100px;
-      height: 100px;
-      border: 1px solid var(--main-theme);
-      border-radius: 50%;
-    }
-  </style>
-  <!-- <preloader-xpwa color="rgba(255, 0, 0, 0.2)"></preloader-xpwa> -->
 
-  <tos-x timer="2">xPWA</tos-x>
   <footer-x>
     2023 © xPWA
   </footer-x>
-
 
   <script type="module" src="./xpwa.js"></script>
   <!-- <script src="./xpwa/DOM/cursor.js"></script> -->

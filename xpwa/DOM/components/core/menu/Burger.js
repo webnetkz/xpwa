@@ -3,9 +3,17 @@ export class BurgerXPWA extends HTMLElement
   constructor()
   {
     super();
-    this.innerHTML += `<span></span><span></span><span></span>`;
-
+    
+    this.createLines();
     this.addEventListener('click', this.changeBurger);
+  }
+  
+  createLines()
+  {
+    if(!this.querySelector('span'))
+    {
+      this.innerHTML = `<span></span><span></span><span></span>`;
+    } return;
   }
 
   openMenu()

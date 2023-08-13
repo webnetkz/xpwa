@@ -3,7 +3,8 @@ button-x {
     border-radius: var(--radius);
     padding: var(--padding) 15px;
     background: var(--main-theme);
-    box-shadow: 0px 1px 3px 0px rgba(93, 100, 148, 0.20), 0px 4px 11px 0px rgba(37, 44, 97, 0.15)
+    box-shadow: 0px 1px 3px 0px rgba(93, 100, 148, 0.20), 0px 4px 11px 0px rgba(37, 44, 97, 0.15);
+    margin: 3px;
 }
 
 button-x:active {

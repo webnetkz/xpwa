@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.6</i>
+    <i>version 0.7.7</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -63,6 +63,10 @@
             <code>
                 <img src="./gifs/nav.gif">
             </code>
+            <li><b>sidebar-x</b></li>
+            <code>
+                <img src="./gifs/sidebar.gif">
+            </code>
         </ul>
     </li>
     <li>
@@ -86,6 +90,10 @@
             <li><b>progress-bar-x</b></li>
             <code>
                 <img src="./gifs/progress_bar.gif">
+            </code>
+            <li><b>preloader-x</b></li>
+            <code>
+                <img src="./gifs/preloader.gif">
             </code>
         </ul>
     </li>

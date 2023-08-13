@@ -6,21 +6,15 @@ export class MenuXPWA extends HTMLElement
   {
     super();
     
-    let menuElements = this.getSettings();
-    menuElements = menuElements.menu;
-    
-    menuElements.forEach(element => {
-      this.innerHTML += `<button-x link="${element.link}">${element.text}</button-x>`;
-    });
-
-    this.innerHTML += `<burger-x></burger-x>`;
+    this.createMenu();
   }
-
-  getSettings()
+  
+  createMenu()
   {
-    let settings = localStorage.getItem('xpwa-menu');
-    settings = JSON.parse(settings);
-    return settings;
+    if(!this.querySelector('burger-x'))
+    {
+      this.innerHTML = this.innerHTML + `<burger-x></burger-x>`;
+    } return;
   }
 }
 

@@ -1,10 +1,10 @@
 import './components/core/core_components.js';
+import './components/navigation/navigation_components.js';
 
 import { TosXPWA } from './components/messages/Tos.js';
-import { NavXPWA } from './components/navigation/Nav.js';
 import { Card3DXPWA } from './components/decorative/Card3D.js';
 
-import { SidebarXPWA } from './components/Sidebar.js';
+
 import { StubXPWA } from './components/Stub.js';
 import { ModalXPWA } from './components/Modal.js';
 import { StepProcessingXPWA } from './components/progress/StepProcessing.js';

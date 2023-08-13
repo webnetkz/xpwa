@@ -5,13 +5,14 @@ tos-x {
   width: 300px;
   min-height: 70px;
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--gray);
   border-radius: 12px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--main-theme);
+  backdrop-filter: blur(12px);
   z-index: var(--z-message);
+  color: var(--main-theme);
 }
 
 tos-x close-x {

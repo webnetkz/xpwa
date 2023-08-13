@@ -27,6 +27,8 @@
 
 @import url(navigation_panels/nav.css);
 @import url(navigation_panels/nav_mobile.css);
+@import url(navigation_panels/sidebar.css);
+@import url(navigation_panels/sidebar_mobile.css);
 
 @import url(sliders/slider.css);
 @import url(sliders/dots.css);
@@ -39,6 +41,8 @@
 
 @import url(progress_components/progress_bar.css);
 @import url(progress_components/progress_bar_mobile.css);
+@import url(progress_components/preloader.css);
+@import url(progress_components/preloader_mobile.css);
 
 * {
   margin: 0;
@@ -108,17 +112,6 @@ modal-xpwa {
   background: var(--white);
 }
 
-sidebar-xpwa {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 20vw;
-  right: 0;
-  min-height: 100vh;
-  width: 80vw;
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
 
 stub-xpwa {
   position: fixed;

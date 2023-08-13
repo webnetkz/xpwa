@@ -19,11 +19,11 @@
   --z-nav: 9;
   --z-to-top: 88;
   --z-phone: 88;
-  --z-message: 99;
-  --z-header: 99;
+  --z-header: 90;
   --z-stub: 998;
+  
   --z-preloader: 999;
-
+  --z-message: 999;
   --z-progress: 999;
   --progress-round: 1000;
 
