@@ -9,8 +9,8 @@
 
   <header-x position="fixed">
     <menu-x>
-      <button-x>Home</button-x>
-      <button-x>Components</button-x>
-      <button-x>Contacts</button-x>
+      <button-x link="/index.php">Home</button-x>
+      <button-x link="/pages/index.php">Components</button-x>
+      <button-x link="/pages/contacts.php">Contacts</button-x>
     </menu-x>
   </header-x>

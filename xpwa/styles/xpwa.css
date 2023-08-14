@@ -73,6 +73,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   background: var(--bg);
+  color: var(--white);
 }
 
 tabs-xpwa {
