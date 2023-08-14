@@ -2,12 +2,11 @@
 @import url(variables.css);
 @import url(animations.css);
 @import url(scrollbar.css);
-@import url(mobile.css);
 @import url(form.css);
-@import url(modal.css);
 @import url(components.css);
 @import url(stepprocessing.css);
 
+@import url(core_components/stub.css);
 @import url(core_components/header.css);
 @import url(core_components/header_mobile.css);
 @import url(core_components/content.css);
@@ -35,6 +34,8 @@
 
 @import url(messages/tos/tos.css);
 @import url(messages/tos/tos_mobile.css);
+@import url(messages/modal/modal.css);
+@import url(messages/modal/modal_mobile.css);
 
 @import url(decorative_components/3d_card.css);
 @import url(decorative_components/3d_card_mobile.css);
@@ -71,35 +72,6 @@ body {
   width: 100vw;
   overflow-x: hidden;
   background: var(--bg);
-}
-
-
-modal-xpwa {
-  width: 60vw;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--white);
-  border-radius: var(--radius);
-  border-color: var(--border-color);
-  box-shadow: var(--box-shadow);
-  background: var(--white);
-}
-
-
-stub-xpwa {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  z-index: var(--z-stub);
 }
 
 tabs-xpwa {

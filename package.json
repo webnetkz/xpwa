@@ -1,6 +1,6 @@
 {
   "name": "xpwa",
-  "version": "0.7.71",
+  "version": "0.7.73",
   "description": "For fast dev web UI",
   "main": "xpwa.js",
   "scripts": {

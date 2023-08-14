@@ -7,7 +7,7 @@ export class StubXPWA extends HTMLElement
   
   createCloseButton()
   {
-    this.innerHTML += `<close-xpwa style="color: var(--main-theme);"></close-xpwa>`;
+    this.innerHTML += `<close-x style="color: var(--main-theme);"></close-x>`;
   }
 
   static get observedAttributes()
@@ -26,4 +26,4 @@ export class StubXPWA extends HTMLElement
   }
 }
 
-customElements.define("stub-xpwa", StubXPWA);
+customElements.define("stub-x", StubXPWA);

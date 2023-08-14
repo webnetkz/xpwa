@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.71</i>
+    <i>version 0.7.73</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -30,6 +30,7 @@
             <li><b>header-x</b></li>
             <li><b>footer-x</b></li> 
             <li><b>menu-x</b></li>
+            <li><b>stub-x</b></li>
             <li>
                 <ul>
                     <li><b>burger-x</b></li>
@@ -73,6 +74,7 @@
         <ul>
             <li><h3>Messages</h3></li>
             <li><b>tos-x</b></li>
+            <li><b>modal-x</b></li>
         </ul>
     </li>
     <li>
@@ -103,9 +105,7 @@
     </li>
     
     <li><b>input-xpwa</b></li>
-    <li><b>modal-xpwa</b></li>
     <li><b>progress-round-xpwa</b></li>
-    <li><b>stub-xpwa</b></li>
     <li><b>tabs-xpwa</b></li>
     <li><b>radio-xpwa</b></li>
     <li><b>sign-form-xpwa</b></li>

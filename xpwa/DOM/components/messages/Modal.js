@@ -36,18 +36,18 @@ export class ModalXPWA extends HTMLElement
 
   static get observedAttributes()
   {
-    return ['modal'];
+    return ['title'];
   }
 
   attributeChangedCallback(name, oldValue, newValue)
   {
     switch(name)
     {
-        case 'modal':
+        case 'title':
           this.querySelector('h2').innerHTML = newValue;
         break;
     } 
   }
 }
 
-customElements.define("modal-xpwa", ModalXPWA);
+customElements.define("modal-x", ModalXPWA);
