@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.7</i>
+    <i>version 0.7.71</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -73,9 +73,6 @@
         <ul>
             <li><h3>Messages</h3></li>
             <li><b>tos-x</b></li>
-            <code>
-                <img src="./gifs/tos.gif">
-            </code>
         </ul>
     </li>
     <li>
@@ -97,15 +94,20 @@
             </code>
         </ul>
     </li>
+    <li>
+        <ul>
+            <li><h3>Interactive elements</h3></li>
+            <li><b>top-x</b></li>
+            <li><b>phone-x</b></li>
+        </ul>
+    </li>
     
     <li><b>input-xpwa</b></li>
     <li><b>modal-xpwa</b></li>
     <li><b>progress-round-xpwa</b></li>
-    <li><b>sidebar-xpwa</b></li>
     <li><b>stub-xpwa</b></li>
     <li><b>tabs-xpwa</b></li>
     <li><b>radio-xpwa</b></li>
-    <li><b>top-xpwa</b></li>
     <li><b>sign-form-xpwa</b></li>
     <li><b>and more</b></li>
 </ul>

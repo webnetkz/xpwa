@@ -30,7 +30,7 @@
 @import url(navigation_panels/sidebar.css);
 @import url(navigation_panels/sidebar_mobile.css);
 
-@import url(sliders/slider.css);
+@import url(sliders/carusel.css);
 @import url(sliders/dots.css);
 
 @import url(messages/tos/tos.css);
@@ -43,6 +43,11 @@
 @import url(progress_components/progress_bar_mobile.css);
 @import url(progress_components/preloader.css);
 @import url(progress_components/preloader_mobile.css);
+
+@import url(interactive_components/top.css);
+@import url(interactive_components/top_moblile.css);
+@import url(interactive_components/phone.css);
+@import url(interactive_components/phone_mobile.css);
 
 * {
   margin: 0;
@@ -68,36 +73,6 @@ body {
   background: var(--bg);
 }
 
-
-top-xpwa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  line-height: 5rem;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: var(--main-theme);
-  border-radius: 50%;
-  z-index: var(--z-to-top);
-  transition-duration: 0.5s;
-}
-
-top-xpwa:hover {
-  transform: scale(1.2) rotateZ(360deg);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-top-xpwa:after {
-  content: "\2191";
-  transform: scaleX(0.7);
-  margin-bottom: 10px;
-  color: var(--white);
-}
 
 modal-xpwa {
   width: 60vw;
@@ -158,32 +133,4 @@ h1 {
 hr {
   border-color: var(--main-theme);
   margin: 1rem;
-}
-
-phone-xpwa {
-  min-width: 50px;
-  min-height: 50px;
-  border: 1px solid var(--main-theme);
-  position: fixed;
-  right: 20px;
-  bottom: 80px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: var(--z-phone);
-}
-
-phone-xpwa a {
-  color: var(--main-theme);
-  font-size: 1.4rem;
-  line-height: 3rem;
-}
-
-phone-xpwa:hover {
-  background: var(--main-theme);
-}
-
-phone-xpwa:hover a {
-  color: var(--black);
 }

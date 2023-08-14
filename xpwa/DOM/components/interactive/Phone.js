@@ -22,4 +22,4 @@ export class PhoneXPWA extends HTMLElement
   }
 }
 
-customElements.define("phone-xpwa", PhoneXPWA);
+customElements.define("phone-x", PhoneXPWA);

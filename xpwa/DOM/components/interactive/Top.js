@@ -1,4 +1,4 @@
-import { Mobile } from '../Mobile.js';
+import { Mobile } from '../../Mobile.js';
 
 export class TopXPWA extends HTMLElement
 {
@@ -12,4 +12,4 @@ export class TopXPWA extends HTMLElement
   }
 }
 
-customElements.define("top-xpwa", TopXPWA);
+customElements.define("top-x", TopXPWA);

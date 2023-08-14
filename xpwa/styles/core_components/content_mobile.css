@@ -2,4 +2,8 @@
     body:has(nav-x) content-x {
         padding-left: 2vw;
     }
+    content-xpwa {
+        width: 96vw !important;
+        left: 0.5vw !important;
+    }
 }

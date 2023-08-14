@@ -1,0 +1,27 @@
+phone-x {
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid var(--main-theme);
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: var(--z-phone);
+}
+
+phone-x a {
+  color: var(--main-theme);
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+phone-x:hover {
+  background: var(--main-theme);
+}
+
+phone-x:hover a {
+  color: var(--black);
+}

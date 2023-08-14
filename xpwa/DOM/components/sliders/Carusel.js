@@ -6,7 +6,7 @@ import { DotXPWA } from './Dot.js';
 import { DotsContainerXPWA } from './DotsContainer.js';
 
 
-export class SliderXPWA extends HTMLElement
+export class CaruselXPWA extends HTMLElement
 {
   constructor()
   {
@@ -131,4 +131,4 @@ export class SliderXPWA extends HTMLElement
   }
 }
 
-customElements.define("slider-x", SliderXPWA);
+customElements.define("carusel-x", CaruselXPWA);
