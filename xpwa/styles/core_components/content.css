@@ -1,15 +1,21 @@
 content-x {
     display: block;
     position: relative;
+    min-height: 90vh;
+    top: 1vh;
+    width: 98.5vw;
     left: 0.5vw;
     right: 0.5vw;
-    top: 1vh;
-    min-height: 90vh;
-    width: 98vw;
     background: var(--gray-gradient);
     padding: var(--padding);
     border-radius: var(--radius);
 }
+
+content-x p,
+content-x h1, h2, h3, h4, h5 {
+    color: var(--white);
+}
+
 
 body:has(header-x) content-x {
     padding-top: 20px;

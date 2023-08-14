@@ -3,6 +3,7 @@
 
   
   <content-x>
+    <h1>xPWA - less code</h1>
     <p>Welcome to the official documentation for xPWA - your
        ultimate solution for rapid interface development. 
        As an expert in software development and an experienced 
