@@ -1,5 +1,5 @@
-<?php require_once './components/header.php'; ?>
-<?php require_once './components/nav.php'; ?>
+<?php require_once '../header.php'; ?>
+<?php require_once '../nav.php'; ?>
 
 
-<?php require_once './components/footer.php'; ?>
+<?php require_once '../footer.php'; ?>
