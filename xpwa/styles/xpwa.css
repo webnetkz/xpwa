@@ -4,7 +4,6 @@
 @import url(scrollbar.css);
 @import url(form.css);
 @import url(components.css);
-@import url(stepprocessing.css);
 
 @import url(core_components/stub.css);
 @import url(core_components/header.css);
@@ -44,6 +43,8 @@
 @import url(progress_components/progress_bar_mobile.css);
 @import url(progress_components/preloader.css);
 @import url(progress_components/preloader_mobile.css);
+@import url(progress_components/stepprocessing.css);
+@import url(progress_components/stepprocessing_moblile.css);
 
 @import url(interactive_components/top.css);
 @import url(interactive_components/top_moblile.css);

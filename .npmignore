@@ -1,2 +1,5 @@
 gifs
 .vscode
+pages
+index.html
+webpack.config.js

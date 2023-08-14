@@ -1,4 +1,5 @@
-step-processing-xpwa {
+step-processing-x {
+    display: inline-block;
     position: relative;
     width: 300px;
     height: 20px;
@@ -7,8 +8,8 @@ step-processing-xpwa {
     border-radius: 10px;
 }
 
-step-processing-xpwa .line,
-step-processing-xpwa .indecator-line {
+step-processing-x .line,
+step-processing-x .indecator-line {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,15 +19,14 @@ step-processing-xpwa .indecator-line {
     border-radius: 10px;
 }
 
-step-processing-xpwa .indecator-line {
-    width: 25%;
+step-processing-x .indecator-line {
+    width: 33%;
     top: -8px;
     background: red;
     transition: width 0.5s ease-in-out;
-    /* Добавляем анимацию для плавного перемещения */
 }
 
-step-processing-xpwa .step {
+step-processing-x .step {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -36,14 +36,14 @@ step-processing-xpwa .step {
     background-color: #ccc;
 }
 
-step-processing-xpwa .step:hover {
+step-processing-x .step:hover {
     cursor: pointer;
 }
 
-step-processing-xpwa .step.active {
+step-processing-x .step.active {
     background-color: red;
 }
 
-step-processing-xpwa .step.active+.line {
+step-processing-x .step.active+.line {
     background-color: red;
 }

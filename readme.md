@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.74</i>
+    <i>version 0.7.76</i>
 </h1>
 <hr>
 <img src="./logo.png">
@@ -103,13 +103,6 @@
             <li><b>phone-x</b></li>
         </ul>
     </li>
-    
-    <li><b>input-xpwa</b></li>
-    <li><b>progress-round-xpwa</b></li>
-    <li><b>tabs-xpwa</b></li>
-    <li><b>radio-xpwa</b></li>
-    <li><b>sign-form-xpwa</b></li>
-    <li><b>and more</b></li>
 </ul>
 
 <hr>
