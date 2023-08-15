@@ -1,4 +1,5 @@
 button-x {
+    display: inline-block;
     color: var(--black);
     border-radius: var(--radius);
     padding: var(--padding) 15px;
