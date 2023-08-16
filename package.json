@@ -1,6 +1,6 @@
 {
   "name": "xpwa",
-  "version": "0.7.78",
+  "version": "0.7.79",
   "description": "For fast dev web UI",
   "main": "xpwa.js",
   "scripts": {
@@ -32,5 +32,8 @@
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "xpwa": "^0.7.78"
   }
 }

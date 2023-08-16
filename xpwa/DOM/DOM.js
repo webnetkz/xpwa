@@ -1,3 +1,4 @@
+//import '../styles/xpwa.css';
 import './components/core/core_components.js';
 import './components/navigation/navigation_components.js';
 import './components/messages/messages_components.js';
@@ -29,6 +30,7 @@ export class DOM
     {
         const linkElement = document.createElement("link");
         linkElement.rel = "stylesheet";
+        linkElement.type = 'text/css';
         linkElement.href = "./xpwa/styles/xpwa.css";
         document.head.appendChild(linkElement);
     }
