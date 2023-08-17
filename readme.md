@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.79</i>
+    <i>version 0.7.8</i>
 </h1>
 <hr>
 <img src="./logo.png">

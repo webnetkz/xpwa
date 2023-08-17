@@ -19,4 +19,5 @@ dot-x:hover,
 dot-x.active {
     transform: scale(2);
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
