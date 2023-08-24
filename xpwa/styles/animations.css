@@ -60,12 +60,9 @@
   {
     opacity: 1;
   }
-  50%
-  {
-    transform: perspective(800px) rotateY(70deg);
-  }
   100%
   {
+    right: -100vw;
     opacity: 0;
   }
 }
