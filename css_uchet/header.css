@@ -1,0 +1,135 @@
+header.uchet-header {
+    position: fixed;
+    z-index: var(--z-header);
+    top: 0;
+    height: 113px;
+    width: 100vw;
+    background: var(--white);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+header.uchet-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 113px;
+    width: 100vw;
+}
+
+.uchet-header-content {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uchet-main-menu a,
+.uchet-left-nav a {
+    color: #424242;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    margin-left: 26px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.uchet-main-menu a:hover,
+.uchet-main-menu a.active {
+    border-bottom: 1px solid var(--dark);
+}
+
+.uchet-sign {
+    display: inline;
+}
+
+.uchet-sign a {
+    color: var(--black, #1A1A1A);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.uchet-sign .uchet-signin-button {
+    border-radius: var(--radius);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    padding: 17px 40px;
+    margin-left: 40px;
+}
+
+.uchet-signin-button:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.uchet-control-mobile-menu {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    .uchet-header-content {
+        width: 100%;
+        padding: 3px 7px;
+    }
+
+    .uchet-sign {
+        display: block;
+        position: absolute;
+        top: 5vh;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        width: 100vw;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .uchet-main-menu {
+        display: flex !important;
+        position: absolute;
+        flex-direction: column;
+        background: white;
+        height: 100vh;
+        width: 90vw;
+        top: 0;
+        left: 10vw;
+        padding-top: 200px;
+        box-shadow: -10vw 0 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .uchet-main-menu a {
+        font-size: 2rem;
+        width: 50%;
+    }
+
+    .uchet-main-menu-close {
+        left: 110vw;
+        display: none;
+    }
+
+    .uchet-main-menu-open {
+        left: 10vw;
+        display: block;
+        animation: showMenu 0.2s linear;
+        overscroll-behavior-y: contain;
+        overflow-y: auto;
+    }
+
+    .uchet-control-mobile-menu {
+        display: block;
+        font-size: 2rem;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
+
+    .uchet-sign .uchet-signin-button {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}

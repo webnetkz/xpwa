@@ -1,0 +1,195 @@
+.uchet-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.uchet-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.uchet-checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.uchet-checkbox-container:hover input~.uchet-checkbox-checkmark {
+  background-color: #ccc;
+}
+
+.uchet-checkbox-container input:checked~.uchet-checkbox-checkmark {
+  background-color: var(--red);
+}
+
+.uchet-checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.uchet-checkbox-container input:checked~.uchet-checkbox-checkmark:after {
+  display: block;
+}
+
+.uchet-checkbox-container .uchet-checkbox-checkmark:after {
+  left: 12px;
+  top: -10px;
+  width: 8px;
+  height: 25px;
+  border-radius: 1px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+input.uchet-radio-new {
+  -webkit-appearance: none;
+  display: block;
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  box-shadow: hsla(0, 0%, 100%, .15) 0 1px 1px, inset #2A60EB 0 0 0 1px;
+  background-color: hsla(0, 13%, 57%, 0.2);
+  background-image: -webkit-radial-gradient(rgb(107, 100, 231) 0%, #2A60EB 15%, hsla(200, 100%, 60%, .3) 28%, hsla(200, 100%, 30%, 0) 70%);
+  background-repeat: no-repeat;
+  -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+  outline: none;
+}
+
+input.uchet-radio-new:checked {
+  -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+    -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+input.uchet-radio-new:active {
+  -webkit-transform: scale(1.5);
+  -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+
+
+input.uchet-radio-new,
+input.uchet-radio-new:active {
+  background-position: 0 24px;
+}
+
+input:checked {
+  background-position: 0 0;
+}
+
+input.uchet-radio-new:checked~input.uchet-radio-new,
+input.uchet-radio-new:checked~input.uchet-radio-new:active {
+  background-position: 0 -24px;
+}
+
+
+
+
+.uchet-label {
+  display: block;
+  line-height: 20px;
+}
+
+.uchet-option-input {
+  transform: scale(0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: var(--gray);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: var(--z-inputs);
+}
+
+.uchet-option-input[type="checkbox"] {
+  border-radius: var(--radius);
+}
+
+.uchet-option-input:hover {
+  background: var(--red-light);
+}
+
+.uchet-option-input:checked {
+  background: var(--red);
+}
+
+.uchet-option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  content: '\f00c';
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Font Awesome 5 Free';
+}
+
+.uchet-option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: var(--red-light);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: var(--z-inputs);
+  border-radius: var(--radius);
+}
+
+.uchet-option-input.uchet-radio {
+  border-radius: 50%;
+}
+
+.uchet-option-input.uchet-radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,38 @@
+.uchet-answer-two-tour {
+    width: 50%;
+    border-left: 2px solid var(--gray);
+    min-height: calc(100% - 72px);
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 10px 20px;
+}
+
+.uchet-input-two-tour {
+    border-radius: var(--radius);
+    width: 100%;
+    padding: 3px 12px;
+    outline: none;
+    border: 1px solid var(--gray);
+    font-size: 1.4rem;
+}
+
+.uchet-answer-block-two-tour {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+    .uchet-answer-two-tour {
+        display: block;
+        position: relative;
+        width: 100%;
+        left: 0;
+        margin-bottom: 70px;
+    }
+    .uchet-container-tabs > section > main {
+        flex-direction: column;
+    }
+    #panel-1 main > div, #panel-2 main > div, #panel-3 main > div {
+        width: 100%;
+    }
+}

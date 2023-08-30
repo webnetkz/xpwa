@@ -1,0 +1,57 @@
+.uchet-breadcrumb {
+  background: var(--white);
+  border-radius: var(--radius);
+  height: 30px;
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 0.7rem;
+}
+
+.uchet-breadcrumb ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.uchet-breadcrumb ul li {
+  display: flex;
+  align-items: flex-end;
+}
+
+.uchet-breadcrumb ul li:first-child a {
+  color: var(--black-light);
+}
+
+.uchet-breadcrumb ul li::after {
+  content: "\25C6";
+  margin: 0px 5px;
+  font-size: 0.77rem;
+  line-height: 1rem;
+  color: var(--black-light);
+}
+
+.uchet-breadcrumb ul li:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
+.uchet-breadcrumb a {
+  padding: 3px 8px;
+  color: var(--black-light);
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.uchet-breadcrumb a:hover,
+.uchet-breadcrumb a.active {
+  color: var(--blue);
+}
+
+@media (max-width: 1400px) {
+  .uchet-breadcrumb {
+    display: none;
+  }
+}

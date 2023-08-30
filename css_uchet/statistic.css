@@ -1,0 +1,61 @@
+.uchet-statistics {
+    background-color: var(--gray);
+    border-radius: var(--radius);
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    animation: showElementAnimation 0.3s linear;
+}
+
+#uchet-total-questions,
+#uchet-correct-answers,
+#uchet-incorrect-answers,
+#uchet-time-answers {
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 5px;
+    border-radius: var(--radius);
+}
+
+.uchet-total-questions,
+.uchet-correct-answers,
+.uchet-incorrect-answers,
+.uchet-time-answers {
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1px solid var(--gray-dark);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.uchet-total-questions {
+    background: linear-gradient(to right, #ffffff, #ffc107);
+    animation: showResult 1s linear;
+}
+
+.uchet-correct-answers {
+    background: linear-gradient(to right, #ffffff, #28a745);
+    animation: showResult 1.2s linear;
+}
+
+.uchet-incorrect-answers {
+    background: linear-gradient(to right, #ffffff, #dc3545);
+    animation: showResult 1.4s linear;
+}
+
+.uchet-time-answers {
+    background: linear-gradient(to right, #ffffff, var(--white));
+    animation: showResult 1.6s linear;
+    color: var(--black);
+}
+
+#uchet-time-answers {
+    color: var(--black);
+    border-color: var(--black);
+}

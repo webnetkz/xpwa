@@ -1,0 +1,81 @@
+.container-form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.uchet-form {
+    position: relative;
+    width: 604px;
+    height: 743px;
+    background: var(--white);
+    border-radius: var(--radius);
+}
+
+.uchet-close-icon {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+}
+
+.uchet-close-icon:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.uchet-form-content {
+    margin: 83px 90px;
+}
+
+form.uchet-form .uchet-form-content h2 {
+    color: var(--black);
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.uchet-form-content button {
+    width: 100%;
+    color: var(--white);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.uchet-input {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: var(--deep-gray);
+    width: 422px;
+    height: 76px;
+    border-radius: var(--radius);
+    font-size: 22px;
+    outline: none;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.uchet-input:focus {
+    border: 1px solid var(--dark);
+}
+
+.uchet-error-input {
+    display: none;
+    color: var(--red);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
