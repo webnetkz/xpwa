@@ -9,8 +9,7 @@ export class CloseXPWA extends HTMLElement
     this.addEventListener('click', this.hidden);
   }
 
-  hidden()
-  {
+  hidden() {
     const parentElement = this.parentElement;
     parentElement.classList.add('hiddenElement');
 

@@ -2,10 +2,9 @@ content-x {
     display: block;
     position: relative;
     min-height: 90vh;
+    margin-bottom: 50px;
     top: 1vh;
-    width: 98.5vw;
-    left: 0.5vw;
-    right: 0.5vw;
+    width: 1200px;
     background: var(--gray-gradient);
     padding: var(--padding);
     border-radius: var(--radius);
@@ -13,8 +12,7 @@ content-x {
 
 content-x p,
 content-x h1, h2, h3, h4, h5 {
-    color: var(--white);
-    width: 70%;
+    color: var(--black);
     margin: 0px auto;
 }
 

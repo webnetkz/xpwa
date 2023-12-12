@@ -7,5 +7,6 @@ header-x {
     min-height: var(--height-header);
     width: 100vw;
     z-index: var(--z-header);
+    backdrop-filter: blur(7px);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }

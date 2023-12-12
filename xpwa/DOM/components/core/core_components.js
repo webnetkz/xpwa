@@ -1,4 +1,5 @@
 import { HeaderXPWA } from './Header.js';
+import { LogoXPWA } from './Logo.js';
 import { ContentXPWA } from './Content.js';
 import { MenuXPWA } from './menu/Menu.js';
 import { FooterXPWA } from './Footer.js';

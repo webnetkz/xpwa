@@ -9,6 +9,7 @@
 <body>
 
   <header-x position="fixed">
+    <logo-x src="/logo.png"></logo-x>
     <menu-x>
       <button-x link="/index.php">Home</button-x>
       <button-x link="/pages/index.php">Components</button-x>

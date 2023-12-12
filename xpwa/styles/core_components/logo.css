@@ -1,0 +1,8 @@
+logo-x img {
+    margin-left: 20px;
+    height: 40px;
+}
+logo-x:hover {
+    cursor: pointer;
+    filter: invert(30%);
+}

@@ -1,14 +1,14 @@
 :root {
-  --main-theme: #fffb00;
-  --main-theme-light: #fcf946;
-  --main-theme-dark: #dad601;
+  --main-theme: #0140EB;
+  --main-theme-light: #446bd6;
+  --main-theme-dark: #0035c7;
 
   --green: rgb(6, 157, 6);
-  --bg: #4d3d3d;
-  --white: #e6e1e1;
+  --bg: #FFF;
+  --white: #FFF;
   --black: black;
-  --gray: #302e2e;
-  --gray-gradient: linear-gradient(90deg,#222222 80%,#302e2e);
+  --gray: #f4ecec;
+  --gray-gradient: rgba(138, 170, 255, 0.1);
 
   --padding: 5px;
   --margin: 5px;

@@ -1,6 +1,6 @@
 footer-x {
     display: block;
-    background: var(--gray);
+    background: var(--main-theme);
     min-width: 100vw;
     min-height: 100px;
     display: flex;

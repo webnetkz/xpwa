@@ -1,9 +1,17 @@
 menu-x {
     display: flex;
     position: relative;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     margin: var(--margin);
-    background: var(--gray-gradient);
     width: 100%;
+}
+menu-x button-x {
+    color: var(--main-theme);
+    border-radius: 0;
+    padding: var(--padding) 15px;
+    background: none;
+    border: none;
+    margin: 3px;
+    font-size: 1.2rem;
 }
