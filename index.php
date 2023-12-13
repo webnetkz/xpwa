@@ -47,6 +47,43 @@
             border-radius: 200px;
         }
     }
+    card-x {
+        background: var(--main-theme);
+        border-radius: var(--radius);
+        min-height: 200px;
+        width: 96vw;
+        margin-top: 20px;
+        padding: 5px 15px;
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    card-x card-x {
+        display: inline-block;
+        width: 20%;
+        height: 180px;
+        margin: 10px;
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.3); 
+        padding-top: 2rem;
+    }
+    card-x h2 {
+        color: var(--white);
+        font-size: 2.3rem;
+    }
+    card-x card-x h2 {
+        font-size: 2rem;
+    }
+    card-x card-x h2 span {
+        font-size: 2.9rem;
+        color: var(--main-theme-dark);
+        position: absolute;
+        top: -1rem;
+        right: 2rem;
+        text-shadow: 0 0 1px white;
+    }
 </style>
 
 <promo-x>
@@ -61,6 +98,25 @@
         <button-x link="/pages/documention.php">Документация</button-x>
     </div>
 </promo-x>
+
+<card-x>
+    <h2>Почему xPWA?</h2>
+    <card-x>
+        <h2><span>01</span> Быстрый старт</h2>
+        <hr>
+        Очень простой и минималистичный синтаксис
+    </card-x>
+    <card-x>
+        <h2><span>02</span> Простота</h2>
+        <hr>
+        Все элементы интерфейса уже созданы
+    </card-x>
+    <card-x>
+        <h2><span>03</span> Свободность / открытость</h2>
+        <hr>
+        Открытые исходные коды, поддержка
+    </card-x>
+</card-x>
     
 
 <?php require_once './footer.php'; ?>
