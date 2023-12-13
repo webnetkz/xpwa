@@ -18,16 +18,16 @@ import { BorderLinesXPWA } from './components/form/BorderLines.js';
 import { TabsXPWA } from './components/Tabs.js';
 import { InputXPWA } from './components/form/Input.js';
 
+import { Mobile } from './Mobile.js';
 
-export class DOM
-{
-    constructor()
-    {
+
+export class DOM {
+    constructor() {
         this.setStyles();
+        this.MOBILE = new Mobile();
     }
 
-    setStyles()
-    {
+    setStyles() {
         const linkElement = document.createElement("link");
         linkElement.rel = "stylesheet";
         linkElement.type = 'text/css';

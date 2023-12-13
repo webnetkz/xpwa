@@ -1,7 +1,5 @@
-export class CloseXPWA extends HTMLElement
-{
-  constructor()
-  {
+export class CloseXPWA extends HTMLElement {
+  constructor() {
     super();
     this.innerHTML = '+';
 

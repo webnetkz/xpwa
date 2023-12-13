@@ -1,7 +1,6 @@
 import { DOM } from './xpwa/DOM/DOM.js';
 
-export class XPWA
-{
+export class XPWA {
 
 }
 

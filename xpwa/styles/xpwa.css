@@ -8,11 +8,16 @@
 @import url(core_components/stub.css);
 @import url(core_components/header.css);
 @import url(core_components/logo.css);
+@import url(core_components/logo_mobile.css);
 @import url(core_components/header_mobile.css);
 @import url(core_components/content.css);
 @import url(core_components/content_mobile.css);
 @import url(core_components/block.css);
 @import url(core_components/block_mobile.css);
+@import url(core_components/card/card.css);
+@import url(core_components/card/card_mobile.css);
+@import url(core_components/promo/promo.css);
+@import url(core_components/promo/promo_mobile.css);
 @import url(core_components/menu/menu.css);
 @import url(core_components/menu/menu_mobile.css);
 @import url(core_components/menu/burger.css);
@@ -52,6 +57,8 @@
 @import url(interactive_components/phone.css);
 @import url(interactive_components/phone_mobile.css);
 
+@import url(tabs.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -73,30 +80,6 @@ body {
   overflow-x: hidden;
   background: var(--bg);
   color: var(--black);
-}
-
-tabs-xpwa {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-height: 300px;
-  max-height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  box-sizing: border-box;
-  padding: 20px;
-  background: rgba(62, 56, 56, 0.1);
-  border: 0.480855px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(25.2449px);
-  border-radius: 9.61711px;
-  position: relative;
-}
-
-tab-content {
-  display: none;
-  position: absolute;
-  left: 10px;
-  top: 70px;
-  min-width: 95%;
 }
 
 h1 {

@@ -1,43 +1,43 @@
-export class BurgerXPWA extends HTMLElement
-{
-  constructor()
-  {
+import { Mobile } from '../../../Mobile.js';
+export class BurgerXPWA extends HTMLElement {
+  constructor() {
     super();
     
     this.createLines();
+    if(Mobile.isMobile()) {
+      this.closeMenu();
+    }
     this.addEventListener('click', this.changeBurger);
   }
   
-  createLines()
-  {
-    if(!this.querySelector('span'))
-    {
+  createLines() {
+    if(!this.querySelector('span')) {
       this.innerHTML = `<span></span><span></span><span></span>`;
     } return;
   }
 
-  openMenu()
-  {
+  openMenu() {
     const childElements = this.parentNode.querySelectorAll('button-x');
     childElements.forEach((el) => {
         el.style.display = 'block';
     });
+
+    document.querySelector('header-x').style.height = '100vh';
   }
 
-  closeMenu()
-  {
+  closeMenu() {
     const childElements = this.parentNode.querySelectorAll('button-x');
     childElements.forEach((el) => {
         el.style.display = 'none';
     });
+
+    document.querySelector('header-x').style.height = '50px';
   }
 
-  changeBurger()
-  {
+  changeBurger() {
     const linesOfBurger = this.querySelectorAll('span');
 
-    if(this.getAttribute('status') != 'close')
-    {
+    if(this.getAttribute('status') != 'close') {
         this.openMenu();
         linesOfBurger[0].style.transform = 'rotate(45deg)';
         linesOfBurger[0].style.marginTop = '13px';
@@ -46,9 +46,7 @@ export class BurgerXPWA extends HTMLElement
         linesOfBurger[2].style.marginTop = '-14px';
     
         this.setAttribute('status', 'close');
-    }
-    else
-    {
+    } else {
         this.closeMenu();
         linesOfBurger[0].style.transform = 'rotate(0deg)';
         linesOfBurger[0].style.marginTop = '0';
@@ -58,7 +56,6 @@ export class BurgerXPWA extends HTMLElement
         this.setAttribute('status', 'open');
     }
   }
-
 }
 
 customElements.define("burger-x", BurgerXPWA);

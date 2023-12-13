@@ -1,16 +1,13 @@
-export class TabsXPWA extends HTMLElement
-{
-  constructor()
-  {
+export class TabsXPWA extends HTMLElement {
+  constructor() {
     super();
 
     this.querySelector('tab-content').style.display = 'block';
     this.addAction();
   }
 
-  addAction()
-  {
-    this.tabs = this.querySelectorAll('tab-xpwa');
+  addAction() {
+    this.tabs = this.querySelectorAll('tab-x');
     
     this.tabs.forEach((element) => {
       element.classList.add('button');
@@ -33,4 +30,4 @@ export class TabsXPWA extends HTMLElement
   }
 }
 
-customElements.define("tabs-xpwa", TabsXPWA);
+customElements.define("tabs-x", TabsXPWA);

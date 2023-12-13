@@ -1,0 +1,10 @@
+@media (max-width: 1200px) {
+    card-x:has(card-x) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    card-x:has(card-x) card-x {
+        width: 100%;
+    }
+}
