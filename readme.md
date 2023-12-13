@@ -1,9 +1,9 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.7.91</i>
+    <i>version 0.8.0</i>
 </h1>
 <hr>
-<img src="./logo.png">
+<img src="./logo.png" width="50px;">
 <hr>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
 <code><a href="https://xpwa.webnet.kz">Documentation</a></code>
