@@ -1,5 +1,3 @@
-import { Mobile } from '../../Mobile.js';
-
 export class Card3DXPWA extends HTMLElement
 {
   constructor()
@@ -9,7 +7,7 @@ export class Card3DXPWA extends HTMLElement
     this.addEventListener('mousemove', this.rotate);  
     this.addEventListener('mouseout', this.stopRotate);      
 
-    if(Mobile.isMobile())
+    if(window.MOBILE.isMobile())
     {
       window.addEventListener("deviceorientation", function(event)
       {

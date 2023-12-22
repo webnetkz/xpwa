@@ -1,10 +1,9 @@
-import { Mobile } from '../../../Mobile.js';
 export class BurgerXPWA extends HTMLElement {
   constructor() {
     super();
     
     this.createLines();
-    if(Mobile.isMobile()) {
+    if(window.MOBILE.isMobile()) {
       this.closeMenu();
     }
     this.addEventListener('click', this.changeBurger);

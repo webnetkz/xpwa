@@ -1,10 +1,7 @@
 <?php require_once './header.php'; ?>
 
 <promo-x>
-    <h1>
-        <logo-x src="/logo.png"></logo-x>
-        xPWA
-    </h1>
+    <h1><logo-x src="/logo.png"></logo-x>PWA</h1>
     <h2>Прогрессивное построение интерфейсов</h2>
     <hr>
     <div>
@@ -21,16 +18,34 @@
         Очень простой и минималистичный синтаксис
     </card-x>
     <card-x>
-        <h2><span>02</span> Простота</h2>
+        <h2><span>02</span> Реиспользуемость</h2>
         <hr>
         Все элементы интерфейса уже созданы
     </card-x>
     <card-x>
         <h2><span>03</span> Свободность / открытость</h2>
         <hr>
-        Открытые исходные коды, поддержка
+        Открытые исходные коды, длительная поддержка
     </card-x>
 </card-x>
+
+<style>
+    block-x img {
+        width: 77px;
+        margin: 12px;
+    }
+</style>
+
+<block-x>
+    <img src="/public/logotypes/chrome.jpeg" alt="">
+    <img src="/public/logotypes/edge.png" alt="">
+    <img src="/public/logotypes/mozila.webp" alt="">
+    <img src="/public/logotypes/safari.png" alt="">
+
+    <img src="/public/logotypes/android.png" alt="">
+    <img src="/public/logotypes/linux.png" alt="">
+    <img src="/public/logotypes/windows.png" alt="">
+</block-x>
     
 
 <?php require_once './footer.php'; ?>

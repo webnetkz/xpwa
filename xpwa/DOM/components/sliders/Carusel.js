@@ -1,4 +1,3 @@
-import { Mobile } from '../../Mobile.js';
 import { SlideXPWA } from './Slide.js';
 import { NextSlideXPWA } from './NextSlide.js';
 import { BackSlideXPWA } from './BackSlide.js';
@@ -18,7 +17,7 @@ export class CaruselXPWA extends HTMLElement
     this.setAttribute('index', this.sliderIndex);
     this.createArrows();
 
-    if(!Mobile.isMobile())
+    if(!window.MOBILE.isMobile())
     {
     }
 

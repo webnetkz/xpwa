@@ -13,7 +13,7 @@
   --padding: 5px;
   --margin: 5px;
   --radius: 3px;
-  --shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  --shadow: none;
   --width-scroll-bar: 5px;
 
   --z-nav: 9;

@@ -1,5 +1,3 @@
-import { Mobile } from '../../Mobile.js';
-
 export class NavXPWA extends HTMLElement {
   constructor() {
     super();
@@ -17,7 +15,7 @@ export class NavXPWA extends HTMLElement {
       left: -19.5vw;
       background: var(--main-theme);`;
 
-      if(Mobile.isMobile())
+      if(window.MOBILE.isMobile())
       {
         this.style.cssText = `
         left: -79vw;`;

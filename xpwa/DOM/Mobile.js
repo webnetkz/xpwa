@@ -1,5 +1,5 @@
-export class Mobile {
-    static isMobile() {
+class Mobile {
+    isMobile() {
         if(window.innerWidth <= 1200)
         {
             return true;
@@ -8,3 +8,6 @@ export class Mobile {
         return false;
     }
 }
+
+window.MOBILE = new Mobile();
+

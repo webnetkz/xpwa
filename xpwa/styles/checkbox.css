@@ -1,0 +1,79 @@
+.checkbox-x {
+  display: none;
+}
+.checkbox-x, .checkbox-x:after, .checkbox-x:before, .checkbox-x *, .checkbox-x *:after, .checkbox-x *:before, .checkbox-x + .checkbox-btn-x {
+  box-sizing: border-box;
+}
+.checkbox-x::-moz-selection, .checkbox-x:after::-moz-selection, .checkbox-x:before::-moz-selection, .checkbox-x *::-moz-selection, .checkbox-x *:after::-moz-selection, .checkbox-x *:before::-moz-selection, .checkbox-x + .checkbox-btn-x::-moz-selection {
+  background: none;
+}
+.checkbox-x::selection, .checkbox-x:after::selection, .checkbox-x:before::selection, .checkbox-x *::selection, .checkbox-x *:after::selection, .checkbox-x *:before::selection, .checkbox-x + .checkbox-btn-x::selection {
+  background: none;
+}
+.checkbox-x + .checkbox-btn-x {
+  outline: 0;
+  display: block;
+  width: 3em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox-x + .checkbox-btn-x:after, .checkbox-x + .checkbox-btn-x:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.checkbox-x + .checkbox-btn-x:after {
+  left: 0;
+}
+.checkbox-x + .checkbox-btn-x:before {
+  display: none;
+}
+.checkbox-x:checked + .checkbox-btn-x:after {
+  left: 50%;
+}
+
+
+
+.checkbox-ios-x + .checkbox-btn-x {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+  border: 1px solid #e8eae9;
+}
+.checkbox-ios-x + .checkbox-btn-x:after {
+  border-radius: 2em;
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.change-theme-x .checkbox-ios-x + .checkbox-btn-x:after {
+  content: "\1F4A1";
+  text-align: center;
+}
+
+.checkbox-ios-x + .checkbox-btn-x:hover:after {
+  will-change: padding;
+}
+.checkbox-ios-x + .checkbox-btn-x:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.checkbox-ios-x + .checkbox-btn-x:active:after {
+  padding-right: 0.8em;
+}
+.checkbox-ios-x:checked + .checkbox-btn-x {
+  background: var(--main-theme);
+}
+.checkbox-ios-x:checked + .checkbox-btn-x:active {
+  box-shadow: none;
+}
+.checkbox-ios-x:checked + .checkbox-btn-x:active:after {
+  margin-left: -0.8em;
+}

@@ -3,6 +3,7 @@
 @import url(animations.css);
 @import url(scrollbar.css);
 @import url(form.css);
+@import url(checkbox.css);
 @import url(components.css);
 
 @import url(core_components/stub.css);
@@ -78,7 +79,7 @@ body {
   min-width: 100vw;
   width: 100vw;
   overflow-x: hidden;
-  background: var(--bg);
+  background: var(--white);
   color: var(--black);
 }
 
@@ -89,4 +90,6 @@ h1 {
 hr {
   border-color: var(--main-theme);
   margin: 1rem;
+  width: 50%;
+  opacity: 0.2;
 }

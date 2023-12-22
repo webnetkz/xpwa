@@ -1,5 +1,3 @@
-import { Mobile } from '../../Mobile.js';
-
 export class SidebarXPWA extends HTMLElement
 {
   constructor()

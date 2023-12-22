@@ -5,12 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documentation xPWA</title>
   <link rel="icon" type="image/png" href="./logo.png">
+  <script type="module" src="../xpwa.js" defer></script>
 </head>
-<body>
+<body x-options='
+{
+  "core_ui": {
+    "padding": "5px",
+    "margin": "5px",
+    "radius": "3px",
+    "shadow": "none",
+    "width_scroll_bar": "5px"
+  },
+  "colors": {
+    "main_theme": "blue",
+    "main_theme-light": "blue",
+    "main_theme-dark": "yellow"
+  }
+}
+'>
 
   <header-x position="fixed">
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
+      <change-theme-x></change-theme-x>
       <button-x link="/index.php">Главная</button-x>
       <button-x link="/quick-start.php">Быстрый старт</button-x>
       <button-x link="/documentation.php">Документация</button-x>

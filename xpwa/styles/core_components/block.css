@@ -1,11 +1,14 @@
 block-x {
-  display: block;
-  background: var(--gray-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
   min-height: 100px;
   background: var(--white);
   padding: 10px var(--padding);
   margin: var(--margin);
+  width: 98vw;
+  border: 3px solid var(--gray);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
