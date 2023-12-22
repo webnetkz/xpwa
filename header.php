@@ -10,7 +10,7 @@
 <body x-options='
 {
   "core_ui": {
-    "padding": "5px",
+    "padding": "10px",
     "margin": "5px",
     "radius": "3px",
     "shadow": "none",

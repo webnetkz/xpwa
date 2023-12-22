@@ -12,3 +12,7 @@ block-x {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+block-x img {
+  width: 77px;
+  margin: 12px;
+}

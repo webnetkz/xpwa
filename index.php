@@ -29,13 +29,6 @@
     </card-x>
 </card-x>
 
-<style>
-    block-x img {
-        width: 77px;
-        margin: 12px;
-    }
-</style>
-
 <block-x>
     <img src="/public/logotypes/chrome.jpeg" alt="">
     <img src="/public/logotypes/edge.png" alt="">
