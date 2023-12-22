@@ -1,9 +1,11 @@
+.gitignore
 /*
 !dist/
 !xpwa/
 .vscode/sftp.json
 *.zip
 .DS_Store
+/node_modules
 *
 !demo.html
 !webpack.config.js

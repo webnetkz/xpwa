@@ -2,11 +2,11 @@ button-x {
     display: inline;
     color: var(--white);
     border-radius: var(--radius);
-    padding: var(--padding) 15px;
+    padding: var(--padding) calc(var(--padding) * 3);
     background: var(--main-theme);
     border: 1px solid var(--main-theme);
     margin: 3px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 button-x:active {
