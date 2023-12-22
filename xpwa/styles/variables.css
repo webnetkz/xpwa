@@ -4,7 +4,6 @@
   --main-theme-dark: #0035c7;
 
   --green: rgb(6, 157, 6);
-  --bg: #FFF;
   --white: #FFF;
   --black: black;
   --gray: #f4ecec;
@@ -12,9 +11,10 @@
 
   --padding: 5px;
   --margin: 5px;
-  --radius: 3px;
+  --radius: 7px;
   --shadow: none;
   --width-scroll-bar: 5px;
+  --blur: 7px;
 
   --z-nav: 9;
   --z-to-top: 88;

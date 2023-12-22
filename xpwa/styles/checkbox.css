@@ -11,7 +11,7 @@
   background: none;
 }
 .checkbox-x + .checkbox-btn-x {
-  outline: 0;
+  outline: none;
   display: block;
   width: 3em;
   height: 1.5em;
@@ -70,6 +70,7 @@
 }
 .checkbox-ios-x:checked + .checkbox-btn-x {
   background: var(--main-theme);
+  outline: none;
 }
 .checkbox-ios-x:checked + .checkbox-btn-x:active {
   box-shadow: none;

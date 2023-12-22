@@ -6,7 +6,8 @@ export class NavXPWA extends HTMLElement {
       this.style.cssText = `
       transition-duration: 400ms;
       left: 0;
-      background: var(--bg);`;
+      background: rgba(0, 0, 0, 0);
+      `;
     });
 
     document.body.addEventListener('click', () => {

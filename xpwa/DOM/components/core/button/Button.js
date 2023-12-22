@@ -10,6 +10,10 @@ export class ButtonXPWA extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     switch(name) {
       case 'link':
+        if(newValue === window.location.pathname) {
+          this.classList.add('active-x');
+        }
+
         this.addEventListener('click', () => {
           location.href = newValue;
         });

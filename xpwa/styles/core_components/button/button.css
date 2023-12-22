@@ -4,9 +4,9 @@ button-x {
     border-radius: var(--radius);
     padding: var(--padding) calc(var(--padding) * 3);
     background: var(--main-theme);
-    border: 1px solid var(--main-theme);
     margin: 3px;
     font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0);
 }
 
 button-x:active {
@@ -14,8 +14,10 @@ button-x:active {
     color: var(--main-theme);
 }
 
+button-x.active-x,
 button-x:hover {
     background: var(--white);
     color: var(--main-theme);
+    border: 1px solid var(--main-theme);
     cursor: pointer;
 }
