@@ -39,7 +39,7 @@
 <block-x>
     <img src="/public/logotypes/chrome.jpeg" alt="">
     <img src="/public/logotypes/edge.png" alt="">
-    <img src="/public/logotypes/mozila.webp" alt="">
+    <img src="/public/logotypes/mozila.svg" alt="">
     <img src="/public/logotypes/safari.png" alt="">
 
     <img src="/public/logotypes/android.png" alt="">
