@@ -43,6 +43,5 @@ export class DOM {
         }
 
         document.head.appendChild(linkStyles);
-
     }
 }

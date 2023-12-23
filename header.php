@@ -13,7 +13,6 @@
       "margin": "5px",
       "radius": "7px",
       "shadow": "none",
-      "widthScrollBar": "5px",
       "blur": "7px"
     },
     "colors": {
@@ -30,7 +29,7 @@
   <header-x position="fixed">
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
-      <change-theme-x></change-theme-x>
+      <!-- <change-theme-x></change-theme-x> -->
       <button-x link="/index.php">Главная</button-x>
       <button-x link="/quick-start.php">Быстрый старт</button-x>
       <button-x link="/documentation.php">Документация</button-x>
