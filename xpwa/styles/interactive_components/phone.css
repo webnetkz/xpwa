@@ -25,3 +25,8 @@ phone-x:hover {
 phone-x:hover a {
   color: var(--black);
 }
+
+
+@media (max-width: 1200px) {
+
+}

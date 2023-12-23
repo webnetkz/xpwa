@@ -1,0 +1,9 @@
+responsive-x {
+    width: 96%;
+    min-height: 100px;
+    background-color: var(--green);
+    padding: var(--padding);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+

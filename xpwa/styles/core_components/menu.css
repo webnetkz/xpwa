@@ -16,3 +16,18 @@ menu-x button-x {
     font-size: 1.2rem;
     border: 1px solid rgba(0,0,0,0);
 }
+
+
+@media (max-width: 1200px) {
+    menu-x {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    menu-x > * {
+        margin-bottom: 5px;
+        width: 94%;
+        display: none;
+        animation: show 0.3s linear;
+    }
+}

@@ -14,3 +14,8 @@ card-3d-x > * {
     perspective: 500px;
     transform-style: preserve-3d;
 }
+
+
+@media (max-width: 1200px) {
+
+}

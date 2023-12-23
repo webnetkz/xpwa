@@ -42,3 +42,10 @@ promo-x::after {
         border-radius: 200px;
     }
 }
+
+
+@media (max-width: 1200px) {
+    promo-x h2 {
+        text-align: center;
+    }
+}

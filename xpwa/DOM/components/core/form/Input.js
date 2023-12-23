@@ -1,7 +1,5 @@
-export class InputXPWA extends HTMLElement
-{
-    constructor()
-    {
+export class InputXPWA extends HTMLElement {
+    constructor() {
         super();
         this.innerHTML = '<input type="text">';
 
@@ -13,18 +11,16 @@ export class InputXPWA extends HTMLElement
             this.closeAllLists(e.target);
         });
     }
-    
-    static get observedAttributes()
-    {
+
+    static get observedAttributes() {
         return [];
     }
 
-    listener(e)
-    {
+    listener(e) {
         let a, b, i, val = this.value;
 
         this.closeAllLists();
-        if (!val) { return false;}
+        if (!val) { return false; }
         this.currentFocus = -1;
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
@@ -32,15 +28,13 @@ export class InputXPWA extends HTMLElement
 
         this.parentNode.appendChild(a);
 
-        for(i = 0; i < arr.length; i++)
-        {
-            if(arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase())
-            {
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                 b = document.createElement("DIV");
                 b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
                 b.innerHTML += arr[i].substr(val.length);
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                b.addEventListener("click", function(e) {
+                b.addEventListener("click", function (e) {
                     inp.value = this.getElementsByTagName("input")[0].value;
                     this.closeAllLists();
                 });
@@ -49,60 +43,51 @@ export class InputXPWA extends HTMLElement
         }
     }
 
-    keyDown(e)
-    {
+    keyDown(e) {
         let x = document.getElementById(this.id + "autocomplete-list");
         if (x) x = x.getElementsByTagName("div");
-        if (e.keyCode == 40)
-        {
-          this.currentFocus++;
-          this.addActive(x);
-        } else if (e.keyCode == 38) { 
-          this.currentFocus--;
-          this.addActive(x);
+        if (e.keyCode == 40) {
+            this.currentFocus++;
+            this.addActive(x);
+        } else if (e.keyCode == 38) {
+            this.currentFocus--;
+            this.addActive(x);
         } else if (e.keyCode == 13) {
-          e.preventDefault();
-          if(this.currentFocus > -1)
-          {
-            if(x) x[this.currentFocus].click();
-          }
+            e.preventDefault();
+            if (this.currentFocus > -1) {
+                if (x) x[this.currentFocus].click();
+            }
         }
     }
 
-    addActive(x)
-    {
-        if(!x) return false;
+    addActive(x) {
+        if (!x) return false;
 
         this.removeActive(x);
-        if(this.currentFocus >= x.length) this.currentFocus = 0;
-        if(this.currentFocus < 0) this.currentFocus = (x.length - 1);
+        if (this.currentFocus >= x.length) this.currentFocus = 0;
+        if (this.currentFocus < 0) this.currentFocus = (x.length - 1);
         x[this.currentFocus].classList.add("autocomplete-active");
     }
 
-    removeActive(x)
-    {
-        for(var i = 0; i < x.length; i++)
-        {
-        x[i].classList.remove("autocomplete-active");
+    removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
         }
     }
 
-    closeAllLists(elmnt)
-    {
+    closeAllLists(elmnt) {
         let x = document.getElementsByClassName("autocomplete-items");
         for (let i = 0; i < x.length; i++) {
-        if (elmnt != x[i] && elmnt != inp) {
-            x[i].parentNode.removeChild(x[i]);
-        }
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
         }
     }
 
-    attributeChangedCallback(name, oldValue, newValue)
-    {
-        switch(name)
-        {
+    attributeChangedCallback(name, oldValue, newValue) {
+        switch (name) {
             case '':
-            break;
+                break;
         }
     }
 }

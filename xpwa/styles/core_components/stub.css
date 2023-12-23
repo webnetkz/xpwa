@@ -11,3 +11,8 @@ stub-x {
   backdrop-filter: blur(5px);
   z-index: var(--z-stub);
 }
+
+
+@media (max-width: 1200px) {
+
+}

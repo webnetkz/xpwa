@@ -1,15 +1,12 @@
-export class LogoXPWA extends HTMLElement
-{
-  constructor()
-  {
+export class LogoXPWA extends HTMLElement {
+  constructor() {
     super();
 
     this.innerHTML = '<img>';
     this.addEventListener('click', this.redirect);
   }
 
-  static get observedAttributes()
-  {
+  static get observedAttributes() {
     return ['src'];
   }
 
@@ -17,10 +14,8 @@ export class LogoXPWA extends HTMLElement
     location.href = '/';
   }
 
-  attributeChangedCallback(name, oldValue, newValue)
-  {
-    switch(name)
-    {
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch(name) {
         case 'src':
             this.querySelector('img').src = newValue; 
         break;

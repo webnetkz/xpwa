@@ -11,3 +11,8 @@ sidebar-x {
   box-shadow: var(--shadow);
   z-index: var(--z-message);
 }
+
+
+@media (max-width: 1200px) {
+    
+}

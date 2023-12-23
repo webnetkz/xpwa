@@ -1,63 +1,44 @@
 @import url(variables.css);
 @import url(animations.css);
-@import url(scrollbar.css);
-@import url(form.css);
-@import url(checkbox.css);
-@import url(components.css);
 
 @import url(core_components/stub.css);
+@import url(core_components/responsive.css);
 @import url(core_components/header.css);
 @import url(core_components/logo.css);
-@import url(core_components/logo_mobile.css);
-@import url(core_components/header_mobile.css);
 @import url(core_components/content.css);
-@import url(core_components/content_mobile.css);
 @import url(core_components/block.css);
-@import url(core_components/block_mobile.css);
-@import url(core_components/card/card.css);
-@import url(core_components/card/card_mobile.css);
-@import url(core_components/promo/promo.css);
-@import url(core_components/promo/promo_mobile.css);
-@import url(core_components/menu/menu.css);
-@import url(core_components/menu/menu_mobile.css);
-@import url(core_components/menu/burger.css);
-@import url(core_components/menu/burger_moblie.css);
-@import url(core_components/button/button.css);
-@import url(core_components/button/button_mobile.css);
-@import url(core_components/close/close.css);
-@import url(core_components/close/close_mobile.css);
+@import url(core_components/card.css);
+@import url(core_components/menu.css);
+@import url(core_components/burger.css);
+@import url(core_components/close.css);
 @import url(core_components/footer.css);
-@import url(core_components/footer_mobile.css);
+
+@import url(core_components/form/form.css);
+@import url(core_components/form/button.css);
+@import url(core_components/form/checkbox.css);
+
 
 @import url(navigation_panels/nav.css);
-@import url(navigation_panels/nav_mobile.css);
 @import url(navigation_panels/sidebar.css);
-@import url(navigation_panels/sidebar_mobile.css);
 
 @import url(sliders/carusel.css);
 @import url(sliders/dots.css);
 
-@import url(messages/tos/tos.css);
-@import url(messages/tos/tos_mobile.css);
-@import url(messages/modal/modal.css);
-@import url(messages/modal/modal_mobile.css);
+@import url(messages/tos.css);
+@import url(messages/modal.css);
 
 @import url(decorative_components/3d_card.css);
-@import url(decorative_components/3d_card_mobile.css);
+@import url(decorative_components/promo.css);
+@import url(decorative_components/scrollbar.css);
 
 @import url(progress_components/progress_bar.css);
-@import url(progress_components/progress_bar_mobile.css);
 @import url(progress_components/preloader.css);
-@import url(progress_components/preloader_mobile.css);
 @import url(progress_components/stepprocessing.css);
-@import url(progress_components/stepprocessing_moblile.css);
 
 @import url(interactive_components/top.css);
-@import url(interactive_components/top_moblile.css);
 @import url(interactive_components/phone.css);
-@import url(interactive_components/phone_mobile.css);
+@import url(interactive_components/tabs.css);
 
-@import url(tabs.css);
 
 * {
   margin: 0;
@@ -86,8 +67,9 @@ options-x {
   display: none;
 }
 
+
 h1 {
-  color: var(--black);
+  color: var(--color-theme);
 }
 
 hr {
@@ -95,4 +77,9 @@ hr {
   margin: 1rem;
   width: 50%;
   opacity: 0.2;
+}
+
+
+@media (max-width: 1200px) {
+  
 }

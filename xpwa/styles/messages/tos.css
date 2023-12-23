@@ -18,3 +18,8 @@ tos-x {
 tos-x close-x {
   color: var(--dark) !important;
 }
+
+
+@media (max-width: 1200px) {
+
+}

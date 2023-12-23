@@ -35,3 +35,15 @@ card-x card-x h2 span {
     right: 2rem;
     text-shadow: 0 0 1px white;
 }
+
+
+@media (max-width: 1200px) {
+    card-x:has(card-x) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    card-x:has(card-x) card-x {
+        width: 100%;
+    }
+}

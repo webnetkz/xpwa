@@ -27,3 +27,10 @@ top-x:after {
   margin-bottom: 10px;
   color: var(--white);
 }
+
+@media (max-width: 1200px) {
+  top-x {
+      width: 30px;
+      height: 30px;
+  }
+}

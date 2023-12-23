@@ -1,16 +1,14 @@
-@keyframes formAnimation 
-{
-  0% 
-  {
+@keyframes formAnimation {
+  0% {
     transform: rotate(0deg);
   }
-  100%
-  {
+
+  100% {
     transform: rotate(360deg);
   }
 }
-sign-form-xpwa
-{
+
+sign-form-xpwa {
   position: absolute;
   width: 380px;
   height: 420px;
@@ -19,29 +17,27 @@ sign-form-xpwa
   overflow: hidden;
   margin: 1rem;
 }
-sign-form-xpwa::before 
-{
+
+sign-form-xpwa::before {
   content: '';
   position: absolute;
   top: -50%;
   left: -50%;
   width: 380px;
   height: 420px;
-  background: 
-    linear-gradient(
-      0deg,
+  background:
+    linear-gradient(0deg,
       transparent,
       transparent,
       #45f3ff,
       #45f3ff,
-      #45f3ff
-    );
+      #45f3ff);
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
 }
-sign-form-xpwa::after
-{
+
+sign-form-xpwa::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -54,8 +50,8 @@ sign-form-xpwa::after
   animation: formAnimation 7s linear infinite;
   animation-delay: 0.75s;
 }
-sign-form-xpwa form
-{
+
+sign-form-xpwa form {
   position: absolute;
   inset: 4px;
   background: #222;
@@ -65,20 +61,20 @@ sign-form-xpwa form
   display: flex;
   flex-direction: column;
 }
-sign-form-xpwa form h2
-{
+
+sign-form-xpwa form h2 {
   color: var(--color-theme);
   font-weight: 500;
-  letter-spacing: 0.1rem; 
+  letter-spacing: 0.1rem;
 }
-sign-form-xpwa form .sign-input
-{
+
+sign-form-xpwa form .sign-input {
   position: relative;
   width: 300px;
   margin-top: 35px;
 }
-sign-form-xpwa form .sign-input input
-{
+
+sign-form-xpwa form .sign-input input {
   position: relative;
   width: 100%;
   padding: 20px 10px 10px;
@@ -92,8 +88,8 @@ sign-form-xpwa form .sign-input input
   transition: 0.5s;
   z-index: 10;
 }
-sign-form-xpwa form .sign-input span
-{
+
+sign-form-xpwa form .sign-input span {
   position: absolute;
   left: 0;
   padding: 20px 0 10px;
@@ -103,15 +99,15 @@ sign-form-xpwa form .sign-input span
   letter-spacing: 0.05rem;
   transition: 0.5s;
 }
-sign-form-xpwa form .sign-input input:valid ~ span,
-sign-form-xpwa form .sign-input input:focus ~ span
-{
+
+sign-form-xpwa form .sign-input input:valid~span,
+sign-form-xpwa form .sign-input input:focus~span {
   color: var(--color-theme);
   font-size: 0.75rem;
   transform: translateY(-35px);
 }
-sign-form-xpwa form .sign-input i
-{
+
+sign-form-xpwa form .sign-input i {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -123,36 +119,36 @@ sign-form-xpwa form .sign-input i
   transition: 0.5s;
   pointer-events: none;
 }
-sign-form-xpwa form .sign-input input:valid ~ i,
-sign-form-xpwa form .sign-input input:focus ~ i
-{
+
+sign-form-xpwa form .sign-input input:valid~i,
+sign-form-xpwa form .sign-input input:focus~i {
   height: 43px;
 }
-sign-form-xpwa form .links
-{
+
+sign-form-xpwa form .links {
   display: flex;
   justify-content: space-between;
 }
-sign-form-xpwa form .links a
-{
+
+sign-form-xpwa form .links a {
   margin: 10px 0;
   font-size: 0.75rem;
   color: #8f8f8f;
   text-decoration: none;
 }
+
 sign-form-xpwa form .links a:hover,
-sign-form-xpwa form .links a:nth-child(2)
-{
+sign-form-xpwa form .links a:nth-child(2) {
   color: var(--color-theme);
 }
-border-lines-xpwa
-{
+
+border-lines-xpwa {
   position: absolute;
   top: 0;
   inset: 0;
 }
-border-lines-xpwa:before
-{
+
+border-lines-xpwa:before {
   content: '';
   position: absolute;
   top: -50%;
@@ -160,21 +156,19 @@ border-lines-xpwa:before
   width: 380px;
   height: 420px;
   background:
-    linear-gradient(
-      0deg,
+    linear-gradient(0deg,
       transparent,
       transparent,
       #27ff40,
       #27ff40,
-      #27ff40
-    );
+      #27ff40);
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
   animation-delay: 1s;
 }
-border-lines-xpwa::after
-{
+
+border-lines-xpwa::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -182,17 +176,19 @@ border-lines-xpwa::after
   width: 380px;
   height: 420px;
   background:
-    linear-gradient(
-      0deg,
+    linear-gradient(0deg,
       transparent,
       transparent,
       #ff2770,
       #ff2770,
-      #ff2770
-    );
+      #ff2770);
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
   animation-delay: 2s;
 }
 
+
+@media (max-width: 1200px) {
+
+}

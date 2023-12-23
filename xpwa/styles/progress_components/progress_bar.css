@@ -7,3 +7,8 @@ progress-bar-x {
   height: 5px;
   background: var(--color-theme-up);
 }
+
+
+@media (max-width: 1200px) {
+
+}

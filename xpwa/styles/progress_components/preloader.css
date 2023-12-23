@@ -48,3 +48,8 @@ preloader-x span
     box-shadow: 0 0 0;
     }
 }
+
+
+@media (max-width: 1200px) {
+
+}

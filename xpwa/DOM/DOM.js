@@ -6,6 +6,8 @@ import './components/navigation/navigation_components.js';
 import './components/messages/messages_components.js';
 import './components/progress/progress_components.js';
 
+
+
 import { StepProcessingXPWA } from './components/progress/StepProcessing.js';
 
 import { Card3DXPWA } from './components/decorative/Card3D.js';
@@ -13,14 +15,13 @@ import { CaruselXPWA } from './components/sliders/Carusel.js';
 
 
 
-import { CheckboxXPWA } from './components/form/Checkbox.js';
-import { RadioXPWA } from './components/form/Radio.js';
-import { BorderLinesXPWA } from './components/form/BorderLines.js';
 
 import { TabsXPWA } from './components/Tabs.js';
-import { ChangeThemeXPWA } from './ChangeTheme.js';
 
-import { InputXPWA } from './components/form/Input.js';
+import { ChangeThemeXPWA } from './components/interactive/ChangeTheme.js';
+import { PhoneXPWA } from './components/interactive/Phone.js';
+import { TopXPWA } from './components/interactive/Top.js';
+
 
 export class DOM {
     constructor() {

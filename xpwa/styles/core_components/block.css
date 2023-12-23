@@ -2,17 +2,22 @@ block-x {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
   min-height: 100px;
   background: var(--white);
   padding: 10px var(--padding);
   margin: var(--margin);
-  width: 98vw;
+  width: 98%;
   border: 3px solid var(--gray);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 block-x img {
   width: 77px;
   margin: 12px;
+}
+
+
+@media (max-width: 1200px) {
+
 }

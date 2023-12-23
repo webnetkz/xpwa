@@ -11,3 +11,14 @@ burger-x span {
     border-radius: 7px;
     background: var(--color-theme);
 }
+
+
+@media (max-width: 1200px) {
+    burger-x {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: -30px;
+        left: 90%;
+    }
+}

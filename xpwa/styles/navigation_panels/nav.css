@@ -1,5 +1,3 @@
-@import url(nav_mobile.css);
-
 nav-x {
   padding: 60px 10px;
   position: fixed;
@@ -21,4 +19,12 @@ nav-x:hover {
 
 nav-x button-x {
   margin-bottom: 3px;
+}
+
+
+@media (max-width: 1200px) {
+  nav-x {
+      left: -79vw;
+      width: 80vw;
+  }
 }

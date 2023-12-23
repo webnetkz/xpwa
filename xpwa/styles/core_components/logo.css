@@ -6,3 +6,10 @@ logo-x:hover {
     cursor: pointer;
     filter: invert(30%);
 }
+
+
+@media (max-width: 1200px) {
+    logo-x {
+        margin-top: 5px;
+    }
+}

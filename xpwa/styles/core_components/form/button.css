@@ -21,3 +21,8 @@ button-x:hover {
     border: 1px solid var(--color-theme);
     cursor: pointer;
 }
+
+
+@media (max-width: 1200px) {
+
+}

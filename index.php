@@ -39,6 +39,21 @@
     <img src="/public/logotypes/linux.png" alt="">
     <img src="/public/logotypes/windows.png" alt="">
 </block-x>
+
+<responsive-x>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+<h1>This is test</h1>
+</responsive-x>
     
 
 <?php require_once './footer.php'; ?>

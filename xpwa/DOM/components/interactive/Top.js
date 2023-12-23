@@ -1,5 +1,3 @@
-import { Mobile } from '../../Mobile.js';
-
 export class TopXPWA extends HTMLElement
 {
   constructor()

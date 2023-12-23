@@ -1,7 +1,5 @@
-export class SignFormXPWA extends HTMLElement
-{
-  constructor()
-  {
+export class SignFormXPWA extends HTMLElement {
+  constructor() {
     super();
   }
 }
