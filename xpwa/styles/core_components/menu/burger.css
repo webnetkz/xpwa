@@ -9,5 +9,5 @@ burger-x span {
     height: 3px;
     margin: 4px 0;
     border-radius: 7px;
-    background: var(--main-theme);
+    background: var(--color-theme);
 }

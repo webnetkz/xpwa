@@ -7,7 +7,7 @@ menu-x {
     width: 100%;
 }
 menu-x button-x {
-    color: var(--main-theme);
+    color: var(--color-theme);
     border-radius: var(--radius);
     padding: var(--padding) 15px;
     background: none;

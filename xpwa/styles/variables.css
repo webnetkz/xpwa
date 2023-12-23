@@ -1,7 +1,12 @@
 :root {
-  --main-theme: #0140EB;
-  --main-theme-light: #446bd6;
-  --main-theme-dark: #0035c7;
+  --color-theme: #0140EB;
+  --color-theme-down: #446bd6;
+  --color-theme-up: #0936b5;
+  --color-theme-dark: #c70000;
+  --color-theme-dark-down: #cc3d3d;
+  --color-theme-up: #9a0f0f;
+
+
 
   --green: rgb(6, 157, 6);
   --white: #FFF;

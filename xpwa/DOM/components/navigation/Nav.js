@@ -14,7 +14,7 @@ export class NavXPWA extends HTMLElement {
       this.style.cssText = `
       transition-duration: 400ms;
       left: -19.5vw;
-      background: var(--main-theme);`;
+      background: var(--color-theme);`;
 
       if(window.MOBILE.isMobile())
       {

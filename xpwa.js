@@ -2,7 +2,8 @@ import './xpwa/options.js';
 import { DOM } from './xpwa/DOM/DOM.js';
 
 export class XPWA {
-  constructor() {}
+  constructor() {
+  }  
 }
 
 window.onload = (() => {

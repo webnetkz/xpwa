@@ -8,7 +8,7 @@ nav-x {
   width: 20vw;
   height: 100vh;
   z-index: var(--z-nav);
-  background: var(--main-theme);
+  background: var(--color-theme);
   display: flex;
   flex-direction: column;
   transition-duration: 50ms;

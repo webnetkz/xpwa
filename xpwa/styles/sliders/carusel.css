@@ -17,7 +17,7 @@ next-slide-x {
     position: absolute;
     height: 100%;
     width: 50px;
-    color: var(--main-theme);
+    color: var(--color-theme);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@ back-slide-x {
 
 back-slide-x:after {
     content: "\25C0";
-    color: var(--main-theme);
+    color: var(--color-theme);
     font-size: 1rem;
 }
 
@@ -46,6 +46,6 @@ next-slide-x {
 
 next-slide-x:after {
     content: "\25B6";
-    color: var(--main-theme);
+    color: var(--color-theme);
     font-size: 1rem;
 }

@@ -5,5 +5,5 @@ progress-bar-x {
   z-index: var(--z-progress);
   width: 100vw;
   height: 5px;
-  background: var(--main-theme-dark);
+  background: var(--color-theme-up);
 }

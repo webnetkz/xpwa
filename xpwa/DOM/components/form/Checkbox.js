@@ -8,7 +8,7 @@ export class CheckboxXPWA extends HTMLElement {
     <input class="checkbox-x checkbox-ios-x" id="${idElement}" type="checkbox"/>
     <label class="checkbox-btn-x" for="${idElement}"></label>`;
 
-    this.querySelector('label').addEventListener('click', this.changeTheme);
+    this.querySelector('label').addEventListener('click', this.generateId);
   }
 
   static get observedAttributes() {

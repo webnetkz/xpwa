@@ -4,7 +4,7 @@ export class StubXPWA extends HTMLElement {
   }
   
   createCloseButton() {
-    this.innerHTML += `<close-x style="color: var(--main-theme);"></close-x>`;
+    this.innerHTML += `<close-x style="color: var(--color-theme);"></close-x>`;
   }
 
   static get observedAttributes() {

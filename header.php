@@ -8,7 +8,7 @@
   <options-x>
   {
     "coreUi": {
-      "theme": "dark",
+      "theme": "light",
       "padding": "10px",
       "margin": "5px",
       "radius": "7px",

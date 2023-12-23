@@ -7,7 +7,7 @@ checkbox-xpwa input + label:before
   width: 20px;
   height: 20px;
   background: white;
-  border: 2px solid var(--main-theme);
+  border: 2px solid var(--color-theme);
   border-radius: 5px;
 }
 checkbox-xpwa input:checked + label:after
@@ -22,7 +22,7 @@ checkbox-xpwa input:checked + label:after
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  color: var(--main-theme);
+  color: var(--color-theme);
   line-height: 18px;
 }
 
@@ -65,7 +65,7 @@ radio-xpwa input + label:before
   width: 20px;
   height: 20px;
   background: white;
-  border: 2px solid var(--main-theme);
+  border: 2px solid var(--color-theme);
   border-radius: 50%;
 }
 radio-xpwa input:checked + label:after
@@ -80,7 +80,7 @@ radio-xpwa input:checked + label:after
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  color: var(--main-theme);
+  color: var(--color-theme);
   line-height: 18px;
 }
 

@@ -69,7 +69,7 @@
   padding-right: 0.8em;
 }
 .checkbox-ios-x:checked + .checkbox-btn-x {
-  background: var(--main-theme);
+  background: var(--color-theme);
   outline: none;
 }
 .checkbox-ios-x:checked + .checkbox-btn-x:active {

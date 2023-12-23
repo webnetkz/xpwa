@@ -28,10 +28,21 @@ export class DOM {
     }
 
     setStyles() {
-        const linkElement = document.createElement("link");
-        linkElement.rel = "stylesheet";
-        linkElement.type = 'text/css';
-        linkElement.href = "./xpwa/styles/xpwa.css";
-        document.head.appendChild(linkElement);
+        const linkStyles = document.createElement("link");
+        const linkFont = document.createElement("link");
+
+        linkStyles.rel = "stylesheet";
+        linkFont.rel = "stylesheet";
+        linkStyles.type = 'text/css';
+        linkFont.type = 'text/css';
+        linkStyles.href = "./xpwa/styles/xpwa.css";
+        linkFont.href = 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap';
+
+        if(navigator.onLine) {
+            document.head.appendChild(linkFont);
+        }
+
+        document.head.appendChild(linkStyles);
+
     }
 }
