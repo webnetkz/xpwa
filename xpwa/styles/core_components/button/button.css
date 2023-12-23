@@ -4,6 +4,7 @@ button-x {
     border-radius: var(--radius);
     padding: var(--padding) calc(var(--padding) * 3);
 <<<<<<< HEAD
+<<<<<<< HEAD
     background: var(--color-theme);
     margin: 3px;
     font-size: 1.5rem;
@@ -14,6 +15,12 @@ button-x {
     margin: 3px;
     font-size: 1.5rem;
 >>>>>>> e900c0c5c267f10c81238f92aa7b9933a34e5062
+=======
+    background: var(--color-theme);
+    margin: 3px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0);
+>>>>>>> docs
 }
 
 button-x:active {
