@@ -1,5 +1,8 @@
+.gitignore
+/*
+!dist/
+!xpwa/
 .vscode/sftp.json
 *.zip
 .DS_Store
 /node_modules
-.gitignore
