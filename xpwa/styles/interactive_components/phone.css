@@ -1,7 +1,7 @@
 phone-x {
   min-width: 50px;
   min-height: 50px;
-  border: 1px solid var(--main-theme);
+  border: 1px solid var(--color-theme);
   position: fixed;
   right: 20px;
   bottom: 80px;
@@ -13,13 +13,13 @@ phone-x {
 }
 
 phone-x a {
-  color: var(--main-theme);
+  color: var(--color-theme);
   font-size: 1.4rem;
   line-height: 3rem;
 }
 
 phone-x:hover {
-  background: var(--main-theme);
+  background: var(--color-theme);
 }
 
 phone-x:hover a {

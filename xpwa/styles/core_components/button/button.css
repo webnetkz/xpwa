@@ -2,20 +2,22 @@ button-x {
     display: inline;
     color: var(--white);
     border-radius: var(--radius);
-    padding: var(--padding) 15px;
-    background: var(--main-theme);
-    border: 1px solid var(--main-theme);
+    padding: var(--padding) calc(var(--padding) * 3);
+    background: var(--color-theme);
     margin: 3px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0);
 }
 
 button-x:active {
     background: var(--white);
-    color: var(--main-theme);
+    color: var(--color-theme);
 }
 
+button-x.active-x,
 button-x:hover {
     background: var(--white);
-    color: var(--main-theme);
+    color: var(--color-theme);
+    border: 1px solid var(--color-theme);
     cursor: pointer;
 }

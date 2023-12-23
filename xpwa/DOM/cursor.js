@@ -32,7 +32,7 @@ body *
     z-index:99999999;
     width: 16.0px;
     height: 16.0px;
-    background: var(--main-theme);
+    background: var(--color-theme);
     border: solid;
     border-radius: 50%;
     border-width: 0px;

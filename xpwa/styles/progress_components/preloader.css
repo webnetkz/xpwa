@@ -15,7 +15,7 @@ preloader-x span
 {
     width: 100px;
     height: 100px;
-    border: 1px solid var(--main-theme);
+    border: 1px solid var(--color-theme);
     border-radius: 50%;
     animation: showPreloaderSpan 2s infinite;
 }
@@ -40,7 +40,7 @@ preloader-x span
     50% {
     transform: scale(2);
     backdrop-filter: blur(0px);
-    box-shadow: 0 0 0 10px var(--main-theme);
+    box-shadow: 0 0 0 10px var(--color-theme);
     }
     100% {
     transform: scale(1);

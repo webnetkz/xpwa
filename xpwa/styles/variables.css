@@ -1,10 +1,14 @@
 :root {
-  --main-theme: #0140EB;
-  --main-theme-light: #446bd6;
-  --main-theme-dark: #0035c7;
+  --color-theme: #0140EB;
+  --color-theme-down: #446bd6;
+  --color-theme-up: #0936b5;
+  --color-theme-dark: #c70000;
+  --color-theme-dark-down: #cc3d3d;
+  --color-theme-up: #9a0f0f;
+
+
 
   --green: rgb(6, 157, 6);
-  --bg: #FFF;
   --white: #FFF;
   --black: black;
   --gray: #f4ecec;
@@ -12,9 +16,10 @@
 
   --padding: 5px;
   --margin: 5px;
-  --radius: 3px;
+  --radius: 7px;
   --shadow: none;
   --width-scroll-bar: 5px;
+  --blur: 7px;
 
   --z-nav: 9;
   --z-to-top: 88;

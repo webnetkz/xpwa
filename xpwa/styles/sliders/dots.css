@@ -12,7 +12,7 @@ dot-x {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--main-theme);
+    background: var(--color-theme);
 }
 
 dot-x:hover,

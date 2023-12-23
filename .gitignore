@@ -1,7 +1,16 @@
+.gitignore
 /*
 !dist/
 !xpwa/
 .vscode/sftp.json
 *.zip
 .DS_Store
-index.php
+/node_modules
+*
+!demo.html
+!webpack.config.js
+!xpwa.js
+!readme.md
+!package.json
+!package-lock.json
+!logo.png

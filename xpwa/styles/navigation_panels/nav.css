@@ -8,11 +8,11 @@ nav-x {
   width: 20vw;
   height: 100vh;
   z-index: var(--z-nav);
-  background: var(--main-theme);
+  background: var(--color-theme);
   display: flex;
   flex-direction: column;
   transition-duration: 50ms;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(var(--blur));
 }
 
 nav-x:hover {

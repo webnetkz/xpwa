@@ -1,7 +1,7 @@
 card-3d-x {
     width: 500px;
     height: 400px;
-    background: var(--main-theme);
+    background: var(--color-theme);
     padding: 5px;
     border-radius: var(--radius);
     will-change: transform;
