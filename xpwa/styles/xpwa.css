@@ -73,10 +73,5 @@ hr {
   border-color: var(--color-theme);
   margin: 1rem;
   width: 50%;
-  opacity: 0.2;
-}
-
-
-@media (max-width: 1200px) {
-  
+  opacity: 0.3;
 }
