@@ -8,7 +8,7 @@
   <options-x>
   {
     "coreUi": {
-      <!-- "pwa": "true", -->
+      "pwa": "true",
       "theme": "light",
       "padding": "10px",
       "margin": "5px",

@@ -20,6 +20,7 @@ class Options {
             
             if(options?.coreUi) {
                 if(options?.coreUi?.pwa) {
+                    window.addEventListener('load', this.pwa)
                     this.pwa();
                 }
                 if(options?.coreUi?.theme) {

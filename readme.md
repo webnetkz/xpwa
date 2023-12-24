@@ -1,12 +1,11 @@
 <h1 style="display: flex; align-items: center;">
     xPWA 
-    <i>version 0.8.5</i>
+    <i>version 0.8.6</i>
 </h1>
 <hr>
 <code>https://cdn.jsdelivr.net/npm/xpwa@latest/dist/xpwa.min.js</code>
+<br>
 <code><a href="https://xpwa.webnet.kz">Documentation</a></code>
-
-<hr>
 <hr>
 <h5>Author:</h5>
 <p>WebNet (@webnetkz)</p>
