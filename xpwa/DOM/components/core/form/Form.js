@@ -2,7 +2,9 @@ export class FormXPWA extends HTMLElement {
   constructor() {
     super();
     this.innerHTML += `
-    <form-container-x></form-container-x>`;
+    <form-container-x>
+      <form></form>
+    </form-container-x>`;
   }
 
   static get observedAttributes() {

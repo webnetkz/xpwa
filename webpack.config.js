@@ -37,6 +37,7 @@ module.exports = {
       filename: 'xpwa.min.css',
     }),
   ],
+  mode: 'production',
   optimization: {
     minimize: true,
     minimizer: [
