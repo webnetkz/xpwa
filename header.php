@@ -36,6 +36,7 @@
       <button-x link="/quick-start.php">Быстрый старт</button-x>
       <button-x link="/documentation.php">Документация</button-x>
       <button-x link="">Компоненты</button-x>
+      <button-x link="/test.php">test</button-x>
 
       <button-x link="/pages/index.php">Components</button-x>
       <button-x onclick="document.body.innerHTML += `<tos-x>Message</tos-x>`">Tos</button-x>
