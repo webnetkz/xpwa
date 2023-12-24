@@ -13,7 +13,9 @@
       "margin": "5px",
       "radius": "7px",
       "shadow": "none",
-      "blur": "7px"
+      "blur": "7px",
+      "border": "2px solid red",
+      "heightHeader": "100px"
       <!-- ,
       "cursor": "1" -->
     },

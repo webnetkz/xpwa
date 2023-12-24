@@ -1,12 +1,12 @@
 footer-x {
     display: block;
     background: var(--color-theme);
+    color: var(--white);
     min-width: 100vw;
     min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: var(--white);
     margin-top: 75px;
     padding-bottom: 7px;
 }

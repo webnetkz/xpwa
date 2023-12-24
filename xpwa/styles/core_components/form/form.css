@@ -9,20 +9,23 @@
 }
 
 form-x {
+  display: block;
   position: relative;
+  height: 420px;
+  width: 380px;
+  margin: 1rem;
 }
 
 form-container-x {
   position: absolute;
   width: 380px;
   height: 420px;
-  background: #1c1c1c;
+  background: var(--gray);
   border-radius: var(--radius);
   overflow: hidden;
-  margin: 1rem;
 }
 
-form-container-x::before {
+form-container-x.animation-form-x::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -41,7 +44,7 @@ form-container-x::before {
   animation: formAnimation 7s linear infinite;
 }
 
-form-container-x::after {
+form-container-x.animation-form-x::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -52,98 +55,25 @@ form-container-x::after {
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
-  animation-delay: 0.75s;
+  animation-delay: 1.5s;
 }
 
 form-container-x form {
   position: absolute;
   inset: 4px;
-  background: #222;
+  background: var(--white);
   padding: 50px 40px;
   border-radius: var(--radius);
   z-index: 2;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow);
 }
 
 form-container-x form h2 {
   color: var(--color-theme);
   font-weight: 500;
   letter-spacing: 0.1rem;
-}
-
-form-container-x form .sign-input {
-  position: relative;
-  width: 300px;
-  margin-top: 35px;
-}
-
-form-container-x form .sign-input input {
-  position: relative;
-  width: 100%;
-  padding: 20px 10px 10px;
-  background: transparent;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  color: var(--dark);
-  font-size: 1em;
-  letter-spacing: 0.05rem;
-  transition: 0.5s;
-  z-index: 10;
-}
-
-form-container-x form .sign-input span {
-  position: absolute;
-  left: 0;
-  padding: 20px 0 10px;
-  pointer-events: none;
-  color: #8f8f8f;
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  transition: 0.5s;
-}
-
-form-container-x form .sign-input input:valid~span,
-form-container-x form .sign-input input:focus~span {
-  color: var(--color-theme);
-  font-size: 0.75rem;
-  transform: translateY(-35px);
-}
-
-form-container-x form .sign-input i {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-theme);
-  border-radius: 4px;
-  overflow: hidden;
-  transition: 0.5s;
-  pointer-events: none;
-}
-
-form-container-x form .sign-input input:valid~i,
-form-container-x form .sign-input input:focus~i {
-  height: 43px;
-}
-
-form-container-x form .links {
-  display: flex;
-  justify-content: space-between;
-}
-
-form-container-x form .links a {
-  margin: 10px 0;
-  font-size: 0.75rem;
-  color: #8f8f8f;
-  text-decoration: none;
-}
-
-form-container-x form .links a:hover,
-form-container-x form .links a:nth-child(2) {
-  color: var(--color-theme);
 }
 
 border-lines-x {
@@ -169,7 +99,7 @@ border-lines-x:before {
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 
 border-lines-x::after {
@@ -189,7 +119,7 @@ border-lines-x::after {
   z-index: 1;
   transform-origin: bottom right;
   animation: formAnimation 7s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 4.5s;
 }
 
 

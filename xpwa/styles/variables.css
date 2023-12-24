@@ -6,6 +6,8 @@
   --color-theme-dark-down: #cc3d3d;
   --color-theme-up: #9a0f0f;
 
+  --height-header: 50px;
+  --border: 1px solid var(--color-theme);
 
 
   --green: rgb(6, 157, 6);
@@ -34,5 +36,4 @@
   --progress-round: 1000;
 
 
-  --height-header: 50px;
 }

@@ -43,6 +43,12 @@ class Options {
                     cursor.init();
                     document.body.style.cursor = 'none';
                 }
+                if(options?.coreUi?.borer) {
+                    this.setOptionsVariable('--border', options?.coreUi?.borer);
+                }
+                if(options?.coreUi?.heightHeader) {
+                    this.setOptionsVariable('--height-header', options?.coreUi?.heightHeader);
+                }
             }
     
             if(options?.colors) {

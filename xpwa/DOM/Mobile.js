@@ -1,9 +1,10 @@
 class Mobile {
     isMobile() {
-        if(window.innerWidth <= 1200) {
+        if(document.body.clientWidth < 1200) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }
 

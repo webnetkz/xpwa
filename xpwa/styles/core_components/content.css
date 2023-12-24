@@ -5,9 +5,12 @@ content-x {
     margin-bottom: 50px;
     top: 1vh;
     width: 1200px;
-    background: var(--gray-gradient);
-    padding: var(--padding);
+    background: var(--white);
+    padding: 10px var(--padding);
+    margin: var(--margin);
     border-radius: var(--radius);
+    border: var(--border);
+    box-shadow: var(--shadow);
 }
 
 content-x p,

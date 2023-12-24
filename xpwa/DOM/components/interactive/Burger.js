@@ -3,6 +3,7 @@ export class BurgerXPWA extends HTMLElement {
     super();
     
     this.createLines();
+    console.log(window.MOBILE.isMobile());
     if(window.MOBILE.isMobile()) {
       this.closeMenu();
     }

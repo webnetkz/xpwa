@@ -15,8 +15,10 @@ import { CaruselXPWA } from './components/sliders/Carusel.js';
 
 import { TabsXPWA } from './components/Tabs.js';
 
+import { CloseXPWA } from './components/interactive/Close.js';
 import { ChangeThemeXPWA } from './components/interactive/ChangeTheme.js';
 import { PhoneXPWA } from './components/interactive/Phone.js';
+import { ResponsiveXPWA } from './components/interactive/Responsive.js';
 import { TopXPWA } from './components/interactive/Top.js';
 
 

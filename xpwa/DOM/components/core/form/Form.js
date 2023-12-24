@@ -1,20 +1,24 @@
 export class FormXPWA extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML += `
-    <form-container-x>
-      <form></form>
+    this.innerHTML = `
+    <form-container-x class="animation-form-x">
+      <form>${this.innerHTML}</form>
+      <border-lines-x></border-lines-x>
     </form-container-x>`;
   }
 
   static get observedAttributes() {
-    return ['name'];
+    return ['animation-off'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
-      case 'name':
-        this.querySelector('input').name = newValue;
+      case 'animation-off':
+        if(newValue) {
+          this.querySelector('form-container-x').classList.remove('animation-form-x');
+          this.querySelector('border-lines-x').style.display = 'none';
+        }
         break;
     }
   }

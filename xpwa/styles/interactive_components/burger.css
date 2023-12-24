@@ -15,10 +15,11 @@ burger-x span {
 
 @media (max-width: 1200px) {
     burger-x {
-        display: inline-block;
+        display: inline;
         cursor: pointer;
         position: absolute;
         top: -30px;
         left: 90%;
+        max-width: 50px;
     }
 }

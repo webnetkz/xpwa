@@ -16,8 +16,7 @@ export class NavXPWA extends HTMLElement {
       left: -19.5vw;
       background: var(--color-theme);`;
 
-      if(window.MOBILE.isMobile())
-      {
+      if(window.MOBILE.isMobile()) {
         this.style.cssText = `
         left: -79vw;`;
       }

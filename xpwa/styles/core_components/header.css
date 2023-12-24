@@ -1,14 +1,15 @@
 header-x {
+    position: fixed;
     display: flex;
     align-items: center;
     position: relative;
     left: 0;
-    background: var(--gray-gradient);
+    background: var(--white);
     min-height: var(--height-header);
-    width: 100vw;
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur);
     z-index: var(--z-header);
-    backdrop-filter: blur(7px);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    width: 100vw;
 }
 
 
