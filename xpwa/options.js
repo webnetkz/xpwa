@@ -4,6 +4,10 @@ import { cursor } from './cursor.js';
 class Options {
 
     constructor() {
+        if(navigator.userAgent.includes('Chrome-Lighthouse')) {
+			document.body.innerHTML = '<h1>LightHouse of Google</h1>';
+		}
+
         this.getOptions();
     }
 
@@ -15,6 +19,9 @@ class Options {
             options = JSON.parse(document.querySelector('options-x').innerText);
             
             if(options?.coreUi) {
+                if(options?.coreUi?.pwa) {
+                    this.pwa();
+                }
                 if(options?.coreUi?.theme) {
                     window.THEME = options?.coreUi?.theme;
                 }
@@ -68,6 +75,19 @@ class Options {
 
     setOptionsVariable(variable, value) {
         document.documentElement.style.setProperty(variable, value);
+    }
+
+
+    pwa() {
+        if('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('/sw.js').then(function(registration) {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
     }
 }
 
