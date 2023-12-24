@@ -51,8 +51,8 @@ class Options {
                     cursor.init();
                     document.body.style.cursor = 'none';
                 }
-                if(options?.coreUi?.borer) {
-                    this.setOptionsVariable('--border', options?.coreUi?.borer);
+                if(options?.coreUi?.border) {
+                    this.setOptionsVariable('--border', options?.coreUi?.border);
                 }
                 if(options?.coreUi?.heightHeader) {
                     this.setOptionsVariable('--height-header', options?.coreUi?.heightHeader);
@@ -82,7 +82,7 @@ class Options {
     pwa() {
         if('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
-				navigator.serviceWorker.register('https://cdn.jsdelivr.net/npm/xpwa@0.8.61/sw.js').then(function(registration) {
+				navigator.serviceWorker.register('/sw.js').then(function(registration) {
 					console.log('ServiceWorker registration successful with scope: ', registration.scope);
 				}, function(err) {
 					console.log('ServiceWorker registration failed: ', err);

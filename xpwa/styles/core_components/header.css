@@ -2,7 +2,7 @@ header-x {
     position: fixed;
     display: flex;
     align-items: center;
-    position: relative;
+    top: 0;
     left: 0;
     background: var(--white);
     min-height: var(--height-header);

@@ -30,7 +30,7 @@ export class BurgerXPWA extends HTMLElement {
         el.style.display = 'none';
     });
 
-    document.querySelector('header-x').style.height = '50px';
+    document.querySelector('header-x').style.height = '--heightHeader';
   }
 
   changeBurger() {

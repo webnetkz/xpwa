@@ -1,4 +1,3 @@
-
 document.body.innerHTML += '<div class="cursor-dot-outline-x"></div>';
 document.body.innerHTML += '<div class="cursor-dot-x"></div>';
 

@@ -6,8 +6,8 @@ block-x {
   background: var(--white);
   padding: 10px var(--padding);
   margin: var(--margin);
-  border-radius: var(--radius);
   border: var(--border);
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   width: 98%;
   overflow: hidden;

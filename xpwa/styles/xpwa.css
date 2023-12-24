@@ -69,11 +69,6 @@ options-x {
   display: none;
 }
 
-
-h1 {
-  color: var(--color-theme);
-}
-
 hr {
   border-color: var(--color-theme);
   margin: 1rem;

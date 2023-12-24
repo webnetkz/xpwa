@@ -8,17 +8,16 @@
   <options-x>
   {
     "coreUi": {
-      "pwa": "true",
+      <!-- "pwa": "true", -->
       "theme": "light",
       "padding": "10px",
       "margin": "5px",
       "radius": "7px",
       "shadow": "none",
       "blur": "7px",
-      "border": "2px solid red",
-      "heightHeader": "100px"
-      <!-- ,
-      "cursor": "1" -->
+      "border": "2px solid var(--color-theme)",
+      "heightHeader": "50px",
+      "cursor": "true"
     },
     "colors": {
       "mainTheme": "blue",
@@ -31,7 +30,7 @@
 </head>
 <body>
 
-  <header-x position="fixed">
+  <header-x>
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
       <!-- <change-theme-x></change-theme-x> -->
