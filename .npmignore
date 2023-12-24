@@ -1,5 +1,11 @@
-gifs
 .vscode
-pages
-index.html
+index.php
 webpack.config.js
+footer.php
+header.php
+quick-start.php
+nav.php
+documentation.php
+node_modules
+pages
+public
