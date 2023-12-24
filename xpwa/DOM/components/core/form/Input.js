@@ -3,9 +3,9 @@ export class InputXPWA extends HTMLElement {
         super();
         this.innerHTML = '<input type="text">';
 
-        this.inp = this.querySelector('input');
-        this.inp.addEventListener('input', this.listener(e));
-        this.inp.addEventListener('keydown', this.keyDown(e));
+        this.input = this.querySelector('input');
+        this.input.addEventListener('input', this.listener(e));
+        this.input.addEventListener('keydown', this.keyDown(e));
         this.currentFocus;
         document.addEventListener("click", function (e) {
             this.closeAllLists(e.target);
@@ -35,7 +35,7 @@ export class InputXPWA extends HTMLElement {
                 b.innerHTML += arr[i].substr(val.length);
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 b.addEventListener("click", function (e) {
-                    inp.value = this.getElementsByTagName("input")[0].value;
+                    input.value = this.getElementsByTagName("input")[0].value;
                     this.closeAllLists();
                 });
                 a.appendChild(b);
@@ -92,4 +92,4 @@ export class InputXPWA extends HTMLElement {
     }
 }
 
-customElements.define("input-xpwa", InputXPWA);
+customElements.define("input-x", InputXPWA);

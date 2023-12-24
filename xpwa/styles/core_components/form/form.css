@@ -8,7 +8,11 @@
   }
 }
 
-sign-form-xpwa {
+form-x {
+  position: relative;
+}
+
+form-container-x {
   position: absolute;
   width: 380px;
   height: 420px;
@@ -18,7 +22,7 @@ sign-form-xpwa {
   margin: 1rem;
 }
 
-sign-form-xpwa::before {
+form-container-x::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -37,7 +41,7 @@ sign-form-xpwa::before {
   animation: formAnimation 7s linear infinite;
 }
 
-sign-form-xpwa::after {
+form-container-x::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -51,7 +55,7 @@ sign-form-xpwa::after {
   animation-delay: 0.75s;
 }
 
-sign-form-xpwa form {
+form-container-x form {
   position: absolute;
   inset: 4px;
   background: #222;
@@ -62,19 +66,19 @@ sign-form-xpwa form {
   flex-direction: column;
 }
 
-sign-form-xpwa form h2 {
+form-container-x form h2 {
   color: var(--color-theme);
   font-weight: 500;
   letter-spacing: 0.1rem;
 }
 
-sign-form-xpwa form .sign-input {
+form-container-x form .sign-input {
   position: relative;
   width: 300px;
   margin-top: 35px;
 }
 
-sign-form-xpwa form .sign-input input {
+form-container-x form .sign-input input {
   position: relative;
   width: 100%;
   padding: 20px 10px 10px;
@@ -89,7 +93,7 @@ sign-form-xpwa form .sign-input input {
   z-index: 10;
 }
 
-sign-form-xpwa form .sign-input span {
+form-container-x form .sign-input span {
   position: absolute;
   left: 0;
   padding: 20px 0 10px;
@@ -100,14 +104,14 @@ sign-form-xpwa form .sign-input span {
   transition: 0.5s;
 }
 
-sign-form-xpwa form .sign-input input:valid~span,
-sign-form-xpwa form .sign-input input:focus~span {
+form-container-x form .sign-input input:valid~span,
+form-container-x form .sign-input input:focus~span {
   color: var(--color-theme);
   font-size: 0.75rem;
   transform: translateY(-35px);
 }
 
-sign-form-xpwa form .sign-input i {
+form-container-x form .sign-input i {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -120,35 +124,35 @@ sign-form-xpwa form .sign-input i {
   pointer-events: none;
 }
 
-sign-form-xpwa form .sign-input input:valid~i,
-sign-form-xpwa form .sign-input input:focus~i {
+form-container-x form .sign-input input:valid~i,
+form-container-x form .sign-input input:focus~i {
   height: 43px;
 }
 
-sign-form-xpwa form .links {
+form-container-x form .links {
   display: flex;
   justify-content: space-between;
 }
 
-sign-form-xpwa form .links a {
+form-container-x form .links a {
   margin: 10px 0;
   font-size: 0.75rem;
   color: #8f8f8f;
   text-decoration: none;
 }
 
-sign-form-xpwa form .links a:hover,
-sign-form-xpwa form .links a:nth-child(2) {
+form-container-x form .links a:hover,
+form-container-x form .links a:nth-child(2) {
   color: var(--color-theme);
 }
 
-border-lines-xpwa {
+border-lines-x {
   position: absolute;
   top: 0;
   inset: 0;
 }
 
-border-lines-xpwa:before {
+border-lines-x:before {
   content: '';
   position: absolute;
   top: -50%;
@@ -168,7 +172,7 @@ border-lines-xpwa:before {
   animation-delay: 1s;
 }
 
-border-lines-xpwa::after {
+border-lines-x::after {
   content: '';
   position: absolute;
   top: -50%;

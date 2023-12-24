@@ -40,7 +40,11 @@
     <img src="/public/logotypes/windows.png" alt="">
 </block-x>
 
-<responsive-x>
+
+<form-x>
+    
+</form-x>
+<!-- <responsive-x>
 <h1>This is test</h1>
 <h1>This is test</h1>
 <h1>This is test</h1>
@@ -53,7 +57,7 @@
 <h1>This is test</h1>
 <h1>This is test</h1>
 <h1>This is test</h1>
-</responsive-x>
+</responsive-x> -->
     
 
 <?php require_once './footer.php'; ?>

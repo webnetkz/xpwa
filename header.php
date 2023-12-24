@@ -14,6 +14,8 @@
       "radius": "7px",
       "shadow": "none",
       "blur": "7px"
+      <!-- ,
+      "cursor": "1" -->
     },
     "colors": {
       "mainTheme": "blue",

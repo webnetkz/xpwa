@@ -1,17 +1,10 @@
-document.body.innerHTML += '<div class="cursor-dot-outline"></div>';
-document.body.innerHTML += '<div class="cursor-dot"></div>';
+
+document.body.innerHTML += '<div class="cursor-dot-outline-x"></div>';
+document.body.innerHTML += '<div class="cursor-dot-x"></div>';
 
 document.body.innerHTML += `<style>
-html, 
-html *, 
-body, 
-body *
-{
-    cursor: none;
-}
-.cursor-dot,
-.cursor-dot-outline
-{
+.cursor-dot-x,
+.cursor-dot-outline-x {
     mix-blend-mode: normal;
     pointer-events: none;
     position: absolute;
@@ -27,8 +20,7 @@ body *
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out;
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, -webkit-transform 0.20s ease-in-out;
 }
-.cursor-dot
-{
+.cursor-dot-x {
     z-index:99999999;
     width: 16.0px;
     height: 16.0px;
@@ -38,8 +30,7 @@ body *
     border-width: 0px;
     border-color: #ffffff;
 }
-.cursor-dot-outline
-{
+.cursor-dot-outline-x {
     z-index:99999998;
     width: 30.0px;
     height: 30.0px;
@@ -51,6 +42,7 @@ body *
 }
 </style>`;
 
+
 let cursor = {
     delay: 1,
     _x: 0,
@@ -59,8 +51,8 @@ let cursor = {
     endY: window.innerHeight / 2,
     cursorVisible: true,
     cursorEnlarged: false,
-    dot: document.querySelector('.cursor-dot'),
-    outline: document.querySelector('.cursor-dot-outline'),
+    dot: document.querySelector('.cursor-dot-x'),
+    outline: document.querySelector('.cursor-dot-outline-x'),
 
     init: function() {
         this.dotSize = this.dot.offsetWidth;
@@ -155,4 +147,4 @@ let cursor = {
     },
 };
 
-cursor.init();
+export { cursor };

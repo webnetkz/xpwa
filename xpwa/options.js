@@ -1,3 +1,6 @@
+import './cursor.js';
+import { cursor } from './cursor.js';
+
 class Options {
 
     constructor() {
@@ -30,6 +33,16 @@ class Options {
                 if(options?.coreUi?.widthScrollBar) {
                     this.setOptionsVariable('--width-scroll-bar', options?.coreUi?.widthScrollBar);
                 }
+                if(options?.coreUi?.shadow) {
+                    this.setOptionsVariable('--shadow', options?.coreUi?.shadow);
+                }
+                if(options?.coreUi?.blur) {
+                    this.setOptionsVariable('--blur', options?.coreUi?.blur);
+                }
+                if(options?.coreUi?.cursor) {
+                    cursor.init();
+                    document.body.style.cursor = 'none';
+                }
             }
     
             if(options?.colors) {
@@ -45,6 +58,7 @@ class Options {
             }
         }
     }
+
 
     setOptionsVariable(variable, value) {
         document.documentElement.style.setProperty(variable, value);
