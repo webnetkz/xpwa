@@ -1,4 +1,4 @@
-import '../styles/xpwa.css';
+// import '../styles/xpwa.css';
 import './Mobile.js';
 
 import './components/core/core_components.js';
