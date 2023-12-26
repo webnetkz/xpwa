@@ -1,7 +1,7 @@
 #!/bin/bash
 
-old_string="0.8.63"
-new_string="0.8.64"
+old_string="0.8.64"
+new_string="0.8.65"
 
 replace_string_in_file() {
     file=$1

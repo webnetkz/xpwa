@@ -9,20 +9,24 @@
   {
     "coreUi": {
       <!-- "pwa": "true", -->
-      "theme": "light",
       "padding": "10px",
       "margin": "5px",
       "radius": "7px",
       "shadow": "none",
       "blur": "7px",
       "border": "2px solid var(--color-theme)",
-      "heightHeader": "50px",
-      "cursor": "true"
+      "heightHeader": "50px"
+      <!-- "cursor": "true" -->
     },
     "colors": {
-      "mainTheme": "blue",
-      "mainThemeLight": "blue",
-      "mainThemeDark": "yellow"
+      "colorTheme": "blue",
+      "culorThemeUp": "blue",
+      "culorThemeDown": "blue",
+      "colorThemeDark": "yellow",
+      "colorThemeDarkUp": "yellow",
+      "colorThemeDarkDown": "yellow",
+      "white": "white",
+      "black": "black"
     }
   }
   </options-x>

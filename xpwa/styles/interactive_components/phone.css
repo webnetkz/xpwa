@@ -10,12 +10,17 @@ phone-x {
 phone-x a svg {
   width: 50px;
   height: 50px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
 }
 
 phone-x a {
   color: var(--color-theme);
-  font-size: 1.4rem;
-  line-height: 3rem;
+}
+
+phone-x:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 

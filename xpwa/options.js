@@ -1,5 +1,5 @@
-import './cursor.js';
-import { cursor } from './cursor.js';
+// import './cursor.js';
+// import { cursor } from './cursor.js';
 
 class Options {
 
@@ -8,7 +8,7 @@ class Options {
 			document.body.innerHTML = '<h1>LightHouse of Google</h1>';
 		}
 
-        this.getOptions();
+        window.OPT = this.getOptions();
     }
 
 
@@ -17,14 +17,11 @@ class Options {
         
         if(options) {
             options = JSON.parse(document.querySelector('options-x').innerText);
-            
+
             if(options?.coreUi) {
                 if(options?.coreUi?.pwa) {
                     window.addEventListener('load', this.pwa)
                     this.pwa();
-                }
-                if(options?.coreUi?.theme) {
-                    window.THEME = options?.coreUi?.theme;
                 }
                 if(options?.coreUi?.padding) {
                     this.setOptionsVariable('--padding', options?.coreUi?.padding);
@@ -69,7 +66,24 @@ class Options {
                 if(options?.colors?.colorThemeDown) {
                     this.setOptionsVariable('--color-theme-down', options?.colors?.colorThemeDown);
                 }
+                if(options?.colors?.colorThemeDark) {
+                    this.setOptionsVariable('--color-theme-dark', options?.colors?.colorThemeDark);
+                }
+                if(options?.colors?.colorThemeDarkUp) {
+                    this.setOptionsVariable('--color-theme-dark-up', options?.colors?.colorThemeDarkUp);
+                }
+                if(options?.colors?.colorThemeDarkDown) {
+                    this.setOptionsVariable('--color-theme-dark-down', options?.colors?.colorThemeDarkDown);
+                }
+                if(options?.colors?.white) {
+                    this.setOptionsVariable('--white', options?.colors?.white);
+                }
+                if(options?.colors?.black) {
+                    this.setOptionsVariable('--black', options?.colors?.black);
+                }
             }
+
+            return options;
         }
     }
 
