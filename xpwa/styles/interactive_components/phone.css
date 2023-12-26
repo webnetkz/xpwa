@@ -1,29 +1,21 @@
 phone-x {
-  min-width: 50px;
-  min-height: 50px;
-  border: 1px solid var(--color-theme);
   position: fixed;
   right: 20px;
   bottom: 80px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   z-index: var(--z-phone);
+}
+phone-x a svg {
+  width: 50px;
+  height: 50px;
 }
 
 phone-x a {
   color: var(--color-theme);
   font-size: 1.4rem;
   line-height: 3rem;
-}
-
-phone-x:hover {
-  background: var(--color-theme);
-}
-
-phone-x:hover a {
-  color: var(--black);
 }
 
 

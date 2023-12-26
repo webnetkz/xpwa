@@ -46,5 +46,5 @@
 </block-x>
 
     
-
+<phone-x phone="+77777777777"></phone-x>
 <?php require_once './footer.php'; ?>
