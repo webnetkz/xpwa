@@ -9,14 +9,20 @@ export class ChangeThemeXPWA extends HTMLElement {
 
   changeTheme() {
     if(window.THEME === 'light') {
-      document.documentElement.style.setProperty('--white', window?.OPT.colors.black);
-      document.documentElement.style.setProperty('--black', window?.OPT.colors.white);
-      document.documentElement.style.setProperty('--color-theme', window?.OPT.colors.colorThemeDark);
+      document.documentElement.style.setProperty('--white', window?.OPT?.colors?.black);
+      document.documentElement.style.setProperty('--black', window?.OPT?.colors?.white);
+      document.documentElement.style.setProperty('--color-theme', window?.OPT.colors?.colorThemeDark);
+      document.documentElement.style.setProperty('--color-theme-up', window?.OPT.colors?.colorThemeDarkUp);
+      document.documentElement.style.setProperty('--color-theme-down', window?.OPT.colors?.colorThemeDarkDonw);
+
       window.THEME = 'dark';
     } else {
-      document.documentElement.style.setProperty('--white', window?.OPT.colors.white);
-      document.documentElement.style.setProperty('--black', window?.OPT.colors.black);
-      document.documentElement.style.setProperty('--color-theme', window?.OPT.colors.colorTheme);
+      document.documentElement.style.setProperty('--white', window?.OPT?.colors?.white);
+      document.documentElement.style.setProperty('--black', window?.OPT?.colors?.black);
+      document.documentElement.style.setProperty('--color-theme', window?.OPT?.colors?.colorTheme);
+      document.documentElement.style.setProperty('--color-theme-up', window?.OPT.colors?.colorThemeUp);
+      document.documentElement.style.setProperty('--color-theme-down', window?.OPT.colors?.colorThemeDonw);
+
       window.THEME = 'light';
     }
   }

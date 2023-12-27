@@ -20,7 +20,7 @@ module.exports = {
             loader: 'string-replace-loader',
             options: {
               multiple: [
-                { search: './xpwa/styles/xpwa.css', replace: 'https://cdn.jsdelivr.net/npm/xpwa@0.8.65/dist/xpwa.min.css', flags: 'g' },
+                { search: './xpwa/styles/xpwa.css', replace: './dist/xpwa.min.css', flags: 'g' },
               ],
             },
           },
