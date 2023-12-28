@@ -5,34 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documentation xPWA</title>
   <link rel="icon" type="image/png" href="./logo.png">
-  <options-x>
-  {
-    "coreUi": {
-      <!-- "pwa": "true", -->
-      "padding": "10px",
-      "margin": "5px",
-      "radius": "7px",
-      "shadow": "none",
-      "blur": "7px",
-      "border": "2px solid var(--color-theme)",
-      "heightHeader": "50px"
-      <!-- "cursor": "true" -->
-    },
-    "colors": {
-      "colorTheme": "blue",
-      "culorThemeUp": "blue",
-      "culorThemeDown": "blue",
-      "colorThemeDark": "yellow",
-      "colorThemeDarkUp": "yellow",
-      "colorThemeDarkDown": "yellow",
-      "white": "white",
-      "black": "black"
-    }
-  }
-  </options-x>
-  <script type="module" src="../xpwa.js" defer></script>
 </head>
 <body>
+
+  <!-- <preloader-x></preloader-x> -->
 
   <header-x>
     <logo-x src="/logo.png"></logo-x>

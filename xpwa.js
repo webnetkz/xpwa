@@ -6,6 +6,14 @@ export class XPWA {
   }  
 }
 
+
+const dom = document.body.innerHTML;
+document.body.innerHTML = 'This is xPWA';
+setTimeout(() => {
+  document.body.innerHTML = dom;
+}, 100);
+
+
 window.onload = (() => {
     window.DOM = new DOM();
 })();
@@ -19,4 +27,4 @@ const style = ['padding: 0.3rem 1rem;',
   'border-radius: 17px;',
   'color: white;'].join('');
 
-console.log('%c%s', style, 'xPWA', 'v0.8.66');
+console.log('%c%s', style, 'xPWA', 'v0.8.7');
