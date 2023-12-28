@@ -11,6 +11,7 @@ content-x {
     border-radius: var(--radius);
     border: var(--border);
     box-shadow: var(--shadow);
+    margin-top: calc(var(--height-header) + var(--margin));
 }
 
 content-x p,

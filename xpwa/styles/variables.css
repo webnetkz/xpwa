@@ -6,16 +6,14 @@
   --color-theme-dark-down: #cc3d3d;
   --color-theme-up: #9a0f0f;
 
-  --height-header: 50px;
-  --border: 1px solid var(--color-theme);
-
-
   --green: rgb(6, 157, 6);
   --white: #FFF;
   --black: black;
   --gray: #f4ecec;
   --gray-gradient: rgba(138, 170, 255, 0.1);
 
+  --border: 1px solid var(--color-theme);
+  --height-header: 50px;
   --padding: 5px;
   --margin: 5px;
   --radius: 7px;
@@ -24,16 +22,13 @@
   --shadow: none;
   --blur: 7px;
 
-  --z-nav: 9;
-  --z-to-top: 88;
-  --z-phone: 88;
-  --z-header: 90;
-  --z-stub: 998;
-  
+  --z-header: 80;
+  --z-to-top: 81;
+  --z-phone: 81;
+  --z-nav: 90;
+  --z-stub: 991;
   --z-preloader: 999;
   --z-message: 999;
   --z-progress: 999;
   --progress-round: 1000;
-
-
 }

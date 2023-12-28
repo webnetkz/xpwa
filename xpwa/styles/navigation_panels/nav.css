@@ -1,11 +1,11 @@
 nav-x {
   padding: 60px 10px;
   position: fixed;
+  z-index: var(--z-nav);
   left: -19.5vw;
   top: 0;
   width: 20vw;
   height: 100vh;
-  z-index: var(--z-nav);
   background: var(--color-theme);
   display: flex;
   flex-direction: column;

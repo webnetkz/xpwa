@@ -21,7 +21,7 @@ export class BurgerXPWA extends HTMLElement {
         el.style.display = 'block';
     });
 
-    document.querySelector('header-x').style.height = '100vh';
+    document.querySelector('header-x').style.height = '--height-header';
   }
 
   closeMenu() {
@@ -29,8 +29,6 @@ export class BurgerXPWA extends HTMLElement {
     childElements.forEach((el) => {
         el.style.display = 'none';
     });
-
-    document.querySelector('header-x').style.height = '--heightHeader';
   }
 
   changeBurger() {
