@@ -1,52 +1,45 @@
-export class ModalXPWA extends HTMLElement
-{
-  constructor()
-  {
+export class ModalXPWA extends HTMLElement {
+  constructor() {
     super();
     this.classList.add('showElement');
     this.rendering();
     this.closeModal();
   }
 
-  rendering()
-  {
+  rendering() {
     const tmp = this.innerHTML;
     this.innerHTML = `
-    <div class="modal-xpwa">
-      <div class="modal-title-xpwa">
+    <div class="modal-x">
+      <div class="modal-title-x">
         <h2>${this.modalTitle}</h2>
         <span>&times;</span>
       </div>
-      <div class="modal-content-xpwa">
+      <div class="modal-content-x">
         ${tmp}
       </div>
     </div>`;
   }
 
-  closeModal()
-  {
-    this.querySelector('.modal-title-xpwa span').addEventListener('click', () => {
+  closeModal() {
+    this.querySelector('.modal-title-x span').addEventListener('click', () => {
       this.classList.add('hiddenElement');
       setTimeout(() => {
         this.remove();
       }, 200);
-      
+
     });
   }
 
-  static get observedAttributes()
-  {
+  static get observedAttributes() {
     return ['title'];
   }
 
-  attributeChangedCallback(name, oldValue, newValue)
-  {
-    switch(name)
-    {
-        case 'title':
-          this.querySelector('h2').innerHTML = newValue;
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch (name) {
+      case 'title':
+        this.querySelector('h2').innerHTML = newValue;
         break;
-    } 
+    }
   }
 }
 

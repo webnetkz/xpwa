@@ -11,14 +11,16 @@ export class NavXPWA extends HTMLElement {
         background: rgba(0, 0, 0, 0);`;
       if(contentBlock) {
         contentBlock.style.cssText = `
-          left: 5vw;`;
+          left: 10vw;
+          width: 75vw`;
       }
     });
 
     document.body.addEventListener('click', () => {
       if(contentBlock) {
         contentBlock.style.cssText = `
-          left: 0;`;
+          left: 0;
+          width: 1200px`;
       }
       this.style.cssText = `
         transition-duration: 400ms;
@@ -28,6 +30,10 @@ export class NavXPWA extends HTMLElement {
       if(window.MOBILE.isMobile()) {
         this.style.cssText = `
         left: -79vw;`;
+        if(contentBlock) {
+          contentBlock.style.cssText = `
+            width: 96vw`;
+        }
       }
     });
   }

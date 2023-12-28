@@ -19,4 +19,4 @@ export class RadioXPWA extends HTMLElement {
   }
 }
 
-customElements.define("radio-xpwa", RadioXPWA);
+customElements.define("radio-x", RadioXPWA);

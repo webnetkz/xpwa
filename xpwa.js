@@ -27,4 +27,4 @@ const style = ['padding: 0.3rem 1rem;',
   'border-radius: 17px;',
   'color: white;'].join('');
 
-console.log('%c%s', style, 'xPWA', 'v0.8.7');
+console.log('%c%s', style, 'xPWA', 'v0.8.71');
