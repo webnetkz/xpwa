@@ -49,6 +49,7 @@
   font-family: sans-serif;
   font-family: 'Ubuntu', sans-serif;
   scroll-behavior: smooth;
+  transition-duration: 100ms;
 }
 
 body {
