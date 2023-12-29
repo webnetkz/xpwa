@@ -6,6 +6,7 @@ header-x {
     left: 0;
     background: var(--white);
     min-height: var(--height-header);
+    border-bottom: 0.01pt solid var(--color-theme);
     box-shadow: var(--shadow);
     backdrop-filter: var(--blur);
     z-index: var(--z-header);

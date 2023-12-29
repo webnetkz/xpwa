@@ -3,8 +3,12 @@ export class ChangeThemeXPWA extends HTMLElement {
     super();
     this.innerHTML = `<checkbox-x class="change-theme-x"></checkbox-x>`;
 
-    this.querySelector('label').addEventListener('click', () => this.changeTheme());
     window.THEME = 'light';
+    this.querySelector('label').addEventListener('click', () => this.changeTheme());
+
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.changeTheme();  
+    }
   }
 
   changeTheme() {

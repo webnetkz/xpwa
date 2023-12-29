@@ -7,6 +7,7 @@
     <div>
         <button-x link="/quick-start.php">Быстрый старт</button-x>
         <button-x link="/documentation.php">Документация</button-x>
+        <!-- <input-x></input-x> -->
     </div>
 </promo-x>
 
@@ -35,7 +36,7 @@
 </card-x>
 
 <block-x>
-    <img src="/public/logotypes/chrome.jpeg" alt="">
+    <img src="/public/logotypes/chrome.jpeg" alt="" style="border-radius: 50%;">
     <img src="/public/logotypes/edge.png" alt="">
     <img src="/public/logotypes/mozila.svg" alt="">
     <img src="/public/logotypes/safari.png" alt="">

@@ -11,7 +11,7 @@ modal-x
     background: rgba(55, 55, 55, 0.3);
     z-index: 999999999999;
 }
-modal-x .modal-xpwa
+modal-x .modal-x
 {
     width: 60vw;
     height: 50vh;
@@ -22,7 +22,7 @@ modal-x .modal-xpwa
     border-radius: var(--radius);
     box-shadow: 0 0 10px rgba(0,0,0,0.3)
 }
-modal-x .modal-title-xpwa
+modal-x .modal-title-x
 {
     height: 60px;
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
@@ -31,23 +31,23 @@ modal-x .modal-title-xpwa
     justify-content: space-between;
     padding: 15px;
 }
-modal-x .modal-content-xpwa
+modal-x .modal-content-x
 {
     padding: 5px 15px;
     height: 98%;
 }
-modal-x .modal-title-xpwa span
+modal-x .modal-title-x span
 {
    font-size: 1.5rem; 
 }
-modal-x .modal-title-xpwa span:hover
+modal-x .modal-title-x span:hover
 {
     transform: scale(1.2);
     cursor: pointer;
 }
 @media (max-width: 1200px)
 {
-    modal-x .modal-xpwa
+    modal-x .modal-x
     {
         width: 90vw;
     }

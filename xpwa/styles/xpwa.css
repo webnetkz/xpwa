@@ -12,6 +12,7 @@
 @import url(core_components/form/form.css);
 @import url(core_components/form/button.css);
 @import url(core_components/form/checkbox.css);
+@import url(core_components/form/input.css);
 
 @import url(decorative_components/3d_card.css);
 @import url(decorative_components/card.css);

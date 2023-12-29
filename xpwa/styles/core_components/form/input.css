@@ -1,0 +1,23 @@
+input-x input {
+    display: inline;
+    color: var(--black);
+    outline: none;
+    border-radius: var(--radius);
+    padding: var(--padding) calc(var(--padding) * 3);
+    border: 1px solid rgba(0,0,0,0);
+    border: var(--border);
+    background: var(--white);
+    margin: 3px;
+    font-size: 1.5rem;
+}
+
+input-x input:focus {
+    background: var(--color-theme);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+
+@media (max-width: 1200px) {
+
+}
