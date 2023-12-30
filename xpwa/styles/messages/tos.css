@@ -16,10 +16,6 @@ tos-x {
   box-shadow: var(--shadow);
 }
 
-tos-x close-x {
-  color: var(--black) !important;
-}
-
 
 @media (max-width: 1200px) {
 

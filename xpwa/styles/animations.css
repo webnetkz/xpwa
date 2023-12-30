@@ -13,11 +13,6 @@
   will-change: transform;
 }
 
-.showFromRightElement {
-  animation: showFromRightElementAnimation 0.2s linear;
-  will-change: transform;
-}
-
 .hiddenElement {
   animation: hiddenElementAnimation 0.3s linear;
   will-change: transform;
@@ -41,7 +36,25 @@
   }
 }
 
-@keyframes showFromRightElementAnimation {
+.show-from-left-sidebar-x {
+  animation: showFromLeftSidebarAnimation 0.2s linear;
+  will-change: transform;
+}
+@keyframes showFromLeftSidebarAnimation {
+  0% {
+    left: -120vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.show-from-right-sidebar-x {
+  animation: showFromRightSidebarAnimation 0.2s linear;
+  will-change: transform;
+}
+@keyframes showFromRightSidebarAnimation {
   0% {
     left: 120vw;
   }

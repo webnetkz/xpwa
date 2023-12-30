@@ -1,6 +1,8 @@
 export class TosXPWA extends HTMLElement {
   constructor() {
     super();
+    this.margin = '20px';
+    this.style.top = this.margin;
     this.innerHTML = this.innerHTML+'<close-x></closer-x>';
   }
 
@@ -22,28 +24,28 @@ export class TosXPWA extends HTMLElement {
             }, Number(newValue) * 1000);
         break;
         case 'position':
-          const margin = '20px';
           switch(newValue) {
             case 'left':
-              this.style.left = margin;
+              this.style.top = this.margin;
+              this.style.left = this.margin;
             break;
             case 'right':
-              this.style.right = margin;
+              this.style.top = this.margin;
+              this.style.right = this.margin;
             break;
             case 'bottom':
               this.style.top = '';
-              this.style.bottom = margin;
+              this.style.bottom = this.margin;
             break;
             case 'bottom-left':
-              this.style.bottom = margin;
-              this.style.left = margin;
+              this.style.top = '';
+              this.style.bottom = this.margin;
+              this.style.left = this.margin;
             break;
             case 'bottom-right':
-              this.style.bottom = margin;
-              this.style.right = margin;
-            break;
-            default:
-              this.style.top = margin;
+              this.style.top = '';
+              this.style.bottom = this.margin;
+              this.style.right = this.margin;
             break;
           }
         break;
