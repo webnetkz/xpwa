@@ -11,7 +11,7 @@
   <header-x>
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
-      <lang-x>123</lang-x>
+      <!-- <lang-x>123</lang-x> -->
       <!-- <change-theme-x></change-theme-x> -->
       <button-x link="/index.php">Главная</button-x>
       <button-x link="/quick-start.php">Быстрый старт</button-x>
