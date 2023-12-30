@@ -13,6 +13,7 @@ class Options {
 
 
     getOptions() {
+
         let options = document.querySelector('options-x');
         
         if(options) {

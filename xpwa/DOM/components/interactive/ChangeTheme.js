@@ -1,25 +1,35 @@
 export class ChangeThemeXPWA extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `<checkbox-x class="change-theme-x"></checkbox-x>`;
-
-    window.THEME = 'light';
-    this.querySelector('label').addEventListener('click', () => this.changeTheme());
-
-    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      this.changeTheme();  
-    }
+    setTimeout(() => {
+      this.THEME = 'light';
+      if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.THEME = 'dark';
+      }
+      
+      this.innerHTML = `<checkbox-x class="change-theme-x"></checkbox-x>`;
+      this.addEventListener('click', this.changeTheme.bind(this));
+      console.log(this.THEME);
+    });
   }
-
+  
+  
+  connectedCallback() {
+    
+  }
+  
+  
   changeTheme() {
-    if(window.THEME === 'light') {
+    X.log(this.THEME);
+    if(this.THEME === 'light') {
       document.documentElement.style.setProperty('--white', window?.OPT?.colors?.black);
       document.documentElement.style.setProperty('--black', window?.OPT?.colors?.white);
       document.documentElement.style.setProperty('--color-theme', window?.OPT.colors?.colorThemeDark);
       document.documentElement.style.setProperty('--color-theme-up', window?.OPT.colors?.colorThemeDarkUp);
       document.documentElement.style.setProperty('--color-theme-down', window?.OPT.colors?.colorThemeDarkDonw);
 
-      window.THEME = 'dark';
+      this.THEME = 'dark';
+      return;
     } else {
       document.documentElement.style.setProperty('--white', window?.OPT?.colors?.white);
       document.documentElement.style.setProperty('--black', window?.OPT?.colors?.black);
@@ -27,7 +37,8 @@ export class ChangeThemeXPWA extends HTMLElement {
       document.documentElement.style.setProperty('--color-theme-up', window?.OPT.colors?.colorThemeUp);
       document.documentElement.style.setProperty('--color-theme-down', window?.OPT.colors?.colorThemeDonw);
 
-      window.THEME = 'light';
+      this.THEME = 'light';
+      return;
     }
   }
 

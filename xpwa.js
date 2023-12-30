@@ -6,9 +6,9 @@ export class XPWA {
   }
 
   log(logData) {
-    console.log('==================');
-    console.warn(logData);
-    console.log('==================');
+    console.log('=-=-=-=-=-=-=-=-=');
+    console.log(logData);
+    debugger;
   }
 }
 
@@ -34,6 +34,6 @@ window.onload = (() => {
     'border-radius: 17px;',
     'color: white;'].join('');
   
-  console.log('%c%s', style, 'xPWA', 'v0.8.72');
+  console.log('%c%s', style, 'xPWA', 'v0.8.73');
 })();
 

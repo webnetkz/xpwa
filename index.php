@@ -35,16 +35,19 @@
     </card-x>
 </card-x>
 
-<block-x>
+<!-- <block-x>
     <img src="/public/logotypes/chrome.jpeg" alt="" style="border-radius: 50%;">
     <img src="/public/logotypes/edge.png" alt="">
     <img src="/public/logotypes/mozila.svg" alt="">
     <img src="/public/logotypes/safari.png" alt="">
-
+    
     <img src="/public/logotypes/android.png" alt="">
     <img src="/public/logotypes/linux.png" alt="">
     <img src="/public/logotypes/windows.png" alt="">
 </block-x>
+
+<show-element-x></show-element-x> -->
+
 
     
 <phone-x phone="+77777777777" class="pulse-x"></phone-x>
