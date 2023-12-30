@@ -1,7 +1,7 @@
 tos-x {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  min-height: 80px;
+  max-height: 200px;
   width: 300px;
   min-height: 70px;
   padding: 5px;
@@ -13,10 +13,11 @@ tos-x {
   backdrop-filter: blur(12px);
   z-index: var(--z-message);
   color: var(--color-theme);
+  box-shadow: var(--shadow);
 }
 
 tos-x close-x {
-  color: var(--dark) !important;
+  color: var(--black) !important;
 }
 
 

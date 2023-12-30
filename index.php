@@ -48,7 +48,5 @@
 
 <show-element-x></show-element-x> -->
 
-
     
-<phone-x phone="+77777777777" class="pulse-x"></phone-x>
 <?php require_once './footer.php'; ?>
