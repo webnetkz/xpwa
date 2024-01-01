@@ -59,7 +59,7 @@ export class NavXPWA extends HTMLElement {
           if(this.contentBlock) {
             this.contentBlock.style.cssText = `
               left: 10vw;
-              width: 75vw`;
+              width: 75vw;`;
           }
       break;
     }

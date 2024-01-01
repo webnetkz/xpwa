@@ -1,3 +1,4 @@
+import './Header.js';
 import './Lang.js';
 import './Logo.js';
 import './Menu.js';

@@ -14,6 +14,11 @@ nav-x {
   border-right: 1px solid var(--color-theme);
 }
 
+nav-x[fixed] {
+  top: var(--height-header);
+  z-index: calc(var(--z-header) - 1);
+}
+
 nav-x:hover {
   cursor: pointer;
 }

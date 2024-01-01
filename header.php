@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header-x>
+  <header-x fixed fill>
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
       <!-- <lang-x>123</lang-x> -->
@@ -18,6 +18,6 @@
       <button-x link="/documentation.php">Документация</button-x>
       <button-x link="/test.php">test</button-x>
 
-      <button-x onclick="document.body.innerHTML += `<sidebar-x><h1>Content</h1></sidebar-x>`">Sidebar</button-x>
+      <button-x onclick="document.body.innerHTML += `<sidebar-x right><h1>Content</h1></sidebar-x>`">Sidebar</button-x>
     </menu-x>
   </header-x>
