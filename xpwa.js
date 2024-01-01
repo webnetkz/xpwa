@@ -15,11 +15,11 @@ export class XPWA {
 window.X = new XPWA();
 
 
-const dom = document.body.innerHTML;
-document.body.innerHTML = 'This is xPWA';
-setTimeout(() => {
-  document.body.innerHTML = dom;
-}, 100);
+// const dom = document.body.innerHTML;
+// document.body.innerHTML = 'This is xPWA';
+// setTimeout(() => {
+//   document.body.innerHTML = dom;
+// }, 100);
 
 
 
@@ -34,6 +34,6 @@ window.onload = (() => {
     'border-radius: 17px;',
     'color: white;'].join('');
   
-  console.log('%c%s', style, 'xPWA', 'v0.8.74');
+  console.log('%c%s', style, 'xPWA', 'v0.8.75');
 })();
 

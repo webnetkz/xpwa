@@ -36,33 +36,6 @@
   }
 }
 
-.show-from-left-sidebar-x {
-  animation: showFromLeftSidebarAnimation 0.2s linear;
-  will-change: transform;
-}
-@keyframes showFromLeftSidebarAnimation {
-  0% {
-    left: -120vw;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-.show-from-right-sidebar-x {
-  animation: showFromRightSidebarAnimation 0.2s linear;
-  will-change: transform;
-}
-@keyframes showFromRightSidebarAnimation {
-  0% {
-    left: 120vw;
-  }
-
-  100% {
-    left: 20vw;
-  }
-}
 
 @keyframes hiddenElementAnimation {
   0% {

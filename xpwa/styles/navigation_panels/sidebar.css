@@ -9,8 +9,8 @@ sidebar-x {
   box-shadow: var(--shadow);
   z-index: var(--z-message);
   box-shadow: var(--shadow);
+  transition-duration: 1s;
 }
-
 
 @media (max-width: 1200px) {
     

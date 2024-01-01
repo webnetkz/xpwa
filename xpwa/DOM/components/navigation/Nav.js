@@ -1,24 +1,32 @@
 export class NavXPWA extends HTMLElement {
   constructor() {
     super();
+    
+    this.contentBlock = document.querySelector('content-x');
+  }
+  
+  connectedCallback() {
+    if(!!this.getAttribute('fixed') === false) {
+      this.createListener();
+    }
+  }
 
-    let contentBlock = this.checkContentBlock();
-
+  createListener() {
     this.addEventListener('mousemove', () => {
       this.style.cssText = `
         transition-duration: 400ms;
         left: 0;
         background: rgba(0, 0, 0, 0);`;
-      if(contentBlock) {
-        contentBlock.style.cssText = `
+      if(this.contentBlock) {
+        this.contentBlock.style.cssText = `
           left: 10vw;
           width: 75vw`;
       }
     });
 
     document.body.addEventListener('click', () => {
-      if(contentBlock) {
-        contentBlock.style.cssText = `
+      if(this.contentBlock) {
+        this.contentBlock.style.cssText = `
           left: 0;
           width: 1200px`;
       }
@@ -30,16 +38,31 @@ export class NavXPWA extends HTMLElement {
       if(window.MOBILE.isMobile()) {
         this.style.cssText = `
         left: -79vw;`;
-        if(contentBlock) {
-          contentBlock.style.cssText = `
+        if(this.contentBlock) {
+          this.contentBlock.style.cssText = `
             width: 96vw`;
         }
       }
     });
   }
 
-  checkContentBlock() {
-    return document.querySelector('content-x');
+  static get observedAttributes() {
+    return ['fixed'];
+  }
+
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch(name) {
+      case 'fixed':
+          this.style.left = '0';
+          this.style.background = 'rgba(0, 0, 0, 0)';
+          if(this.contentBlock) {
+            this.contentBlock.style.cssText = `
+              left: 10vw;
+              width: 75vw`;
+          }
+      break;
+    }
   }
 }
 

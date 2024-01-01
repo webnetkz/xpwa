@@ -6,13 +6,14 @@ export class LogoXPWA extends HTMLElement {
     this.addEventListener('click', this.redirect);
   }
 
+  redirect() {
+    location.href = '/';
+  }
+  
   static get observedAttributes() {
     return ['src'];
   }
 
-  redirect() {
-    location.href = '/';
-  }
 
   attributeChangedCallback(name, oldValue, newValue) {
     switch(name) {

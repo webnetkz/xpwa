@@ -41,7 +41,7 @@ export class DOM {
         if(navigator.onLine) {
             document.head.appendChild(linkFont);
         } else {
-          X.log('OFFLINE');
+          console.log('OFFLINE');
         }
 
         document.head.appendChild(linkStyles);

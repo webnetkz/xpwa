@@ -18,7 +18,6 @@
       <button-x link="/documentation.php">Документация</button-x>
       <button-x link="/test.php">test</button-x>
 
-      <button-x onclick="document.body.innerHTML += `<tos-x position='bottom-right'>Message</tos-x>`">Tos</button-x>
-      <button-x onclick="document.body.innerHTML += `<sidebar-x position='left'><h1>Content</h1><div><card-3d-x style='color: black'>Card-3D<h2>Hover me</h2></card-3d-x></div></sidebar-x>`">Sidebar</button-x>
+      <button-x onclick="document.body.innerHTML += `<sidebar-x><h1>Content</h1></sidebar-x>`">Sidebar</button-x>
     </menu-x>
   </header-x>

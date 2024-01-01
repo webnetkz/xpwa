@@ -2,7 +2,7 @@ tos-x {
   position: fixed;
   min-height: 80px;
   max-height: 200px;
-  width: 300px;
+  width: 400px;
   min-height: 70px;
   padding: 5px;
   border: 1px solid var(--color-theme);
@@ -16,7 +16,16 @@ tos-x {
   box-shadow: var(--shadow);
 }
 
+tos-x tos-content-x {
+  width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 
 @media (max-width: 1200px) {
-
+  tos-x {
+    width: 90vw;
+  }
 }

@@ -1,8 +1,11 @@
 export class CloseXPWA extends HTMLElement {
   constructor() {
     super();
+  }
+  
+  connectedCallback() {
     this.innerHTML = '+';
-
+  
     this.animation = 'hide';
     this.addEventListener('click', this.hidden);
   }
