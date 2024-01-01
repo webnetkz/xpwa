@@ -1,46 +1,14 @@
 @import url(variables.css);
 @import url(animations.css);
 
-@import url(core_components/stub.css);
-@import url(core_components/header.css);
-@import url(core_components/logo.css);
-@import url(core_components/content.css);
-@import url(core_components/block.css);
-@import url(core_components/menu.css);
-@import url(core_components/footer.css);
-
-@import url(core_components/form/form.css);
-@import url(core_components/form/button.css);
-@import url(core_components/form/checkbox.css);
-@import url(core_components/form/input.css);
-
-@import url(decorative_components/3d_card.css);
-@import url(decorative_components/card.css);
-@import url(decorative_components/promo.css);
-@import url(decorative_components/scrollbar.css);
-
-@import url(interactive_components/burger.css);
-@import url(interactive_components/close.css);
-@import url(interactive_components/phone.css);
-@import url(interactive_components/responsive.css);
-@import url(interactive_components/tabs.css);
-@import url(interactive_components/top.css);
-
-@import url(messages/tos.css);
-@import url(messages/modal.css);
-
-@import url(navigation_panels/nav.css);
-@import url(navigation_panels/sidebar.css);
-
-@import url(sliders/carusel.css);
-@import url(sliders/dots.css);
-
-
-
-@import url(progress_components/progress_bar.css);
-@import url(progress_components/preloader.css);
-@import url(progress_components/stepprocessing.css);
-
+@import url(core/core.css);
+@import url(decorative/decorative.css);
+@import url(interactive/interactive.css);
+@import url(messages/messages.css);
+@import url(layouts/layouts.css);
+@import url(navigation/navigation.css);
+@import url(progress/progress.css);
+@import url(sliders/sliders.css);
 
 
 * {

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header-x fixed fill>
+  <header-x fixed >
     <logo-x src="/logo.png"></logo-x>
     <menu-x>
       <!-- <lang-x>123</lang-x> -->

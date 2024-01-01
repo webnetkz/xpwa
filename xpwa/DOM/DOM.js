@@ -3,23 +3,12 @@ import './Mobile.js';
 
 import './components/core/core_components.js';
 import './components/navigation/navigation_components.js';
+import './components/decorative/decorative_components.js';
+import './components/interactive/interactive_components.js';
+import './components/layouts/layouts_components.js';
 import './components/messages/messages_components.js';
 import './components/progress/progress_components.js';
-
-
-import './components/progress/StepProcessing.js';
-
-import './components/decorative/Card3D.js';
-import './components/sliders/Carusel.js';
-
-
-import './components/Tabs.js';
-
-import './components/interactive/Close.js';
-import './components/interactive/ChangeTheme.js';
-import './components/interactive/Phone.js';
-import './components/interactive/Responsive.js';
-import './components/interactive/Top.js';
+import './components/sliders/sliders_componetns.js';
 
 
 export class DOM {

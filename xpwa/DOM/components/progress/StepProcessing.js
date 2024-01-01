@@ -1,7 +1,5 @@
-export class StepProcessingXPWA extends HTMLElement
-{
-    constructor()
-    {
+export class StepProcessingXPWA extends HTMLElement {
+    constructor() {
         super();
 
         this.innerHTML = `
@@ -11,14 +9,12 @@ export class StepProcessingXPWA extends HTMLElement
         `;
     }
 
-    createStepIndicator(numSteps)
-    {
+    createStepIndicator(numSteps) {
         const line = this.querySelector('.line');
 
         const stepWidth = 100 / (numSteps - 1);
 
-        for(let i = 0; i < numSteps; i++)
-        {
+        for (let i = 0; i < numSteps; i++) {
             const step = document.createElement('div');
             step.classList.add('step');
             step.style.left = `${stepWidth * i}%`;
@@ -28,8 +24,7 @@ export class StepProcessingXPWA extends HTMLElement
         line.style.width = `${stepWidth * (numSteps - 1)}%`;
     }
 
-    updateStepIndicator(currentStep)
-    {
+    updateStepIndicator(currentStep) {
         const steps = document.querySelectorAll('.step');
         const indicatorLine = document.querySelector('.indicator-line');
         const stepWidth = 100 / (steps.length - 1);
@@ -44,22 +39,19 @@ export class StepProcessingXPWA extends HTMLElement
 
         indicatorLine.style.width = `${stepWidth * currentStep}%`;
     }
-    
-    static get observedAttributes()
-    {
+
+    static get observedAttributes() {
         return ['steps', 'progress'];
     }
 
-    attributeChangedCallback(name, oldValue, newValue)
-    {
-        switch(name)
-        {
+    attributeChangedCallback(name, oldValue, newValue) {
+        switch (name) {
             case 'steps':
                 this.createStepIndicator(newValue);
-            break;
+                break;
             case 'progress':
                 this.updateStepIndicator(newValue);
-            break;
+                break;
         }
     }
 }
