@@ -54,6 +54,7 @@ export class NavXPWA extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     switch(name) {
       case 'fixed':
+        if(!window.MOBILE.isMobile()) {
           this.style.left = '0';
           this.style.background = 'rgba(0, 0, 0, 0)';
           if(this.contentBlock) {
@@ -61,6 +62,7 @@ export class NavXPWA extends HTMLElement {
               left: 10vw;
               width: 75vw;`;
           }
+        }
       break;
     }
   }

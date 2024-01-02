@@ -26,6 +26,5 @@
     }
   }
 </options-x>
-<script async type="module" src="../xpwa.js" defer></script>
 </body>
 </html>

@@ -13,27 +13,6 @@ import './components/sliders/sliders_componetns.js';
 
 export class DOM {
     constructor() {
-        this.setStyles();
-    }
-
-
-    setStyles() {
-        const linkStyles = document.createElement("link");
-        const linkFont = document.createElement("link");
-
-        linkStyles.rel = linkFont.rel = "stylesheet";
-        linkStyles.type = linkFont.type = 'text/css';
-
-        linkStyles.href = "./xpwa/styles/xpwa.css";
-        linkFont.href = 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap';
-
-        if(navigator.onLine) {
-            document.head.appendChild(linkFont);
-        } else {
-          console.log('OFFLINE');
-        }
-
-        document.head.appendChild(linkStyles);
     }
 
     generateId() {
