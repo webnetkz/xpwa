@@ -35,6 +35,7 @@
     </card-x>
 </card-x>
 
+
 <!-- <block-x>
     <img src="/public/logotypes/chrome.jpeg" alt="" style="border-radius: 50%;">
     <img src="/public/logotypes/edge.png" alt="">

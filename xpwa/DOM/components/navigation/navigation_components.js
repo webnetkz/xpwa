@@ -1,2 +1,3 @@
-import { NavXPWA } from './Nav.js';
-import { SidebarXPWA } from './Sidebar.js';
+import './Dropdown.js';
+import './Nav.js';
+import './Sidebar.js';
