@@ -1,14 +1,14 @@
 // import '../styles/xpwa.css';
 import './Mobile.js';
 
-import './components/core/core_components.js';
-import './components/navigation/navigation_components.js';
-import './components/decorative/decorative_components.js';
-import './components/interactive/interactive_components.js';
-import './components/layouts/layouts_components.js';
-import './components/messages/messages_components.js';
-import './components/progress/progress_components.js';
-import './components/sliders/sliders_componetns.js';
+import './components/core/core.js';
+import './components/navigations/navigations.js';
+import './components/decorative/decorative.js';
+import './components/interactive/interactive.js';
+import './components/layouts/layouts.js';
+import './components/messages/messages.js';
+import './components/progress/progress.js';
+import './components/sliders/sliders.js';
 
 
 export class DOM {

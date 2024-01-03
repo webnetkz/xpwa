@@ -1,7 +1,4 @@
-import './Header.js';
 import './Lang.js';
-import './Logo.js';
-import './Menu.js';
 import './Stub.js';
 
 import './form/Button.js';

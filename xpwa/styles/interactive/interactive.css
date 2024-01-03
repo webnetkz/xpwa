@@ -1,3 +1,6 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(logo.css);
 @import url(burger.css);
 @import url(close.css);
 @import url(phone.css);

@@ -1,5 +1,8 @@
-import './Close.js';
+import './Burger.js';
 import './ChangeTheme.js';
+import './Close.js';
+import './Header.js';
+import './Logo.js';
 import './Phone.js';
 import './Responsive.js';
 import './Tabs.js';
