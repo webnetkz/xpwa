@@ -3,7 +3,7 @@ export class DropdownXPWA extends HTMLElement {
     super();
 
     this.status = 'close';
-    
+
     this.addEventListener('click', this.openDropdown);
   }
   
@@ -11,15 +11,17 @@ export class DropdownXPWA extends HTMLElement {
     this.querySelectorAll('item-x').forEach(i => { i.style.display = 'none'});
   }
 
-  openDropdown() {
+  openDropdown(event) {
     if(this.status === 'close') {
       this.status = 'open';
       this.querySelectorAll('item-x').forEach(i => { i.style.display = 'block'});
       this.classList.add('open-x');
     } else {
-      this.status = 'close';
-      this.querySelectorAll('item-x').forEach(i => { i.style.display = 'none'});
-      this.classList.remove('open-x');
+      if(event.target == this.querySelector('head-x')) {
+        this.status = 'close';
+        this.querySelectorAll('item-x').forEach(i => { i.style.display = 'none'});
+        this.classList.remove('open-x');
+      }
     }
   }
 

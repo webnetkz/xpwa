@@ -1,5 +1,5 @@
 import './xpwa/options.js';
-import './xpwa/DOM/DOM.js';
+import { DOM } from './xpwa/DOM/DOM.js';
 
 export class XPWA {
   constructor() {
@@ -9,6 +9,17 @@ export class XPWA {
     console.log('=-=-=-=-=-=-=-=-=');
     console.log(logData);
     debugger;
+  }
+
+  getContent(path, container) {
+    let htmlFilePath = path;
+
+    fetch(htmlFilePath)
+        .then(response => response.text())
+        .then(htmlContent => {
+          container.innerHTML = htmlContent;
+        })
+        .catch(error => console.error('Error loading HTML file:', error));
   }
 }
 
@@ -24,7 +35,7 @@ window.X = new XPWA();
 
 
 window.onload = (() => {
-  // window.X.DOM = new DOM();
+  window.X.DOM = new DOM();
 
   const style = ['padding: 0.3rem 1rem;',
     'background: black;',
@@ -34,6 +45,6 @@ window.onload = (() => {
     'border-radius: 17px;',
     'color: white;'].join('');
   
-  console.log('%c%s', style, 'xPWA', 'v0.8.79');
+  console.log('%c%s', style, 'xPWA', 'v0.8.8');
 })();
 

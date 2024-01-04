@@ -15,6 +15,10 @@ export class DOM {
     constructor() {
     }
 
+    query(selector, parent=document) {
+      return parent.querySelector(selector);
+    }
+
     generateId() {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let randomCode = '';

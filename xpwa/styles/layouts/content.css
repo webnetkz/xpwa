@@ -24,6 +24,11 @@ body:has(header-x) content-x {
     padding-top: 20px;
 }
 
+body:has(nav-x[fixed]) content-x {
+    left: 10vw;
+    width: 75vw;
+}
+
 
 @media (max-width: 1200px) {
     body:has(nav-x) content-x {

@@ -3,11 +3,11 @@
 
     </dropdown-x>
     <dropdown-x header="Form">
-        <item-x>Button</item-x>
-        <item-x>Checkbox</item-x>
-        <item-x>Form</item-x>
-        <item-x>Input</item-x>
-        <item-x>Radio</item-x>
+        <item-x onclick="X.getContent('./documentation/form/button.html', X.DOM.query('content-x'))">Button</item-x>
+        <item-x onclick="X.getContent('./documentation/form/checkbox.html', X.DOM.query('content-x'))">Checkbox</item-x>
+        <item-x onclick="X.getContent('./documentation/form/form.html', X.DOM.query('content-x'))">Form</item-x>
+        <item-x onclick="X.getContent('./documentation/form/input.html', X.DOM.query('content-x'))">Input</item-x>
+        <item-x onclick="X.getContent('./documentation/form/radio.html', X.DOM.query('content-x'))">Radio</item-x>
     </dropdown-x>
     <dropdown-x header="Interactive">
         <item-x>Burger</item-x>
@@ -31,3 +31,8 @@
     
     </dropdown-x>
 </nav-x>
+
+
+<script>
+     
+</script>

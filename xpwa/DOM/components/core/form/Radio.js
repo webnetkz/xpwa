@@ -1,11 +1,18 @@
 export class RadioXPWA extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML += `
-    <input type="radio">
-    <label></label>`;
-  }
 
+    this.name = 'radio';
+  }
+  
+  connectedCallback() {
+    setTimeout(() => {  
+        const idElement = X.DOM.generateId();
+        this.innerHTML += `
+        <input class="radio-x radio-ios-x" id="${idElement}" name="${this.name}" type="radio"/>
+        <label class="radio-btn-x" for="${idElement}"></label>`;
+    });
+  }
   static get observedAttributes() {
     return ['name'];
   }
@@ -13,7 +20,9 @@ export class RadioXPWA extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case 'name':
-        this.querySelector('input').name = newValue;
+        if(newValue) {
+          this.name = newValue;
+        }
         break;
     }
   }
