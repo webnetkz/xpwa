@@ -5,7 +5,8 @@ warning-x {
     border-radius: var(--radius);
     backdrop-filter: blur(var(--blur));
     background: var(--color-warning-down);
-    width: 100%;
+    width: calc(100% - 42px - var(--padding));
+    margin: 20px;
 }
 warning-x::before {
     content: "\26A0";

@@ -7,7 +7,7 @@
       <!-- "pwa": "true", -->
       "padding": "10px",
       "margin": "5px",
-      "radius": "3px",
+      "radius": "5px",
       "shadow": "none",
       "blur": "7px",
       "border": "1px solid var(--color-theme)",
@@ -22,7 +22,7 @@
       "colorThemeDarkUp": "yellow",
       "colorThemeDarkDown": "yellow",
       "white": "white",
-      "black": "black"
+      "black": "#222"
     }
   }
 </options-x>

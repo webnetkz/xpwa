@@ -1,6 +1,26 @@
 code-x {
-    
+    position: relative;
+    font-size: 1.2rem;
+}
+code-x pre {
+    background: var(--black);
+    color: var(--white);
+    padding: var(--padding);
+    padding-top: 30px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
 }
 code-x:hover {
     cursor:text
+}
+
+t-x {
+    color: #e6db74;
+}
+a-x {
+    color: #A7E12F;
+}
+v-x {
+    color: var(--red);
 }

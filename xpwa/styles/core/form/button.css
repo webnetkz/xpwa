@@ -1,5 +1,5 @@
 button-x {
-    display: inline;
+    display: inline-block;
     color: var(--white);
     border-radius: var(--radius);
     padding: var(--padding) calc(var(--padding) * 3);

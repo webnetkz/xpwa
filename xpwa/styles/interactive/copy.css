@@ -1,8 +1,15 @@
-copy-x svg {
-    width: 30px;
+copy-x {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: var(--radius);
+    transition-duration: 1s;
+}
+copy-x svg {    
+    width: 20px;
     margin: 3px;
-    border-radius: 3px;
 }
 copy-x:hover {
     cursor: copy;
+    border: 1px solid var(--white);
 }
