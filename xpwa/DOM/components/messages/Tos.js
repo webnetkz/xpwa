@@ -1,12 +1,11 @@
 export class TosXPWA extends HTMLElement {
   constructor() {
     super();
-
-    this.margin = '20px';
-    this.style.top = this.margin;
   }
   
   connectedCallback() {
+    this.margin = '20px';
+    this.style.top = this.margin;
     this.innerHTML = `<tos-content-x>${this.innerHTML}</tos-content-x><close-x></closer-x>`;
   }
 

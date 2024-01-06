@@ -7,10 +7,10 @@
       <!-- "pwa": "true", -->
       "padding": "10px",
       "margin": "5px",
-      "radius": "7px",
+      "radius": "3px",
       "shadow": "none",
       "blur": "7px",
-      "border": "2px solid var(--color-theme)",
+      "border": "1px solid var(--color-theme)",
       "heightHeader": "50px"
       <!-- "cursor": "true" -->
     },
@@ -26,5 +26,6 @@
     }
   }
 </options-x>
+<script async defer type="module" src="./xpwa.js" ></script>
 </body>
 </html>

@@ -2,9 +2,7 @@
 <?php require_once './nav.php'; ?>
 
 <content-x>
-<form-x animation-off="">
-    <input type="text">
-</form-x>
+
 <responsive-x>
 <h1>This is test</h1>
 <h1>This is test</h1>

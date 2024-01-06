@@ -6,6 +6,11 @@
   --color-theme-dark-down: #cc3d3d;
   --color-theme-up: #9a0f0f;
 
+  --color-warning: #FFECA1;
+  --color-warning-down: rgba(255, 236, 161, 0.2);
+
+  --red: red;
+
   --green: rgb(6, 157, 6);
   --white: #FFF;
   --black: rgb(68, 63, 63);

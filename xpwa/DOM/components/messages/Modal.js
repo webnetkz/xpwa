@@ -1,6 +1,10 @@
 export class ModalXPWA extends HTMLElement {
   constructor() {
     super();
+  }
+  
+  connectedCallback() {
+    this.modalTitle = '';
     this.classList.add('showElement');
     this.rendering();
     this.closeModal();

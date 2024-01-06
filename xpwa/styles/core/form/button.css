@@ -4,7 +4,7 @@ button-x {
     border-radius: var(--radius);
     padding: var(--padding) calc(var(--padding) * 3);
     background: var(--color-theme);
-    margin: 3px;
+    margin: var(--margin);
     font-size: 1.5rem;
     border: 1px solid rgba(0,0,0,0);
 }

@@ -6,7 +6,6 @@
   <title>Documentation xPWA</title>
   <link rel="icon" type="image/png" href="./logo.png">
   <link rel="stylesheet" href="./xpwa/styles/xpwa.css">
-  <script async defer type="module" src="./xpwa.js" ></script>
 </head>
 <body>
 

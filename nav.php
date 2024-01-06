@@ -3,7 +3,7 @@
 
     </dropdown-x>
     <dropdown-x header="Form">
-        <item-x onclick="X.getContent('./documentation/form/button.html', X.DOM.query('content-x'))">Button</item-x>
+        <item-x onclick="X.getContent('./documentation/form/button.html', X.DOM.query('content-x'));">Button</item-x>
         <item-x onclick="X.getContent('./documentation/form/checkbox.html', X.DOM.query('content-x'))">Checkbox</item-x>
         <item-x onclick="X.getContent('./documentation/form/form.html', X.DOM.query('content-x'))">Form</item-x>
         <item-x onclick="X.getContent('./documentation/form/input.html', X.DOM.query('content-x'))">Input</item-x>
@@ -22,7 +22,9 @@
     
     </dropdown-x>
     <dropdown-x header="Messages">
-    
+        <item-x onclick="X.getContent('./documentation/messages/modal.html', X.DOM.query('content-x'));">Modal</item-x>
+        <item-x onclick="X.getContent('./documentation/messages/tos.html', X.DOM.query('content-x'));">Tos</item-x>
+        <item-x onclick="X.getContent('./documentation/messages/warning.html', X.DOM.query('content-x'));">Warning</item-x>
     </dropdown-x>
     <dropdown-x header="Sliders">
     
@@ -31,8 +33,3 @@
     
     </dropdown-x>
 </nav-x>
-
-
-<script>
-     
-</script>

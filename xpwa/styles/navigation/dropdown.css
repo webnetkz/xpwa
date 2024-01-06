@@ -9,9 +9,9 @@ dropdown-x::before {
   content: "";
   position: absolute;
   left: -2px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
+  top: 7.5px;
+  width: 5px;
+  height: 5px;
   border: 1px solid var(--color-theme);
   border-radius: 50%;
   background-color: var(--color-theme);
@@ -23,7 +23,8 @@ dropdown-x.open-x::before {
 
 dropdown-x head-x {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 dropdown-x item-x {
@@ -32,6 +33,21 @@ dropdown-x item-x {
   margin-left: -12.5px;
   border-left: 1px solid var(--color-theme);
   animation: fadeIn 0.2s ease-in-out forwards;
+  font-weight: 200;
+}
+
+dropdown-x item-x::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  margin-top: calc(1rem + 2px);
+  height: 0px;
+  left: 3px;
+  border: 0.5px solid var(--color-theme);
+}
+
+dropdown-x item-x.active-x {
+  color: var(--color-theme);
 }
 
 @keyframes fadeIn {

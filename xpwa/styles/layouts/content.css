@@ -3,7 +3,7 @@ content-x {
     position: relative;
     min-height: 90vh;
     margin-bottom: 50px;
-    top: 1vh;
+    top: 2vh;
     width: 1200px;
     background: var(--white);
     padding: 10px var(--padding);

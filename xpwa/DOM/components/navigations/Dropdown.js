@@ -14,7 +14,11 @@ export class DropdownXPWA extends HTMLElement {
   openDropdown(event) {
     if(this.status === 'close') {
       this.status = 'open';
-      this.querySelectorAll('item-x').forEach(i => { i.style.display = 'block'});
+      this.querySelectorAll('item-x').forEach(i => { 
+        if(i.parentNode == this) {
+          i.style.display = 'block';
+        }
+      });
       this.classList.add('open-x');
     } else {
       if(event.target == this.querySelector('head-x')) {

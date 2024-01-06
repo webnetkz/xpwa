@@ -53,6 +53,7 @@ options-x {
 hr {
   border-color: var(--color-theme);
   margin: 1rem;
-  width: 50%;
-  opacity: 0.3;
+  width: 90%;
+  opacity: 0.1;
+  margin-left: 5%;
 }

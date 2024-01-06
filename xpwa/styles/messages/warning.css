@@ -1,0 +1,15 @@
+warning-x {
+    display: block;
+    border: 1px solid var(--color-warning);
+    padding: var(--padding);
+    border-radius: var(--radius);
+    backdrop-filter: blur(var(--blur));
+    background: var(--color-warning-down);
+    width: 100%;
+}
+warning-x::before {
+    content: "\26A0";
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-right: 10px;
+}

@@ -8,7 +8,7 @@ input-x input {
     border: var(--border);
     background: var(--white);
     margin: 3px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 input-x input:focus {
