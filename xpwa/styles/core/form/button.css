@@ -7,6 +7,7 @@ button-x {
     margin: var(--margin);
     font-size: 1.5rem;
     border: 1px solid rgba(0,0,0,0);
+    user-select: none;
 }
 
 button-x:active {

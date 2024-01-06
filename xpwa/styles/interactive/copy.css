@@ -1,0 +1,8 @@
+copy-x svg {
+    width: 30px;
+    margin: 3px;
+    border-radius: 3px;
+}
+copy-x:hover {
+    cursor: copy;
+}

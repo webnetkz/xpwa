@@ -1,6 +1,8 @@
 <nav-x fixed="true">
     <dropdown-x header="Layouts">
-
+        <item-x onclick="X.getContent('./documentation/layouts/block.html', X.DOM.query('content-x'));">Block</item-x>
+        <item-x onclick="X.getContent('./documentation/layouts/container.html', X.DOM.query('content-x'));">Container</item-x>
+        <item-x onclick="X.getContent('./documentation/layouts/content.html', X.DOM.query('content-x'));">Content</item-x>
     </dropdown-x>
     <dropdown-x header="Form">
         <item-x onclick="X.getContent('./documentation/form/button.html', X.DOM.query('content-x'));">Button</item-x>
@@ -13,6 +15,7 @@
         <item-x>Burger</item-x>
         <item-x>ChangeTheme</item-x>
         <item-x>Close</item-x>
+        <item-x onclick="X.getContent('./documentation/interactive/copy.html', X.DOM.query('content-x'));">Copy</item-x>
         <item-x>Phone</item-x>
         <item-x>Responsive</item-x>
         <item-x>Tabs</item-x>

@@ -20,15 +20,12 @@ export class CloseXPWA extends HTMLElement {
     }, 290)
   }
 
-  static get observedAttributes()
-  {
+  static get observedAttributes() {
     return ['animation'];
   }
 
-  attributeChangedCallback(name, oldValue, newValue)
-  {
-    switch(name)
-    {
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch(name) {
       case 'animation':
 
       break;

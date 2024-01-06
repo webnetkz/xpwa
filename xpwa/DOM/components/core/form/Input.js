@@ -1,19 +1,18 @@
 export class InputXPWA extends HTMLElement {
     constructor() {
         super();
+    }
+    
+    connectedCallback() {
         this.innerHTML = '<input type="text">';
-
-        this.input = this.querySelector('input');
-        this.input.addEventListener('input', this.listener(e));
-        this.input.addEventListener('keydown', this.keyDown(e));
+    
+        let input = this.querySelector('input');
+        input.addEventListener('input', this.listener);
+        input.addEventListener('keydown', this.keyDown);
         this.currentFocus;
         document.addEventListener("click", function (e) {
             this.closeAllLists(e.target);
         });
-    }
-
-    static get observedAttributes() {
-        return [];
     }
 
     listener(e) {
@@ -22,7 +21,7 @@ export class InputXPWA extends HTMLElement {
         this.closeAllLists();
         if (!val) { return false; }
         this.currentFocus = -1;
-        a = document.createElement("DIV");
+        a = document.createElement("div");
         a.setAttribute("id", this.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");
 
@@ -84,10 +83,14 @@ export class InputXPWA extends HTMLElement {
         }
     }
 
+    static get observedAttributes() {
+        return [];
+    }
+
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
             case '':
-                break;
+            break;
         }
     }
 }

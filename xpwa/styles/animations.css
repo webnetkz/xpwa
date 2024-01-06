@@ -104,7 +104,7 @@
   }
 }
 
-*:has(pulse-x) {
+/* *:has(pulse-x) {
 }
 
 pulse-x {
@@ -119,4 +119,4 @@ pulse-x::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */

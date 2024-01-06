@@ -5,7 +5,8 @@ close-x {
   width: 20px;
   font-size: 2.5rem;
   transform: rotate(45deg);
-  color: var(--color-theme) !important;
+  color: var(--color-theme);
+  user-select: none;
 }
 
 close-x:hover {

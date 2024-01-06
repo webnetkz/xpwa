@@ -1,6 +1,8 @@
 import './Burger.js';
 import './ChangeTheme.js';
 import './Close.js';
+import './Code.js';
+import './Copy.js';
 import './Header.js';
 import './Logo.js';
 import './Phone.js';

@@ -36,6 +36,10 @@ dropdown-x item-x {
   font-weight: 200;
 }
 
+dropdown-x item-x:hover {
+  padding-left: calc(var(--padding) + 5px);
+}
+
 dropdown-x item-x::before {
   content: "";
   position: absolute;
