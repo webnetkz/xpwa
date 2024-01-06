@@ -1,11 +1,10 @@
 export class TosXPWA extends HTMLElement {
   constructor() {
     super();
+    this.margin = '20px';
   }
   
   connectedCallback() {
-    this.margin = '20px';
-    this.style.top = this.margin;
     this.innerHTML = `<tos-content-x>${this.innerHTML}</tos-content-x><close-x></closer-x>`;
   }
 
@@ -17,7 +16,7 @@ export class TosXPWA extends HTMLElement {
     switch(name) {
         case 'timer':
             setTimeout(() => {
-              this.querySelector('close-x').click();
+              this.remove();
             }, Number(newValue) * 1000);
         break;
         case 'left':
@@ -29,16 +28,16 @@ export class TosXPWA extends HTMLElement {
           this.style.right = this.margin;
         break;
         case 'bottom':
-          this.style.top = '';
+          this.style.top = 'auto';
           this.style.bottom = this.margin;
         break;
         case 'bottom-left':
-          this.style.top = '';
+          this.style.top = 'auto';
           this.style.bottom = this.margin;
           this.style.left = this.margin;
         break;
         case 'bottom-right':
-          this.style.top = '';
+          this.style.top = 'auto';
           this.style.bottom = this.margin;
           this.style.right = this.margin;
         break;

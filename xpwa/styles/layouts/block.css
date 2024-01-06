@@ -12,10 +12,6 @@ block-x {
   width: 98%;
   overflow: hidden;
 }
-block-x img {
-  width: 77px;
-  margin: 12px;
-}
 
 
 @media (max-width: 1200px) {

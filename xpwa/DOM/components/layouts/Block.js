@@ -10,12 +10,16 @@ export class BlockPWA extends HTMLElement {
 
   
     static get observedAttributes() {
-      return [];
+      return ['column'];
     }
   
   
     attributeChangedCallback(name, oldValue, newValue) {
       switch(name) {
+        case 'column':
+          this.style.flexDirection = 'column';
+          this.style.alignItems = 'flex-start';
+        break;
       }
     }
   }

@@ -12,9 +12,5 @@ close-x {
 close-x:hover {
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-}
-
-
-@media (max-width: 1200px) {
-
+  transform: scale(1.1) rotate(45deg);
 }

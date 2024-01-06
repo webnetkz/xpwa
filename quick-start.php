@@ -4,10 +4,12 @@
 <content-x>
     <h1>All components</h1>
     <hr>
-        <button-x link="/pages/core.php">Core components</button-x>
-        <button-x link="/pages/decorative.php">Decorative</button-x>
-        <button-x link="/pages/interactive.php">Interactive</button-x>
-        <button-x link="/pages/messages.php">Messages</button-x>
+        <block-x>
+            <button-x link="/pages/core.php">Core components</button-x>
+            <button-x link="/pages/decorative.php">Decorative</button-x>
+            <button-x link="/pages/interactive.php">Interactive</button-x>
+            <button-x link="/pages/messages.php">Messages</button-x>
+        </block-x>
     <hr>
     <p>
         xPWA Component Library: Unleash the Power of Customization

@@ -1,10 +1,53 @@
 <h1>Tos</h1>
 <hr>
-<button-x onclick="
-    let tos = document.createElement('tos-x');
-    tos.innerText = 'Message of tos-x component!';
+<block-x column>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.innerText = 'Message of tos-x default position!';
 
-    document.body.appendChild(tos);
-">Show tos</button-x>
+        document.body.appendChild(tos);
+    ">Default</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('left', 'yes');
+        tos.innerText = 'Message of tos-x left position!';
+
+        document.body.appendChild(tos);
+    ">Left</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('right', 'yes');
+        tos.innerText = 'Message of tos-x right position!';
+
+        document.body.appendChild(tos);
+    ">Right</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('bottom', 'yes');
+        tos.innerText = 'Message of tos-x bottom position!';
+
+        document.body.appendChild(tos);
+    ">Bottom</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('bottom-left', 'yes');
+        tos.innerText = 'Message of tos-x bottom-left position!';
+
+        document.body.appendChild(tos);
+    ">Bottom-left</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('bottom-right', 'yes');
+        tos.innerText = 'Message of tos-x bottom-right position!';
+
+        document.body.appendChild(tos);
+    ">Bottom-right</button-x>
+    <button-x onclick="
+        let tos = document.createElement('tos-x');
+        tos.setAttribute('timer', '3');
+        tos.innerText = 'Message of tos-x bottom-right position!';
+
+        document.body.appendChild(tos);
+    ">Auto close after seconds</button-x>
+</block-x>
 <hr>
-return ['timer', 'left', 'right', 'bottom', 'bottom-right', 'bottom-left'];

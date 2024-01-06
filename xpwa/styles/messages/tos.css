@@ -2,21 +2,23 @@ tos-x {
   position: fixed;
   min-height: 80px;
   max-height: 200px;
+  top: 20px;
   width: 400px;
   min-height: 70px;
   padding: 5px;
-  border: 1px solid var(--color-theme);
-  border-radius: 12px;
+  border: var(--border);
+  border-radius: var(--radius);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(var(--blur));
   z-index: var(--z-message);
   color: var(--color-theme);
   box-shadow: var(--shadow);
 }
 
 tos-x tos-content-x {
+  padding-left: 5px;
   width: 350px;
   overflow: hidden;
   white-space: nowrap;
