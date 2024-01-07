@@ -9,7 +9,7 @@ export class CodeXPWA extends HTMLElement {
         <copy-content-x>${this.innerHTML}</copy-content-x>
       </pre>
       </code>
-      <copy-x></copy-x><hr>
+      <copy-x></copy-x>
     `;
   }
 

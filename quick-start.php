@@ -2,36 +2,46 @@
 <?php require_once './nav.php'; ?>
 
 <content-x>
-    
-<h1>Button</h1>
+<h1>Checkbox</h1>
 <block-x>
-    <button-x>Button</button-x>
+    <checkbox-x></checkbox-x>
 </block-x>
-<warning-x>
-    Меняет стили если находится в компоненте <b>menu-x</b>
-</warning-x>
-<hr>
 <code-x>
-    &lt;<t-x>button-x</t-x>&gt;Button&lt;<t-x>/button-x</t-x>&gt;
+    &lt;<t-x>checkbox-x</t-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;
 </code-x>
+<hr>
+<h2>checked</h2>
+<p>Активный переключатель</p>
+<block-x>
+    <checkbox-x checked></checkbox-x>
+</block-x>
+<code-x>
+    &lt;<t-x>checkbox-x</t-x> <a-x>checked</a-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;
+</code-x>
+<hr>
 <h2>name</h2>
-<p>Для использования в form</p>
-<hr>
 <code-x>
-    &lt;<t-x>button-x</t-x> <a-x>name="<v-x>button</v-x>"</a-x>&gt;Button&lt;<t-x>/button-x</t-x>&gt;
+    &lt;<t-x>checkbox-x</t-x> <a-x>name="<v-x>checkbox</v-x>"</a-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;
 </code-x>
-<h2>link</h2>
-<p>Указывается ссылка для редиректа</p>
+<hr>
+<h2>small</h2>
+<p>Уменьшает переключатель</p>
 <block-x>
-    <button-x link="https://google.com">Google</button-x>
+    <checkbox-x small></checkbox-x>
 </block-x>
-<warning-x>
-    Делает активным элемент меню если текущий URI соответствует значению
-</warning-x>
-<hr>
 <code-x>
-    &lt;<t-x>button-x</t-x> <a-x>link="<v-x>https://google.com</v-x>"</a-x>&gt;Google&lt;<t-x>/button-x</t-x>&gt;
+    &lt;<t-x>checkbox-x</t-x> <a-x>small</a-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;
 </code-x>
+<hr>
+<h2>large</h2>
+<p>Уменьшает переключатель</p>
+<block-x>
+    <checkbox-x large></checkbox-x>
+</block-x>
+<code-x>
+    &lt;<t-x>checkbox-x</t-x> <a-x>large</a-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;
+</code-x>
+
 
 </content-x>
 

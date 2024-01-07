@@ -52,6 +52,7 @@ dropdown-x item-x::before {
 
 dropdown-x item-x.active-x {
   color: var(--color-theme);
+  padding-left: calc(var(--padding) + 5px);
 }
 
 @keyframes fadeIn {

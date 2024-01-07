@@ -1,5 +1,5 @@
 <footer-x>
-    2023 © xPWA
+    2023-2024 © xPWA
 </footer-x>
 <options-x>
   {

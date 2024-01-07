@@ -1,8 +1,36 @@
-<h1>Copy</h1>
-<hr>
+<h1>Block</h1>
 <block-x>
-    <copy-x></copy-x>
+    <block-x>1</block-x>
+    <block-x>2</block-x>
+    <block-x>3</block-x>
+    <block-x>4</block-x>
+    <block-x>5</block-x>
+    <block-x>6</block-x>
+    <block-x>7</block-x>
+</block-x>
+
+<code-x>
+    &lt;<t-x>block-x</t-x>&gt;&lt;<t-x>/block-x</t-x>&gt;
+</code-x>
+<h2>column</h2>
+<p>Позиционирование дочерних элементов в колонку</p>
+<block-x column>
+    <block-x>1</block-x>
+    <block-x>2</block-x>
+    <block-x>3</block-x>
+    <block-x>4</block-x>
+    <block-x>5</block-x>
+    <block-x>6</block-x>
+    <block-x>7</block-x>
 </block-x>
 <hr>
-case 'column':
-
+<code-x>
+    &lt;<t-x>block-x</t-x> <a-x>column</a-x>&gt;&lt;<t-x>/block-x</t-x>&gt;
+</code-x>
+<h2>small</h2>
+<p>Уменьшает блок и все его дочерние элементы</p>
+<block-x small></block-x>
+<hr>
+<code-x>
+    &lt;<t-x>block-x</t-x> <a-x>small</a-x>&gt;&lt;<t-x>/block-x</t-x>&gt;
+</code-x>

@@ -50,11 +50,12 @@ options-x {
   display: none;
 }
 
-h1 {
-  padding-bottom: 20px;
+*[small] {
+  transform: scale(0.8);
 }
-h2, h3, h4 {
-  padding-bottom: 10px;
+
+*[large] {
+  transform: scale(1.2);
 }
 
 hr {

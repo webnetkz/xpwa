@@ -1,13 +1,14 @@
+import "./Item.js";
+
 export class DropdownXPWA extends HTMLElement {
   constructor() {
     super();
 
     this.status = 'close';
-
-    this.addEventListener('click', this.openDropdown);
   }
   
   connectedCallback() {
+    this.addEventListener('click', this.openDropdown);
     this.querySelectorAll('item-x').forEach(i => { i.style.display = 'none'});
   }
 

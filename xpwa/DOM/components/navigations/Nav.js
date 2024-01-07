@@ -19,8 +19,8 @@ export class NavXPWA extends HTMLElement {
         background: rgba(0, 0, 0, 0);`;
       if(this.contentBlock) {
         this.contentBlock.style.cssText = `
-          left: 10vw;
-          width: 75vw`;
+          left: 8vw;
+          width: 80vw`;
       }
     });
 
@@ -32,7 +32,7 @@ export class NavXPWA extends HTMLElement {
       }
       this.style.cssText = `
         transition-duration: 400ms;
-        left: -19.5vw;
+        left: -15.5vw;
         background: var(--color-theme);`;
 
       if(window.MOBILE.isMobile()) {
@@ -59,8 +59,8 @@ export class NavXPWA extends HTMLElement {
           this.style.background = 'rgba(0, 0, 0, 0)';
           if(this.contentBlock) {
             this.contentBlock.style.cssText = `
-              left: 10vw;
-              width: 75vw;`;
+              left: 8vw;
+              width: 80vw;`;
           }
         }
       break;

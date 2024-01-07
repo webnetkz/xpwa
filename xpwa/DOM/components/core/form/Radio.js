@@ -7,10 +7,12 @@ export class RadioXPWA extends HTMLElement {
   }
   
   connectedCallback() {
-    const idElement = X.DOM.generateId();
-    this.innerHTML += `
-      <input class="radio-x radio-ios-x" id="${idElement}" name="${this.name}" type="radio" ${this.status}/>
-      <label class="radio-btn-x" for="${idElement}"></label>`;
+    setTimeout(() => {
+      const idElement = X.DOM.generateId();
+      this.innerHTML += `
+        <input class="radio-x radio-ios-x" id="${idElement}" name="${this.name}" type="radio" ${this.status}/>
+        <label class="radio-btn-x" for="${idElement}"></label>`;
+    });
   }
 
   static get observedAttributes() {

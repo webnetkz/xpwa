@@ -6,10 +6,12 @@ export class CheckboxXPWA extends HTMLElement {
   }
   
   connectedCallback() {
-    const idElement = X.DOM.generateId();
-    this.innerHTML += `
-      <input class="checkbox-x checkbox-ios-x" id="${idElement}" name="${this.name}" type="checkbox" ${this.status}/>
-      <label class="checkbox-btn-x" for="${idElement}"></label>`;
+    setTimeout(() => {
+      const idElement = X.DOM.generateId();
+      this.innerHTML += `
+        <input class="checkbox-x checkbox-ios-x" id="${idElement}" name="${this.name}" type="checkbox" ${this.status}/>
+        <label class="checkbox-btn-x" for="${idElement}"></label>`;
+    });
   }
 
   static get observedAttributes() {

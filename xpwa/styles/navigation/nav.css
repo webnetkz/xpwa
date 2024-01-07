@@ -2,9 +2,9 @@ nav-x {
   padding: 60px 10px;
   position: fixed;
   z-index: var(--z-nav);
-  left: -19.5vw;
+  left: -15.5vw;
   top: 0;
-  width: 20vw;
+  width: 16vw;
   height: 100vh;
   background: var(--color-theme);
   display: flex;
