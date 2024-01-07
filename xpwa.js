@@ -45,6 +45,6 @@ window.onload = (() => {
     'border-radius: 17px;',
     'color: white;'].join('');
   
-  console.log('%c%s', style, 'xPWA', 'v0.8.83');
+  console.log('%c%s', style, 'xPWA', 'v0.8.83-1');
 })();
 
