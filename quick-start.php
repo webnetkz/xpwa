@@ -4,7 +4,7 @@
 <content-x>
 <h1>Checkbox</h1>
 <block-x>
-    <checkbox-x></checkbox-x>
+    <checkbox-x vertical></checkbox-x>
 </block-x>
 <code-x>
     &lt;<t-x>checkbox-x</t-x>&gt;&lt;<t-x>/checkbox-x</t-x>&gt;

@@ -58,6 +58,10 @@ options-x {
   transform: scale(1.2);
 }
 
+*[vertical] {
+  transform: rotate(90deg);
+}
+
 hr {
   border-color: var(--color-theme);
   margin: 1rem;
