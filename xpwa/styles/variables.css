@@ -1,10 +1,11 @@
 :root {
   --color-theme: #0140EB;
-  --color-theme-down: #446bd6;
-  --color-theme-up: #0936b5;
+  --color-theme-up: color-mix(in srgb,var(--color-theme),white 20%);
+  --color-theme-down: color-mix(in srgb,var(--color-theme),black 20%);
+
   --color-theme-dark: #c70000;
-  --color-theme-dark-down: #cc3d3d;
-  --color-theme-up: #9a0f0f;
+  --color-theme-dark-up: color-mix(in srgb,var(--color-theme-dark),white 20%);
+  --color-theme-dark-down: color-mix(in srgb,var(--color-theme),black 20%);
 
   --color-warning: #FFECA1;
   --color-warning-down: rgba(255, 236, 161, 0.2);

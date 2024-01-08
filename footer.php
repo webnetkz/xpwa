@@ -11,16 +11,13 @@
       "shadow": "none",
       "blur": "7px",
       "border": "1px solid var(--color-theme)",
-      "heightHeader": "50px"
+      "heightHeader": "50px",
+      "toTop": "true"
       <!-- "cursor": "true" -->
     },
     "colors": {
       "colorTheme": "blue",
-      "culorThemeUp": "blue",
-      "culorThemeDown": "blue",
       "colorThemeDark": "yellow",
-      "colorThemeDarkUp": "yellow",
-      "colorThemeDarkDown": "yellow",
       "white": "white",
       "black": "#222"
     }

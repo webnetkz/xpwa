@@ -13,79 +13,70 @@ class Options {
 
 
     getOptions() {
-
         let options = document.querySelector('options-x');
-        
-        if(options) {
-            options = JSON.parse(document.querySelector('options-x').innerText);
+        if(!options) return;
 
-            if(options?.coreUi) {
-                if(options?.coreUi?.pwa) {
-                    window.addEventListener('load', this.pwa)
-                    this.pwa();
-                }
-                if(options?.coreUi?.padding) {
-                    this.setOptionsVariable('--padding', options?.coreUi?.padding);
-                }
-                if(options?.coreUi?.margin) {
-                    this.setOptionsVariable('--margin', options?.coreUi?.margin);
-                }
-                if(options?.coreUi?.radius) {
-                    this.setOptionsVariable('--radius', options?.coreUi?.radius);
-                }
-                if(options?.coreUi?.shadow) {
-                    this.setOptionsVariable('--shadow', options?.coreUi?.shadow);
-                }
-                if(options?.coreUi?.widthScrollBar) {
-                    this.setOptionsVariable('--width-scroll-bar', options?.coreUi?.widthScrollBar);
-                }
-                if(options?.coreUi?.shadow) {
-                    this.setOptionsVariable('--shadow', options?.coreUi?.shadow);
-                }
-                if(options?.coreUi?.blur) {
-                    this.setOptionsVariable('--blur', options?.coreUi?.blur);
-                }
-                if(options?.coreUi?.cursor) {
-                    cursor.init();
-                    document.body.style.cursor = 'none';
-                }
-                if(options?.coreUi?.border) {
-                    this.setOptionsVariable('--border', options?.coreUi?.border);
-                }
-                if(options?.coreUi?.heightHeader) {
-                    this.setOptionsVariable('--height-header', options?.coreUi?.heightHeader);
-                }
-            }
-    
-            if(options?.colors) {
-                if(options?.colors?.colorTheme) {
-                    this.setOptionsVariable('--color-theme', options?.colors?.colorTheme);
-                }
-                if(options?.colors?.colorThemeUp) {
-                    this.setOptionsVariable('--color-theme-up', options?.colors?.colorThemeUp);
-                }
-                if(options?.colors?.colorThemeDown) {
-                    this.setOptionsVariable('--color-theme-down', options?.colors?.colorThemeDown);
-                }
-                if(options?.colors?.colorThemeDark) {
-                    this.setOptionsVariable('--color-theme-dark', options?.colors?.colorThemeDark);
-                }
-                if(options?.colors?.colorThemeDarkUp) {
-                    this.setOptionsVariable('--color-theme-dark-up', options?.colors?.colorThemeDarkUp);
-                }
-                if(options?.colors?.colorThemeDarkDown) {
-                    this.setOptionsVariable('--color-theme-dark-down', options?.colors?.colorThemeDarkDown);
-                }
-                if(options?.colors?.white) {
-                    this.setOptionsVariable('--white', options?.colors?.white);
-                }
-                if(options?.colors?.black) {
-                    this.setOptionsVariable('--black', options?.colors?.black);
-                }
-            }
+        options = JSON.parse(options.innerText);
+        const coreUi = options?.coreUi;
+        const colors = options?.colors;
 
-            return options;
+        if(options?.coreUi) {
+            if(options?.coreUi?.pwa) {
+                window.addEventListener('load', this.pwa)
+                this.pwa();
+            }
+            if(options?.coreUi?.padding) {
+                this.setOptionsVariable('--padding', options?.coreUi?.padding);
+            }
+            if(options?.coreUi?.margin) {
+                this.setOptionsVariable('--margin', options?.coreUi?.margin);
+            }
+            if(options?.coreUi?.radius) {
+                this.setOptionsVariable('--radius', options?.coreUi?.radius);
+            }
+            if(options?.coreUi?.shadow) {
+                this.setOptionsVariable('--shadow', options?.coreUi?.shadow);
+            }
+            if(options?.coreUi?.widthScrollBar) {
+                this.setOptionsVariable('--width-scroll-bar', options?.coreUi?.widthScrollBar);
+            }
+            if(options?.coreUi?.shadow) {
+                this.setOptionsVariable('--shadow', options?.coreUi?.shadow);
+            }
+            if(options?.coreUi?.blur) {
+                this.setOptionsVariable('--blur', options?.coreUi?.blur);
+            }
+            if(options?.coreUi?.cursor) {
+                cursor.init();
+                document.body.style.cursor = 'none';
+            }
+            if(options?.coreUi?.border) {
+                this.setOptionsVariable('--border', options?.coreUi?.border);
+            }
+            if(options?.coreUi?.heightHeader) {
+                this.setOptionsVariable('--height-header', options?.coreUi?.heightHeader);
+            }
+            if(options?.coreUi?.toTop) {
+
+            }
         }
+
+        if(colors) {
+            if(colors?.colorTheme) {
+                this.setOptionsVariable('--color-theme', colors?.colorTheme);
+            }
+            if(colors?.colorThemeDark) {
+                this.setOptionsVariable('--color-theme-dark', colors?.colorThemeDark);
+            }
+            if(colors?.white) {
+                this.setOptionsVariable('--white', colors?.white);
+            }
+            if(colors?.black) {
+                this.setOptionsVariable('--black', colors?.black);
+            }
+        }
+
+        return options;
     }
 
 
